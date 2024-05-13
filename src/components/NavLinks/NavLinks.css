@@ -1,0 +1,81 @@
+@keyframes slideDown {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(1%);
+    opacity: 1;
+  }
+}
+
+.links {
+  display: none;
+  position: absolute;
+  top: 52px;
+  right: 0px;
+  width: 100%;
+  padding: 10px;
+  z-index: 999;
+  border-radius: 0px 0px 10px 10px;
+  font-family: "Raleway", sans-serif;
+}
+
+.links a {
+  color: white;
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+  position: relative;
+  white-space: nowrap;
+}
+
+.links.open {
+  display: block;
+  animation: slideDown 0.5s ease-in-out forwards;
+  background-color: #365286;
+}
+
+.dropdown-toggle {
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.openMenu,
+.closeMenu {
+  height: 20px;
+  transition: transform 0.5s ease-in-out;
+  color: black;
+  width: 30px;
+}
+
+.closeMenu {
+  transform: rotate(180deg);
+  cursor: pointer;
+}
+
+.links .closed {
+  background-color: transparent;
+}
+
+.toggleMode {
+  background: none;
+  border: none;
+  outline: none;
+  margin-left: 10px;
+  display: none;
+}
+
+.toggleIcon {
+  scale: 2;
+  cursor: pointer;
+}
+
+.toggleIcon:hover {
+  color: var(--hl-color);
+}

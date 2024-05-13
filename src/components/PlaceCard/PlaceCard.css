@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+.card {
+  width: 85%;
+  text-decoration: none;
+  display: flex;
+  justify-content: flex-start;
+  padding: 10px;
+  margin: 10px;
+  color: white;
+  font-size: 20px;
+  font-family: "Raleway", sans-serif;
+  background-color: #365286;
+  border-radius: 10px;
+  text-overflow: ellipsis;
+  box-shadow: 5px 7px 9px -6px rgba(0, 0, 0, 0.75);
+}
+
+.card h1 {
+  font-size: 13px;
+  font-weight: bold;
+  overflow: hidden;
+}
+
+.card p {
+  font-size: 11px;
+  margin-top: 5px;
+  font-style: italic;
+}
+
+.card svg {
+  margin: 10px 35px 10px 20px;
+  display: flex;
+}
+
+.cardFlex {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.lastCard {
+  margin-bottom: 75px;
+}

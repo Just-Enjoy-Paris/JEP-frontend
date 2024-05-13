@@ -1,0 +1,21 @@
+.footer {
+  display: flex;
+  justify-content: center;
+  background-color: #213251;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%; /* Pour s'étendre sur toute la largeur de la fenêtre */
+}
+
+.footer a {
+  text-decoration: none;
+  padding: 14px;
+  color: black;
+  font-family: "Raleway", sans-serif;
+  color: white;
+}
+
+.logoFooter {
+  width: 55px;
+}

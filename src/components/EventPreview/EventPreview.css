@@ -1,0 +1,14 @@
+.previewTitle {
+  text-align: center;
+  margin: 10px;
+  padding: 5px;
+  text-decoration: underline;
+}
+
+.previewContainer {
+  border: 2px solid black;
+  height: 230px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
