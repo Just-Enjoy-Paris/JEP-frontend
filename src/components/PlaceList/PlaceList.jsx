@@ -1,5 +1,5 @@
 import "./placeList.css"
-import places from "../../data/placesJEP.json"
+import places from "../../data/places.geo.json"
 import PlaceCard from "../PlaceCard/PlaceCard"
 
 export default function PlaceList() {
@@ -8,8 +8,8 @@ export default function PlaceList() {
       <h1 className="placeListTitle">Lieux</h1>
       {places.map((place, index) => (
         <PlaceCard
-          place={place}
-          key={place._id.$oid}
+          place={place.properties}
+          key={place._id}
           isLast={index === places.length - 1}
         />
       ))}
