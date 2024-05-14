@@ -6,7 +6,7 @@ import CategoryIcon from "../IconCategory/IconCategory"
 export default function PlaceCard({ place, isLast }) {
   return (
     <Link
-      to={`/lieux/${place._id.$oid}`}
+      to={`/lieux/${place._id}`}
       className={`card ${isLast ? "lastCard" : ""}`}
     >
       <CategoryIcon category={place.category} className="cardIcon" />
