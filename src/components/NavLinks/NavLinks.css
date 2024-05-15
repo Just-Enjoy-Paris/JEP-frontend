@@ -12,12 +12,11 @@
 .links {
   display: none;
   position: absolute;
-  top: 52px;
+  top: 50px;
   right: 0px;
   width: 100%;
-  padding: 10px;
+  padding: 10px 10px 20px;
   z-index: 999;
-  border-radius: 0px 0px 10px 10px;
   font-family: "Raleway", sans-serif;
 }
 
@@ -26,15 +25,19 @@
   font-size: 15px;
   display: flex;
   justify-content: center;
-  padding: 20px 0;
+  padding: 15px 0;
   position: relative;
   white-space: nowrap;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 16px;
 }
 
 .links.open {
   display: block;
   animation: slideDown 0.5s ease-in-out forwards;
   background-color: #365286;
+  box-shadow: 2px 4px 18px 0px rgba(0, 0, 0, 0.3);
 }
 
 .dropdown-toggle {
@@ -76,6 +79,3 @@
   cursor: pointer;
 }
 
-.toggleIcon:hover {
-  color: var(--hl-color);
-}
