@@ -528,7 +528,7 @@
     },
     "geometry": {
       "type": "Point",
-      "coordinates": [48.856368352047234, 2.361070468141442]
+      "coordinates": [2.361070468141442, 48.856368352047234]
     }
   },
   {
@@ -546,7 +546,7 @@
     },
     "geometry": {
       "type": "Point",
-      "coordinates": [48.85836375261056, 2.347534696977298]
+      "coordinates": [2.347534696977298, 48.85836375261056]
     }
   },
   {
@@ -564,7 +564,7 @@
     },
     "geometry": {
       "type": "Point",
-      "coordinates": [48.85955540868169, 2.347982610470057]
+      "coordinates": [2.347982610470057, 48.85955540868169]
     }
   },
   {
@@ -581,7 +581,7 @@
     },
     "geometry": {
       "type": "Point",
-      "coordinates": [48.855818480643585, 2.360432468141383]
+      "coordinates": [2.360432468141383, 48.855818480643585]
     }
   },
   {
@@ -598,7 +598,7 @@
     },
     "geometry": {
       "type": "Point",
-      "coordinates": [48.86114798835508, 2.353738552798607]
+      "coordinates": [2.353738552798607, 48.86114798835508]
     }
   },
   {
@@ -608,15 +608,14 @@
       "address": "29 Rue du Faubourg Saint-Antoine, 75011 Paris",
       "category": ["Restaurant", "Hotel"],
       "social_network": {
-        "instagram": "https://www.instagram.com/lacourdufaubourg/",
-        "facebook": "https://www.facebook.com/LaCourduFaubourg/"
+        "instagram": "https://www.instagram.com/lacourdufaubourg/"
       },
-      "website": "https://www.leschambresdufaubourg.com/",
+      "website": "https://la-cour-du-faubourg.paris/",
       "description": "description36"
     },
     "geometry": {
       "type": "Point",
-      "coordinates": [2.3731, 48.852]
+      "coordinates": [2.374118080648118, 48.85001800106523]
     }
   },
   {
@@ -634,7 +633,7 @@
     },
     "geometry": {
       "type": "Point",
-      "coordinates": [2.3682, 48.8693]
+      "coordinates": [2.368858581634894, 48.869637700785994]
     }
   },
   {
@@ -652,7 +651,7 @@
     },
     "geometry": {
       "type": "Point",
-      "coordinates": [2.35825, 48.86091]
+      "coordinates": [2.356926083484756, 48.860095783015424]
     }
   },
   {
@@ -669,7 +668,7 @@
     },
     "geometry": {
       "type": "Point",
-      "coordinates": [2.3472, 48.8525]
+      "coordinates": [2.347130296976979, 48.85273260054166]
     }
   },
   {
@@ -684,7 +683,7 @@
     },
     "geometry": {
       "type": "Point",
-      "coordinates": [2.3593, 48.8587]
+      "coordinates": [2.3583800123204393, 48.85867343452612]
     }
   },
   {
@@ -702,7 +701,7 @@
     },
     "geometry": {
       "type": "Point",
-      "coordinates": [2.3645, 48.8504]
+      "coordinates": [2.362895181633725, 48.85043666661602]
     }
   },
   {
@@ -717,25 +716,7 @@
     },
     "geometry": {
       "type": "Point",
-      "coordinates": [2.3812, 48.8602]
-    }
-  },
-  {
-    "properties": {
-      "name": "Le Passage vers les Etoiles",
-      "picture": "https://res.cloudinary.com/daxicbm7j/image/upload/v1713207890/places2/Le%20Passage%20vers%20les%20Etoiles.jpg",
-      "address": "17 Cité Joly, 75011 Paris",
-      "category": ["Salle de Spectacles", "Théâtre"],
-      "social_network": {
-        "instagram": "https://www.instagram.com/lepassageverslesetoiles/",
-        "facebook": "https://www.facebook.com/p/Théâtre-Le-Passage-Vers-Les-Etoiles-100063724952882/"
-      },
-      "website": "https://www.lepassageverslesetoiles.com/",
-      "description": "description44"
-    },
-    "geometry": {
-      "type": "Point",
-      "coordinates": [2.3789, 48.8578]
+      "coordinates": [2.380775777816775, 48.86067914730617]
     }
   },
   {
@@ -753,7 +734,7 @@
     },
     "geometry": {
       "type": "Point",
-      "coordinates": [2.381, 48.8605]
+      "coordinates": [2.38398926814174, 48.862101994114454]
     }
   },
   {
@@ -770,7 +751,7 @@
     },
     "geometry": {
       "type": "Point",
-      "coordinates": [2.3813, 48.8531]
+      "coordinates": [2.3802253411561134, 48.85716200342954]
     }
   },
   {
@@ -787,7 +768,7 @@
     },
     "geometry": {
       "type": "Point",
-      "coordinates": [2.3878, 48.8392]
+      "coordinates": [2.381947781633391, 48.844006426117815]
     }
   },
   {
@@ -805,7 +786,7 @@
     },
     "geometry": {
       "type": "Point",
-      "coordinates": [2.3932, 48.8425]
+      "coordinates": [2.3816460988268653, 48.844071065166645]
     }
   },
   {
@@ -823,7 +804,7 @@
     },
     "geometry": {
       "type": "Point",
-      "coordinates": [2.3847, 48.8539]
+      "coordinates": [2.387173012319931, 48.850552507280334]
     }
   },
   {
@@ -838,7 +819,7 @@
     },
     "geometry": {
       "type": "Point",
-      "coordinates": [2.4032, 48.8532]
+      "coordinates": [2.406480483484218, 48.85156548503921]
     }
   },
   {
@@ -856,7 +837,7 @@
     },
     "geometry": {
       "type": "Point",
-      "coordinates": [2.3987, 48.8545]
+      "coordinates": [2.395530296977213, 48.85519761086696]
     }
   },
   {
@@ -873,7 +854,7 @@
     },
     "geometry": {
       "type": "Point",
-      "coordinates": [2.3894, 48.856]
+      "coordinates": [2.394985539305533, 48.85419079560704]
     }
   },
   {
@@ -888,7 +869,7 @@
     },
     "geometry": {
       "type": "Point",
-      "coordinates": [2.3602, 48.8556]
+      "coordinates": [2.362265110469845, 48.855933212381785]
     }
   },
   {
@@ -906,7 +887,7 @@
     },
     "geometry": {
       "type": "Point",
-      "coordinates": [2.3607, 48.855]
+      "coordinates": [2.3613369681413894, 48.855847998817936]
     }
   },
   {
@@ -924,7 +905,7 @@
     },
     "geometry": {
       "type": "Point",
-      "coordinates": [2.3628, 48.8546]
+      "coordinates": [2.361395025812837, 48.853878959067444]
     }
   },
   {
@@ -942,7 +923,7 @@
     },
     "geometry": {
       "type": "Point",
-      "coordinates": [2.3685, 48.8537]
+      "coordinates": [2.36851699512666, 48.85443107955812]
     }
   },
   {
@@ -960,7 +941,7 @@
     },
     "geometry": {
       "type": "Point",
-      "coordinates": [2.3663, 48.8661]
+      "coordinates": [2.3652911816346824, 48.866139424489305]
     }
   },
   {
@@ -978,7 +959,7 @@
     },
     "geometry": {
       "type": "Point",
-      "coordinates": [2.3531, 48.8605]
+      "coordinates": [2.351406881634438, 48.86191046162887]
     }
   },
   {
@@ -996,12 +977,12 @@
     },
     "geometry": {
       "type": "Point",
-      "coordinates": [2.3618, 48.8559]
+      "coordinates": [2.3628243546487506, 48.856449051819496]
     }
   },
   {
     "properties": {
-      "name": "Sobering",
+      "name": "sobering",
       "picture": "https://res.cloudinary.com/daxicbm7j/image/upload/v1713207868/places2/Sobering.jpg",
       "address": "87 Rue de Turenne, 75003 Paris",
       "category": ["Galerie d'art"],
@@ -1014,7 +995,7 @@
     },
     "geometry": {
       "type": "Point",
-      "coordinates": [2.364, 48.8609]
+      "coordinates": [2.3643244104701373, 48.860806305859484]
     }
   },
   {
@@ -1032,7 +1013,7 @@
     },
     "geometry": {
       "type": "Point",
-      "coordinates": [2.3616, 48.8587]
+      "coordinates": [2.3606683969774003, 48.859917083494125]
     }
   },
   {
@@ -1050,7 +1031,7 @@
     },
     "geometry": {
       "type": "Point",
-      "coordinates": [2.3704, 48.858]
+      "coordinates": [2.376839941156301, 48.86026745054626]
     }
   },
   {
@@ -1067,7 +1048,7 @@
     },
     "geometry": {
       "type": "Point",
-      "coordinates": [2.3629, 48.8591]
+      "coordinates": [2.367222196977267, 48.85800365328831]
     }
   },
   {
@@ -1084,7 +1065,7 @@
     },
     "geometry": {
       "type": "Point",
-      "coordinates": [2.3697, 48.863]
+      "coordinates": [2.3721693258133905, 48.86372297329678]
     }
   },
   {
@@ -1101,7 +1082,7 @@
     },
     "geometry": {
       "type": "Point",
-      "coordinates": [2.384, 48.8703]
+      "coordinates": [2.389817568142409, 48.87292896204867]
     }
   },
   {
@@ -1118,7 +1099,7 @@
     },
     "geometry": {
       "type": "Point",
-      "coordinates": [2.3701, 48.8621]
+      "coordinates": [2.3735247104702166, 48.862349767994736]
     }
   },
   {
@@ -1135,7 +1116,7 @@
     },
     "geometry": {
       "type": "Point",
-      "coordinates": [2.3696, 48.8629]
+      "coordinates": [2.3723513546491666, 48.86371064736223]
     }
   },
   {
@@ -1157,7 +1138,7 @@
     },
     "geometry": {
       "type": "Point",
-      "coordinates": [2.3695, 48.863]
+      "coordinates": [2.3727834258133824, 48.86349578371998]
     }
   },
   {
@@ -1175,7 +1156,7 @@
     },
     "geometry": {
       "type": "Point",
-      "coordinates": [2.3812, 48.8598]
+      "coordinates": [2.3828652123204734, 48.85927334385437]
     }
   },
   {
@@ -1192,7 +1173,7 @@
     },
     "geometry": {
       "type": "Point",
-      "coordinates": [2.3811, 48.8597]
+      "coordinates": [2.3822348123204344, 48.858758545306294]
     }
   },
   {
@@ -1210,7 +1191,7 @@
     },
     "geometry": {
       "type": "Point",
-      "coordinates": [2.3649, 48.8575]
+      "coordinates": [2.3672197546487856, 48.85680057898182]
     }
   },
   {
@@ -1227,7 +1208,7 @@
     },
     "geometry": {
       "type": "Point",
-      "coordinates": [2.3509, 48.8671]
+      "coordinates": [2.3503654681419506, 48.86555419514682]
     }
   },
   {
@@ -1245,25 +1226,25 @@
     },
     "geometry": {
       "type": "Point",
-      "coordinates": [2.3854, 48.8532]
+      "coordinates": [2.3864370969768527, 48.85083048409006]
     }
   },
   {
     "properties": {
       "name": "Le Bec Salé",
       "picture": "https://res.cloudinary.com/daxicbm7j/image/upload/v1713895269/places2/Le%20Bec%20Sal%C3%A9.jpg",
-      "address": "119 Rue de la Roquette, 1 Rue Pétion, 75011 Paris",
-      "category": ["Bar", "Restaurant", "Restaurant Français"],
+      "address": "1 Rue Pétion, 75011 Paris",
+      "category": ["Bar", "Restaurant", "Restaurant français"],
       "social_network": {
-        "instagram": "https://www.instagram.com/lebecsale/",
-        "facebook": "https://fr-fr.facebook.com/people/Le-Bec-Sal%C3%A9-de-Roshan-et-Sandrine/100063540551891/"
+        "instagram": "https://www.instagram.com/lebecsaleparis/",
+        "facebook": "https://www.facebook.com/lebecsaleparis"
       },
-      "website": "https://lebecsale.eatbu.com/",
+      "website": "https://www.lebecsale.com/",
       "description": "description74"
     },
     "geometry": {
       "type": "Point",
-      "coordinates": [2.3846, 48.8556]
+      "coordinates": [2.3751254681407484, 48.86327736599366]
     }
   },
   {
@@ -1278,7 +1259,7 @@
     },
     "geometry": {
       "type": "Point",
-      "coordinates": [2.3487, 48.8601]
+      "coordinates": [2.349730639305863, 48.860063417204636]
     }
   },
   {
@@ -1295,7 +1276,7 @@
     },
     "geometry": {
       "type": "Point",
-      "coordinates": [2.3662, 48.8713]
+      "coordinates": [2.3645966258138675, 48.87180962223345]
     }
   }
 ]
