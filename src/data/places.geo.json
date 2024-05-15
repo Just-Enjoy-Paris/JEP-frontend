@@ -42,7 +42,7 @@
     },
     "properties": {
       "name": "Le Grand Breguet",
-      "address": "17 rue Bréguet 75011 Paris",
+      "address": "17 rue Bréguet, 75011 Paris",
       "category": ["Restaurant", "Bar", "Bar-Bio"],
       "social_network": [
         { "instagram": "https://www.instagram.com/legrandbreguet/" },
@@ -91,9 +91,9 @@
       "coordinates": [2.3264544682978294, 48.84716637787654]
     },
     "properties": {
-      "name": "Les Saisonniers - Saint Placide",
+      "name": "Les Saisonniers",
       "address": "62 Rue Saint-Placide, 75006 Paris",
-      "category": ["Magasin de produits de la ferme", "Primeur"],
+      "category": ["Primeur"],
       "social_network": [
         { "facebok": "https://www.facebook.com/LesSaisonniersParis/" },
         { "instagram": "https://www.instagram.com/les_saisonniers/" }
@@ -126,7 +126,7 @@
     "properties": {
       "name": "Dergenne",
       "address": "45 Rue Saint-Placide, 75006 Paris",
-      "category": ["Boutique", "Boutique de Porcelaine"],
+      "category": ["Boutique de Porcelaine"],
       "social_network": [],
       "website": "https://www.degrenne.fr/",
       "description": "description8",
@@ -168,7 +168,7 @@
       "name": "Le Bullier",
       "picture": "https://res.cloudinary.com/daxicbm7j/image/upload/v1713207920/places2/Le%20Bullier.jpg",
       "address": "22 Av. de l'Observatoire, 75014 Paris",
-      "category": ["Brasserie", "Bar", "Restaurant"],
+      "category": ["Bar", "Brasserie", "Restaurant"],
       "social_network": {
         "facebok": "https://www.facebook.com/people/Bullier/100054201414421/",
         "instagram": "https://www.instagram.com/lebullierparis/"
@@ -183,7 +183,7 @@
   },
   {
     "properties": {
-      "name": "L'Artisanat Monastique de Paris",
+      "name": "L'Artisanat Monastique",
       "picture": "https://res.cloudinary.com/daxicbm7j/image/upload/v1713207921/places2/L%27Artisanat%20Monastique%20de%20Paris.jpg",
       "address": "68 Bis Av. Denfert Rochereau, 75014 Paris",
       "category": ["Boutique d'objets religieux", "Boutique"],
@@ -205,9 +205,9 @@
       "address": "48 Bd Arago, 75013 Paris",
       "category": ["Café", "Bar", "Restaurant"],
       "social_network": {
-        "instagram": "https://www.instagram.com/lecafepaulette/"
+        "instagram": "https://www.instagram.com/leCafépaulette/"
       },
-      "website": "https://www.lecafepaulette.com/",
+      "website": "https://www.leCafépaulette.com/",
       "description": "description13"
     },
     "geometry": {
@@ -255,7 +255,7 @@
       "name": "La Factory",
       "picture": "https://res.cloudinary.com/daxicbm7j/image/upload/v1713207924/places2/La%20Factory.jpg",
       "address": "8 Rue Beaurepaire, 75010 Paris",
-      "category": ["Boutique", "Boutique de vêtements éco-responsable"],
+      "category": ["Boutique de vêtements"],
       "social_network": {
         "instagram": "https://www.instagram.com/adresse.paris/"
       },
@@ -337,10 +337,10 @@
   },
   {
     "properties": {
-      "name": "10SIGN ARTISANAT PARIS",
+      "name": "10SIGN ARTISANAT",
       "picture": "https://res.cloudinary.com/daxicbm7j/image/upload/v1713207944/places2/10sign.jpg",
       "address": "10 Rue de Fourcy, 75004 Paris",
-      "category": ["Boutique de vêtements", "Boutique"],
+      "category": ["Boutique de vêtements"],
       "social_network": {
         "instagram": "",
         "facebook": ""
@@ -358,7 +358,7 @@
       "name": "L'Atelier Parfum",
       "picture": "https://res.cloudinary.com/daxicbm7j/image/upload/v1713207943/places2/atelier-parfum.jpg",
       "address": "12 Rue de Sévigné, 75004 Paris",
-      "category": ["Boutique", "Parfumerie"],
+      "category": ["Parfumerie"],
       "social_network": {
         "instagram": "https://www.instagram.com/latelierparfum/",
         "facebook": "https://www.facebook.com/latelierparfum/"
@@ -376,7 +376,7 @@
       "name": "Librairie Ulysse",
       "picture": "https://res.cloudinary.com/daxicbm7j/image/upload/v1713207942/places2/pays-et-voyage.jpg",
       "address": "26 Rue Saint-Louis en l'Île, 75004 Paris",
-      "category": ["Boutique", "Librairie"],
+      "category": ["Librairie"],
       "social_network": {
         "instagram": "https://www.instagram.com/librairie_ulysse/",
         "facebook": ""
@@ -429,7 +429,7 @@
       "name": "Marché Saint-Germain",
       "picture": "https://res.cloudinary.com/daxicbm7j/image/upload/v1713207939/places2/march%C3%A9-saint-germain.jpg",
       "address": "4-6 Rue Lobineau, 75006 Paris",
-      "category": ["Boutique", "Restaurant"],
+      "category": ["Primeur", "Restaurant"],
       "social_network": {
         "instagram": "https://www.instagram.com/marchestgermain/",
         "facebook": "https://www.facebook.com/marchestgermain/"
@@ -464,12 +464,12 @@
       "name": "Café de Flore",
       "picture": "https://res.cloudinary.com/daxicbm7j/image/upload/v1713207937/places2/caf%C3%A9-de-flore.jpg",
       "address": "172 Bd Saint-Germain, 75006 Paris",
-      "category": "category28",
+      "category": "Café",
       "social_network": {
-        "instagram": "https://www.instagram.com/lecafedeflore/",
-        "facebook": "https://www.facebook.com/Cafedefloreofficial/"
+        "instagram": "https://www.instagram.com/leCafédeflore/",
+        "facebook": "https://www.facebook.com/Cafédefloreofficial/"
       },
-      "website": "https://cafedeflore.fr/",
+      "website": "https://Cafédeflore.fr/",
       "description": "description28"
     },
     "geometry": {
@@ -482,7 +482,7 @@
       "name": "LDB",
       "picture": "https://res.cloudinary.com/daxicbm7j/image/upload/v1713207933/places2/LDB.jpg",
       "address": "12 Rue de Sévigné, 75004 Paris",
-      "category": ["Boutique", "Boutique de vêtements"],
+      "category": ["Boutique de vêtements"],
       "social_network": {
         "instagram": "https://www.instagram.com/ldb_paris/",
         "facebook": "https://www.facebook.com/ldbparis/"
@@ -518,7 +518,7 @@
       "name": "Le Loir dans La Théière",
       "picture": "https://res.cloudinary.com/daxicbm7j/image/upload/v1713207931/places2/Le%20Loir%20dans%20La%20Th%C3%A9i%C3%A8re.jpg",
       "address": "3 Rue des Rosiers, 75004 Paris",
-      "category": ["Salon de thé"],
+      "category": ["Salon de the"],
       "social_network": {
         "instagram": "https://www.instagram.com/leloirdanslatheiereofficiel/",
         "facebook": "https://www.facebook.com/leloirdanslatheiere75004/"
@@ -536,7 +536,7 @@
       "name": "Au Trappiste",
       "picture": "https://res.cloudinary.com/daxicbm7j/image/upload/v1713207907/places2/Au%20trappiste.jpg",
       "address": "4 Rue St Denis, 75001 Paris",
-      "category": ["Brasserie"],
+      "category": ["Bar", "Brasserie"],
       "social_network": {
         "instagram": "https://www.instagram.com/autrappiste/",
         "facebook": "https://www.facebook.com/autrappisteparis/"
@@ -551,15 +551,15 @@
   },
   {
     "properties": {
-      "name": "Café Oz The Australian Bar",
+      "name": "Café Oz Australian Bar",
       "picture": "https://res.cloudinary.com/daxicbm7j/image/upload/v1713207906/places2/Caf%C3%A9%20Oz%20The%20Australian%20Bar.jpg",
       "address": "18 Rue St Denis, 75001 Paris",
       "category": ["Bar"],
       "social_network": {
-        "instagram": "https://www.instagram.com/cafeozchatelet/",
-        "facebook": "https://www.facebook.com/CafeOzChatelet/"
+        "instagram": "https://www.instagram.com/Caféozchatelet/",
+        "facebook": "https://www.facebook.com/CaféOzChatelet/"
       },
-      "website": "https://cafe-oz.com/",
+      "website": "https://Café-oz.com/",
       "description": "description33"
     },
     "geometry": {
@@ -572,7 +572,7 @@
       "name": "Clark Hot Dog",
       "picture": "https://res.cloudinary.com/daxicbm7j/image/upload/v1713207905/places2/Clark%20Hot%20Dog.jpg",
       "address": "6 rue du roi de Sicile, 75004 Paris",
-      "category": ["Restauration rapide", "Restaurant"],
+      "category": ["Fast food", "Restaurant"],
       "social_network": {
         "instagram": "https://www.instagram.com/clarkhotdog/"
       },
@@ -591,7 +591,7 @@
       "address": "35 Rue Rambuteau, 75003 Paris",
       "category": ["Restaurant", "Restaurant libanais"],
       "social_network": {
-        "instagram": "https://www.instagram.com/lacourdufaubourg/"
+        "instagram": "https://www.instagram.com/lacourduFg/"
       },
       "website": "",
       "description": "description35"
@@ -604,13 +604,13 @@
   {
     "properties": {
       "name": "La Cour du Faubourg",
-      "picture": "https://res.cloudinary.com/daxicbm7j/image/upload/v1713207903/places2/La%20Cour%20du%20Faubourg.jpg",
-      "address": "29 Rue du Faubourg Saint-Antoine, 75011 Paris",
+      "picture": "https://res.cloudinary.com/daxicbm7j/image/upload/v1713207903/places2/La%20Cour%20du%20Fg.jpg",
+      "address": "29 Rue du Fg Saint-Antoine, 75011 Paris",
       "category": ["Restaurant", "Hotel"],
       "social_network": {
-        "instagram": "https://www.instagram.com/lacourdufaubourg/"
+        "instagram": "https://www.instagram.com/lacourduFg/"
       },
-      "website": "https://la-cour-du-faubourg.paris/",
+      "website": "https://la-cour-du-Fg.paris/",
       "description": "description36"
     },
     "geometry": {
@@ -620,9 +620,9 @@
   },
   {
     "properties": {
-      "name": "Emmaüs Alternatives Temple",
+      "name": "Emmaüs Alternatives",
       "picture": "https://res.cloudinary.com/daxicbm7j/image/upload/v1713207902/places2/Emma%C3%BCs%20Alternatives%20Temple.jpg",
-      "address": "43-45 Rue du Faubourg du Temple, 75010 Paris",
+      "address": "43-45 Rue du Fg du Temple, 75010 Paris",
       "category": ["Association"],
       "social_network": {
         "instagram": "https://www.instagram.com/emmaus_alternatives",
@@ -656,7 +656,7 @@
   },
   {
     "properties": {
-      "name": "Shakespeare and Company",
+      "name": "Shakespeare and Cie",
       "picture": "https://res.cloudinary.com/daxicbm7j/image/upload/v1713207894/places2/Shakespeare%20and%20Company.jpg",
       "address": "37 rue de la Bûcherie, Paris, France 75005",
       "category": ["Librairie"],
@@ -673,7 +673,7 @@
   },
   {
     "properties": {
-      "name": "Bar du Marché des Blancs Manteaux",
+      "name": "Bar du Marché",
       "picture": "https://res.cloudinary.com/daxicbm7j/image/upload/v1713207893/places2/Bar%20du%20March%C3%A9%20des%20Blancs%20Manteaux.jpg",
       "address": "53 Rue Vieille du Temple, 75004 Paris",
       "category": ["Restaurant"],
@@ -706,7 +706,7 @@
   },
   {
     "properties": {
-      "name": "Cafe Moderne",
+      "name": "Café Moderne",
       "picture": "https://res.cloudinary.com/daxicbm7j/image/upload/v1713207891/places2/Le%20Moderne.jpg",
       "address": "121 Rue du Chemin Vert, 75011 Paris",
       "category": ["Bar", "Brasserie"],
@@ -791,7 +791,7 @@
   },
   {
     "properties": {
-      "name": "bonjour madame",
+      "name": "Bonjour Madame",
       "picture": "https://res.cloudinary.com/daxicbm7j/image/upload/v1713207884/places2/bonjour%20madame.jpg",
       "address": "40 Rue de Montreuil, 75011 Paris",
       "category": ["Bar", "Bar culturel militant féministe queer"],
@@ -827,7 +827,7 @@
       "name": "Chez Tante Farida",
       "picture": "https://res.cloudinary.com/daxicbm7j/image/upload/v1713207882/places2/Chez%20Tante%20Farida.jpg",
       "address": "13 Rue de Bagnolet, 75020 Paris",
-      "category": ["Restaurant Algérien", "Restaurant"],
+      "category": ["Restaurant", "Restaurant Algerien"],
       "social_network": {
         "instagram": "https://www.instagram.com/chez_tante_farida/",
         "facebook": "https://www.facebook.com/ChezTanteFarida/"
@@ -845,7 +845,7 @@
       "name": "Mangez et cassez-vous",
       "picture": "https://res.cloudinary.com/daxicbm7j/image/upload/v1713207879/places2/Mangez%20et%20cassez-vous.jpg",
       "address": "64 Rue Alexandre Dumas, 75011 Paris",
-      "category": ["Restaurant", "Restaurant de Hamburgers"],
+      "category": ["Fast food", "Restaurant de Hamburgers"],
       "social_network": {
         "instagram": "https://www.instagram.com/mangezetcassezvous/"
       },
@@ -877,7 +877,7 @@
       "name": "Ciore",
       "picture": "https://res.cloudinary.com/daxicbm7j/image/upload/v1713207877/places2/Ciore.jpg",
       "address": "6 Rue Malher, 75004 Paris",
-      "category": ["Restaurant Italien", "Restaurant"],
+      "category": ["Restaurant", "Restaurant italien"],
       "social_network": {
         "instagram": "https://www.instagram.com/ciore_pizzeria/",
         "facebook": "https://www.facebook.com/ciore.pizzeria/"
@@ -964,7 +964,7 @@
   },
   {
     "properties": {
-      "name": "Boutique Monsieur Poulet",
+      "name": "Monsieur Poulet",
       "picture": "https://res.cloudinary.com/daxicbm7j/image/upload/v1713207870/places2/Boutique%20Monsieur%20Poulet.jpg",
       "address": "24 Rue de Sévigné, 75004 Paris",
       "category": ["Boutique de vêtements", "Boutique"],
@@ -982,7 +982,7 @@
   },
   {
     "properties": {
-      "name": "sobering",
+      "name": "Sobering",
       "picture": "https://res.cloudinary.com/daxicbm7j/image/upload/v1713207868/places2/Sobering.jpg",
       "address": "87 Rue de Turenne, 75003 Paris",
       "category": ["Galerie d'art"],
@@ -1005,10 +1005,10 @@
       "address": "78 Rue Vieille du Temple, 75003 Paris",
       "category": ["Café", "Brasserie"],
       "social_network": {
-        "instagram": "https://www.instagram.com/cafelaperle/",
-        "facebook": "https://www.facebook.com/cafelaperleparis"
+        "instagram": "https://www.instagram.com/Cafélaperle/",
+        "facebook": "https://www.facebook.com/Cafélaperleparis"
       },
-      "website": "https://cafelaperle.com/",
+      "website": "https://Cafélaperle.com/",
       "description": "description61"
     },
     "geometry": {
@@ -1056,7 +1056,7 @@
       "name": "Green Owl",
       "picture": "https://res.cloudinary.com/daxicbm7j/image/upload/v1713207866/places2/Green%20Owl.jpg",
       "address": "41 Rue de la Folie Méricourt, 75011 Paris",
-      "category": ["Magasin d'aromathérapie", "Boutique de CBD"],
+      "category": ["Boutique de CBD", "Magasin d'aromathérapie" ],
       "social_network": {
         "instagram": "https://www.instagram.com/greenowl_france/"
       },
@@ -1070,7 +1070,7 @@
   },
   {
     "properties": {
-      "name": "Bistrot Littéraire Les Cascades",
+      "name": "Les Cascades",
       "picture": "picture65",
       "address": "82 Rue des Cascades, 75020 Paris",
       "category": ["Bar", "Restaurant"],
@@ -1090,7 +1090,7 @@
       "name": "Hamady Gaye",
       "picture": "https://res.cloudinary.com/daxicbm7j/image/upload/v1713207863/places2/Hamady%20Gaye.jpg",
       "address": "56 Rue Saint-Sébastien, 75011 Paris",
-      "category": ["Bijoutier", "Bijouterie", "Créateur bijoutier"],
+      "category": ["Bijouterie", "Créateur bijoutier"],
       "social_network": {
         "instagram": "https://www.instagram.com/hamady.gaye.bijoutier/"
       },
@@ -1124,11 +1124,7 @@
       "name": "Acid Violette",
       "picture": "https://res.cloudinary.com/daxicbm7j/image/upload/v1713207861/places2/Acid%20Violette.jpg",
       "address": "38 rue de la Folie Méricourt, 75011",
-      "category": [
-        "Boutique de vêtements vintage",
-        "Boutique",
-        "Boutique de vêtements"
-      ],
+      "category": ["Boutique de vêtements","Boutique de vêtements vintage" ],
       "social_network": {
         "instagram": "https://www.instagram.com/acidviolettevintage/",
         "facebook": "https://www.facebook.com/people/Acid-Violette-Vintage/100076321682614/"
@@ -1181,7 +1177,7 @@
       "name": "Chez Janou",
       "picture": "https://res.cloudinary.com/daxicbm7j/image/upload/v1713894562/places2/Chez%20Janou.jpg",
       "address": "2 Rue Roger Verlomme, 75003 Paris",
-      "category": ["Bistro", "Restaurant", "Restaurant provençale"],
+      "category": ["Restaurant", "Bistro", "Restaurant provençale"],
       "social_network": {
         "instagram": "https://www.instagram.com/chezjanou/",
         "facebook": "https://www.facebook.com/pages/Chez-Janou/556351424411518"
@@ -1199,7 +1195,7 @@
       "name": "Mala Bavo",
       "picture": "https://res.cloudinary.com/daxicbm7j/image/upload/v1713895018/places2/Mala%20Bavo.jpg",
       "address": "171 Rue St Denis, 75002 Paris",
-      "category": ["Bistro", "Restaurant"],
+      "category": ["Restaurant", "Bistro" ],
       "social_network": {
         "instagram": "https://www.instagram.com/malabavo/"
       },
@@ -1213,7 +1209,7 @@
   },
   {
     "properties": {
-      "name": "Patrick's - Le Ballon Vert",
+      "name": "Patrick's Le Ballon Vert",
       "picture": "https://res.cloudinary.com/daxicbm7j/image/upload/v1713895992/places2/Patrick%27s%20-%20Le%20Ballon%20Vert.jpg",
       "address": "33 Rue de Montreuil, 75011 Paris",
       "category": ["Bar", "Pub", "Irish Pub"],
@@ -1252,7 +1248,7 @@
       "name": "La Comédie Café",
       "picture": "https://res.cloudinary.com/daxicbm7j/image/upload/v1713207895/places2/La%20Com%C3%A9die%20Caf%C3%A9.jpg",
       "address": "9 Rue de la Reynie, 75001 Paris",
-      "category": ["Café-Théâtre"],
+      "category": ["Café", "Café-Théâtre"],
       "social_network": {},
       "website": "website39",
       "description": "description39"
@@ -1267,7 +1263,7 @@
       "name": "Chez Prune",
       "picture": "https://res.cloudinary.com/daxicbm7j/image/upload/v1713962358/places2/Chez%20Prune.jpg",
       "address": "36 Rue Beaurepaire, 75010 Paris",
-      "category": ["Brasserie"],
+      "category": ["Bar", "Brasserie"],
       "social_network": {
         "instagram": "https://www.instagram.com/chez_prune_bistrot_canal/"
       },
