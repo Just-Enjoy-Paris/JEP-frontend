@@ -118,5 +118,95 @@
       "description": "Les Champs-Élysées sont une avenue emblématique de Paris, bordée de boutiques de luxe, de cafés et de théâtres, menant à l'imposant Arc de Triomphe.",
       "picture": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Arc_de_Triomphe%2C_Paris_4_April_2007.jpg/300px-Arc_de_Triomphe%2C_Paris_4_April_2007.jpg"
     }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [2.3324, 48.8606]
+    },
+    "properties": {
+      "name": "Musée d'Orsay",
+      "address": "1 Rue de la Légion d'Honneur, 75007 Paris",
+      "category": ["Musée"],
+      "social_network": [
+        { "instagram": "https://www.instagram.com/museeorsay/" }
+      ],
+      "website": "https://www.musee-orsay.fr/",
+      "description": "Le musée d'Orsay est un musée abritant une vaste collection d'œuvres d'art impressionnistes et post-impressionnistes, logé dans une ancienne gare ferroviaire.",
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Paris_-_Mus%C3%A9e_d%E2%80%99Orsay_-_2018-09-09_-_IMG_2861.jpg/300px-Paris_-_Mus%C3%A9e_d%E2%80%99Orsay_-_2018-09-09_-_IMG_2861.jpg"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [2.3372, 48.8661]
+    },
+    "properties": {
+      "name": "Jardin des Tuileries",
+      "address": "Rue de Rivoli, 75001 Paris",
+      "category": ["Jardin"],
+      "social_network": [
+        { "instagram": "https://www.instagram.com/jardindes_tuileries/" }
+      ],
+      "website": "https://en.parisinfo.com/paris-museum-monument/71440/Jardin-des-Tuileries",
+      "description": "Le Jardin des Tuileries est un magnifique jardin à la française situé entre le Louvre et la place de la Concorde, offrant des promenades paisibles et des vues sur des sculptures classiques.",
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Paris_Tuileries_Garden_Facepalm_IMG_8662.jpg/300px-Paris_Tuileries_Garden_Facepalm_IMG_8662.jpg"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [2.3341, 48.8606]
+    },
+    "properties": {
+      "name": "Musée de l'Orangerie",
+      "address": "Jardin des Tuileries, 75001 Paris",
+      "category": ["Musée"],
+      "social_network": [
+        { "instagram": "https://www.instagram.com/museeorangerie/" }
+      ],
+      "website": "https://www.musee-orangerie.fr/",
+      "description": "Le musée de l'Orangerie est un musée abritant les célèbres Nymphéas de Claude Monet ainsi que d'autres œuvres d'art impressionnistes et post-impressionnistes.",
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Paris_-_Mus%C3%A9e_de_l%27Orangerie_-_2018-09-09_-_IMG_2818.jpg/300px-Paris_-_Mus%C3%A9e_de_l%27Orangerie_-_2018-09-09_-_IMG_2818.jpg"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [2.3515, 48.8566]
+    },
+    "properties": {
+      "name": "Panthéon",
+      "address": "Place du Panthéon, 75005 Paris",
+      "category": ["Monument"],
+      "social_network": [
+        { "instagram": "https://www.instagram.com/le_panth%C3%A9on/" }
+      ],
+      "website": "https://www.paris-pantheon.fr/",
+      "description": "Le Panthéon est un monument néo-classique abritant les tombes de nombreuses figures historiques françaises, dont Voltaire, Rousseau et Victor Hugo.",
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Pantheon_-_Paris%2C_France_-_Diliff.jpg/300px-Pantheon_-_Paris%2C_France_-_Diliff.jpg"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [2.358, 48.8567]
+    },
+    "properties": {
+      "name": "Île Saint-Louis",
+      "address": "Île Saint-Louis, 75004 Paris",
+      "category": ["Île"],
+      "social_network": [
+        { "instagram": "https://www.instagram.com/explore/tags/ilesaintlouis/" }
+      ],
+      "website": "https://en.parisinfo.com/transport/73274/Ile-Saint-Louis",
+      "description": "L'Île Saint-Louis est une charmante île sur la Seine, célèbre pour ses rues pavées, ses boutiques artisanales et ses vues sur la ville.",
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Seine_2011_05_09.jpg/300px-Seine_2011_05_09.jpg"
+    }
   }
 ]
