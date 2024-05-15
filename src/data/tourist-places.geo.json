@@ -1,0 +1,122 @@
+[
+  {
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        2.2945,
+        48.8584
+      ]
+    },
+    "properties": {
+      "name": "Tour Eiffel",
+      "address": "Champ de Mars, 5 Avenue Anatole France, 75007 Paris",
+      "category": [
+        "Monument"
+      ],
+      "social_network": [
+        {
+          "instagram": "https://www.instagram.com/toureiffelofficielle/"
+        }
+      ],
+      "website": "https://www.toureiffel.paris/",
+      "description": "La Tour Eiffel est une tour en fer puddlé de 324 mètres de hauteur (avec antennes)o[10] située à Paris, à l’extrémité nord-ouest du parc du Champ-de-Mars en bordure de la Seine dans le 7e arrondissement. Son adresse officielle est 5, avenue Anatole-France.",
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Tour_Eiffel_Wikimedia_Commons_%28cropped%29.jpg/300px-Tour_Eiffel_Wikimedia_Commons_%28cropped%29.jpg"
+    }
+  },
+  {
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        2.3376,
+        48.8606
+      ]
+    },
+    "properties": {
+      "name": "Musée du Louvre",
+      "address": "Rue de Rivoli, 75001 Paris",
+      "category": [
+        "Musée"
+      ],
+      "social_network": [
+        {
+          "instagram": "https://www.instagram.com/museelouvre/"
+        }
+      ],
+      "website": "https://www.louvre.fr/",
+      "description": "Le musée du Louvre est le plus grand musée d'art et d'antiquités au monde. Il est situé dans le 1er arrondissement de Paris, entre le palais du Louvre et la rue de Rivoli.",
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Louvre_Museum_Wikimedia_Commons.jpg/300px-Louvre_Museum_Wikimedia_Commons.jpg"
+    }
+  },
+  {
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        2.328,
+        48.8615
+      ]
+    },
+    "properties": {
+      "name": "Cathédrale Notre-Dame de Paris",
+      "address": "6 Parvis Notre-Dame - Pl. Jean-Paul II, 75004 Paris",
+      "category": [
+        "Cathédrale"
+      ],
+      "social_network": [
+        {
+          "instagram": "https://www.instagram.com/cathedralenotredamedeparis/"
+        }
+      ],
+      "website": "https://www.notredamedeparis.fr/",
+      "description": "La cathédrale Notre-Dame de Paris est une cathédrale de style gothique située sur l'île de la Cité, dans le 4e arrondissement de Paris. Elle est l'un des monuments les plus emblématiques de la ville.",
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Paris_Cath%C3%A9drale_Notre-Dame_de_Paris_b.jpg/300px-Paris_Cath%C3%A9drale_Notre-Dame_de_Paris_b.jpg"
+    }
+  },
+  {
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        2.3331,
+        48.8867
+      ]
+    },
+    "properties": {
+      "name": "Montmartre",
+      "address": "Montmartre, 75018 Paris",
+      "category": [
+        "Quartier"
+      ],
+      "social_network": [
+        {
+          "instagram": "https://www.instagram.com/explore/tags/montmartre/"
+        }
+      ],
+      "website": "https://en.parisinfo.com/paris-museum-monument/71235/Montmartre",
+      "description": "Montmartre est un quartier pittoresque de Paris, connu pour ses artistes de rue, ses cafés et sa superbe vue depuis la basilique du Sacré-Cœur.",
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Sacre_Coeur_2_LR.jpg/300px-Sacre_Coeur_2_LR.jpg"
+    }
+  },
+  {
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        2.2951,
+        48.8738
+      ]
+    },
+    "properties": {
+      "name": "Champs-Élysées",
+      "address": "Avenue des Champs-Élysées, 75008 Paris",
+      "category": [
+        "Avenue"
+      ],
+      "social_network": [
+        {
+          "instagram": "https://www.instagram.com/avenuechampselysees/"
+        }
+      ],
+      "website": "https://en.parisinfo.com/transport/73289/Champs-Elysees",
+      "description": "Les Champs-Élysées sont une avenue emblématique de Paris, bordée de boutiques de luxe, de cafés et de théâtres, menant à l'imposant Arc de Triomphe.",
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Arc_de_Triomphe%2C_Paris_4_April_2007.jpg/300px-Arc_de_Triomphe%2C_Paris_4_April_2007.jpg"
+    }
+  }
+]
