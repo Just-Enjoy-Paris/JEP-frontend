@@ -29,16 +29,16 @@ const NavLinks = () => {
           Acceuil
         </NavLink>
 
+        {/* Places link */}
+        <NavLink to="/places" onClick={() => setIsMenuOpen(false)}>
+          Lieux
+        </NavLink>
+
         {/* About link */}
         <NavLink to="/about" onClick={() => setIsMenuOpen(false)}>
           À propos
-        </NavLink>
-
-        {/*
-            <NavLink to="/places" onClick={() => setIsMenuOpen(false)}>
-              Lieux
-            </NavLink>
-          
+        </NavLink>      
+                  
             {/* 
             <NavLink to="/events" onClick={() => setIsMenuOpen(false)}>
               Evenements

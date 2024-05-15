@@ -4,16 +4,13 @@
   justify-content: center;
   align-items: center;
   background-color: #213251;
-  padding-top: 20px;
   margin-bottom: 50px;
 }
 
 .placeListTitle {
   text-align: center;
   background-color: #213251;
-  padding: 15px 45px 0px;
-  position: absolute;
-  top: 425px;
+  padding: 15px 45px;
   color: white;
   border-radius: 10px;
   font-size: 24px;

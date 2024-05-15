@@ -16,7 +16,7 @@ export default function Header() {
       </NavLink>
       {/* log button */}
       <NavLink className="logButton" to="/Log">
-        <FaUserAlt className="logIcon" />
+        <FaUserAlt className="logIcon" size={24}/>
       </NavLink>
     </header>
   )
