@@ -14,6 +14,7 @@ import { IoBookSharp } from "react-icons/io5"
 import { BiBaguette } from "react-icons/bi"
 import { MdLocalGroceryStore } from "react-icons/md"
 import { GiClothes } from "react-icons/gi"
+import { CiSettings } from "react-icons/ci";
 
 const categoryIcons = {
   Pâtisserie: LuCroissant,
@@ -47,7 +48,7 @@ function CategoryIcon({ category }) {
     return <IconComponent size="2em" />
   } else {
     // Sinon, affichez un message d'erreur ou un espace réservé
-    return <div>0</div>
+    return <CiSettings size="2em"/>
   }
 }
 
