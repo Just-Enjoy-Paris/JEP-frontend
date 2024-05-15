@@ -28,7 +28,11 @@ export default function Map() {
             <div>
               <h3>${point.properties.name}</h3>
               <p>${point.properties.address}</p>
-              <p>${point.properties.category.join(", ")}</p>
+              <p>${
+                Array.isArray(point.properties.category)
+                  ? point.properties.category.join(", ")
+                  : ""
+              }</p>
             </div>
           `
         })
