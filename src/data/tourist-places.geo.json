@@ -3,210 +3,974 @@
     "geometry": {
       "type": "Point",
       "coordinates": [
-        2.2945,
-        48.8584
+        2.294511,
+        48.858261
       ]
     },
     "properties": {
       "name": "Tour Eiffel",
-      "address": "Champ de Mars, 5 Avenue Anatole France, 75007 Paris",
+      "address": "",
       "category": [
-        "Monument"
+        "monument"
       ],
       "social_network": [
         {
-          "instagram": "https://www.instagram.com/toureiffelofficielle/"
+          "instagram": ""
         }
       ],
-      "website": "https://www.toureiffel.paris/",
-      "description": "La Tour Eiffel est une tour en fer puddlé de 324 mètres de hauteur (avec antennes)o[10] située à Paris, à l’extrémité nord-ouest du parc du Champ-de-Mars en bordure de la Seine dans le 7e arrondissement. Son adresse officielle est 5, avenue Anatole-France.",
-      "picture": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Tour_Eiffel_Wikimedia_Commons_%28cropped%29.jpg/300px-Tour_Eiffel_Wikimedia_Commons_%28cropped%29.jpg"
+      "website": "",
+      "description": "L'emblème de Paris, une tour emblématique offrant une vue panoramique sur la ville depuis ses plateformes d'observation.",
+      "picture": ""
     }
   },
   {
     "geometry": {
       "type": "Point",
       "coordinates": [
-        2.3376,
-        48.8606
+        2.340107,
+        48.860619
       ]
     },
     "properties": {
       "name": "Musée du Louvre",
-      "address": "Rue de Rivoli, 75001 Paris",
+      "address": "",
       "category": [
-        "Musée"
+        "musée"
       ],
       "social_network": [
         {
-          "instagram": "https://www.instagram.com/museelouvre/"
+          "instagram": ""
         }
       ],
-      "website": "https://www.louvre.fr/",
-      "description": "Le musée du Louvre est le plus grand musée d'art et d'antiquités au monde. Il est situé dans le 1er arrondissement de Paris, entre le palais du Louvre et la rue de Rivoli.",
-      "picture": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Louvre_Museum_Wikimedia_Commons.jpg/300px-Louvre_Museum_Wikimedia_Commons.jpg"
+      "website": "",
+      "description": "Un des plus grands musées d'art et d'antiquités au monde, abritant des milliers d'œuvres d'art célèbres, dont la Joconde et la Vénus de Milo.",
+      "picture": ""
     }
   },
   {
     "geometry": {
       "type": "Point",
-      "coordinates": [
-        2.328,
-        48.8615
-      ]
+      "coordinates": []
     },
     "properties": {
       "name": "Cathédrale Notre-Dame de Paris",
-      "address": "6 Parvis Notre-Dame - Pl. Jean-Paul II, 75004 Paris",
+      "address": "",
       "category": [
-        "Cathédrale"
+        "monument"
       ],
       "social_network": [
         {
-          "instagram": "https://www.instagram.com/cathedralenotredamedeparis/"
+          "instagram": ""
         }
       ],
-      "website": "https://www.notredamedeparis.fr/",
-      "description": "La cathédrale Notre-Dame de Paris est une cathédrale de style gothique située sur l'île de la Cité, dans le 4e arrondissement de Paris. Elle est l'un des monuments les plus emblématiques de la ville.",
-      "picture": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Paris_Cath%C3%A9drale_Notre-Dame_de_Paris_b.jpg/300px-Paris_Cath%C3%A9drale_Notre-Dame_de_Paris_b.jpg"
+      "website": "",
+      "description": "Une magnifique cathédrale gothique située sur l'île de la Cité, célèbre pour ses vitraux et ses gargouilles.",
+      "picture": ""
     }
   },
   {
     "geometry": {
       "type": "Point",
-      "coordinates": [
-        2.3331,
-        48.8867
-      ]
+      "coordinates": []
     },
     "properties": {
-      "name": "Montmartre",
-      "address": "Montmartre, 75018 Paris",
+      "name": "Montmartre et la basilique du Sacré-Cœur",
+      "address": "",
       "category": [
-        "Quartier"
+        "quartier",
+        "monument"
       ],
       "social_network": [
         {
-          "instagram": "https://www.instagram.com/explore/tags/montmartre/"
+          "instagram": ""
         }
       ],
-      "website": "https://en.parisinfo.com/paris-museum-monument/71235/Montmartre",
-      "description": "Montmartre est un quartier pittoresque de Paris, connu pour ses artistes de rue, ses cafés et sa superbe vue depuis la basilique du Sacré-Cœur.",
-      "picture": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Sacre_Coeur_2_LR.jpg/300px-Sacre_Coeur_2_LR.jpg"
+      "website": "",
+      "description": "Un quartier pittoresque de Paris connu pour ses artistes de rue, ses cafés et sa superbe vue depuis la basilique du Sacré-Cœur.",
+      "picture": ""
     }
   },
   {
     "geometry": {
       "type": "Point",
-      "coordinates": [
-        2.2951,
-        48.8738
-      ]
+      "coordinates": []
     },
     "properties": {
-      "name": "Champs-Élysées",
-      "address": "Avenue des Champs-Élysées, 75008 Paris",
+      "name": "Champs-Élysées et l'Arc de Triomphe",
+      "address": "",
       "category": [
-        "Avenue"
+        "avenue",
+        "monument"
       ],
       "social_network": [
         {
-          "instagram": "https://www.instagram.com/avenuechampselysees/"
+          "instagram": ""
         }
       ],
-      "website": "https://en.parisinfo.com/transport/73289/Champs-Elysees",
-      "description": "Les Champs-Élysées sont une avenue emblématique de Paris, bordée de boutiques de luxe, de cafés et de théâtres, menant à l'imposant Arc de Triomphe.",
-      "picture": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Arc_de_Triomphe%2C_Paris_4_April_2007.jpg/300px-Arc_de_Triomphe%2C_Paris_4_April_2007.jpg"
+      "website": "",
+      "description": "Une célèbre avenue bordée de boutiques de luxe et de cafés, menant à l'imposant Arc de Triomphe.",
+      "picture": ""
     }
   },
   {
-    "type": "Feature",
     "geometry": {
       "type": "Point",
-      "coordinates": [2.3324, 48.8606]
+      "coordinates": []
     },
     "properties": {
       "name": "Musée d'Orsay",
-      "address": "1 Rue de la Légion d'Honneur, 75007 Paris",
-      "category": ["Musée"],
-      "social_network": [
-        { "instagram": "https://www.instagram.com/museeorsay/" }
+      "address": "",
+      "category": [
+        "musée"
       ],
-      "website": "https://www.musee-orsay.fr/",
-      "description": "Le musée d'Orsay est un musée abritant une vaste collection d'œuvres d'art impressionnistes et post-impressionnistes, logé dans une ancienne gare ferroviaire.",
-      "picture": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Paris_-_Mus%C3%A9e_d%E2%80%99Orsay_-_2018-09-09_-_IMG_2861.jpg/300px-Paris_-_Mus%C3%A9e_d%E2%80%99Orsay_-_2018-09-09_-_IMG_2861.jpg"
+      "social_network": [
+        {
+          "instagram": ""
+        }
+      ],
+      "website": "",
+      "description": "Un musée abritant une vaste collection d'œuvres d'art impressionnistes et post-impressionnistes, logé dans une ancienne gare ferroviaire.",
+      "picture": ""
     }
   },
   {
-    "type": "Feature",
     "geometry": {
       "type": "Point",
-      "coordinates": [2.3372, 48.8661]
-    },
-    "properties": {
-      "name": "Jardin des Tuileries",
-      "address": "Rue de Rivoli, 75001 Paris",
-      "category": ["Jardin"],
-      "social_network": [
-        { "instagram": "https://www.instagram.com/jardindes_tuileries/" }
-      ],
-      "website": "https://en.parisinfo.com/paris-museum-monument/71440/Jardin-des-Tuileries",
-      "description": "Le Jardin des Tuileries est un magnifique jardin à la française situé entre le Louvre et la place de la Concorde, offrant des promenades paisibles et des vues sur des sculptures classiques.",
-      "picture": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Paris_Tuileries_Garden_Facepalm_IMG_8662.jpg/300px-Paris_Tuileries_Garden_Facepalm_IMG_8662.jpg"
-    }
-  },
-  {
-    "type": "Feature",
-    "geometry": {
-      "type": "Point",
-      "coordinates": [2.3341, 48.8606]
+      "coordinates": []
     },
     "properties": {
       "name": "Musée de l'Orangerie",
-      "address": "Jardin des Tuileries, 75001 Paris",
-      "category": ["Musée"],
-      "social_network": [
-        { "instagram": "https://www.instagram.com/museeorangerie/" }
+      "address": "",
+      "category": [
+        "musée"
       ],
-      "website": "https://www.musee-orangerie.fr/",
-      "description": "Le musée de l'Orangerie est un musée abritant les célèbres Nymphéas de Claude Monet ainsi que d'autres œuvres d'art impressionnistes et post-impressionnistes.",
-      "picture": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Paris_-_Mus%C3%A9e_de_l%27Orangerie_-_2018-09-09_-_IMG_2818.jpg/300px-Paris_-_Mus%C3%A9e_de_l%27Orangerie_-_2018-09-09_-_IMG_2818.jpg"
+      "social_network": [
+        {
+          "instagram": ""
+        }
+      ],
+      "website": "",
+      "description": "Un musée abritant les célèbres Nymphéas de Claude Monet ainsi que d'autres œuvres d'art impressionnistes et post-impressionnistes.",
+      "picture": ""
     }
   },
   {
-    "type": "Feature",
     "geometry": {
       "type": "Point",
-      "coordinates": [2.3515, 48.8566]
+      "coordinates": []
     },
     "properties": {
       "name": "Panthéon",
-      "address": "Place du Panthéon, 75005 Paris",
-      "category": ["Monument"],
-      "social_network": [
-        { "instagram": "https://www.instagram.com/le_panth%C3%A9on/" }
+      "address": "",
+      "category": [
+        "monument"
       ],
-      "website": "https://www.paris-pantheon.fr/",
-      "description": "Le Panthéon est un monument néo-classique abritant les tombes de nombreuses figures historiques françaises, dont Voltaire, Rousseau et Victor Hugo.",
-      "picture": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Pantheon_-_Paris%2C_France_-_Diliff.jpg/300px-Pantheon_-_Paris%2C_France_-_Diliff.jpg"
+      "social_network": [
+        {
+          "instagram": ""
+        }
+      ],
+      "website": "",
+      "description": "Un monument néo-classique abritant les tombes de nombreuses figures historiques françaises, dont Voltaire, Rousseau et Victor Hugo.",
+      "picture": ""
     }
   },
   {
-    "type": "Feature",
     "geometry": {
       "type": "Point",
-      "coordinates": [2.358, 48.8567]
+      "coordinates": []
     },
     "properties": {
       "name": "Île Saint-Louis",
-      "address": "Île Saint-Louis, 75004 Paris",
-      "category": ["Île"],
-      "social_network": [
-        { "instagram": "https://www.instagram.com/explore/tags/ilesaintlouis/" }
+      "address": "",
+      "category": [
+        "île"
       ],
-      "website": "https://en.parisinfo.com/transport/73274/Ile-Saint-Louis",
-      "description": "L'Île Saint-Louis est une charmante île sur la Seine, célèbre pour ses rues pavées, ses boutiques artisanales et ses vues sur la ville.",
-      "picture": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Seine_2011_05_09.jpg/300px-Seine_2011_05_09.jpg"
+      "social_network": [
+        {
+          "instagram": ""
+        }
+      ],
+      "website": "",
+      "description": "Une charmante île sur la Seine, célèbre pour ses rues pavées, ses boutiques artisanales et ses vues sur la ville.",
+      "picture": ""
+    }
+  },
+  {
+    "geometry": {
+      "type": "Point",
+      "coordinates": []
+    },
+    "properties": {
+      "name": "Opéra Garnier",
+      "address": "",
+      "category": [
+        "opéra"
+      ],
+      "social_network": [
+        {
+          "instagram": ""
+        }
+      ],
+      "website": "",
+      "description": "Un somptueux opéra de style néo-baroque, célèbre pour son architecture spectaculaire et ses spectacles d'opéra et de ballet.",
+      "picture": ""
+    }
+  },
+  {
+    "geometry": {
+      "type": "Point",
+      "coordinates": []
+    },
+    "properties": {
+      "name": "Musée Rodin",
+      "address": "",
+      "category": [
+        "musée"
+      ],
+      "social_network": [
+        {
+          "instagram": ""
+        }
+      ],
+      "website": "",
+      "description": "Un musée dédié à l'œuvre du sculpteur français Auguste Rodin, situé dans un hôtel particulier entouré de jardins où sont exposées certaines de ses sculptures les plus célèbres.",
+      "picture": ""
+    }
+  },
+  {
+    "geometry": {
+      "type": "Point",
+      "coordinates": []
+    },
+    "properties": {
+      "name": "Centre Pompidou",
+      "address": "",
+      "category": [
+        "musée"
+      ],
+      "social_network": [
+        {
+          "instagram": ""
+        }
+      ],
+      "website": "",
+      "description": "Un centre culturel et artistique abritant le musée national d'art moderne, ainsi que des expositions temporaires, des bibliothèques et des espaces dédiés à la musique et au cinéma.",
+      "picture": ""
+    }
+  },
+  {
+    "geometry": {
+      "type": "Point",
+      "coordinates": []
+    },
+    "properties": {
+      "name": "Le Marais",
+      "address": "",
+      "category": [
+        "quartier"
+      ],
+      "social_network": [
+        {
+          "instagram": ""
+        }
+      ],
+      "website": "",
+      "description": "Un quartier historique de Paris, connu pour ses ruelles pittoresques, ses hôtels particuliers, ses galeries d'art et ses boutiques branchées.",
+      "picture": ""
+    }
+  },
+  {
+    "geometry": {
+      "type": "Point",
+      "coordinates": []
+    },
+    "properties": {
+      "name": "Place des Vosges",
+      "address": "",
+      "category": [
+        "place"
+      ],
+      "social_network": [
+        {
+          "instagram": ""
+        }
+      ],
+      "website": "",
+      "description": "La plus ancienne place de Paris, célèbre pour son architecture élégante et ses arcades, entourée de bâtiments du XVIIe siècle.",
+      "picture": ""
+    }
+  },
+  {
+    "geometry": {
+      "type": "Point",
+      "coordinates": []
+    },
+    "properties": {
+      "name": "Musée Carnavalet",
+      "address": "",
+      "category": [
+        "musée"
+      ],
+      "social_network": [
+        {
+          "instagram": ""
+        }
+      ],
+      "website": "",
+      "description": "Un musée consacré à l'histoire de Paris, situé dans un hôtel particulier du Marais, présentant des collections d'œuvres d'art, de mobilier et d'objets historiques.",
+      "picture": ""
+    }
+  },
+  {
+    "geometry": {
+      "type": "Point",
+      "coordinates": []
+    },
+    "properties": {
+      "name": "Place Vendôme",
+      "address": "",
+      "category": [
+        "place"
+      ],
+      "social_network": [
+        {
+          "instagram": ""
+        }
+      ],
+      "website": "",
+      "description": "Une place prestigieuse bordée de boutiques de luxe et de grands hôtels, dominée par la colonne Vendôme érigée en l'honneur de la victoire de Napoléon à Austerlitz.",
+      "picture": ""
+    }
+  },
+  {
+    "geometry": {
+      "type": "Point",
+      "coordinates": []
+    },
+    "properties": {
+      "name": "Canal Saint-Martin",
+      "address": "",
+      "category": [
+        "canal"
+      ],
+      "social_network": [
+        {
+          "instagram": ""
+        }
+      ],
+      "website": "",
+      "description": "Un canal pittoresque traversant les quartiers du 10e et 11e arrondissement, bordé de cafés, de restaurants et de boutiques branchées.",
+      "picture": ""
+    }
+  },
+  {
+    "geometry": {
+      "type": "Point",
+      "coordinates": []
+    },
+    "properties": {
+      "name": "Musée de l'Armée (Hôtel des Invalides)",
+      "address": "",
+      "category": [
+        "musée"
+      ],
+      "social_network": [
+        {
+          "instagram": ""
+        }
+      ],
+      "website": "",
+      "description": "Un musée d'histoire militaire abritant une vaste collection d'armes, d'uniformes et de souvenirs militaires, situé dans un monument historique.",
+      "picture": ""
+    }
+  },
+  {
+    "geometry": {
+      "type": "Point",
+      "coordinates": []
+    },
+    "properties": {
+      "name": "Bibliothèque nationale de France (Site Richelieu-Louvois)",
+      "address": "",
+      "category": [
+        "bibliothèque"
+      ],
+      "social_network": [
+        {
+          "instagram": ""
+        }
+      ],
+      "website": "",
+      "description": "Une bibliothèque prestigieuse abritant une vaste collection de livres, de manuscrits et de documents historiques, située dans un bâtiment néo-classique du XVIIe siècle.",
+      "picture": ""
+    }
+  },
+  {
+    "geometry": {
+      "type": "Point",
+      "coordinates": []
+    },
+    "properties": {
+      "name": "Place de la Concorde",
+      "address": "",
+      "category": [
+        "place"
+      ],
+      "social_network": [
+        {
+          "instagram": ""
+        }
+      ],
+      "website": "",
+      "description": "La plus grande place de Paris, célèbre pour son obélisque égyptien, ses fontaines et ses statues, offrant une vue panoramique sur les Champs-Élysées et le Jardin des Tuileries.",
+      "picture": ""
+    }
+  },
+  {
+    "geometry": {
+      "type": "Point",
+      "coordinates": []
+    },
+    "properties": {
+      "name": "Musée des Arts et Métiers",
+      "address": "",
+      "category": [
+        "musée"
+      ],
+      "social_network": [
+        {
+          "instagram": ""
+        }
+      ],
+      "website": "",
+      "description": "Un musée des sciences et des techniques abritant une impressionnante collection d'instruments scientifiques, de machines et d'objets technologiques historiques.",
+      "picture": ""
+    }
+  },
+  {
+    "geometry": {
+      "type": "Point",
+      "coordinates": []
+    },
+    "properties": {
+      "name": "Musée Grévin",
+      "address": "",
+      "category": [
+        "musée"
+      ],
+      "social_network": [
+        {
+          "instagram": ""
+        }
+      ],
+      "website": "",
+      "description": "Un musée de cire présentant des personnages célèbres de l'histoire, de la politique, du sport et du divertissement, offrant une expérience ludique et interactive.",
+      "picture": ""
+    }
+  },
+  {
+    "geometry": {
+      "type": "Point",
+      "coordinates": []
+    },
+    "properties": {
+      "name": "Place de la Bastille",
+      "address": "",
+      "category": [
+        "place"
+      ],
+      "social_network": [
+        {
+          "instagram": ""
+        }
+      ],
+      "website": "",
+      "description": "Une place historique associée à la Révolution française, où se trouve la colonne de Juillet commémorant les événements de 1830, entourée de cafés, de théâtres et de boutiques.",
+      "picture": ""
+    }
+  },
+  {
+    "geometry": {
+      "type": "Point",
+      "coordinates": []
+    },
+    "properties": {
+      "name": "Quartier Latin",
+      "address": "",
+      "category": [
+        "quartier"
+      ],
+      "social_network": [
+        {
+          "instagram": ""
+        }
+      ],
+      "website": "",
+      "description": "Un quartier animé de Paris, connu pour ses universités, ses librairies, ses cafés et ses rues étroites remplies de charme et d'histoire.",
+      "picture": ""
+    }
+  },
+  {
+    "geometry": {
+      "type": "Point",
+      "coordinates": []
+    },
+    "properties": {
+      "name": "Musée Picasso",
+      "address": "",
+      "category": [
+        "musée"
+      ],
+      "social_network": [
+        {
+          "instagram": ""
+        }
+      ],
+      "website": "",
+      "description": "Un musée dédié à l'œuvre du célèbre artiste espagnol Pablo Picasso, abritant une vaste collection de peintures, de sculptures, de dessins et d'archives.",
+      "picture": ""
+    }
+  },
+  {
+    "geometry": {
+      "type": "Point",
+      "coordinates": []
+    },
+    "properties": {
+      "name": "Hôtel de Ville",
+      "address": "",
+      "category": [
+        "monument"
+      ],
+      "social_network": [
+        {
+          "instagram": ""
+        }
+      ],
+      "website": "",
+      "description": "Le bâtiment de la mairie de Paris, un magnifique édifice de style néo-Renaissance, souvent utilisé pour des expositions, des concerts et des événements culturels.",
+      "picture": ""
+    }
+  },
+  {
+    "geometry": {
+      "type": "Point",
+      "coordinates": []
+    },
+    "properties": {
+      "name": "La Défense",
+      "address": "",
+      "category": [
+        "quartier"
+      ],
+      "social_network": [
+        {
+          "instagram": ""
+        }
+      ],
+      "website": "",
+      "description": "Le quartier d'affaires moderne de Paris, célèbre pour ses gratte-ciel, son centre commercial géant et son impressionnante arche de la Défense.",
+      "picture": ""
+    }
+  },
+  {
+    "geometry": {
+      "type": "Point",
+      "coordinates": []
+    },
+    "properties": {
+      "name": "Musée de l'Orangerie",
+      "address": "",
+      "category": [
+        "musée"
+      ],
+      "social_network": [
+        {
+          "instagram": ""
+        }
+      ],
+      "website": "",
+      "description": "Un musée situé dans les Jardins des Tuileries, abritant les célèbres Nymphéas de Claude Monet ainsi que d'autres œuvres d'art impressionnistes et post-impressionnistes.",
+      "picture": ""
+    }
+  },
+  {
+    "geometry": {
+      "type": "Point",
+      "coordinates": []
+    },
+    "properties": {
+      "name": "Pont Alexandre III",
+      "address": "",
+      "category": [
+        "pont"
+      ],
+      "social_network": [
+        {
+          "instagram": ""
+        }
+      ],
+      "website": "",
+      "description": "Un pont emblématique de Paris, richement décoré avec des sculptures, des lampadaires en bronze et une vue magnifique sur la Seine et les Invalides.",
+      "picture": ""
+    }
+  },
+  {
+    "geometry": {
+      "type": "Point",
+      "coordinates": []
+    },
+    "properties": {
+      "name": "Musée du Quai Branly - Jacques Chirac",
+      "address": "",
+      "category": [
+        "musée"
+      ],
+      "social_network": [
+        {
+          "instagram": ""
+        }
+      ],
+      "website": "",
+      "description": "Un musée des arts et des civilisations d'Afrique, d'Asie, d'Océanie et des Amériques, conçu par l'architecte Jean Nouvel, abritant une collection éclectique d'objets et d'artefacts.",
+      "picture": ""
+    }
+  },
+  {
+    "geometry": {
+      "type": "Point",
+      "coordinates": []
+    },
+    "properties": {
+      "name": "Palais-Royal",
+      "address": "",
+      "category": [
+        "monument"
+      ],
+      "social_network": [
+        {
+          "instagram": ""
+        }
+      ],
+      "website": "",
+      "description": "Un palais historique et ses jardins, situé près du Louvre, célèbre pour ses colonnes de Daniel Buren dans la cour d'honneur et ses arcades bordées de boutiques élégantes.",
+      "picture": ""
+    }
+  },
+  {
+    "geometry": {
+      "type": "Point",
+      "coordinates": []
+    },
+    "properties": {
+      "name": "Musée de Cluny - Musée national du Moyen Âge",
+      "address": "",
+      "category": [
+        "musée"
+      ],
+      "social_network": [
+        {
+          "instagram": ""
+        }
+      ],
+      "website": "",
+      "description": "Un musée situé dans un ancien hôtel particulier médiéval, abritant une collection d'art et d'objets du Moyen Âge, dont la célèbre tapisserie de la Dame à la licorne.",
+      "picture": ""
+    }
+  },
+  {
+    "geometry": {
+      "type": "Point",
+      "coordinates": []
+    },
+    "properties": {
+      "name": "Sainte-Chapelle",
+      "address": "",
+      "category": [
+        "monument"
+      ],
+      "social_network": [
+        {
+          "instagram": ""
+        }
+      ],
+      "website": "",
+      "description": "Une chapelle gothique située sur l'île de la Cité, célèbre pour ses vitraux colorés et ses magnifiques décorations médiévales.",
+      "picture": ""
+    }
+  },
+  {
+    "geometry": {
+      "type": "Point",
+      "coordinates": []
+    },
+    "properties": {
+      "name": "La Conciergerie",
+      "address": "",
+      "category": [
+        "monument"
+      ],
+      "social_network": [
+        {
+          "instagram": ""
+        }
+      ],
+      "website": "",
+      "description": "Ancienne résidence royale transformée en prison pendant la Révolution française, où Marie-Antoinette a été détenue avant son exécution, maintenant ouverte au public comme musée.",
+      "picture": ""
+    }
+  },
+  {
+    "geometry": {
+      "type": "Point",
+      "coordinates": []
+    },
+    "properties": {
+      "name": "Musée Jacquemart-André",
+      "address": "",
+      "category": [
+        "musée"
+      ],
+      "social_network": [
+        {
+          "instagram": ""
+        }
+      ],
+      "website": "",
+      "description": "Un musée situé dans un somptueux hôtel particulier du XIXe siècle, abritant une collection d'œuvres d'art, de mobilier et d'objets précieux.",
+      "picture": ""
+    }
+  },
+  {
+    "geometry": {
+      "type": "Point",
+      "coordinates": []
+    },
+    "properties": {
+      "name": "Basilique Saint-Denis",
+      "address": "",
+      "category": [
+        "monument"
+      ],
+      "social_network": [
+        {
+          "instagram": ""
+        }
+      ],
+      "website": "",
+      "description": "Une basilique gothique située dans la banlieue nord de Paris, abritant les tombes des rois et des reines de France, considérée comme le berceau de l'art gothique.",
+      "picture": ""
+    }
+  },
+  {
+    "geometry": {
+      "type": "Point",
+      "coordinates": []
+    },
+    "properties": {
+      "name": "La Cité des Sciences et de l'Industrie",
+      "address": "",
+      "category": [
+        "musée"
+      ],
+      "social_network": [
+        {
+          "instagram": ""
+        }
+      ],
+      "website": "",
+      "description": "Un grand complexe de musées et d'expositions scientifiques, offrant des activités interactives et éducatives pour les enfants et les adultes.",
+      "picture": ""
+    }
+  },
+  {
+    "geometry": {
+      "type": "Point",
+      "coordinates": []
+    },
+    "properties": {
+      "name": "Musée de la Vie romantique",
+      "address": "",
+      "category": [
+        "musée"
+      ],
+      "social_network": [
+        {
+          "instagram": ""
+        }
+      ],
+      "website": "",
+      "description": "Un musée situé dans un charmant hôtel particulier du XIXe siècle, consacré à l'art et à la culture de l'époque romantique.",
+      "picture": ""
+    }
+  },
+  {
+    "geometry": {
+      "type": "Point",
+      "coordinates": []
+    },
+    "properties": {
+      "name": "Bateaux-Mouches sur la Seine",
+      "address": "",
+      "category": [
+        "activité"
+      ],
+      "social_network": [
+        {
+          "instagram": ""
+        }
+      ],
+      "website": "",
+      "description": "Des croisières en bateau sur la Seine offrant une vue panoramique sur les principaux monuments de Paris, notamment la Tour Eiffel, Notre-Dame et le Louvre.",
+      "picture": ""
+    }
+  },
+  {
+    "geometry": {
+      "type": "Point",
+      "coordinates": []
+    },
+    "properties": {
+      "name": "Musée de Montmartre",
+      "address": "",
+      "category": [
+        "musée"
+      ],
+      "social_network": [
+        {
+          "instagram": ""
+        }
+      ],
+      "website": "",
+      "description": "Un musée situé dans l'un des plus anciens bâtiments de Montmartre, présentant l'histoire et l'art du quartier, ainsi que des expositions sur des artistes comme Toulouse-Lautrec et Renoir.",
+      "picture": ""
+    }
+  },
+  {
+    "geometry": {
+      "type": "Point",
+      "coordinates": []
+    },
+    "properties": {
+      "name": "Musée de l'Homme",
+      "address": "",
+      "category": [
+        "musée"
+      ],
+      "social_network": [
+        {
+          "instagram": ""
+        }
+      ],
+      "website": "",
+      "description": "Un musée d'anthropologie situé dans le palais de Chaillot, abritant des collections sur l'évolution de l'homme, les sociétés humaines et la diversité culturelle.",
+      "picture": ""
+    }
+  },
+  {
+    "geometry": {
+      "type": "Point",
+      "coordinates": []
+    },
+    "properties": {
+      "name": "Musée de la Chasse et de la Nature",
+      "address": "",
+      "category": [
+        "musée"
+      ],
+      "social_network": [
+        {
+          "instagram": ""
+        }
+      ],
+      "website": "",
+      "description": "Un musée consacré à la chasse et à la relation entre l'homme et la nature, situé dans un hôtel particulier du XVIIIe siècle, avec des collections d'œuvres d'art, de trophées et d'objets liés à la chasse.",
+      "picture": ""
+    }
+  },
+  {
+    "geometry": {
+      "type": "Point",
+      "coordinates": []
+    },
+    "properties": {
+      "name": "Musée des Égouts de Paris",
+      "address": "",
+      "category": [
+        "musée"
+      ],
+      "social_network": [
+        {
+          "instagram": ""
+        }
+      ],
+      "website": "",
+      "description": "Un musée insolite situé dans les égouts de Paris, offrant une visite fascinante de l'histoire et du fonctionnement du système d'égouts de la ville.",
+      "picture": ""
+    }
+  },
+  {
+    "geometry": {
+      "type": "Point",
+      "coordinates": []
+    },
+    "properties": {
+      "name": "Musée de la Poupée",
+      "address": "",
+      "category": [
+        "musée"
+      ],
+      "social_network": [
+        {
+          "instagram": ""
+        }
+      ],
+      "website": "",
+      "description": "Un musée dédié à l'art et à l'histoire des poupées, avec une collection impressionnante de poupées anciennes, de jouets et d'accessoires.",
+      "picture": ""
+    }
+  },
+  {
+    "geometry": {
+      "type": "Point",
+      "coordinates": []
+    },
+    "properties": {
+      "name": "Le Marché aux Puces de Saint-Ouen",
+      "address": "",
+      "category": [
+        "marché"
+      ],
+      "social_network": [
+        {
+          "instagram": ""
+        }
+      ],
+      "website": "",
+      "description": "Le plus grand marché aux puces d'Europe, offrant une expérience de shopping unique avec des stands vendant des antiquités, des vêtements vintage, des meubles et des objets insolites.",
+      "picture": ""
+    }
+  },
+  {
+    "geometry": {
+      "type": "Point",
+      "coordinates": []
+    },
+    "properties": {
+      "name": "Le Musée de la Magie et le Musée des Automates",
+      "address": "",
+      "category": [
+        "musée"
+      ],
+      "social_network": [
+        {
+          "instagram": ""
+        }
+      ],
+      "website": "",
+      "description": "Deux musées situés dans le même bâtiment, offrant des expositions sur l'histoire de la magie et des automates, avec des démonstrations de tours de magie et des spectacles.",
+      "picture": ""
     }
   }
 ]
