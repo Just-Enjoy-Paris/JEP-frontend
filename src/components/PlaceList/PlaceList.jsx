@@ -9,7 +9,11 @@ export default function PlaceList() {
       {places.map((place, index) => (
         <PlaceCard
           place={place.properties}
+
+
+
           key={place._id}
+
           isLast={index === places.length - 1}
         />
       ))}

@@ -1,13 +1,33 @@
 import { useState } from "react"
 import "./LogForm.css"
+import axios from "axios"
 
 const LoginForm = () => {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
 
-  const handleSubmit = e => {
+  // eslint-disable-next-line no-unused-vars
+  const [user, setUser] = useState("")
+  // eslint-disable-next-line no-unused-vars
+  const [isAuthenticated, setIsAuthenticated] = useState(false)
+
+  const handleSubmit = async e => {
     e.preventDefault()
     // Traitement de la soumission du formulaire
+    try {
+      const response = await axios.post(
+        `${import.meta.env.VITE_API_URL}/login`,
+        { email: email, password: password },
+        { withCredentials: true }
+      )
+      setIsAuthenticated(true)
+      setUser(response)
+      // eslint-disable-next-line no-console
+      console.log(response)
+    } catch (error) {
+      // eslint-disable-next-line no-console, no-undef
+      console.log(response)
+    }
   }
 
   return (
