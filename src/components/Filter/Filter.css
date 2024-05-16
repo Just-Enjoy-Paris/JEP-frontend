@@ -1,31 +1,5 @@
-.filterBar {
-    color: white;
+.placesCategories {
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    margin: 15px;
-    align-items: center;
-}
-
-.filterMenu {
-    display: flex;
-    margin: 0 5px;
-}
-
-.filterMenu svg {
-    width: 26px;
-}
-
-.searchBar {
-    display: flex;
-    position: relative;
-}
-
-.searchIcon{
-    color: white,
-}
-
-.searchBar textarea {
-    height: 25px;
-    width: 200px;
+    flex-wrap: wrap;
 }
