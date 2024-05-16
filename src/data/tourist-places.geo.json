@@ -6,7 +6,7 @@
     },
     "properties": {
       "name": "Tour Eiffel",
-      "address": "",
+      "address": "Av. Gustave Eiffel, 75007 Paris",
       "category": [
         "monument"
       ],
@@ -27,7 +27,7 @@
     },
     "properties": {
       "name": "Musée du Louvre",
-      "address": "",
+      "address": "8 rue Sainte-Anne, 75001 Paris",
       "category": [
         "musée"
       ],
@@ -48,7 +48,7 @@
     },
     "properties": {
       "name": "Cathédrale Notre-Dame de Paris",
-      "address": "",
+      "address": "6 Parvis Notre-Dame - Pl. Jean-Paul II, 75004 Paris",
       "category": [
         "monument"
       ],
@@ -69,7 +69,7 @@
     },
     "properties": {
       "name": "Montmartre et la basilique du Sacré-Cœur",
-      "address": "",
+      "address": "35 Rue du Chevalier de la Barre, 75018 Paris",
       "category": [
         "quartier",
         "monument"
@@ -91,7 +91,7 @@
     },
     "properties": {
       "name": "Champs-Élysées et l'Arc de Triomphe",
-      "address": "",
+      "address": "Pl. Charles de Gaulle, 75008 Paris",
       "category": [
         "avenue",
         "monument"
@@ -113,7 +113,7 @@
     },
     "properties": {
       "name": "Musée d'Orsay",
-      "address": "",
+      "address": "Esplanade Valéry Giscard d'Estaing, 75007 Paris",
       "category": [
         "musée"
       ],
@@ -134,7 +134,7 @@
     },
     "properties": {
       "name": "Musée de l'Orangerie",
-      "address": "",
+      "address": "Jardin des Tuileries, 75001 Paris",
       "category": [
         "musée"
       ],
@@ -155,7 +155,7 @@
     },
     "properties": {
       "name": "Panthéon",
-      "address": "",
+      "address": "Pl. du Panthéon, 75005 Paris",
       "category": [
         "monument"
       ],
@@ -176,7 +176,7 @@
     },
     "properties": {
       "name": "Île Saint-Louis",
-      "address": "",
+      "address": "21 Rue des Deux Ponts, 75004 Paris",
       "category": [
         "île"
       ],
@@ -197,7 +197,7 @@
     },
     "properties": {
       "name": "Opéra Garnier",
-      "address": "",
+      "address": "Pl. de l'Opéra, 75009 Paris",
       "category": [
         "opéra"
       ],
@@ -218,7 +218,7 @@
     },
     "properties": {
       "name": "Musée Rodin",
-      "address": "",
+      "address": "77 Rue de Varenne, 75007 Paris",
       "category": [
         "musée"
       ],
@@ -239,7 +239,7 @@
     },
     "properties": {
       "name": "Centre Pompidou",
-      "address": "",
+      "address": "Pl. Georges-Pompidou, 75004 Paris",
       "category": [
         "musée"
       ],
@@ -260,7 +260,7 @@
     },
     "properties": {
       "name": "Le Marais",
-      "address": "",
+      "address": "54 Rue Vieille du Temple, 75003 Paris",
       "category": [
         "quartier"
       ],
@@ -281,7 +281,7 @@
     },
     "properties": {
       "name": "Place des Vosges",
-      "address": "",
+      "address": "Pl. des Vosges, 75004 Paris",
       "category": [
         "place"
       ],
@@ -302,7 +302,7 @@
     },
     "properties": {
       "name": "Musée Carnavalet",
-      "address": "",
+      "address": "23 Rue de Sévigné, 75003 Paris",
       "category": [
         "musée"
       ],
@@ -323,7 +323,7 @@
     },
     "properties": {
       "name": "Place Vendôme",
-      "address": "",
+      "address": "14 Pl. Vendôme, 75001 Paris",
       "category": [
         "place"
       ],
@@ -344,7 +344,7 @@
     },
     "properties": {
       "name": "Canal Saint-Martin",
-      "address": "",
+      "address": "115-109 Quai de Valmy, 75010 Paris",
       "category": [
         "canal"
       ],
@@ -365,7 +365,7 @@
     },
     "properties": {
       "name": "Musée de l'Armée (Hôtel des Invalides)",
-      "address": "",
+      "address": "129 Rue de Grenelle, 75007 Paris",
       "category": [
         "musée"
       ],
@@ -386,7 +386,7 @@
     },
     "properties": {
       "name": "Bibliothèque nationale de France (Site Richelieu-Louvois)",
-      "address": "",
+      "address": "5 Rue Vivienne, 75002 Paris",
       "category": [
         "bibliothèque"
       ],
@@ -407,7 +407,7 @@
     },
     "properties": {
       "name": "Place de la Concorde",
-      "address": "",
+      "address": "Pl. de la Concorde",
       "category": [
         "place"
       ],
@@ -428,7 +428,7 @@
     },
     "properties": {
       "name": "Musée des Arts et Métiers",
-      "address": "",
+      "address": "60 Rue Réaumur, 75003 Paris",
       "category": [
         "musée"
       ],
@@ -449,7 +449,7 @@
     },
     "properties": {
       "name": "Musée Grévin",
-      "address": "",
+      "address": "10 Bd Montmartre, 75009 Paris",
       "category": [
         "musée"
       ],
@@ -470,7 +470,7 @@
     },
     "properties": {
       "name": "Place de la Bastille",
-      "address": "",
+      "address": "Pl. de la Bastille, 75004 Paris",
       "category": [
         "place"
       ],
@@ -491,7 +491,7 @@
     },
     "properties": {
       "name": "Quartier Latin",
-      "address": "",
+      "address": "1 Rue Mouffetard, 75005 Paris",
       "category": [
         "quartier"
       ],
@@ -512,7 +512,7 @@
     },
     "properties": {
       "name": "Musée Picasso",
-      "address": "",
+      "address": "5 Rue de Thorigny, 75003 Paris",
       "category": [
         "musée"
       ],
@@ -533,7 +533,7 @@
     },
     "properties": {
       "name": "Hôtel de Ville",
-      "address": "",
+      "address": "Pl. de l'Hôtel de Ville, 75004 Paris",
       "category": [
         "monument"
       ],
@@ -554,7 +554,7 @@
     },
     "properties": {
       "name": "La Défense",
-      "address": "",
+      "address": "1 parvis de La Défense, 92800 Puteaux",
       "category": [
         "quartier"
       ],
@@ -575,7 +575,7 @@
     },
     "properties": {
       "name": "Pont Alexandre III",
-      "address": "",
+      "address": "Pont Alexandre III, 75008 Paris",
       "category": [
         "pont"
       ],
@@ -596,7 +596,7 @@
     },
     "properties": {
       "name": "Musée du Quai Branly - Jacques Chirac",
-      "address": "",
+      "address": "37 Quai Jacques Chirac, 75007 Paris",
       "category": [
         "musée"
       ],
@@ -613,32 +613,11 @@
   {
     "geometry": {
       "type": "Point",
-      "coordinates": [2.337784638982876, 48.865099311800485]
-    },
-    "properties": {
-      "name": "Palais-Royal",
-      "address": "",
-      "category": [
-        "monument"
-      ],
-      "social_network": [
-        {
-          "instagram": ""
-        }
-      ],
-      "website": "",
-      "description": "Un palais historique et ses jardins, situé près du Louvre, célèbre pour ses colonnes de Daniel Buren dans la cour d'honneur et ses arcades bordées de boutiques élégantes.",
-      "picture": ""
-    }
-  },
-  {
-    "geometry": {
-      "type": "Point",
       "coordinates": [2.3440807966541093, 48.85063152808468]
     },
     "properties": {
       "name": "Musée de Cluny - Musée national du Moyen Âge",
-      "address": "",
+      "address": "28 Rue du Sommerard, 75005 Paris",
       "category": [
         "musée"
       ],
@@ -659,7 +638,7 @@
     },
     "properties": {
       "name": "Sainte-Chapelle",
-      "address": "",
+      "address": "10 Bd du Palais, 75001 Paris",
       "category": [
         "monument"
       ],
@@ -680,7 +659,7 @@
     },
     "properties": {
       "name": "La Conciergerie",
-      "address": "",
+      "address": "2 Bd du Palais, 75001 Paris",
       "category": [
         "monument"
       ],
@@ -701,7 +680,7 @@
     },
     "properties": {
       "name": "Musée Jacquemart-André",
-      "address": "",
+      "address": "158 Bd Haussmann, 75008 Paris",
       "category": [
         "musée"
       ],
@@ -722,13 +701,13 @@
     },
     "properties": {
       "name": "Basilique Saint-Denis",
-      "address": "",
+      "address": "1 Rue de la Légion d'Honneur, 93200 Saint-Denis",
       "category": [
         "monument"
       ],
       "social_network": [
         {
-          "instagram": ""
+          "instagram": "-------------A REVOIR------------"
         }
       ],
       "website": "",
@@ -743,7 +722,7 @@
     },
     "properties": {
       "name": "La Cité des Sciences et de l'Industrie",
-      "address": "",
+      "address": "30 Av. Corentin Cariou, 75019 Paris",
       "category": [
         "musée"
       ],
@@ -764,7 +743,7 @@
     },
     "properties": {
       "name": "Musée de la Vie romantique",
-      "address": "",
+      "address": "16 Rue Chaptal, 75009 Paris",
       "category": [
         "musée"
       ],
@@ -785,7 +764,7 @@
     },
     "properties": {
       "name": "Bateaux-Mouches sur la Seine",
-      "address": "",
+      "address": "Port de la Conférence, 75008 Paris",
       "category": [
         "activité"
       ],
@@ -806,7 +785,7 @@
     },
     "properties": {
       "name": "Musée de Montmartre",
-      "address": "",
+      "address": "12 Rue Cortot, 75018 Paris",
       "category": [
         "musée"
       ],
@@ -827,7 +806,7 @@
     },
     "properties": {
       "name": "Musée de l'Homme",
-      "address": "",
+      "address": "17 Pl. du Trocadéro et du 11 Novembre, 75116 Paris",
       "category": [
         "musée"
       ],
@@ -848,7 +827,7 @@
     },
     "properties": {
       "name": "Musée de la Chasse et de la Nature",
-      "address": "",
+      "address": "62 Rue des Archives, 75003 Paris",
       "category": [
         "musée"
       ],
@@ -869,7 +848,7 @@
     },
     "properties": {
       "name": "Musée des Égouts de Paris",
-      "address": "",
+      "address": "Esplanade Habib Bourguiba, Pont de l'Alma, 75007 Paris",
       "category": [
         "musée"
       ],
@@ -890,7 +869,7 @@
     },
     "properties": {
       "name": "Le Marché aux Puces de Saint-Ouen",
-      "address": "",
+      "address": "110 Rue des Rosiers, 93400 Saint-Ouen-sur-Seine",
       "category": [
         "marché"
       ],
@@ -911,7 +890,7 @@
     },
     "properties": {
       "name": "Le Musée de la Magie et le Musée des Automates",
-      "address": "",
+      "address": "11 Rue Saint-Paul, 75004 Paris",
       "category": [
         "musée"
       ],
