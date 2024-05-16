@@ -48,7 +48,7 @@
     },
     "properties": {
       "name": "Cathédrale Notre-Dame de Paris",
-      "address": "6 Parvis Notre-Dame - Pl. Jean-Paul II, 75004 Paris",
+      "address": "6 Parvis Notre-Dame - Pl Jean-Paul II, 75004 Paris",
       "category": [
         "monument"
       ],
@@ -91,7 +91,7 @@
     },
     "properties": {
       "name": "Champs-Élysées et l'Arc de Triomphe",
-      "address": "Pl. Charles de Gaulle, 75008 Paris",
+      "address": "Pl Charles de Gaulle, 75008 Paris",
       "category": [
         "avenue",
         "monument"
@@ -155,7 +155,7 @@
     },
     "properties": {
       "name": "Panthéon",
-      "address": "Pl. du Panthéon, 75005 Paris",
+      "address": "Pl du Panthéon, 75005 Paris",
       "category": [
         "monument"
       ],
@@ -197,7 +197,7 @@
     },
     "properties": {
       "name": "Opéra Garnier",
-      "address": "Pl. de l'Opéra, 75009 Paris",
+      "address": "Pl de l'Opéra, 75009 Paris",
       "category": [
         "opéra"
       ],
@@ -239,7 +239,7 @@
     },
     "properties": {
       "name": "Centre Pompidou",
-      "address": "Pl. Georges-Pompidou, 75004 Paris",
+      "address": "Pl Georges-Pompidou, 75004 Paris",
       "category": [
         "musée"
       ],
@@ -281,7 +281,7 @@
     },
     "properties": {
       "name": "Place des Vosges",
-      "address": "Pl. des Vosges, 75004 Paris",
+      "address": "Pl des Vosges, 75004 Paris",
       "category": [
         "place"
       ],
@@ -323,7 +323,7 @@
     },
     "properties": {
       "name": "Place Vendôme",
-      "address": "14 Pl. Vendôme, 75001 Paris",
+      "address": "14 Pl Vendôme, 75001 Paris",
       "category": [
         "place"
       ],
@@ -407,7 +407,7 @@
     },
     "properties": {
       "name": "Place de la Concorde",
-      "address": "Pl. de la Concorde",
+      "address": "Pl de la Concorde",
       "category": [
         "place"
       ],
@@ -470,7 +470,7 @@
     },
     "properties": {
       "name": "Place de la Bastille",
-      "address": "Pl. de la Bastille, 75004 Paris",
+      "address": "Pl de la Bastille, 75004 Paris",
       "category": [
         "place"
       ],
@@ -533,7 +533,7 @@
     },
     "properties": {
       "name": "Hôtel de Ville",
-      "address": "Pl. de l'Hôtel de Ville, 75004 Paris",
+      "address": "Pl de l'Hôtel de Ville, 75004 Paris",
       "category": [
         "monument"
       ],
@@ -806,7 +806,7 @@
     },
     "properties": {
       "name": "Musée de l'Homme",
-      "address": "17 Pl. du Trocadéro et du 11 Novembre, 75116 Paris",
+      "address": "17 Pl du Trocadéro et du 11 Novembre, 75116 Paris",
       "category": [
         "musée"
       ],
