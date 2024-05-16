@@ -1,0 +1,41 @@
+[
+    {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [2.3372, 48.8661]
+        },
+        "properties": {
+          "name": "Jardin des Tuileries",
+          "address": "Rue de Rivoli, 75001 Paris",
+          "category": ["Jardin"],
+          "social_network": [
+            { "instagram": "https://www.instagram.com/jardindes_tuileries/" }
+          ],
+          "website": "https://en.parisinfo.com/paris-museum-monument/71440/Jardin-des-Tuileries",
+          "description": "Le Jardin des Tuileries est un magnifique jardin à la française situé entre le Louvre et la place de la Concorde, offrant des promenades paisibles et des vues sur des sculptures classiques.",
+          "picture": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Paris_Tuileries_Garden_Facepalm_IMG_8662.jpg/300px-Paris_Tuileries_Garden_Facepalm_IMG_8662.jpg"
+        }
+      },
+      {
+        "geometry": {
+          "type": "Point",
+          "coordinates": [2.337784638982876, 48.865099311800485]
+        },
+        "properties": {
+          "name": "Palais-Royal",
+          "address": "2 Gal de Montpensier, 75001 Paris",
+          "category": [
+            "monument"
+          ],
+          "social_network": [
+            {
+              "instagram": ""
+            }
+          ],
+          "website": "",
+          "description": "Un palais historique et ses jardins, situé près du Louvre, célèbre pour ses colonnes de Daniel Buren dans la cour d'honneur et ses arcades bordées de boutiques élégantes.",
+          "picture": ""
+        }
+      }
+]
