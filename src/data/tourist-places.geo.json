@@ -2,10 +2,7 @@
   {
     "geometry": {
       "type": "Point",
-      "coordinates": [
-        2.294511,
-        48.858261
-      ]
+      "coordinates": [2.2944383813103615, 48.858663008336]
     },
     "properties": {
       "name": "Tour Eiffel",
@@ -26,10 +23,7 @@
   {
     "geometry": {
       "type": "Point",
-      "coordinates": [
-        2.340107,
-        48.860619
-      ]
+      "coordinates": [2.3375796236383612, 48.86084752809984]
     },
     "properties": {
       "name": "Musée du Louvre",
@@ -50,7 +44,7 @@
   {
     "geometry": {
       "type": "Point",
-      "coordinates": []
+      "coordinates": [2.3499450119984826, 48.85311642072705]
     },
     "properties": {
       "name": "Cathédrale Notre-Dame de Paris",
@@ -71,7 +65,7 @@
   {
     "geometry": {
       "type": "Point",
-      "coordinates": []
+      "coordinates": [2.343147212000544, 48.88696912365311]
     },
     "properties": {
       "name": "Montmartre et la basilique du Sacré-Cœur",
@@ -93,7 +87,7 @@
   {
     "geometry": {
       "type": "Point",
-      "coordinates": []
+      "coordinates": [2.295006038983425, 48.87391868941147]
     },
     "properties": {
       "name": "Champs-Élysées et l'Arc de Triomphe",
@@ -115,7 +109,7 @@
   {
     "geometry": {
       "type": "Point",
-      "coordinates": []
+      "coordinates": [2.326733058031628, 48.86015548023645]
     },
     "properties": {
       "name": "Musée d'Orsay",
@@ -136,7 +130,7 @@
   {
     "geometry": {
       "type": "Point",
-      "coordinates": []
+      "coordinates": [2.3226294813106962, 48.86402481308957]
     },
     "properties": {
       "name": "Musée de l'Orangerie",
@@ -157,7 +151,7 @@
   {
     "geometry": {
       "type": "Point",
-      "coordinates": []
+      "coordinates": [2.3464245254898954, 48.846334738511665]
     },
     "properties": {
       "name": "Panthéon",
@@ -178,7 +172,7 @@
   {
     "geometry": {
       "type": "Point",
-      "coordinates": []
+      "coordinates": [2.356554596654207, 48.85210822735995]
     },
     "properties": {
       "name": "Île Saint-Louis",
@@ -199,7 +193,7 @@
   {
     "geometry": {
       "type": "Point",
-      "coordinates": []
+      "coordinates": [2.3315799389833014, 48.87212492125974]
     },
     "properties": {
       "name": "Opéra Garnier",
@@ -220,7 +214,7 @@
   {
     "geometry": {
       "type": "Point",
-      "coordinates": []
+      "coordinates": [2.315835396654404, 48.85542717717504]
     },
     "properties": {
       "name": "Musée Rodin",
@@ -241,7 +235,7 @@
   {
     "geometry": {
       "type": "Point",
-      "coordinates": []
+      "coordinates": [2.352255725490774, 48.860776081197145]
     },
     "properties": {
       "name": "Centre Pompidou",
@@ -262,7 +256,7 @@
   {
     "geometry": {
       "type": "Point",
-      "coordinates": []
+      "coordinates": [2.3588037966546116, 48.85882992771426]
     },
     "properties": {
       "name": "Le Marais",
@@ -283,7 +277,7 @@
   {
     "geometry": {
       "type": "Point",
-      "coordinates": []
+      "coordinates": [2.3655373254904757, 48.85574549467509]
     },
     "properties": {
       "name": "Place des Vosges",
@@ -304,7 +298,7 @@
   {
     "geometry": {
       "type": "Point",
-      "coordinates": []
+      "coordinates": [2.3629008119987676, 48.85717981404598]
     },
     "properties": {
       "name": "Musée Carnavalet",
@@ -325,7 +319,7 @@
   {
     "geometry": {
       "type": "Point",
-      "coordinates": []
+      "coordinates": [2.3297405254912213, 48.86783161972076]
     },
     "properties": {
       "name": "Place Vendôme",
@@ -346,7 +340,7 @@
   {
     "geometry": {
       "type": "Point",
-      "coordinates": []
+      "coordinates": [2.3634111708906738, 48.875192479649456]
     },
     "properties": {
       "name": "Canal Saint-Martin",
@@ -367,7 +361,7 @@
   {
     "geometry": {
       "type": "Point",
-      "coordinates": []
+      "coordinates": [2.312939583162743, 48.858279546661635]
     },
     "properties": {
       "name": "Musée de l'Armée (Hôtel des Invalides)",
@@ -388,7 +382,7 @@
   {
     "geometry": {
       "type": "Point",
-      "coordinates": []
+      "coordinates": [2.3389817985075334, 48.867335591131614]
     },
     "properties": {
       "name": "Bibliothèque nationale de France (Site Richelieu-Louvois)",
@@ -409,7 +403,7 @@
   {
     "geometry": {
       "type": "Point",
-      "coordinates": []
+      "coordinates": [2.321214238982918, 48.86588361974433]
     },
     "properties": {
       "name": "Place de la Concorde",
@@ -430,7 +424,7 @@
   {
     "geometry": {
       "type": "Point",
-      "coordinates": []
+      "coordinates": [2.355615196655059, 48.866195139658394]
     },
     "properties": {
       "name": "Musée des Arts et Métiers",
@@ -451,7 +445,7 @@
   {
     "geometry": {
       "type": "Point",
-      "coordinates": []
+      "coordinates": [2.342156023639045, 48.87195773754527]
     },
     "properties": {
       "name": "Musée Grévin",
@@ -472,7 +466,7 @@
   {
     "geometry": {
       "type": "Point",
-      "coordinates": []
+      "coordinates": [2.3691663410970234, 48.85333609431414]
     },
     "properties": {
       "name": "Place de la Bastille",
@@ -493,7 +487,7 @@
   {
     "geometry": {
       "type": "Point",
-      "coordinates": []
+      "coordinates": [2.3493263254898205, 48.84511050506572]
     },
     "properties": {
       "name": "Quartier Latin",
@@ -514,7 +508,7 @@
   {
     "geometry": {
       "type": "Point",
-      "coordinates": []
+      "coordinates": [2.3626123522119475, 48.859796829879706]
     },
     "properties": {
       "name": "Musée Picasso",
@@ -535,7 +529,7 @@
   {
     "geometry": {
       "type": "Point",
-      "coordinates": []
+      "coordinates": [2.3523920389823414, 48.85661669234102]
     },
     "properties": {
       "name": "Hôtel de Ville",
@@ -556,7 +550,7 @@
   {
     "geometry": {
       "type": "Point",
-      "coordinates": []
+      "coordinates": [2.2433220254925654, 48.8904124102621]
     },
     "properties": {
       "name": "La Défense",
@@ -566,7 +560,7 @@
       ],
       "social_network": [
         {
-          "instagram": ""
+          "instagram": "-------------A REVOIR------------"
         }
       ],
       "website": "",
@@ -577,28 +571,7 @@
   {
     "geometry": {
       "type": "Point",
-      "coordinates": []
-    },
-    "properties": {
-      "name": "Musée de l'Orangerie",
-      "address": "",
-      "category": [
-        "musée"
-      ],
-      "social_network": [
-        {
-          "instagram": ""
-        }
-      ],
-      "website": "",
-      "description": "Un musée situé dans les Jardins des Tuileries, abritant les célèbres Nymphéas de Claude Monet ainsi que d'autres œuvres d'art impressionnistes et post-impressionnistes.",
-      "picture": ""
-    }
-  },
-  {
-    "geometry": {
-      "type": "Point",
-      "coordinates": []
+      "coordinates": [2.3135911831630858, 48.86402651452376]
     },
     "properties": {
       "name": "Pont Alexandre III",
@@ -619,7 +592,7 @@
   {
     "geometry": {
       "type": "Point",
-      "coordinates": []
+      "coordinates": [2.297765250622035, 48.86113944349554]
     },
     "properties": {
       "name": "Musée du Quai Branly - Jacques Chirac",
@@ -640,7 +613,7 @@
   {
     "geometry": {
       "type": "Point",
-      "coordinates": []
+      "coordinates": [2.337784638982876, 48.865099311800485]
     },
     "properties": {
       "name": "Palais-Royal",
@@ -661,7 +634,7 @@
   {
     "geometry": {
       "type": "Point",
-      "coordinates": []
+      "coordinates": [2.3440807966541093, 48.85063152808468]
     },
     "properties": {
       "name": "Musée de Cluny - Musée national du Moyen Âge",
@@ -682,7 +655,7 @@
   {
     "geometry": {
       "type": "Point",
-      "coordinates": []
+      "coordinates": [2.3449565579690677, 48.855487304304695]
     },
     "properties": {
       "name": "Sainte-Chapelle",
@@ -703,7 +676,7 @@
   {
     "geometry": {
       "type": "Point",
-      "coordinates": []
+      "coordinates": [2.3454758232348247, 48.856332005107475]
     },
     "properties": {
       "name": "La Conciergerie",
@@ -724,7 +697,7 @@
   {
     "geometry": {
       "type": "Point",
-      "coordinates": []
+      "coordinates": [2.3105507426883216, 48.87584580776689]
     },
     "properties": {
       "name": "Musée Jacquemart-André",
@@ -745,7 +718,7 @@
   {
     "geometry": {
       "type": "Point",
-      "coordinates": []
+      "coordinates": [2.3599465850198396, 48.93578016363523]
     },
     "properties": {
       "name": "Basilique Saint-Denis",
@@ -766,7 +739,7 @@
   {
     "geometry": {
       "type": "Point",
-      "coordinates": []
+      "coordinates": [2.3879854273453267, 48.89588749043146]
     },
     "properties": {
       "name": "La Cité des Sciences et de l'Industrie",
@@ -787,7 +760,7 @@
   {
     "geometry": {
       "type": "Point",
-      "coordinates": []
+      "coordinates": [2.3336101120002124, 48.881560880991586]
     },
     "properties": {
       "name": "Musée de la Vie romantique",
@@ -808,7 +781,7 @@
   {
     "geometry": {
       "type": "Point",
-      "coordinates": []
+      "coordinates": [2.3058086506222186, 48.86434582274863]
     },
     "properties": {
       "name": "Bateaux-Mouches sur la Seine",
@@ -829,7 +802,7 @@
   {
     "geometry": {
       "type": "Point",
-      "coordinates": []
+      "coordinates": [2.340640910148183, 48.88785711783238]
     },
     "properties": {
       "name": "Musée de Montmartre",
@@ -850,7 +823,7 @@
   {
     "geometry": {
       "type": "Point",
-      "coordinates": []
+      "coordinates": [2.2869336850153497, 48.86148712519764]
     },
     "properties": {
       "name": "Musée de l'Homme",
@@ -871,7 +844,7 @@
   {
     "geometry": {
       "type": "Point",
-      "coordinates": []
+      "coordinates": [2.358667092949941, 48.861724457045256]
     },
     "properties": {
       "name": "Musée de la Chasse et de la Nature",
@@ -892,7 +865,7 @@
   {
     "geometry": {
       "type": "Point",
-      "coordinates": []
+      "coordinates": [2.3024831966548263, 48.86285911639415]
     },
     "properties": {
       "name": "Musée des Égouts de Paris",
@@ -913,28 +886,7 @@
   {
     "geometry": {
       "type": "Point",
-      "coordinates": []
-    },
-    "properties": {
-      "name": "Musée de la Poupée",
-      "address": "",
-      "category": [
-        "musée"
-      ],
-      "social_network": [
-        {
-          "instagram": ""
-        }
-      ],
-      "website": "",
-      "description": "Un musée dédié à l'art et à l'histoire des poupées, avec une collection impressionnante de poupées anciennes, de jouets et d'accessoires.",
-      "picture": ""
-    }
-  },
-  {
-    "geometry": {
-      "type": "Point",
-      "coordinates": []
+      "coordinates": [2.339796354329427, 48.903385162174736]
     },
     "properties": {
       "name": "Le Marché aux Puces de Saint-Ouen",
@@ -955,7 +907,7 @@
   {
     "geometry": {
       "type": "Point",
-      "coordinates": []
+      "coordinates": [2.3611408659657998, 48.85329255813519]
     },
     "properties": {
       "name": "Le Musée de la Magie et le Musée des Automates",
