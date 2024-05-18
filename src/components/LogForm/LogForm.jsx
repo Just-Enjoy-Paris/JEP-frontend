@@ -1,15 +1,13 @@
-import { useState } from "react"
+import { useContext, useState } from "react"
 import "./LogForm.css"
 import axios from "axios"
+import { AuthContext } from "../../../context/user.context"
 
 const LoginForm = () => {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
 
-  // eslint-disable-next-line no-unused-vars
-  const [user, setUser] = useState("")
-  // eslint-disable-next-line no-unused-vars
-  const [isAuthenticated, setIsAuthenticated] = useState(false)
+  const { setIsAuthenticated } = useContext(AuthContext)
 
   const handleSubmit = async e => {
     e.preventDefault()
@@ -21,12 +19,11 @@ const LoginForm = () => {
         { withCredentials: true }
       )
       setIsAuthenticated(true)
-      setUser(response)
       // eslint-disable-next-line no-console
-      console.log(response)
+      console.log(response.data)
     } catch (error) {
       // eslint-disable-next-line no-console, no-undef
-      console.log(response)
+      console.log(error.response.data)
     }
   }
 
