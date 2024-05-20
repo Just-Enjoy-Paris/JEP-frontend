@@ -1,11 +1,14 @@
 import { useState } from "react"
 import axios from "axios"
+import { useNavigate } from "react-router-dom"
 
 const SignUpForm = ({ onSwitchToLogin }) => {
-  const [username, setUsername] = useState("")  
+  const [username, setUsername] = useState("")
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
   const [confirmPassword, setConfirmPassword] = useState("")
+
+  const navigate = useNavigate()
 
   const handleSubmit = async e => {
     e.preventDefault()
@@ -17,13 +20,15 @@ const SignUpForm = ({ onSwitchToLogin }) => {
 
     try {
       const response = await axios.post(
-        `${import.meta.env.VITE_API_URL}/register`,
-        { email: email, password: password },
+        `${import.meta.env.VITE_API_URL}/signup`,
+        { email, password, username },
         { withCredentials: true }
       )
       // eslint-disable-next-line no-console
       console.log(response)
-      onSwitchToLogin()  // Automatically switch to login after successful registration
+      if (response.status === 201) {
+        navigate("/log")
+      }
     } catch (error) {
       // eslint-disable-next-line no-console
       console.log(error)
@@ -34,15 +39,18 @@ const SignUpForm = ({ onSwitchToLogin }) => {
     <form className="login-form" onSubmit={handleSubmit}>
       <h1 className="login-title">Créer un compte</h1>
       <p>
-        déjà inscrit? <a href="/Log" onClick={onSwitchToLogin}>se connecter</a>
+        déjà inscrit?
+        <a href="/log" onClick={onSwitchToLogin}>
+          se connecter
+        </a>
       </p>
       <div className="login-field">
         <label htmlFor="pseudo" className="login-label">
           Pseudo
         </label>
         <input
-          type="email"
-          id="email"
+          type="username"
+          id="username"
           className="login-input"
           value={username}
           onChange={e => setUsername(e.target.value)}
