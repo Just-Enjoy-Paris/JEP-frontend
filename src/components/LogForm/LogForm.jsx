@@ -1,4 +1,7 @@
+
+import { NavLink } from "react-router-dom"
 import { useContext, useState } from "react"
+
 import "./LogForm.css"
 import axios from "axios"
 import { AuthContext } from "../../../context/user.context"
@@ -31,7 +34,7 @@ const LoginForm = () => {
     <form className="login-form" onSubmit={handleSubmit}>
       <h1 className="login-title">Connexion</h1>
       <p>
-        pas encore inscrit? <a>créer un compte</a>
+        pas encore inscrit? <NavLink to="/signup">créer un compte</NavLink>
       </p>
       <div className="login-field">
         <label htmlFor="email" className="login-label">
