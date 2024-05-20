@@ -19,18 +19,27 @@ export default function Map() {
         map: map
       })
 
-      // Récupérer les coordonnées des deux premiers lieux
-      const origin = jsonData[0].geometry.coordinates
-      const destination = jsonData[1].geometry.coordinates
-
       // Créer un objet DirectionsService pour envoyer la requête de calcul d'itinéraire
       const directionsService = new googleMaps.DirectionsService()
+
+      // Créer un tableau de waypoints pour les étapes intermédiaires de l'itinéraire
+      const waypoints = []
+      for (let i = 0; i < 25; i++) {
+        waypoints.push({
+          location: {
+            lat: jsonData[i].geometry.coordinates[1],
+            lng: jsonData[i].geometry.coordinates[0]
+          },
+          stopover: true
+        })
+      }
 
       // Envoyer la requête de calcul d'itinéraire
       directionsService.route(
         {
-          origin: { lat: origin[1], lng: origin[0] },
-          destination: { lat: destination[1], lng: destination[0] },
+          origin: { lat: waypoints[0].location.lat, lng: waypoints[0].location.lng },
+          destination: { lat: waypoints[waypoints.length - 1].location.lat, lng: waypoints[waypoints.length - 1].location.lng },
+          waypoints: waypoints,
           travelMode: "WALKING" // Mode de transport, ici à pied
         },
         (result, status) => {
