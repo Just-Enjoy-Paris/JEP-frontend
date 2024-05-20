@@ -14,15 +14,15 @@ export default function Map() {
         zoom: 13
       })
 
-      // Créer un objet DirectionsRenderer pour afficher l'itinéraire
+      // afficher l'itinéraire
       directionsRendererRef.current = new googleMaps.DirectionsRenderer({
         map: map
       })
 
-      // Créer un objet DirectionsService pour envoyer la requête de calcul d'itinéraire
+      // envoyer la requête de calcul d'itinéraire
       const directionsService = new googleMaps.DirectionsService()
 
-      // Créer un tableau de waypoints pour les étapes intermédiaires de l'itinéraire
+      // tableau de waypoints pour les étapes intermédiaires de l'itinéraire
       const waypoints = []
       for (let i = 0; i < 25; i++) {
         waypoints.push({
@@ -34,7 +34,7 @@ export default function Map() {
         })
       }
 
-      // Envoyer la requête de calcul d'itinéraire
+      // requête de calcul d'itinéraire
       directionsService.route(
         {
           origin: { lat: waypoints[0].location.lat, lng: waypoints[0].location.lng },
@@ -63,7 +63,6 @@ export default function Map() {
               : ""
           }</p>
         `
-
         const marker = new googleMaps.marker.AdvancedMarkerElement({
           map: map,
           position: {
@@ -73,9 +72,9 @@ export default function Map() {
           content: markerElement
         })
 
-        // Ajouter un gestionnaire d'événement pour afficher l'info window lorsque le marqueur est cliqué/touché
+        // gestionnaire d'événement pour afficher l'info window lorsque le marqueur est cliqué/touché
         marker.addListener("click", () => {
-          // Vous pouvez ajouter ici le code pour afficher une info window ou tout autre effet que vous souhaitez lorsque le marqueur est cliqué
+          // ici le code pour afficher une info window ou tout autre effet que vous souhaitez lorsque le marqueur est cliqué
         })
       })
     }
