@@ -8,6 +8,7 @@ import Places from "./pages/places/Places.jsx"
 import Events from "./pages/events/Events.jsx"
 import Contact from "./pages/contact/Contact.jsx"
 import Error from "./pages/error/Error.jsx"
+import Signup from "./pages/signup/Signup.jsx"
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/events" element={<Events />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/*" element={<Error />} />
+        <Route path="/signup" element={<Signup />} />
       </Routes>
     </Router>
   )
