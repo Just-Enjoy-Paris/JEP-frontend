@@ -7,14 +7,16 @@ export default function Directions({ map, showItinerary }) {
   useEffect(() => {
     if (!map) return
 
-    // Créer un objet DirectionsRenderer pour afficher l'itinéraire (mais ne pas l'afficher pour le moment)
+    // Créer un objet DirectionsRenderer pour afficher l'itinéraire
     directionsRendererRef.current = new window.google.maps.DirectionsRenderer({
-      map: map,
-      visible: false
+      map: map
     })
 
     if (showItinerary) {
       calculateItinerary()
+    } else {
+      // Masquer l'itinéraire
+      directionsRendererRef.current.setDirections({ routes: [] })
     }
   }, [map, showItinerary])
 
@@ -46,7 +48,6 @@ export default function Directions({ map, showItinerary }) {
         if (status === "OK") {
           // Afficher l'itinéraire calculé sur la carte
           directionsRendererRef.current.setDirections(result)
-          directionsRendererRef.current.setVisible(true)
         } else {
           console.error("Échec du calcul d'itinéraire : ", status)
         }
