@@ -1,32 +1,36 @@
 import axios from "axios"
-import { createContext, useEffect, useState } from "react"
+import { useEffect } from "react"
+import { createContext } from "react"
+import { useState } from "react"
 
 export const AuthContext = createContext()
 
 export const AuthProvider = ({ children }) => {
   const [isAuthenticated, setIsAuthenticated] = useState(false)
-  const [user, setUser] = useState(null)
+  const [user, setUser] = useState()
   const [update, setUpdate] = useState(false)
 
   useEffect(() => {
-    const fetchUser = async () => {
+    const fetchuser = async () => {
       try {
-        const res = await axios.get(`${import.meta.env.VITE_API_URL}/refresh`, {
-          withCredentials: true
-        })
-        setUser(res.data)
+        const res = await axios.get(
+          `${import.meta.env.VITE_API_URL}/fetchuser`,
+          {
+            withCredentials: true
+          }
+        )
         setIsAuthenticated(true)
+        setUser(res.data)
+        setUpdate(true)
+        // eslint-disable-next-line no-console
+        console.log(res.data)
       } catch (err) {
         // eslint-disable-next-line no-console
-        console.log("Error loading user")
+        console.log("Error loading ,no User found")
       }
     }
-
-    if (update || !isAuthenticated) {
-      // Fetch user if update is true or user is not authenticated
-      fetchUser()
-    }
-  }, [update, isAuthenticated]) // Only trigger useEffect when update or isAuthenticated changes
+    fetchuser()
+  }, [update, isAuthenticated])
 
   return (
     <AuthContext.Provider
