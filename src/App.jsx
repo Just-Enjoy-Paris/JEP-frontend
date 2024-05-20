@@ -11,7 +11,6 @@ import Signup from "./pages/signup/Signup.jsx"
 
 import { AuthProvider } from "../context/user.context.jsx"
 
-
 function App() {
   return (
     <Router>
