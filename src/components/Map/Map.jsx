@@ -1,45 +1,45 @@
-import { useEffect } from "react"
+import { useEffect, useRef, useState } from "react"
 import "./Map.css"
+import Directions from "./Directions"
 
-import jsonData from "../../data/places.geo.json"
+import jsonData from "../../data/places.geo.json";
 
 export default function Map() {
+  const mapRef = useRef(null)
+  const [showItinerary, setShowItinerary] = useState(false)
+
   useEffect(() => {
     async function initMap() {
       const googleMaps = await window.google.maps
-      const map = new googleMaps.Map(document.getElementById("map"), {
+      const map = new googleMaps.Map(mapRef.current, {
         center: { lat: 48.8566, lng: 2.3522 },
         zoom: 13
       })
 
       jsonData.forEach(point => {
-        const marker = new googleMaps.Marker({
+        const markerElement = document.createElement("div")
+        markerElement.innerHTML = `
+          <h3>${point.properties.name}</h3>
+          <p>${point.properties.address}</p>
+          <p>${
+            Array.isArray(point.properties.category)
+              ? point.properties.category.join(", ")
+              : ""
+          }</p>
+        `
+
+        const marker = new googleMaps.marker.AdvancedMarkerElement({
+          map: map,
           position: {
             lat: point.geometry.coordinates[1],
             lng: point.geometry.coordinates[0]
           },
-          map: map,
-          title: point.properties.name
-        })
-
-        // Créer une info window pour chaque marqueur
-        const infoWindow = new googleMaps.InfoWindow({
-          content: `
-            <div>
-              <h3>${point.properties.name}</h3>
-              <p>${point.properties.address}</p>
-              <p>${
-                Array.isArray(point.properties.category)
-                  ? point.properties.category.join(", ")
-                  : ""
-              }</p>
-            </div>
-          `
+          content: markerElement
         })
 
         // Ajouter un gestionnaire d'événement pour afficher l'info window lorsque le marqueur est cliqué/touché
         marker.addListener("click", () => {
-          infoWindow.open(map, marker)
+          // Vous pouvez ajouter ici le code pour afficher une info window ou tout autre effet que vous souhaitez lorsque le marqueur est cliqué
         })
       })
     }
@@ -48,7 +48,6 @@ export default function Map() {
       const script = document.createElement("script")
       script.src = import.meta.env.VITE_API_URL_AND_KEYMAP
       script.async = true
-      script.defer = true
       script.onload = () => {
         initMap()
       }
@@ -69,7 +68,15 @@ export default function Map() {
 
   return (
     <section>
-      <div id="map" className="mapContainer"></div>
+      <div id="map" className="mapContainer" ref={mapRef}></div>
+      <button onClick={() => { setShowItinerary(true); }}>Afficher itinéraire</button>
+      {showItinerary && (
+        <div>
+          <p>Itinéraire de test affiché</p>
+          {/* Vous pouvez ajouter ici des informations supplémentaires sur l'itinéraire, si vous le souhaitez */}
+        </div>
+      )}
+      <Directions map={mapRef.current} showItinerary={showItinerary} />
     </section>
   )
 }
