@@ -1,0 +1,33 @@
+.filterMenu {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    color: white;
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+    background-color: #365286;
+    padding: 10px 30px;
+    border-radius: 5px 5px 0px 0px;
+    width: 100%;
+}
+
+.filterLinks {
+    display: none;
+    position: absolute;
+    top: 165px;
+    right: 0px;
+    width: 100%;
+    padding: 25px 25px 20px;
+    z-index: 999;
+    font-family: "Raleway", sans-serif;    
+}
+
+.filterLinks.open {
+    display: block;
+    animation: slideDown 0.5s ease-in-out forwards;
+    background-color: #365286;
+}
+
+.filter div {
+    color: white;;
+}
