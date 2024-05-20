@@ -1,10 +1,12 @@
-import { useEffect, useRef } from "react"
+import { useEffect, useRef, useState } from "react"
 import "./Map.css"
-import jsonData from "../../data/places.geo.json"
+import Directions from "./Directions"
+
+import jsonData from "../../data/places.geo.json";
 
 export default function Map() {
   const mapRef = useRef(null)
-  const directionsRendererRef = useRef(null)
+  const [showItinerary, setShowItinerary] = useState(false)
 
   useEffect(() => {
     async function initMap() {
@@ -13,44 +15,6 @@ export default function Map() {
         center: { lat: 48.8566, lng: 2.3522 },
         zoom: 13
       })
-
-      // afficher l'itinéraire
-      directionsRendererRef.current = new googleMaps.DirectionsRenderer({
-        map: map
-      })
-
-      // envoyer la requête de calcul d'itinéraire
-      const directionsService = new googleMaps.DirectionsService()
-
-      // tableau de waypoints pour les étapes intermédiaires de l'itinéraire
-      const waypoints = []
-      for (let i = 0; i < 25; i++) {
-        waypoints.push({
-          location: {
-            lat: jsonData[i].geometry.coordinates[1],
-            lng: jsonData[i].geometry.coordinates[0]
-          },
-          stopover: true
-        })
-      }
-
-      // requête de calcul d'itinéraire
-      directionsService.route(
-        {
-          origin: { lat: waypoints[0].location.lat, lng: waypoints[0].location.lng },
-          destination: { lat: waypoints[waypoints.length - 1].location.lat, lng: waypoints[waypoints.length - 1].location.lng },
-          waypoints: waypoints,
-          travelMode: "WALKING" // Mode de transport, ici à pied
-        },
-        (result, status) => {
-          if (status === "OK") {
-            // Afficher l'itinéraire calculé sur la carte
-            directionsRendererRef.current.setDirections(result)
-          } else {
-            console.error("Échec du calcul d'itinéraire : ", status)
-          }
-        }
-      )
 
       jsonData.forEach(point => {
         const markerElement = document.createElement("div")
@@ -63,6 +27,7 @@ export default function Map() {
               : ""
           }</p>
         `
+
         const marker = new googleMaps.marker.AdvancedMarkerElement({
           map: map,
           position: {
@@ -72,9 +37,9 @@ export default function Map() {
           content: markerElement
         })
 
-        // gestionnaire d'événement pour afficher l'info window lorsque le marqueur est cliqué/touché
+        // Ajouter un gestionnaire d'événement pour afficher l'info window lorsque le marqueur est cliqué/touché
         marker.addListener("click", () => {
-          // ici le code pour afficher une info window ou tout autre effet que vous souhaitez lorsque le marqueur est cliqué
+          // Vous pouvez ajouter ici le code pour afficher une info window ou tout autre effet que vous souhaitez lorsque le marqueur est cliqué
         })
       })
     }
@@ -104,6 +69,14 @@ export default function Map() {
   return (
     <section>
       <div id="map" className="mapContainer" ref={mapRef}></div>
+      <button onClick={() => { setShowItinerary(true); }}>Afficher itinéraire</button>
+      {showItinerary && (
+        <div>
+          <p>Itinéraire de test affiché</p>
+          {/* Vous pouvez ajouter ici des informations supplémentaires sur l'itinéraire, si vous le souhaitez */}
+        </div>
+      )}
+      <Directions map={mapRef.current} showItinerary={showItinerary} />
     </section>
   )
 }
