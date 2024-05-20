@@ -1,41 +1,7 @@
-.filterLinks {
-    display: none;
-    position: absolute;
-    top: 50px;
-    right: 0px;
-    width: 100%;
-    padding: 10px 10px 20px;
-    z-index: 999;
-    font-family: "Raleway", sans-serif;
-  }
-
-  .filterLinks a {
-    color: white;
-    font-size: 15px;
-    display: flex;
-    justify-content: center;
-    padding: 15px 0;
-    position: relative;
-    white-space: nowrap;
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 16px;
-  }
-
-  .filterLinks.open {
-    display: block;
-    animation: slideDown 0.5s ease-in-out forwards;
-    background-color: #365286;
-    box-shadow: 2px 4px 18px 0px rgba(0, 0, 0, 0.3);
-    position: absolute;
-    top: 125px;
-    color: white;
-  }
-  
-.openFilter,
-.closeFilter {
-  height: 20px;
-  transition: transform 0.5s ease-in-out;
+.filter{
   color: white;
-  width: 30px;
+  font-family: "Raleway", sans-serif;
+  background-color: #365286;
+  padding: 20px;
+  box-shadow: 1px 0px 36px 8px rgba(0,0,0,0.34);
 }

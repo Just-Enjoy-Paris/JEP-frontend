@@ -2,21 +2,31 @@ import React, { useState } from "react";
 import "./placeList.css";
 import places from "../../data/places.geo.json";
 import PlaceCard from "../PlaceCard/PlaceCard";
-import Filter from "../Filter/Filter";
+import FilterDropdown from "../FilterDropdown/FilterDropdown";
 
 export default function PlaceList() {
-  const [filter, setFilter] = useState("all");
+  const [selectedCategories, setSelectedCategories] = useState([]);
 
-  // Filtrer les lieux en fonction du filtre sélectionné
-  const filteredPlaces = filter === "all" ? places : places.filter(place =>
-    place.properties.category.includes(filter)
+  const handleCategoryChange = (category) => {
+    setSelectedCategories((prevCategories) => {
+      if (prevCategories.includes(category)) {
+        return prevCategories.filter((cat) => cat !== category);
+      } else {
+        return [...prevCategories, category];
+      }
+    });
+  };
+
+  // Filtrer les lieux en fonction des catégories sélectionnées
+  const filteredPlaces = selectedCategories.length === 0 ? places : places.filter((place) =>
+    selectedCategories.includes(place.properties.category[0])
   );
 
   return (
     <section className="placeList">
       <h1 className="placeListTitle">Lieux</h1>
-      {/* Inclure le composant Filter et passer le filtre et setFilter comme props */}
-      <Filter filter={filter} setFilter={setFilter} />
+      {/* Inclure le composant Filter et passer les catégories sélectionnées et la fonction de mise à jour */}
+      <FilterDropdown selectedCategories={selectedCategories} onCategoryChange={handleCategoryChange} />
       {filteredPlaces.map((place, index) => (
         <PlaceCard
           place={place.properties}

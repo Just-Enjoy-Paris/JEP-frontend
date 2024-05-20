@@ -1,64 +1,49 @@
-import React, { useState } from "react";
-import "./Filter.css";
-import { VscSettings } from "react-icons/vsc";
-import closeFilter from "../../img/close.svg"
-import categoriesData from "../../data/places.geo.json"; // Ajustez le chemin si nécessaire
+import React from "react";
 
-const Filter = ({ filter, setFilter }) => {
-  const [isFilterOpen, setIsFilterOpen] = useState(false)
-  // Extraire toutes les catégories uniques
-  const categories = ["tout afficher", ...new Set(categoriesData.flatMap(place => place.properties.category))];
-
-  // État local pour les catégories sélectionnées
-  const [selectedCategories, setSelectedCategories] = useState(["tout afficher"]);
-
-  // Fonction pour gérer le changement de checkbox
-  const handleCheckboxChange = (category) => {
-    if (category === "tout afficher") {
-      setSelectedCategories(["tout afficher"]);
-    } else {
-      setSelectedCategories((prevSelected) => {
-        if (prevSelected.includes(category)) {
-          // Supprime la catégorie si elle est déjà sélectionnée
-          const newSelected = prevSelected.filter((cat) => cat !== category);
-          return newSelected.length === 0 ? ["tout afficher"] : newSelected;
-        } else {
-          // Ajoute la catégorie si elle n'est pas déjà sélectionnée
-          return prevSelected.filter((cat) => cat !== "tout afficher").concat(category);
-        }
-      });
-    }
-    setFilter(category);
-  };
+export default function Filter({ selectedCategories, onCategoryChange }) {
+   // Ajoutez ici toutes les catégories possibles
+  const categories = 
+  [
+    "Pâtisserie",
+    "Restaurant",
+    "Bijouterie",
+    "Bar",
+    "Pub",
+    "Eglise",
+    "Cimetière",
+    "Galerie d'art",
+    "Hotel",
+    "Service d'impression 3D",
+    "Parfumerie",
+    "Librairie",
+    "Boulangerie",
+    "Café",
+    "Boutique de Porcelaine",
+    "Primeur",
+    "Boutique de vêtements",
+    "Boutique d'objets religieux", 
+    "Salon de the",
+    "Fast food",
+    "Bubble tea",
+    "Salon de coiffure",
+    "Marchand de glaces",
+    "Vente et réparation de cycles",
+    "Boutique de CBD",
+    "Association"
+   ];
 
   return (
-    <div className="filterContainer">
-      <div>
-        <button className="categoriesIcon" onClick={() => setIsFilterOpen(!isFilterOpen)}>
-          Filtre: <u>{filter}</u> {/* Affiche le filtre actuel */}
-          {isFilterOpen ? (
-          <img className="closeFilter" src={closeFilter} alt="Close" />
-        ) : (
-          <VscSettings className="openFilter" size={26} />
-        )}
-        </button>
-        <div className={`filterLinks ${isFilterOpen ? "open" : "closed"}`}>
-        {/* Génère les checkboxes de filtre à partir des catégories extraites */}        
-        {categories.map((category) => (
-          <div key={category} onClick={() => setIsFilterOpen(false)}>
-            <input
-              type="checkbox"
-              id={`checkbox-${category}`}
-              checked={selectedCategories.includes(category)}
-              onChange={() => handleCheckboxChange(category)}
-            />
-            <label htmlFor={`checkbox-${category}`}>{category}</label>
-          </div>          
-        ))}
+    <div className="filter">
+      {categories.map((category) => (
+        <div key={category}>
+          <input
+            type="checkbox"
+            checked={selectedCategories.includes(category)}
+            onChange={() => onCategoryChange(category)}
+          />
+          <label>{category}</label>
         </div>
-      </div>
+      ))}
     </div>
   );
-};
-
-export default Filter;
+}
