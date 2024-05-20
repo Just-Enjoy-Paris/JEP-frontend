@@ -130,27 +130,6 @@
   {
     "geometry": {
       "type": "Point",
-      "coordinates": [2.3226294813106962, 48.86402481308957]
-    },
-    "properties": {
-      "name": "Musée de l'Orangerie",
-      "address": "Jardin des Tuileries, 75001 Paris",
-      "category": [
-        "musée"
-      ],
-      "social_network": [
-        {
-          "instagram": ""
-        }
-      ],
-      "website": "",
-      "description": "Un musée abritant les célèbres Nymphéas de Claude Monet ainsi que d'autres œuvres d'art impressionnistes et post-impressionnistes.",
-      "picture": ""
-    }
-  },
-  {
-    "geometry": {
-      "type": "Point",
       "coordinates": [2.3464245254898954, 48.846334738511665]
     },
     "properties": {
@@ -742,7 +721,7 @@
       "coordinates": [2.3336101120002124, 48.881560880991586]
     },
     "properties": {
-      "name": "Musée de la Vie romantique",
+      "name": "Musée de la Vie Romantique",
       "address": "16 Rue Chaptal, 75009 Paris",
       "category": [
         "musée"
@@ -901,6 +880,214 @@
       ],
       "website": "",
       "description": "Deux musées situés dans le même bâtiment, offrant des expositions sur l'histoire de la magie et des automates, avec des démonstrations de tours de magie et des spectacles.",
+      "picture": ""
+    }
+  },
+  {
+    "geometry": {
+      "type": "Point",
+      "coordinates": [2.3481955813098008, 48.84951559134476]
+    },
+    "properties": {
+      "name": "Le Musée de la Préfecture de Police",
+      "address": "4 Rue de la Montagne Sainte-Geneviève, 75005 Paris",
+      "category": ["musée"],
+      "social_network": [
+        {
+          "instagram": ""
+        }
+      ],
+      "website": "",
+      "description": "Un musée situé dans le 5ème arrondissement, abritant une collection d'objets et de documents sur l'histoire de la police et de la criminalité à Paris, ainsi que des expositions temporaires.",
+      "picture": ""
+    }
+  },
+  {
+    "geometry": {
+      "type": "Point",
+      "coordinates": [2.3556111966547477, 48.86108075499945]
+    },
+    "properties": {
+      "name": "Le Musée d'Art et d'Histoire du Judaïsme",
+      "address": "71 Rue du Temple, 75003 Paris",
+      "category": ["musée"],
+      "social_network": [
+        {
+          "instagram": ""
+        }
+      ],
+      "website": "",
+      "description": "Un musée situé dans le Marais, abritant une collection d'objets et de documents sur l'histoire et la culture juives, ainsi que des expositions temporaires.",
+      "picture": ""
+    }
+  },
+  {
+    "geometry": {
+      "type": "Point",
+      "coordinates": [2.287365711999068, 48.86247518602612]
+    },
+    "properties": {
+      "name": "Le Musée de la Marine",
+      "address": "1 Pl. du Trocadéro et du 11 Novembre, 75016 Paris",
+      "category": ["musée"],
+      "social_network": [
+        {
+          "instagram": ""
+        }
+      ],
+      "website": "",
+      "description": "Un musée situé dans le 16ème arrondissement, abritant une collection d'objets et de documents sur l'histoire et la culture de la marine française, ainsi que des expositions temporaires.",
+      "picture": ""
+    }
+  },
+  {
+    "geometry": {
+      "type": "Point",
+      "coordinates": [2.3615163254906384, 48.8583289289859]
+    },
+    "properties": {
+      "name": "Le Musée Cognacq-Jay",
+      "address": "8 Rue Elzévir, 75003 Paris",
+      "category": ["musée"],
+      "social_network": [
+        {
+          "instagram": ""
+        }
+      ],
+      "website": "",
+      "description": "Un musée situé dans le Marais, abritant une collection d'objets et de documents sur l'histoire et la culture du XVIIIème siècle français, ainsi que des expositions temporaires.",
+      "picture": ""
+    }
+  },
+  {
+    "geometry": {
+      "type": "Point",
+      "coordinates": [2.334387865967298, 48.87805554686817]
+    },
+    "properties": {
+      "name": "Le Musée Gustave Moreau",
+      "address": "14 Rue de la Rochefoucauld, 75009 Paris",
+      "category": ["musée"],
+      "social_network": [
+        {
+          "instagram": ""
+        }
+      ],
+      "website": "",
+      "description": "Un musée situé dans le 9ème arrondissement, abritant une collection d'objets et de documents sur l'histoire et la culture de l'artiste Gustave Moreau, ainsi que des expositions temporaires.",
+      "picture": ""
+    }
+  },
+  {
+    "geometry": {
+      "type": "Point",
+      "coordinates": [2.314460850622327, 48.866312532916425]
+    },
+    "properties": {
+      "name": "Le Petit Palais",
+      "address": "Avenue Winston Churchill, 75008 Paris",
+      "category": ["musée"],
+      "social_network": [
+        {
+          "instagram": ""
+        }
+      ],
+      "website": "",
+      "description": "Un musée situé dans le 8ème arrondissement, abritant une collection d'objets et de documents sur l'histoire et la culture de l'art et de l'architecture, ainsi que des expositions temporaires.",
+      "picture": ""
+    }
+  },
+  {
+    "geometry": {
+      "type": "Point",
+      "coordinates": [2.31283017708184, 48.87895243384251]
+    },
+    "properties": {
+      "name": "Le Musée Nissim de Camondo",
+      "address": "63 Rue de Monceau, 75008 Paris",
+      "category": ["musée"],
+      "social_network": [
+        {
+          "instagram": ""
+        }
+      ],
+      "website": "",
+      "description": "Un musée situé dans le 8ème arrondissement, abritant une collection d'objets et de documents sur l'histoire et la culture de l'art décoratif français, ainsi que des expositions temporaires.",
+      "picture": ""
+    }
+  },   {
+    "geometry": {
+      "type": "Point",
+      "coordinates": [2.352486711998414, 48.85199376992355]
+    },
+    "properties": {
+      "name": "Le Mémorial des Martyrs de la Déportation",
+      "address": "Square de l'Île-de-France, 75004 Paris",
+      "category": ["musée"],
+      "social_network": [
+        {
+          "instagram": ""
+        }
+      ],
+      "website": "",
+      "description": "Un musée situé sur l'île de la Cité, dédié à la mémoire des victimes de la déportation pendant la Seconde Guerre mondiale, avec des expositions et des témoignages.",
+      "picture": ""
+    }
+  },
+  {
+    "geometry": {
+      "type": "Point",
+      "coordinates": [2.3359590543269966, 48.86371898933017]
+    },
+    "properties": {
+      "name": "Comédie-Française",
+      "address": "1 Place Colette, 75001 Paris",
+      "category": ["théâtre"],
+      "social_network": [
+        {
+          "instagram": ""
+        }
+      ],
+      "website": "",
+      "description": "Le théâtre national situé dans le Palais-Royal, fondé en 1680.",
+      "picture": ""
+    }
+  },
+  {
+    "geometry": {
+      "type": "Point",
+      "coordinates": [2.290386323636527, 48.83036022487581]
+    },
+    "properties": {
+      "name": "Parc des Expositions de la Porte de Versailles",
+      "address": "1 Place de la Porte de Versailles, 75015 Paris",
+      "category": ["expositions"],
+      "social_network": [
+        {
+          "instagram": ""
+        }
+      ],
+      "website": "",
+      "description": "Le plus grand parc d'expositions de France, situé dans le 15ème arrondissement.",
+      "picture": ""
+    }
+  },
+  {
+    "geometry": {
+      "type": "Point",
+      "coordinates": [2.298312223638071, 48.856154095828835]
+    },
+    "properties": {
+      "name": "Champ de Mars",
+      "address": "2 Allée Adrienne Lecouvreur, 75007 Paris",
+      "category": ["parc"],
+      "social_network": [
+        {
+          "instagram": ""
+        }
+      ],
+      "website": "",
+      "description": "Un grand parc public ouvert situé entre la Tour Eiffel et l'École militaire.",
       "picture": ""
     }
   }
