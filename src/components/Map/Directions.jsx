@@ -5,26 +5,34 @@ export default function Directions({ map, showItinerary }) {
   const directionsRendererRef = useRef(null)
 
   useEffect(() => {
+    // Vérifier que l'objet Map a été initialisé
     if (!map) return
 
-    // Créer un objet DirectionsRenderer pour afficher l'itinéraire
+    // objet DirectionsRenderer pour afficher l'itinéraire
     directionsRendererRef.current = new window.google.maps.DirectionsRenderer({
-      map: map
+      map: null
     })
 
-    if (showItinerary) {
-      calculateItinerary()
-    } else {
-      // Masquer l'itinéraire
-      directionsRendererRef.current.setDirections({ routes: [] })
-    }
+    // Écouter l'événement idle de l'objet Map pour associer l'objet DirectionsRenderer à l'objet Map
+    const idleListener = map.addListener("idle", () => {
+      // Associer l'objet DirectionsRenderer à l'objet Map
+      directionsRendererRef.current.setMap(map)
+      if (showItinerary) {
+        calculateItinerary()
+      } else {
+        // Masquer l'itinéraire
+        directionsRendererRef.current.setDirections({ routes: [] })
+      }
+      // Supprimer l'écouteur d'événement idle
+      idleListener.remove()
+    })
   }, [map, showItinerary])
 
   const calculateItinerary = () => {
-    // Créer un objet DirectionsService pour envoyer la requête de calcul d'itinéraire
+    // objet DirectionsService pour envoyer la requête de calcul d'itinéraire
     const directionsService = new window.google.maps.DirectionsService()
 
-    // Créer un tableau de waypoints pour les étapes intermédiaires de l'itinéraire
+    // tableau de waypoints pour les étapes intermédiaires de l'itinéraire
     const waypoints = []
     for (let i = 0; i < 25; i++) {
       waypoints.push({
@@ -36,17 +44,17 @@ export default function Directions({ map, showItinerary }) {
       })
     }
 
-    // Envoyer la requête de calcul d'itinéraire
+    // requête de calcul d'itinéraire
     directionsService.route(
       {
         origin: { lat: waypoints[0].location.lat, lng: waypoints[0].location.lng },
         destination: { lat: waypoints[waypoints.length - 1].location.lat, lng: waypoints[waypoints.length - 1].location.lng },
         waypoints: waypoints,
-        travelMode: "WALKING" // Mode de transport, ici à pied
+        travelMode: "WALKING"
       },
       (result, status) => {
         if (status === "OK") {
-          // Afficher l'itinéraire calculé sur la carte
+          // itinéraire calculé sur la carte
           directionsRendererRef.current.setDirections(result)
         } else {
           console.error("Échec du calcul d'itinéraire : ", status)

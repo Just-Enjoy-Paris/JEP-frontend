@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react"
 import "./Map.css"
-import Directions from "./Directions"
+import Directions from "./Directions.jsx"
 
 import jsonData from "../../data/places.geo.json"
 
@@ -40,7 +40,7 @@ export default function Map() {
           `
         })
 
-        // Ajouter un gestionnaire d'événement pour afficher l'info window lorsque le marqueur est cliqué/touché
+        // gestionnaire d'événement pour afficher l'info window lorsque le marqueur est cliqué/touché
         marker.addListener("click", () => {
           infoWindow.open(map, marker)
         })
