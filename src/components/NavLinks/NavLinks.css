@@ -36,7 +36,7 @@
 .links.open {
   display: block;
   animation: slideDown 0.5s ease-in-out forwards;
-  background-color: #365286;
+  background-color: var(--secondary-color);
   box-shadow: 2px 4px 18px 0px rgba(0, 0, 0, 0.3);
 }
 

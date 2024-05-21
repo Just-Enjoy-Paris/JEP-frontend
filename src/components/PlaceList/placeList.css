@@ -3,15 +3,15 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #213251;
+  background-color: var(--main-color);
   margin-bottom: 50px;
 }
 
 .placeListTitle {
   text-align: center;
-  background-color: #213251;
+  background-color: var(--main-color);
   padding: 15px 45px;
-  color: white;
+  color: var(--txt-color);
   border-radius: 10px;
   font-size: 24px;
   font-family: "Raleway", sans-serif;

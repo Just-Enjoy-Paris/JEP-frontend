@@ -2,10 +2,10 @@
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    color: white;
+    color: var(--txt-color);
     font-family: "Raleway", sans-serif;
     font-weight: 700;
-    background-color: #365286;
+    background-color: var(--secondary-color);
     padding: 10px 30px;
     border-radius: 5px 5px 0px 0px;
     width: 100%;
@@ -25,9 +25,9 @@
 .filterLinks.open {
     display: block;
     animation: slideDown 0.5s ease-in-out forwards;
-    background-color: #365286;
+    background-color: var(--secondary-color);
 }
 
 .filter div {
-    color: white;;
+    color: var(--txt-color);
 }

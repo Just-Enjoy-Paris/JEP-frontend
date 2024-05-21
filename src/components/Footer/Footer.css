@@ -1,7 +1,7 @@
 .footer {
   display: flex;
   justify-content: center;
-  background-color: #213251;
+  background-color: var(--main-color);
   align-items: center;
   position: fixed;
   bottom: 0;
@@ -13,7 +13,7 @@
   padding: 10px;
   color: black;
   font-family: "Raleway", sans-serif;
-  color: white;
+  color: var(--txt-color);
   font-size: 12px;
 }
 
