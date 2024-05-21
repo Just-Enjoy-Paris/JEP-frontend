@@ -1,12 +1,13 @@
-import { useEffect, useRef, useState } from "react"
+import { useEffect, useState } from "react"
 import "./Map.css"
 import Directions from "./Directions.jsx"
 
 import jsonData from "../../data/places.geo.json"
 
 export default function Map() {
-  const mapRef = useRef(null)
+  const [map, setMap] = useState(null)
   const [showItinerary, setShowItinerary] = useState(false)
+
   useEffect(() => {
     async function initMap() {
       const googleMaps = await window.google.maps
@@ -14,6 +15,8 @@ export default function Map() {
         center: { lat: 48.8566, lng: 2.3522 },
         zoom: 13
       })
+      setMap(map)
+      console.log(map)
 
       jsonData.forEach(point => {
         const marker = new googleMaps.Marker({
@@ -45,6 +48,10 @@ export default function Map() {
           infoWindow.open(map, marker)
         })
       })
+
+      googleMaps.event.addListener(map, "load", function() {
+        console.log('Map is loaded');
+      });
     }
 
     async function loadGoogleMaps() {
@@ -71,11 +78,11 @@ export default function Map() {
 
   return (
     <section>
-      <div id="map" className="mapContainer" ref={mapRef}></div>
+      <div id="map" className="mapContainer"></div>
       <button onClick={() => { setShowItinerary(!showItinerary); }}>
         {showItinerary ? "Masquer l'itinéraire" : "Afficher l'itinéraire"}
       </button>
-      <Directions map={mapRef.current} showItinerary={showItinerary} />
+      {map && <Directions map={map} showItinerary={showItinerary} />}
     </section>
   )
 }

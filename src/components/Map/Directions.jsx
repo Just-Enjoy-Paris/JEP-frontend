@@ -14,7 +14,7 @@ export default function Directions({ map, showItinerary }) {
     })
 
     // Écouter l'événement idle de l'objet Map pour associer l'objet DirectionsRenderer à l'objet Map
-    const idleListener = map.addListener("idle", () => {
+    const idleListener = map.addListener("load", () => {
       // Associer l'objet DirectionsRenderer à l'objet Map
       directionsRendererRef.current.setMap(map)
       if (showItinerary) {
@@ -54,7 +54,6 @@ export default function Directions({ map, showItinerary }) {
       },
       (result, status) => {
         if (status === "OK") {
-          // itinéraire calculé sur la carte
           directionsRendererRef.current.setDirections(result)
         } else {
           console.error("Échec du calcul d'itinéraire : ", status)
