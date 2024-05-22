@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "./placeList.css";
 import places from "../../data/places.geo.json";
 import PlaceCard from "../PlaceCard/PlaceCard";
@@ -20,7 +20,7 @@ export default function PlaceList() {
   // Filtrer les lieux en fonction des catégories sélectionnées
   const filteredPlaces = selectedCategories.length === 0 ? places : places.filter((place) =>
     selectedCategories.includes(place.properties.category[0])
-  );
+  ); 
 
   return (
     <section className="placeList">
@@ -29,8 +29,8 @@ export default function PlaceList() {
       <FilterDropdown selectedCategories={selectedCategories} onCategoryChange={handleCategoryChange} />
       {filteredPlaces.map((place, index) => (
         <PlaceCard
-          place={place.properties}
           key={place._id}
+          place={place.properties}          
           isLast={index === filteredPlaces.length - 1}
         />
       ))}

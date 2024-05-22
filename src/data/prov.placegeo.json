@@ -1,0 +1,516 @@
+[
+  {
+    "geometry": {
+      "type": "Point",
+      "coordinates": [2.3745366836419155, 48.85703395335041]
+    },
+    "properties": {
+      "name": "Emma Duvéré",
+      "address": "41 Rue Sedaine, 75011 Paris",
+      "category": ["Pâtisserie", "Cantine"],
+      "social_network": [
+        { "instagram": "https://www.instagram.com/emmaduvere/" }
+      ],
+      "website": "https://www.emmaduvere.fr/",
+      "description": "description1",
+      "picture": "https://res.cloudinary.com/daxicbm7j/image/upload/v1712184090/places/emma-duver%C3%A9r%C3%A9.jpg"
+    }
+  },
+  {
+    "geometry": {
+      "type": "Point",
+      "coordinates": [2.362456597133869, 48.850183668969805]
+    },
+    "properties": {
+      "name": "So/Paris Hotel",
+      "address": "10 Rue Agrippa d'Aubigné, 75004 Paris",
+      "category": ["Hotel", "Bar", "Restaurant", "Spa", "Bien-Être"],
+      "social_network": [
+        { "instagram": "https://www.instagram.com/soparishotel/" },
+        { "facebook": "https://www.facebook.com/soparishotel/" },
+        { "linkedIn": "https://www.linkedin.com/company/so-paris-hotel" }
+      ],
+      "website": "https://so-hotels.com/fr/paris/",
+      "description": "description2",
+      "picture": "https://res.cloudinary.com/daxicbm7j/image/upload/v1713207899/places2/So%20Paris%20Hotel.jpg"
+    }
+  },
+  {
+    "geometry": {
+      "type": "Point",
+      "coordinates": [2.373408610626678, 48.857978494492556]
+    },
+    "properties": {
+      "name": "Le Grand Breguet",
+      "address": "17 rue Bréguet 75011 Paris",
+      "category": ["Restaurant", "Bar", "Bar-Bio"],
+      "social_network": [
+        { "instagram": "https://www.instagram.com/legrandbreguet/" },
+        { "facebook": "https://www.facebook.com/Legrandbreguet/" }
+      ],
+      "website": "https://legrandbreguet.com/",
+      "description": "description3",
+      "picture": "https://res.cloudinary.com/daxicbm7j/image/upload/e_improve,w_300,h_600,c_thumb,g_auto/v1713207901/places2/Le%20Grand%20Breguet.jpg"
+    }
+  },
+  {
+    "geometry": {
+      "type": "Point",
+      "coordinates": [2.3307822922390344, 48.85351153560422]
+    },
+    "properties": {
+      "name": "Nina's Bagel",
+      "address": "22 Rue du Dragon, 75006 Paris",
+      "category": ["Restaurant"],
+      "social_network": [
+        { "instagram": "https://www.instagram.com/ninas_bagel/" }
+      ],
+      "website": "https://ninasbagel.fr/",
+      "description": "description4",
+      "picture": "https://res.cloudinary.com/daxicbm7j/image/upload/v1712136365/places2/nina-bagel.jpg"
+    }
+  },
+  {
+    "geometry": {
+      "type": "Point",
+      "coordinates": [2.33080508364171, 48.85353727880328]
+    },
+    "properties": {
+      "name": "La Mercerie du 6ème",
+      "address": "20 Rue du Dragon, 75006 Paris",
+      "category": ["Restaurant"],
+      "social_network": [],
+      "website": "",
+      "description": "description5",
+      "picture": "https://res.cloudinary.com/daxicbm7j/image/upload/v1713207911/places2/A0185343-4F1C-4F46-9CAA-A262530524D7_4_5005_c_lddxp8.jpg"
+    }
+  },
+  {
+    "geometry": {
+      "type": "Point",
+      "coordinates": [2.3264544682978294, 48.84716637787654]
+    },
+    "properties": {
+      "name": "Les Saisonniers - Saint Placide",
+      "address": "62 Rue Saint-Placide, 75006 Paris",
+      "category": ["Magasin de produits de la ferme", "Primeur"],
+      "social_network": [
+        { "facebok": "https://www.facebook.com/LesSaisonniersParis/" },
+        { "instagram": "https://www.instagram.com/les_saisonniers/" }
+      ],
+      "website": "https://les-saisonniers.fr/",
+      "description": "description6",
+      "picture": "https://res.cloudinary.com/daxicbm7j/image/upload/v1713207910/places2/Les%20Saisoniers.jpg"
+    }
+  },
+  {
+    "geometry": {
+      "type": "Point",
+      "coordinates": [2.3263676259696227, 48.84791763481688]
+    },
+    "properties": {
+      "name": "Gudule",
+      "address": "47 Rue Saint-Placide, 75006 Paris",
+      "category": ["Bijouterie", "Boutique"],
+      "social_network": [],
+      "website": "https://www.gudule.com/",
+      "description": "description7",
+      "picture": "https://res.cloudinary.com/daxicbm7j/image/upload/v1713207914/places2/Gudule.jpg"
+    }
+  },
+  {
+    "geometry": {
+      "type": "Point",
+      "coordinates": [2.3262864971337827, 48.848025275454596]
+    },
+    "properties": {
+      "name": "Dergenne",
+      "address": "45 Rue Saint-Placide, 75006 Paris",
+      "category": ["Boutique", "Boutique de Porcelaine"],
+      "social_network": [],
+      "website": "https://www.degrenne.fr/",
+      "description": "description8",
+      "picture": "https://res.cloudinary.com/daxicbm7j/image/upload/v1713207916/places2/Degrenne.jpg"
+    }
+  },
+  {
+    "properties": {
+      "name": "Le Plomb du Cantal",
+      "picture": "https://res.cloudinary.com/daxicbm7j/image/upload/v1713207918/places2/Le%20Plomb%20du%20Cantal.jpg",
+      "address": "3 Rue de la Gaité, 75014 Paris",
+      "category": ["Restaurant", "Brasserie"],
+      "social_network": [],
+      "website": "",
+      "description": "description9"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [2.3245489301013436, 48.840741216297914]
+    }
+  },
+  {
+    "properties": {
+      "name": "Le Tournesol",
+      "picture": "https://res.cloudinary.com/daxicbm7j/image/upload/v1713207919/places2/Le%20Tournesol.jpg",
+      "address": "9 Rue de la Gaité, 75014 Paris",
+      "category": ["Bar", "Restaurant", "Brasserie"],
+      "social_network": [{}],
+      "website": "",
+      "description": "description10"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [2.3243072195745356, 48.84046490170536]
+    }
+  },
+  {
+    "properties": {
+      "name": "Le Bullier",
+      "picture": "https://res.cloudinary.com/daxicbm7j/image/upload/v1713207920/places2/Le%20Bullier.jpg",
+      "address": "22 Av. de l'Observatoire, 75014 Paris",
+      "category": ["Brasserie", "Bar", "Restaurant"],
+      "social_network": {
+        "facebok": "https://www.facebook.com/people/Bullier/100054201414421/",
+        "instagram": "https://www.instagram.com/lebullierparis/"
+      },
+      "website": "https://lebullier.com/",
+      "description": "description11"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [2.3363884236063086, 48.83947503003057]
+    }
+  },
+  {
+    "properties": {
+      "name": "L'Artisanat Monastique de Paris",
+      "picture": "https://res.cloudinary.com/daxicbm7j/image/upload/v1713207921/places2/L%27Artisanat%20Monastique%20de%20Paris.jpg",
+      "address": "68 Bis Av. Denfert Rochereau, 75014 Paris",
+      "category": ["Boutique d'objets religieux", "Boutique"],
+      "social_network": {
+        "instagram": "https://www.instagram.com/artisanat.monastique/"
+      },
+      "website": "https://www.artisanatmonastique.com/",
+      "description": "description12"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [2.3357590370451145, 48.83815330830655]
+    }
+  },
+  {
+    "properties": {
+      "name": "Café Paulette",
+      "picture": "https://res.cloudinary.com/daxicbm7j/image/upload/v1713207922/places2/Caf%C3%A9%20Paulette.jpg",
+      "address": "48 Bd Arago, 75013 Paris",
+      "category": ["Café", "Bar", "Restaurant"],
+      "social_network": {
+        "instagram": "https://www.instagram.com/lecafepaulette/"
+      },
+      "website": "https://www.lecafepaulette.com/",
+      "description": "description13"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [2.3448656924286695, 48.835143099215145]
+    }
+  },
+  {
+    "properties": {
+      "name": "Habibi",
+      "picture": "https://res.cloudinary.com/daxicbm7j/image/upload/v1713207923/places2/Habibi.jpg",
+      "address": "47 Bd Arago, 75013 Paris",
+      "category": ["Restaurant"],
+      "social_network": {
+        "instagram": "https://www.instagram.com/habibiresto.paris/"
+      },
+      "website": "https://habibi-paris.fr/",
+      "description": "description14"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [2.3456189446729354, 48.83480130130417]
+    }
+  },
+  {
+    "properties": {
+      "name": "THE IRISHMAN",
+      "picture": "https://res.cloudinary.com/daxicbm7j/image/upload/v1713207926/places2/THE%20IRISHMAN.jpg",
+      "address": "40 Bd Arago, 75013 Paris",
+      "category": ["Pub"],
+      "social_network": {
+        "facebok": "https://www.facebook.com/theirishman.paris/",
+        "instagram": "https://www.instagram.com/theirishman.paris/"
+      },
+      "website": "https://irishman.paris/",
+      "description": "description15"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [2.345982319513098, 48.835193709600134]
+    }
+  },
+  {
+    "properties": {
+      "name": "La Factory",
+      "picture": "https://res.cloudinary.com/daxicbm7j/image/upload/v1713207924/places2/La%20Factory.jpg",
+      "address": "8 Rue Beaurepaire, 75010 Paris",
+      "category": ["Boutique", "Boutique de vêtements éco-responsable"],
+      "social_network": {
+        "instagram": "https://www.instagram.com/adresse.paris/"
+      },
+      "website": "https://adresse.paris/",
+      "description": "description16"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [2.363546419546253, 48.869423278815475]
+    }
+  },
+  {
+    "properties": {
+      "name": "ADN Concept",
+      "picture": "https://res.cloudinary.com/daxicbm7j/image/upload/v1713207929/places2/ADN.jpg",
+      "address": "104 Rue de Turenne, 75003 Paris",
+      "category": ["Galerie d'art"],
+      "social_network": {
+        "instagram": "https://www.instagram.com/adnconcept_paris/"
+      },
+      "website": "",
+      "description": "description17, Site e-commerce à venir (adnconcept.fr)"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [2.3647504571417244, 48.86265532258059]
+    }
+  },
+  {
+    "properties": {
+      "name": "Minimoi",
+      "picture": "https://res.cloudinary.com/daxicbm7j/image/upload/v1713207925/places2/minimoi.jpg",
+      "address": "15 Rue Elzevir, 75003 Paris",
+      "category": ["Service d'impression 3D"],
+      "social_network": [],
+      "website": "https://www.costa3d.fr/",
+      "description": "description18"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [2.362059801985197, 48.858822308773625]
+    }
+  },
+  {
+    "properties": {
+      "name": "Chez Lui",
+      "picture": "https://res.cloudinary.com/daxicbm7j/image/upload/v1713207946/places2/chez-lui.jpg",
+      "address": "67 Rue Saint-Maur, 75011 Paris",
+      "category": ["Bar", "Restaurant"],
+      "social_network": {
+        "instagram": "https://www.instagram.com/bistrochezlui/",
+        "facebook": "https://www.facebook.com/bistrochezlui"
+      },
+      "website": "",
+      "description": "description19"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [2.379289762912748, 48.86293960704188]
+    }
+  },
+  {
+    "properties": {
+      "name": "Bontemps",
+      "picture": "https://res.cloudinary.com/daxicbm7j/image/upload/v1713207946/places2/bontemps.jpg",
+      "address": "57 Rue de Bretagne, 75003 Paris",
+      "category": ["Pâtisserie"],
+      "social_network": {
+        "instagram": "https://www.instagram.com/bontempsparis/",
+        "facebook": "https://www.facebook.com/bontempspatisserie"
+      },
+      "website": "https://bontemps.paris/",
+      "description": "description20"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [2.360638607558201, 48.86387919018239]
+    }
+  },
+  {
+    "properties": {
+      "name": "10SIGN ARTISANAT PARIS",
+      "picture": "https://res.cloudinary.com/daxicbm7j/image/upload/v1713207944/places2/10sign.jpg",
+      "address": "10 Rue de Fourcy, 75004 Paris",
+      "category": ["Boutique de vêtements", "Boutique"],
+      "social_network": {
+        "instagram": "",
+        "facebook": ""
+      },
+      "website": "https://www.cma-paris.fr/boutique/",
+      "description": "description21"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [2.359310107263127, 48.85492457904061]
+    }
+  },
+  {
+    "properties": {
+      "name": "L'Atelier Parfum",
+      "picture": "https://res.cloudinary.com/daxicbm7j/image/upload/v1713207943/places2/atelier-parfum.jpg",
+      "address": "12 Rue de Sévigné, 75004 Paris",
+      "category": ["Boutique", "Parfumerie"],
+      "social_network": {
+        "instagram": "https://www.instagram.com/latelierparfum/",
+        "facebook": "https://www.facebook.com/latelierparfum/"
+      },
+      "website": "https://latelierparfum.com/",
+      "description": "description22"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [2.362266836455859, 48.85574170038092]
+    }
+  },
+  {
+    "properties": {
+      "name": "Librairie Ulysse",
+      "picture": "https://res.cloudinary.com/daxicbm7j/image/upload/v1713207942/places2/pays-et-voyage.jpg",
+      "address": "26 Rue Saint-Louis en l'Île, 75004 Paris",
+      "category": ["Boutique", "Librairie"],
+      "social_network": {
+        "instagram": "https://www.instagram.com/librairie_ulysse/",
+        "facebook": ""
+      },
+      "website": "http://ulysse.fr/",
+      "description": "description23"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [2.3575990889862624, 48.85150508612648]
+    }
+  },
+  {
+    "properties": {
+      "name": "Kozy",
+      "picture": "https://res.cloudinary.com/daxicbm7j/image/upload/v1713207941/places2/kozy.jpg",
+      "address": "6 Rue du Petit Pont, 75005 Paris",
+      "category": ["Restaurant", "Brunch"],
+      "social_network": {
+        "instagram": "https://www.instagram.com/kozyparis/",
+        "facebook": ""
+      },
+      "website": "https://www.kozy.fr/",
+      "description": "description24"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [2.3462844572499364, 48.85240940196323]
+    }
+  },
+  {
+    "properties": {
+      "name": "Chez le Libanais",
+      "picture": "https://res.cloudinary.com/daxicbm7j/image/upload/v1713207940/places2/chez-le-libanais.jpg",
+      "address": "35 Rue Saint-André des Arts, 75006 Paris",
+      "category": ["Restaurant", "Restaurant Libanais"],
+      "social_network": {
+        "instagram": "https://www.instagram.com/chezlelibanais/"
+      },
+      "website": "",
+      "description": "description25"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [2.34167069397148, 48.85330933907173]
+    }
+  },
+  {
+    "properties": {
+      "name": "Marché Saint-Germain",
+      "picture": "https://res.cloudinary.com/daxicbm7j/image/upload/v1713207939/places2/march%C3%A9-saint-germain.jpg",
+      "address": "4-6 Rue Lobineau, 75006 Paris",
+      "category": ["Boutique", "Restaurant"],
+      "social_network": {
+        "instagram": "https://www.instagram.com/marchestgermain/",
+        "facebook": "https://www.facebook.com/marchestgermain/"
+      },
+      "website": "https://marchesaintgermain.fr/",
+      "description": "description26"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [2.336263195887396, 48.851879864141104]
+    }
+  },
+  {
+    "properties": {
+      "name": "La Crêpe Rit du Clown",
+      "picture": "https://res.cloudinary.com/daxicbm7j/image/upload/v1713207938/places2/la-crepe-rit-du-clown.jpg",
+      "address": "6 Rue des Canettes, 75006 Paris",
+      "category": ["Restaurant", "Crêperie"],
+      "social_network": {
+        "instagram": "https://www.instagram.com/creperieduclown/"
+      },
+      "website": "",
+      "description": "description27"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [2.3336349761482325, 48.85238303247894]
+    }
+  },
+  {
+    "properties": {
+      "name": "Café de Flore",
+      "picture": "https://res.cloudinary.com/daxicbm7j/image/upload/v1713207937/places2/caf%C3%A9-de-flore.jpg",
+      "address": "172 Bd Saint-Germain, 75006 Paris",
+      "category": "category28",
+      "social_network": {
+        "instagram": "https://www.instagram.com/lecafedeflore/",
+        "facebook": "https://www.facebook.com/Cafedefloreofficial/"
+      },
+      "website": "https://cafedeflore.fr/",
+      "description": "description28"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [2.332562325955962, 48.85413433582491]
+    }
+  },
+  {
+    "properties": {
+      "name": "LDB",
+      "picture": "https://res.cloudinary.com/daxicbm7j/image/upload/v1713207933/places2/LDB.jpg",
+      "address": "12 Rue de Sévigné, 75004 Paris",
+      "category": ["Boutique", "Boutique de vêtements"],
+      "social_network": {
+        "instagram": "https://www.instagram.com/ldb_paris/",
+        "facebook": "https://www.facebook.com/ldbparis/"
+      },
+      "website": "https://ldbparis.com/",
+      "description": "description29"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [2.36229300026426, 48.85579569958972]
+    }
+  },
+  {
+    "properties": {
+      "name": "Little Temple Bar",
+      "picture": "https://res.cloudinary.com/daxicbm7j/image/upload/v1713207936/places2/Little-Temple-Bar.jpg",
+      "address": "12 Rue Princesse, 75006 Paris",
+      "category": ["Pub", "Irish Pub"],
+      "social_network": {
+        "instagram": "https://www.instagram.com/littletemplebar/",
+        "facebook": "https://www.facebook.com/littletemplebarparis/"
+      },
+      "website": "https://www.littletemplebar.fr/",
+      "description": "description30"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [2.334464680488395, 48.852264821833586]
+    }
+  }
+]

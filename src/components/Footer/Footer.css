@@ -3,8 +3,6 @@
   justify-content: center;
   background-color: var(--main-color);
   align-items: center;
-  position: fixed;
-  bottom: 0;
   width: 100%; /* Pour s'étendre sur toute la largeur de la fenêtre */
 }
 
