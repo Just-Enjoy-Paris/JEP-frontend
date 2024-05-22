@@ -1,22 +1,23 @@
 import React, { useState, useContext } from "react";
-import { DataContext } from "../../../context/data.context";
+import axios from "axios";
 import "./searchBar.css"
+import { DataContext } from "../../../context/data.context"
 
-const SearchBar = () => {
-  const { places } = useContext(DataContext);
+const SearchBar = ({ onSearch }) => {
   const [searchQuery, setSearchQuery] = useState("");
-  const [searchResults, setSearchResults] = useState([]);
+  const { places } = useContext(DataContext)
 
-  const handleSearch = (event) => {
+  const handleSearch = async (event) => {
     event.preventDefault();
-    const results = places.features.filter((place) =>
-      place.properties.name.toLowerCase().includes(searchQuery.toLowerCase())
-    );
-    setSearchResults(results);
+    if(searchQuery.trim().length === 0){
+        setSearchQuery(places)
+    }
+    const response = await axios.get(`/api/search?query=${searchQuery}`);
+    onSearch(response.data);
   };
 
   return (
-    <div className="search-bar">
+    <div>
       <form onSubmit={handleSearch}>
         <input
         className="input-search"
@@ -26,11 +27,6 @@ const SearchBar = () => {
         />
         <button className="btn-search" type="submit">Rechercher</button>
       </form>
-      <ul>
-        {searchResults.map((result) => (
-          <li key={result.id}>{result.properties.name}</li>
-        ))}
-      </ul>
     </div>
   );
 };
