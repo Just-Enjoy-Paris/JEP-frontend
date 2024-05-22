@@ -1,4 +1,4 @@
-import Map from "../../components/Map/Map"
+import Map from "../components/Map/Map"
 //import EventPreview from "../../components/EventPreview/EventPreview";
 //import PlaceList from "../../components/PlaceList/PlaceList"
 
