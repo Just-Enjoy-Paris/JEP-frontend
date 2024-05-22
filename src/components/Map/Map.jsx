@@ -1,18 +1,20 @@
-import { useEffect } from "react"
+import { useContext, useEffect } from "react"
 import "./Map.css"
-
-import jsonData from "../../data/places.geo.json"
+import { DataContext } from "../../../context/data.context"
 
 export default function Map() {
+  const { places } = useContext(DataContext)
+
   useEffect(() => {
-    async function initMap() {
-      const googleMaps = await window.google.maps
+    const initMap = () => {
+      const googleMaps = window.google.maps
+
       const map = new googleMaps.Map(document.getElementById("map"), {
         center: { lat: 48.8566, lng: 2.3522 },
         zoom: 13
       })
 
-      jsonData.forEach(point => {
+      places.forEach(point => {
         const marker = new googleMaps.Marker({
           position: {
             lat: point.geometry.coordinates[1],
@@ -22,7 +24,6 @@ export default function Map() {
           title: point.properties.name
         })
 
-        // Créer une info window pour chaque marqueur
         const infoWindow = new googleMaps.InfoWindow({
           content: `
             <div>
@@ -36,36 +37,31 @@ export default function Map() {
             </div>
           `
         })
-
-        // Ajouter un gestionnaire d'événement pour afficher l'info window lorsque le marqueur est cliqué/touché
         marker.addListener("click", () => {
           infoWindow.open(map, marker)
         })
       })
     }
 
-    async function loadGoogleMaps() {
-      const script = document.createElement("script")
-      script.src = import.meta.env.VITE_API_URL_AND_KEYMAP
-      script.async = true
-      script.defer = true
-      script.onload = () => {
-        initMap()
+    const loadGoogleMaps = async () => {
+      // Vérifier si le script a déjà été chargé
+      if (!document.getElementById("google-maps-script")) {
+        const script = document.createElement("script")
+        script.id = "google-maps-script"
+        script.src = `${import.meta.env.VITE_API_URL_AND_KEYMAP}`
+        script.async = true
+        script.defer = true
+        document.body.appendChild(script)
+        script.onload = initMap
+      } else {
+        // Si le script est déjà chargé, initialiser la carte directement
+        if (window.google && window.google.maps) {
+          initMap()
+        }
       }
-      document.body.appendChild(script)
     }
-
     loadGoogleMaps()
-
-    return () => {
-      const script = document.querySelector(
-        "script[src='" + import.meta.env.VITE_API_URL_AND_KEYMAP + "']"
-      )
-      if (script) {
-        document.body.removeChild(script)
-      }
-    }
-  }, [])
+  }, [places])
 
   return (
     <section>
