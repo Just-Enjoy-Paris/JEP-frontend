@@ -1,10 +1,11 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import "./placeList.css";
-import places from "../../data/JEP-Data.places.json";
+import { DataContext } from "../../../context/data.context"
 import PlaceCard from "../PlaceCard/PlaceCard";
 import FilterDropdown from "../FilterDropdown/FilterDropdown";
 
 export default function PlaceList() {
+  const { places } = useContext(DataContext)
   const [selectedCategories, setSelectedCategories] = useState([]);
 
   const handleCategoryChange = (category) => {
@@ -29,7 +30,7 @@ export default function PlaceList() {
       <FilterDropdown selectedCategories={selectedCategories} onCategoryChange={handleCategoryChange} />
       {filteredPlaces.map((place, index) => (
         <PlaceCard
-          key={place._id.$oid}
+          key={place._id}
           place={place}
           isLast={index === filteredPlaces.length - 1}
         />

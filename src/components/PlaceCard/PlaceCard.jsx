@@ -16,7 +16,7 @@ const PlaceCard = ({ place, isLast }) => {
   };
 
   return (
-    <Link to={`/place/${place._id.$oid}`} className={`placesCard ${isLast ? "lastCard" : ""}`}>
+    <Link to={`/place/${place._id}`} className={`placesCard ${isLast ? "lastCard" : ""}`}>
       <motion.div className="cardFlex"
         ref={ref}
         variants={variants}
