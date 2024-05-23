@@ -29,7 +29,7 @@ export const DataProvider = ({ children }) => {
   // à retirer
   useEffect(() => {
     if (places) {
-      console.log("Places updated: error", places)
+      console.log("Places updated:", places)
     }
     if (gardenPlaces) {
       console.log("Garden updated:", gardenPlaces)
