@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom"
 import { useContext, useState } from "react"
 
-import "./LogForm.css"
+import "./logForm.css"
 import axios from "axios"
 import { AuthContext } from "../../../context/user.context"
 

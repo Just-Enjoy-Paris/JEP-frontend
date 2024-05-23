@@ -1,4 +1,4 @@
-import "./PlaceCard.css";
+import "./placeCard.css";
 import { Link } from "react-router-dom";
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";

@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom"
 import { useState } from "react"
 
-import "./NavLinks.css"
+import "./navLinks.css"
 import openMenu from "../../img/open.svg"
 import closeMenu from "../../img/close.svg"
 

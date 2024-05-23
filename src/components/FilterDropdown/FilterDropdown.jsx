@@ -1,4 +1,4 @@
-import "./FilterDropdown.css"
+import "./filterDropdown.css"
 import { useState } from "react";
 import { VscSettings } from "react-icons/vsc";
 import Filter from "../Filter/Filter";
