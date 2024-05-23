@@ -1,5 +1,5 @@
 import { useContext, useEffect } from "react"
-import "./Map.css"
+import "./map.css"
 import { DataContext } from "../../../context/data.context"
 
 export default function Map() {
