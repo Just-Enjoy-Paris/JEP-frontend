@@ -26,7 +26,8 @@ export default function PlaceList() {
 
   // Filtrer les lieux en fonction des catégories sélectionnées et du terme de recherche
   const filteredPlaces =
-  searchResult !== ""
+  places &&
+  (searchResult !== null
     ? searchResult.filter((place) =>
         selectedCategories.length === 0 ||
         selectedCategories.includes(place.properties.category[0])
@@ -34,7 +35,7 @@ export default function PlaceList() {
     : places.filter((place) =>
         selectedCategories.length === 0 ||
         selectedCategories.includes(place.properties.category[0])
-      );
+      ));
 
       return (
         <section className="placeList">
