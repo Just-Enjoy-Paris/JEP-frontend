@@ -11,7 +11,7 @@ export default function Map() {
 
       const map = new googleMaps.Map(document.getElementById("map"), {
         center: { lat: 48.8566, lng: 2.3522 },
-        zoom: 13
+        zoom: 12
       })
 
       places.forEach(point => {
