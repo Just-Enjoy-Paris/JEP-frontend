@@ -1,4 +1,4 @@
-import "./ContactForm.css"
+import "./contactForm.css"
 import { useState } from "react"
 
 const ContactForm = () => {

@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom"
 import { FaUserAlt } from "react-icons/fa"
 
-import "./Header.css"
+import "./header.css"
 import NavLinks from "../NavLinks/NavLinks"
 import logo from "../../img/logo.svg"
 
