@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./placeList.css";
-import places from "../../data/places.geo.json";
+import places from "../../data/JEP-Data.places.json";
 import PlaceCard from "../PlaceCard/PlaceCard";
 import FilterDropdown from "../FilterDropdown/FilterDropdown";
 
@@ -17,20 +17,20 @@ export default function PlaceList() {
     });
   };
 
-  // Filtrer les lieux en fonction des catégories sélectionnées
-  const filteredPlaces = selectedCategories.length === 0 ? places : places.filter((place) =>
-    selectedCategories.includes(place.properties.category[0])
-  ); 
+  const filteredPlaces = selectedCategories.length === 0 
+    ? places 
+    : places.filter((place) =>
+        selectedCategories.some((cat) => place.properties.category.includes(cat))
+      );
 
   return (
     <section className="placeList">
       <h1 className="placeListTitle">Lieux</h1>
-      {/* Inclure le composant Filter et passer les catégories sélectionnées et la fonction de mise à jour */}
       <FilterDropdown selectedCategories={selectedCategories} onCategoryChange={handleCategoryChange} />
       {filteredPlaces.map((place, index) => (
         <PlaceCard
-          key={place._id}
-          place={place.properties}          
+          key={place._id.$oid}
+          place={place}
           isLast={index === filteredPlaces.length - 1}
         />
       ))}
