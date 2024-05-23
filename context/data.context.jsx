@@ -8,6 +8,8 @@ export const DataProvider = ({ children }) => {
   const [places, setPlaces] = useState([])
   const [gardenPlaces, setGardenPlaces] = useState([])
   const [touristPlaces, setTouristPlaces] = useState([])
+  const [search, setSearch] = useState(null)
+  const [searchResult, setSearchResult] = useState(null)
 
   useEffect(() => {
     const fetchPlaces = async () => {
@@ -40,7 +42,7 @@ export const DataProvider = ({ children }) => {
   }, [places, gardenPlaces, touristPlaces])
 
   return (
-    <DataContext.Provider value={{ places, gardenPlaces, touristPlaces }}>
+    <DataContext.Provider value={{setPlaces, places, gardenPlaces, touristPlaces, search, setSearch, searchResult, setSearchResult}}>
       {children}
     </DataContext.Provider>
   )
