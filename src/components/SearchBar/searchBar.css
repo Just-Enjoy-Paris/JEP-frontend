@@ -1,17 +1,29 @@
+.searchBar {
+    display: flex; 
+}
+
 .btn-search{
     color: var(--txt-color);
     font-family: "Raleway", sans-serif;
     font-weight: 700;
     font-size: 16px;
     background-color: var(--secondary-color);
-    border-radius: 5px;
+    border-radius: 0px 5px 5px 0px;
+    border: none;
+    padding: 10px;
+    width: 50px;
 }
 
 .input-search{
-    color: var(--txt-color);
+    color: black;
     font-family: "Raleway", sans-serif;
     font-weight: 700;
     font-size: 16px;
-    background-color: var(--secondary-color);
-    border-radius: 5px;
+    background-color: var(--txt-color);
+    border-top: 1px solid var(--secondary-color);
+    border-bottom: 1px solid var(--secondary-color);
+    border-left: none;
+    border-right: none;
+    padding: 15px;
+    width: 100%;
 }

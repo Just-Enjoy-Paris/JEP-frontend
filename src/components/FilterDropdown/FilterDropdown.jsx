@@ -11,12 +11,11 @@ const FilterDropdown = ({ selectedCategories, onCategoryChange }) => {
       <div className="filter-dropdown">
         {/* Bouton de bascule du menu */}
         <button
-          className="dropdown-toggle"
+          className="filter-dropdown-toggle"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
             <div className="filterMenu">
                 <VscSettings className="openFilter" size={30} />
-                <p>Filtrer</p>
             </div>
         </button>
   
