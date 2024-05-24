@@ -1,17 +1,39 @@
-.btn-search{
-    color: var(--txt-color);
-    font-family: "Raleway", sans-serif;
-    font-weight: 700;
-    font-size: 16px;
-    background-color: var(--secondary-color);
-    border-radius: 5px;
+.btn-search {
+  color: var(--txt-color);
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  background-color: var(--secondary-color);
+  border-radius: 5px;
 }
 
-.input-search{
-    color: var(--txt-color);
-    font-family: "Raleway", sans-serif;
-    font-weight: 700;
-    font-size: 16px;
-    background-color: var(--secondary-color);
-    border-radius: 5px;
+.input-search {
+  color: var(--txt-color);
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  background-color: var(--secondary-color);
+  border-radius: 5px;
+}
+.autocomplete-results {
+  color: var(--txt-color);
+  background-color: var(--secondary-color);
+  border-top: none;
+  list-style: none;
+  padding: 0;
+  margin-top: 0;
+  z-index: 1000;
+  max-height: 200px;
+  overflow: hidden;
+  overflow-y: auto;
+  scrollbar-width: none;
+}
+
+.autocomplete-results li {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.autocomplete-results li:hover {
+  background-color: lightblue;
 }

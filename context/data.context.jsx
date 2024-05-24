@@ -42,7 +42,18 @@ export const DataProvider = ({ children }) => {
   }, [places, gardenPlaces, touristPlaces])
 
   return (
-    <DataContext.Provider value={{setPlaces, places, gardenPlaces, touristPlaces, search, setSearch, searchResult, setSearchResult}}>
+    <DataContext.Provider
+      value={{
+        setPlaces,
+        places,
+        gardenPlaces,
+        touristPlaces,
+        search,
+        setSearch,
+        searchResult,
+        setSearchResult
+      }}
+    >
       {children}
     </DataContext.Provider>
   )
