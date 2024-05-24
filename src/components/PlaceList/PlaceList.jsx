@@ -6,6 +6,7 @@ import SearchBar from "../SearchBar/SearchBar";
 import { DataContext } from "../../../context/data.context";
 
 export default function PlaceList() {
+  const { places } = useContext(DataContext)
   const [selectedCategories, setSelectedCategories] = useState([]);
   const { searchResult, places } = useContext(DataContext)
 
@@ -18,11 +19,6 @@ export default function PlaceList() {
       }
     });
   };
-
-  // Filtrer les lieux en fonction des catégories sélectionnées
-  // const filteredPlaces = selectedCategories.length === 0 ? places : places.filter((place) =>
-  //   selectedCategories.includes(place.properties.category[0])
-  // );
 
   // Filtrer les lieux en fonction des catégories sélectionnées et du terme de recherche
   const filteredPlaces =

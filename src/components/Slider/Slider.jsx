@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from "react"
 
-import "./Slider.css"
+import "./slider.css"
 
 export default function Slider() {
   const examples = [
