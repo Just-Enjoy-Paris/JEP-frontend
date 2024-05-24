@@ -1,5 +1,5 @@
 .searchBar {
-    display: flex;    
+    display: flex; 
 }
 
 .btn-search{
@@ -11,6 +11,7 @@
     border-radius: 0px 5px 5px 0px;
     border: none;
     padding: 10px;
+    width: 50px;
 }
 
 .input-search{
@@ -24,4 +25,5 @@
     border-left: none;
     border-right: none;
     padding: 15px;
+    width: 100%;
 }

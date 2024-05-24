@@ -23,7 +23,9 @@
 
 .filterBar {
   display: flex;
+  justify-content: center;
   flex-direction: row-reverse;
   flex-wrap: nowrap;
   margin: 10px;
+  width: 79%;
 }
