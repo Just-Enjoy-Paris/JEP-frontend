@@ -2,6 +2,7 @@ import { useContext } from "react"
 import deburr from "lodash.deburr";
 import "./searchBar.css"
 import { DataContext } from "../../../context/data.context"
+import { FaSearch } from "react-icons/fa";
 
 export default function SearchBar() {
   const { places, search, setSearch, setSearchResult } = useContext(DataContext)
@@ -25,13 +26,13 @@ export default function SearchBar() {
     <div className="searchBar">
       <input
         className="input-search"
-        type="text"
+        type="search"
         placeholder="Rechercher un lieu"
         value={search === null ? "" : search}
         onChange={handleSearchChange}
       />
       <button className="btn-search" onClick={handleSearchClick}>
-        Rechercher
+        <FaSearch size={24} />
       </button>
     </div>
   )

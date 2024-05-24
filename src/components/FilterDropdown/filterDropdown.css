@@ -1,14 +1,15 @@
 .filterMenu {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
     color: var(--txt-color);
     font-family: "Raleway", sans-serif;
     font-weight: 700;
     background-color: var(--secondary-color);
-    padding: 10px 30px;
-    border-radius: 5px 5px 0px 0px;
-    width: 100%;
+}
+
+.filter-dropdown-toggle {
+    background-color: var(--secondary-color);
+    border: none;
+    border-radius: 5px 0 0 5px;
+    padding: 10px;    
 }
 
 .filterLinks {
@@ -20,6 +21,7 @@
     padding: 25px 25px 20px;
     z-index: 999;
     font-family: "Raleway", sans-serif;    
+    box-shadow: 5px 7px 9px -6px rgba(0, 0, 0, 0.75);    
 }
 
 .filterLinks.open {

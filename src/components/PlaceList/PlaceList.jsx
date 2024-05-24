@@ -37,12 +37,14 @@ export default function PlaceList() {
   return (
     <section className="placeList">
       <h1 className="placeListTitle">Lieux</h1>
+      <div className="filterBar">
       <SearchBar />
       {/* Inclure le composant Filter et passer les catégories sélectionnées et la fonction de mise à jour */}
       <FilterDropdown
         selectedCategories={selectedCategories}
         onCategoryChange={handleCategoryChange}
       />
+      </div>
       {filteredPlaces.map((place, index) => (
         <PlaceCard
           key={place._id}
