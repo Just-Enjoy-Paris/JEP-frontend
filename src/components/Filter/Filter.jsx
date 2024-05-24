@@ -1,7 +1,6 @@
 import React from "react";
 
 export default function Filter({ selectedCategories, onCategoryChange }) {
-   // Ajoutez ici toutes les catégories possibles
   const categories = 
   [
     "Pâtisserie",
