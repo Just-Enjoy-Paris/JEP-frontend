@@ -46,7 +46,7 @@ export default function PlaceList() {
       {filteredPlaces.map((place, index) => (
         <PlaceCard
           key={place._id}
-          place={place.properties}
+          place={place}
           isLast={index === filteredPlaces.length - 1}
         />
       ))}
