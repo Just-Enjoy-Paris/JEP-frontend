@@ -2,6 +2,7 @@ import { useContext, useRef, useState } from "react"
 import deburr from "lodash.deburr"
 import "./searchBar.css"
 import { DataContext } from "../../../context/data.context"
+import { FaSearch } from "react-icons/fa";
 
 export default function SearchBar() {
   const { places, search, setSearch, setSearchResult } = useContext(DataContext)
@@ -58,7 +59,7 @@ export default function SearchBar() {
         onKeyDown={handleKeyDown}
       />
       <button className="btn-search" onClick={handleSearchClick}>
-        Rechercher
+        <FaSearch size={24} />
       </button>
       {suggestions.length > 0 && (
         <ul className="autocomplete-results">
