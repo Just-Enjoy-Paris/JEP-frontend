@@ -1,45 +1,71 @@
-import React, { useState } from "react"
+import React, { useContext, useState, useEffect } from "react"
 import { useNavigate } from "react-router-dom"
 import classNames from "classnames"
+import { AuthContext } from "../../../context/user.context"
+
 import "./userBoard.css"
 
 const UserBoard = () => {
   const navigate = useNavigate()
-  const [email, setEmail] = useState("")
-  const [password, setPassword] = useState("")
   const [selectedAvatar, setSelectedAvatar] = useState(null)
-//   const [error, setError] = useState("")
+  const { user, updateEmail, updatePassword, updateAvatar } = useContext(AuthContext);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
   const avatars = ["avatar1.png", "avatar2.png"]
 
-  const handleEmailChange = e => {
-    e.preventDefault()
-    // Logic to update email
-    // ...
-  }
+  useEffect(() => {
+    if (user) {
+      setEmail(user.email || "");
+      setPassword(user.password || "");
+      setSelectedAvatar(user.avatar || "");
+    }
+  }, [user]);
 
-  const handlePasswordChange = e => {
-    e.preventDefault()
-    // Logic to update password
-    // ...
-  }
+  const handleEmailChange = async (e) => {
+    e.preventDefault();
+    try {
+      await updateEmail(user.email);
+      console.log("Email mis à jour avec succès");
+    } catch (error) {
+      console.error("Erreur lors de la mise à jour de l'email:", error);
+    }
+  };
 
-  const handleAvatarSelect = avatar => {
-    setSelectedAvatar(avatar)
-  }
+  const handlePasswordChange = async (e) => {
+    e.preventDefault();
+    try {
+      await updatePassword(user.password);
+      console.log("Mot de passe mis à jour avec succès");
+    } catch (error) {
+      console.error("Erreur lors de la mise à jour du mot de passe:", error);
+    }
+  };
 
-  const handleAvatarChange = () => {
-    // Logique pour mettre à jour l'avatar
-    console.log("Avatar sélectionné:", selectedAvatar)
-  }
+  const handleAvatarSelect = (avatar) => {
+    setSelectedAvatar(avatar);
+  };
+
+  const handleAvatarChange = async () => {
+    try {
+      await updateAvatar(selectedAvatar);
+      console.log("Avatar mis à jour avec succès");
+    } catch (error) {
+      console.error("Erreur lors de la mise à jour de l'avatar:", error);
+    }
+  };
 
   const handleLogout = () => {
     // Logic to handle logout
-    navigate("/login")
+    navigate("/login");
+  };
+
+  if (!user) {
+    return <div>Chargement...</div>;
   }
 
   return (
-    <div>
+    <div className="">
       <h1>Espace Client</h1>
       <form onSubmit={handleEmailChange}>
         <label>
@@ -47,7 +73,7 @@ const UserBoard = () => {
           <input
             type="email"
             value={email}
-            onChange={e => setEmail(e.target.value)}
+            onChange={(e) => updateEmail(e.target.value)}
           />
         </label>
         <button type="submit">Mettre à jour Email</button>
@@ -59,7 +85,7 @@ const UserBoard = () => {
           <input
             type="password"
             value={password}
-            onChange={e => setPassword(e.target.value)}
+            onChange={(e) => updatePassword(e.target.value)}
           />
         </label>
         <button type="submit">Mettre à jour Mot de Passe</button>
@@ -82,8 +108,6 @@ const UserBoard = () => {
         </div>
         <button onClick={handleAvatarChange}>Enregistrer Avatar</button>
       </div>
-
-      {/* {error && <p>{error}</p>} */}
 
       <button onClick={handleLogout}>Déconnexion</button>
     </div>
