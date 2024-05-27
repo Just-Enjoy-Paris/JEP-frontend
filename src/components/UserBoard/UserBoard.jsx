@@ -8,7 +8,7 @@ const UserBoard = () => {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
   const [selectedAvatar, setSelectedAvatar] = useState(null)
-  const [error, setError] = useState("")
+//   const [error, setError] = useState("")
 
   const avatars = ["avatar1.png", "avatar2.png"]
 
@@ -83,7 +83,7 @@ const UserBoard = () => {
         <button onClick={handleAvatarChange}>Enregistrer Avatar</button>
       </div>
 
-      {error && <p>{error}</p>}
+      {/* {error && <p>{error}</p>} */}
 
       <button onClick={handleLogout}>Déconnexion</button>
     </div>

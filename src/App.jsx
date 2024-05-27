@@ -1,5 +1,5 @@
 import "./App.css"
-import { BrowserRouter as Router, Routes, Route, ProtectedRoute } from "react-router-dom"
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import Header from "./components/Header/Header.jsx"
 //import Footer from "./components/Footer/Footer.jsx"
 import Landing from "./pages/landing/Landing.jsx"
@@ -11,7 +11,7 @@ import Contact from "./pages/contact/Contact.jsx"
 import Error from "./pages/error/Error.jsx"
 import Signup from "./pages/signup/Signup.jsx"
 import Place from "./pages/places/Place.jsx"
-import CustomerArea from "./pages/customerArea/CustomerArea.jsx"
+// import CustomerArea from "./pages/customerArea/CustomerArea.jsx"
 
 function App() {
   return (
@@ -20,11 +20,11 @@ function App() {
         <Routes>
           <Route path="/" element={<Landing />} />
           <Route path="/log" element={<Log />} />
-          <Route path="/client-area"  element={
+          {/* <Route path="/client-area"  element={
               <ProtectedRoute isAuthenticated={isAuthenticated}>
                   <CustomerArea />
               </ProtectedRoute>} 
-          />
+          /> */}
           <Route path="/signup" element={<Signup />} />
           <Route path="/about" element={<About />} />
           <Route path="/places" element={<Places />} />
