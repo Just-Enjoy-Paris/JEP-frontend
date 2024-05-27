@@ -20,12 +20,10 @@ export default function Header() {
       </NavLink>
       {/* Log button */}
       {isAuthenticated ? (
-        // Si l'utilisateur est connecté, redirigez-le vers la page "customer area"
         <NavLink className="logButton" to="/client-area">
           <FaUserAlt className="logIcon" size={24} />
         </NavLink>
       ) : (
-        // Si l'utilisateur n'est pas connecté, redirigez-le vers la page de connexion
         <NavLink className="logButton" to="/log">
           <FaUserAlt className="logIcon" size={24} />
         </NavLink>

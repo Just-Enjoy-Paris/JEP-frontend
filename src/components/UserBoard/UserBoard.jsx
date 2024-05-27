@@ -17,19 +17,19 @@ const UserBoard = () => {
 
   useEffect(() => {
     if (user) {
-      setEmail(user.email || "");
-      setPassword(user.password || "");
-      setSelectedAvatar(user.avatar || "");
+      setEmail(user.email || "")
+      setPassword(user.password || "")
+      setSelectedAvatar(user.avatar || "")
     }
   }, [user]);
 
   const handleEmailChange = async (e) => {
-    e.preventDefault();
+    e.preventDefault()
     try {
-      await updateEmail(email);  
-      console.log("Email updated successfully");
+      await updateEmail(email)
+      console.log("Email updated successfully")
     } catch (error) {
-      console.error("Error updating email:", error);
+      console.error("Error updating email:", error)
     }
   };
 
@@ -53,14 +53,14 @@ const UserBoard = () => {
   };
 
   const handleLogout = () => {
-    navigate("/login");
+    navigate("/log");
   };
 
-  useEffect(() => {
-    if (!isAuthenticated) {
-      navigate("/login");
+  useEffect(async () => {
+    if (isAuthenticated) {
+      navigate("/client-area");
     }
-  }, [isAuthenticated, navigate]);
+  }, [isAuthenticated]);
 
   if (!user) {
     return <div>Loading...</div>;
