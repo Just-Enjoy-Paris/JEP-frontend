@@ -30,36 +30,12 @@ export const AuthProvider = ({ children }) => {
     fetchuser()
   }, [update, isAuthenticated])
 
-  const handleLogout = () => {
-    axios.delete("/logout", { withCredentials: true })
+  const handleLogout = async () => {
+    await axios.delete(`${import.meta.env.VITE_API_URL}/logout`, {
+      withCredentials: true
+    })
     setIsAuthenticated(false)
   }
-
-
-  const updateUser = async (updatedFields) => {
-    try {
-      const res = await axios.put(
-        `${import.meta.env.VITE_API_URL}/updateuser`,
-        updatedFields,
-        { withCredentials: true }
-      );
-      setUser(res.data);
-    } catch (err) {
-      console.log("Error updating user:", err)
-    }
-  };
-
-  const updateEmail = async (newEmail) => {
-    await updateUser({ email: newEmail })
-  };
-
-  const updatePassword = async (newPassword) => {
-    await updateUser({ password: newPassword })
-  };
-
-  const updateAvatar = async (newAvatar) => {
-    await updateUser({ avatar: newAvatar })
-  };
 
   return (
     <AuthContext.Provider
@@ -70,9 +46,7 @@ export const AuthProvider = ({ children }) => {
         setUser,
         update,
         setUpdate,
-        updateEmail,
-        updatePassword,
-        updateAvatar,handleLogout
+        handleLogout
       }}
     >
       {children}

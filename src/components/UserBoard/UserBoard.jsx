@@ -1,59 +1,66 @@
+/* eslint-disable react/no-unescaped-entities */
 /* eslint-disable no-console */
 import axios from "axios"
-import React, { useContext, useState } from "react";
-import { useNavigate } from "react-router-dom";
-import classNames from "classnames";
-import { AuthContext } from "../../../context/user.context";
+import React, { useContext, useEffect, useState } from "react"
+import { useNavigate } from "react-router-dom"
+import classNames from "classnames"
+import { AuthContext } from "../../../context/user.context"
 
-import "./userBoard.css";
+import "./userBoard.css"
 
 const UserBoard = () => {
-  const navigate = useNavigate();
-  const {  isAuthenticated,update,setUpdate ,handleLogout} = useContext(AuthContext);
-  const [newPassword, setNewPassword] = useState(null);
-  const [newAvatar, setNewAvatar] = useState(null);
-  const [newEmail, setNewEmail] = useState(null);
+  const navigate = useNavigate()
+  const { isAuthenticated, update, setUpdate, handleLogout } =
+    useContext(AuthContext)
+  const [newPassword, setNewPassword] = useState("")
+  const [newAvatar, setNewAvatar] = useState("")
+  const [newEmail, setNewEmail] = useState("")
 
-  const avatars = ["avatar1.png", "avatar2.png"];
+  const avatars = ["avatar1.png", "avatar2.png"]
 
   const updateUser = async () => {
     try {
-       await axios.put(
+      await axios.put(
         `${import.meta.env.VITE_API_URL}/updateprofile`,
-        {newEmail,newAvatar,newPassword},
+        { newEmail, newAvatar, newPassword },
         { withCredentials: true }
-      );
-      setUpdate(!update);
+      )
+      setUpdate(!update)
     } catch (err) {
       console.log("Error updating user:", err)
     }
-  };
+  }
+  useEffect(() => {
+    if (!isAuthenticated) {
+      navigate("/log")
+    }
+  })
 
-  return !isAuthenticated ? ( navigate("/log") ) : (
+  return (
     <div className="espace-client">
       <h1 className="title">Mes informations</h1>
       <form onSubmit={updateUser}>
         <label>
-        Mettre à jour l'email:
+          Mettre à jour l'email:
           <input
             type="email"
-            value={newEmail === "" ?  null : newEmail}
-            onChange={(e) => setNewEmail(e.target.value)}
+            value={newEmail}
+            onChange={e => setNewEmail(e.target.value)}
           />
         </label>
         <button type="submit">Enregistrer</button>
       </form>
 
-     <form onSubmit={updateUser}>
+      <form onSubmit={updateUser}>
         <label>
-        Mettre à jour le mot de passe:
+          Mettre à jour le mot de passe:
           <input
             type="password"
-            value={newPassword === "" ? null : newPassword}
-            onChange={(e) => setNewPassword(e.target.value)}
+            value={newPassword}
+            onChange={e => setNewPassword(e.target.value)}
           />
         </label>
-        <button type="submit">Enregistrer</ button>
+        <button type="submit">Enregistrer</button>
       </form>
 
       <div>
@@ -76,7 +83,7 @@ const UserBoard = () => {
 
       <button onClick={handleLogout}>Log out</button>
     </div>
-  );
+  )
 }
 
-export default UserBoard;
+export default UserBoard

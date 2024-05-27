@@ -10,7 +10,7 @@ const LoginForm = () => {
   const [password, setPassword] = useState("")
   const navigate = useNavigate()
 
-  const { isAuthenticated ,setIsAuthenticated} = useContext(AuthContext)
+  const { setIsAuthenticated } = useContext(AuthContext)
 
   const handleSubmit = async e => {
     e.preventDefault()
@@ -22,7 +22,7 @@ const LoginForm = () => {
         { withCredentials: true }
       )
       setIsAuthenticated(true)
-      if(response.status === 200){
+      if (response.status === 200) {
         navigate("/")
       }
       // eslint-disable-next-line no-console
@@ -33,7 +33,7 @@ const LoginForm = () => {
     }
   }
 
-  return !isAuthenticated ? (
+  return (
     <form className="login-form" onSubmit={handleSubmit}>
       <h1 className="login-title">Connexion</h1>
       <p>
@@ -76,8 +76,6 @@ const LoginForm = () => {
         Se connecter
       </button>
     </form>
-  ) : (
-navigate("/client-area")
   )
 }
 
