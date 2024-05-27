@@ -11,7 +11,7 @@ import Contact from "./pages/contact/Contact.jsx"
 import Error from "./pages/error/Error.jsx"
 import Signup from "./pages/signup/Signup.jsx"
 import Place from "./pages/places/Place.jsx"
-import PrivateRoute from "./components/PrivateRoute/PrivateRoute.jsx"
+import CustomerArea from "./pages/customerArea/CustomerArea.jsx"
 
 function App() {
   return (
@@ -20,7 +20,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Landing />} />
         <Route path="/log" element={<Log />} />
-        <Route path="/client-area" element={<PrivateRoute />}/>
+        <Route path="/client-area" element={<CustomerArea />}/>
         <Route path="/signup" element={<Signup />} />
         <Route path="/about" element={<About />} />
         <Route path="/places" element={<Places />} />

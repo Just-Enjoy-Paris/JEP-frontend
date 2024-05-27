@@ -1,9 +1,9 @@
-import CustomerPage from "../../components/UserBoard/UserBoard"
+import UserBoard from "../../components/UserBoard/UserBoard"
 
 export default function CustomerArea() {
     return (
       <>
-        <CustomerPage />
+        <UserBoard />
       </>
     )
   }
