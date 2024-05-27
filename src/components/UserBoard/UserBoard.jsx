@@ -1,5 +1,6 @@
 /* eslint-disable no-console */
-import React, { useContext, useState, useEffect } from "react";
+import axios from "axios"
+import React, { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import classNames from "classnames";
 import { AuthContext } from "../../../context/user.context";
@@ -8,107 +9,69 @@ import "./userBoard.css";
 
 const UserBoard = () => {
   const navigate = useNavigate();
-  const [selectedAvatar, setSelectedAvatar] = useState(null);
-  const { user, updateEmail, updatePassword, updateAvatar, isAuthenticated } = useContext(AuthContext);
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const {  isAuthenticated,update,setUpdate ,handleLogout} = useContext(AuthContext);
+  const [newPassword, setNewPassword] = useState(null);
+  const [newAvatar, setNewAvatar] = useState(null);
+  const [newEmail, setNewEmail] = useState(null);
 
   const avatars = ["avatar1.png", "avatar2.png"];
 
-  useEffect(() => {
-    if (user) {
-      setEmail(user.email || "")
-      setPassword(user.password || "")
-      setSelectedAvatar(user.avatar || "")
-    }
-  }, [user]);
-
-  const handleEmailChange = async (e) => {
-    e.preventDefault()
+  const updateUser = async () => {
     try {
-      await updateEmail(email)
-      console.log("Email updated successfully")
-    } catch (error) {
-      console.error("Error updating email:", error)
+       await axios.put(
+        `${import.meta.env.VITE_API_URL}/updateprofile`,
+        {newEmail,newAvatar,newPassword},
+        { withCredentials: true }
+      );
+      setUpdate(!update);
+    } catch (err) {
+      console.log("Error updating user:", err)
     }
   };
 
-  const handlePasswordChange = async (e) => {
-    e.preventDefault();
-    try {
-      await updatePassword(password); 
-      console.log("Password updated successfully");
-    } catch (error) {
-      console.error("Error updating password:", error);
-    }
-  };
-
-  const handleAvatarChange = async () => {
-    try {
-      await updateAvatar(selectedAvatar);
-      console.log("Avatar updated successfully");
-    } catch (error) {
-      console.error("Error updating avatar:", error);
-    }
-  };
-
-  const handleLogout = () => {
-    navigate("/log");
-  };
-
-  useEffect(async () => {
-    if (isAuthenticated) {
-      navigate("/client-area");
-    }
-  }, [isAuthenticated]);
-
-  if (!user) {
-    return <div>Loading...</div>;
-  }
-
-  return (
-    <div>
-      <h1>User Dashboard</h1>
-      <form onSubmit={handleEmailChange}>
+  return !isAuthenticated ? ( navigate("/log") ) : (
+    <div className="espace-client">
+      <h1 className="title">Mes informations</h1>
+      <form onSubmit={updateUser}>
         <label>
-          Change Email:
+        Mettre à jour l'email:
           <input
             type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            value={newEmail === "" ?  null : newEmail}
+            onChange={(e) => setNewEmail(e.target.value)}
           />
         </label>
-        <button type="submit">Update Email</button>
+        <button type="submit">Enregistrer</button>
       </form>
 
-      <form onSubmit={handlePasswordChange}>
+     <form onSubmit={updateUser}>
         <label>
-          Change Password:
+        Mettre à jour le mot de passe:
           <input
             type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
+            value={newPassword === "" ? null : newPassword}
+            onChange={(e) => setNewPassword(e.target.value)}
           />
         </label>
-        <button type="submit">Update Password</button>
+        <button type="submit">Enregistrer</ button>
       </form>
 
       <div>
-        <h2>Change Avatar</h2>
+        <h2>Mettre à jour l'avatar</h2>
         <div className="avatarArea">
           {avatars.map(avatar => (
             <img
               className={classNames("avatar", {
-                selected: selectedAvatar === avatar
+                selected: newAvatar === avatar
               })}
               key={avatar}
               src={avatar}
               alt="avatar"
-              onClick={() => setSelectedAvatar(avatar)}
+              onClick={() => setNewAvatar(avatar)}
             />
           ))}
         </div>
-        <button onClick={handleAvatarChange}>Save Avatar</button>
+        <button onClick={updateUser}>Enregistrer</button>
       </div>
 
       <button onClick={handleLogout}>Log out</button>

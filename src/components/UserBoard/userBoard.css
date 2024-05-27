@@ -1,3 +1,16 @@
+.espace-client{
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
+}
+
+.title{
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 3vh;
+}
+
 .avatarArea {
     display: flex;
     gap: 10px;

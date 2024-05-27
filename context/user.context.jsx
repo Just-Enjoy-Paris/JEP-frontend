@@ -30,6 +30,12 @@ export const AuthProvider = ({ children }) => {
     fetchuser()
   }, [update, isAuthenticated])
 
+  const handleLogout = () => {
+    axios.delete("/logout", { withCredentials: true })
+    setIsAuthenticated(false)
+  }
+
+
   const updateUser = async (updatedFields) => {
     try {
       const res = await axios.put(
@@ -66,7 +72,7 @@ export const AuthProvider = ({ children }) => {
         setUpdate,
         updateEmail,
         updatePassword,
-        updateAvatar
+        updateAvatar,handleLogout
       }}
     >
       {children}

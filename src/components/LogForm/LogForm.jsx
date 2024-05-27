@@ -1,5 +1,5 @@
 import { NavLink, useNavigate } from "react-router-dom"
-import { useContext, useState,useEffect } from "react"
+import { useContext, useState } from "react"
 
 import "./logForm.css"
 import axios from "axios"
@@ -33,13 +33,7 @@ const LoginForm = () => {
     }
   }
 
-   useEffect(async () => {
-    if (isAuthenticated) {
-      navigate("/client-area");
-    }
-  }, [isAuthenticated]);
-
-  return (
+  return !isAuthenticated ? (
     <form className="login-form" onSubmit={handleSubmit}>
       <h1 className="login-title">Connexion</h1>
       <p>
@@ -82,6 +76,8 @@ const LoginForm = () => {
         Se connecter
       </button>
     </form>
+  ) : (
+navigate("/client-area")
   )
 }
 
