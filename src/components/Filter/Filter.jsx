@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useContext } from "react"
+import { DataContext } from "../../../context/data.context"
 
-export default function Filter({ selectedCategories, onCategoryChange }) {
-  const categories = 
-  [
+export default function Filter() {
+  const { selectedCategories, setSelectedCategories } = useContext(DataContext)
+  const categories = [
     "Pâtisserie",
     "Restaurant",
     "Bijouterie",
@@ -20,7 +21,7 @@ export default function Filter({ selectedCategories, onCategoryChange }) {
     "Boutique de Porcelaine",
     "Primeur",
     "Boutique de vêtements",
-    "Boutique d'objets religieux", 
+    "Boutique d'objets religieux",
     "Salon de the",
     "Fast food",
     "Bubble tea",
@@ -29,20 +30,30 @@ export default function Filter({ selectedCategories, onCategoryChange }) {
     "Vente et réparation de cycles",
     "Boutique de CBD",
     "Association"
-   ];
+  ]
+
+  const handleCategoryChange = category => {
+    setSelectedCategories(prevCategories => {
+      if (prevCategories.includes(category)) {
+        return prevCategories.filter(cat => cat !== category)
+      } else {
+        return [...prevCategories, category]
+      }
+    })
+  }
 
   return (
     <div className="filter">
-      {categories.map((category) => (
+      {categories.map(category => (
         <div key={category}>
           <input
             type="checkbox"
             checked={selectedCategories.includes(category)}
-            onChange={() => onCategoryChange(category)}
+            onChange={() => handleCategoryChange(category)}
           />
           <label>{category}</label>
         </div>
       ))}
     </div>
-  );
+  )
 }

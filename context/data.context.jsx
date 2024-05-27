@@ -8,8 +8,9 @@ export const DataProvider = ({ children }) => {
   const [places, setPlaces] = useState([])
   const [gardenPlaces, setGardenPlaces] = useState([])
   const [touristPlaces, setTouristPlaces] = useState([])
-  const [search, setSearch] = useState(null)
+  const [search, setSearch] = useState("")
   const [searchResult, setSearchResult] = useState(null)
+  const [selectedCategories, setSelectedCategories] = useState([])
 
   useEffect(() => {
     const fetchPlaces = async () => {
@@ -51,7 +52,9 @@ export const DataProvider = ({ children }) => {
         search,
         setSearch,
         searchResult,
-        setSearchResult
+        setSearchResult,
+        selectedCategories,
+        setSelectedCategories
       }}
     >
       {children}

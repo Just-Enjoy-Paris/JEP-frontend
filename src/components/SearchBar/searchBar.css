@@ -1,40 +1,45 @@
 .searchBar {
-    display: flex; 
+  display: flex;
+  position: relative;
 }
 
-.btn-search{
-    color: var(--txt-color);
-    font-family: "Raleway", sans-serif;
-    font-weight: 700;
-    font-size: 16px;
-    background-color: var(--secondary-color);
-    border-radius: 0px 5px 5px 0px;
-    border: none;
-    padding: 10px;
-    width: 50px;
+.btn-search {
+  color: var(--txt-color);
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  background-color: var(--secondary-color);
+  border-radius: 0px 5px 5px 0px;
+  border: none;
+  padding: 10px;
+  width: 20%;
 }
 
-.input-search{
-    color: black;
-    font-family: "Raleway", sans-serif;
-    font-weight: 700;
-    font-size: 16px;
-    background-color: var(--txt-color);
-    border-top: 1px solid var(--secondary-color);
-    border-bottom: 1px solid var(--secondary-color);
-    border-left: none;
-    border-right: none;
-    padding: 15px;
-    width: 100%;
+.input-search {
+  color: black;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  background-color: var(--txt-color);
+  border-top: 1px solid var(--secondary-color);
+  border-bottom: 1px solid var(--secondary-color);
+  border-left: none;
+  border-right: none;
+  padding: 15px;
+  width: 80%;
 }
 
 .autocomplete-results {
+  position: absolute;
+  top: 53px;
+  left: 50%;
+  transform: translate(-50%);
   color: var(--txt-color);
   background-color: var(--secondary-color);
   border-top: none;
   list-style: none;
   padding: 0;
-  margin-top: 0;
+  width: 70%;
   z-index: 1000;
   max-height: 200px;
   overflow: hidden;
