@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom"
+import { NavLink, useNavigate } from "react-router-dom"
 import { useContext, useState } from "react"
 
 import "./logForm.css"
@@ -8,6 +8,7 @@ import { AuthContext } from "../../../context/user.context"
 const LoginForm = () => {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
+  const navigate = useNavigate()
 
   const { setIsAuthenticated } = useContext(AuthContext)
 
@@ -21,6 +22,9 @@ const LoginForm = () => {
         { withCredentials: true }
       )
       setIsAuthenticated(true)
+      if(response.status === 200){
+        navigate("/")
+      }
       // eslint-disable-next-line no-console
       console.log(response.data)
     } catch (error) {
