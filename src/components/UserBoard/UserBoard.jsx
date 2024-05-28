@@ -6,6 +6,9 @@ import { useNavigate } from "react-router-dom"
 import classNames from "classnames"
 import { AuthContext } from "../../../context/user.context"
 
+import avatar1 from "../../assets/avatars/joker-svgrepo-com.svg";
+import avatar2 from "../../assets/avatars/superhero-svgrepo-com.svg";
+
 import "./userBoard.css"
 
 const UserBoard = () => {
@@ -16,7 +19,7 @@ const UserBoard = () => {
   const [newAvatar, setNewAvatar] = useState("")
   const [newEmail, setNewEmail] = useState("")
 
-  const avatars = ["avatar1.png", "avatar2.png"]
+  const avatars = [avatar1, avatar2]
 
   const updateUser = async () => {
     try {
