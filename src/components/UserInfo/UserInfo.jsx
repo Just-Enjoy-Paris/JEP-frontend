@@ -1,5 +1,5 @@
 /* eslint-disable no-console */
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { FaUserAlt } from "react-icons/fa";
 import { AuthContext } from "../../../context/user.context";
@@ -8,7 +8,6 @@ import "./userInfo.css";
 
 const UserInfo = () => {
   const navigate = useNavigate();
-  const [selectedAvatar, setSelectedAvatar] = useState(null);
   const { user, isAuthenticated } = useContext(AuthContext);
 
   if (!user) {
@@ -29,7 +28,7 @@ const UserInfo = () => {
         <p>Mes informations</p>
       </div>
 
-      <button onClick={handleLogout}>Log out</button>
+      <button>Log out</button>
     </div>
   );
 }
