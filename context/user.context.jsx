@@ -35,6 +35,7 @@ export const AuthProvider = ({ children }) => {
       withCredentials: true
     })
     setIsAuthenticated(false)
+    setUser({})
   }
 
   return (

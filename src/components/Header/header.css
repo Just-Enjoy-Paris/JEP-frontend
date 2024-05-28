@@ -18,3 +18,8 @@
   text-decoration: none;
   color: var(--txt-color);
 }
+
+.header .avatar-icon {
+  size: 24;
+  
+}
