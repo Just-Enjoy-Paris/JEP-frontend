@@ -1,6 +1,6 @@
+import "./searchBar.css"
 import { useContext, useRef, useState } from "react"
 import deburr from "lodash.deburr"
-import "./searchBar.css"
 import { DataContext } from "../../../context/data.context"
 import { FaSearch } from "react-icons/fa"
 import FilterDropdown from "../FilterDropdown/FilterDropdown"
@@ -53,37 +53,35 @@ export default function SearchBar() {
   }
 
   return (
-    <div className="filterBar">
-      <div className="searchBar">
-        <FilterDropdown />
-        <input
-          ref={inputRef}
-          className="input-search"
-          type="search"
-          placeholder="Rechercher un lieu"
-          value={search}
-          onChange={handleSearchChange}
-          onKeyDown={handleKeyDown}
-        />
-        <button className="btn-search" onClick={handleSearchClick}>
-          <FaSearch size={24} />
-        </button>
-        {suggestions.length > 0 && (
-          <ul className="autocomplete-results">
-            {suggestions.map(suggestion => (
-              <li
-                key={suggestion._id}
-                onClick={() => {
-                  setSearch(suggestion.properties.name)
-                  findPlaces({ type: "search" })
-                }}
-              >
-                {suggestion.properties.name}
-              </li>
-            ))}
-          </ul>
-        )}
-      </div>
+    <div className="searchBar">
+      <FilterDropdown />
+      <input
+        ref={inputRef}
+        className="input-search"
+        type="search"
+        placeholder="Rechercher un lieu"
+        value={search}
+        onChange={handleSearchChange}
+        onKeyDown={handleKeyDown}
+      />
+      <button className="btn-search" onClick={handleSearchClick}>
+        <FaSearch size={24} />
+      </button>
+      {suggestions.length > 0 && (
+        <ul className="autocomplete-results">
+          {suggestions.map(suggestion => (
+            <li
+              key={suggestion._id}
+              onClick={() => {
+                setSearch(suggestion.properties.name)
+                findPlaces({ type: "search" })
+              }}
+            >
+              {suggestion.properties.name}
+            </li>
+          ))}
+        </ul>
+      )}
     </div>
   )
 }

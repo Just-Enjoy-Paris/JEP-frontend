@@ -1,0 +1,15 @@
+.placeListTitle {
+  text-align: center;
+  padding: 15px 45px;
+  color: var(--txt-color);
+  font-size: 24px;
+}
+.placeList {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.placesPage {
+  background-color: var(--main-color);
+}

@@ -1,7 +1,9 @@
-.filter{
+.filter {
   color: var(--txt-color);
   font-family: "Raleway", sans-serif;
   background-color: var(--secondary-color);
   padding: 20px;
-  box-shadow: 1px 0px 36px 8px rgba(0,0,0,0.34);
+  width: 80%;
+  border-radius: 0px 5px 5px 0px;
+  box-shadow: 1px 0px 36px 8px rgba(0, 0, 0, 0.34);
 }
