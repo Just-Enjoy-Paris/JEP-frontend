@@ -21,8 +21,12 @@ export default function Header() {
       {/* Log button */}
       {isAuthenticated ? (
         <NavLink className="logButton" to="/client-area">
-          {user?.avatar ? (
-            <img className="avatar-icon" src={user.avatar} alt="user avatar" />
+          {user.account.avatar ? (
+            <img
+              className="avatar-icon"
+              src={user.account.avatar}
+              alt="user avatar"
+            />
           ) : (
             <FaUserAlt className="logIcon" size={24} />
           )}

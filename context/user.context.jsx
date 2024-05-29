@@ -18,10 +18,10 @@ export const AuthProvider = ({ children }) => {
           }
         )
         setIsAuthenticated(true)
-        setUser(res.data)
+        setUser(res.data.userData)
         setUpdate(true)
         // eslint-disable-next-line no-console
-        console.log(res.data)
+        console.log(res.data.userData)
       } catch (err) {
         // eslint-disable-next-line no-console
         console.log("Error loading, no User found")
