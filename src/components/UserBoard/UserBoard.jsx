@@ -8,15 +8,15 @@ import "./userBoard.css"
 const UserBoard = () => {
   const navigate = useNavigate()
   const { isAuthenticated, update, setUpdate, user } = useContext(AuthContext)
-  const [newEmail, setNewEmail] = useState()
+  const [newEmail, setNewEmail] = useState("")
   const [file, setFile] = useState(null)
 
   const updateUser = async e => {
     e.preventDefault()
     const formData = new FormData()
-    formData.append("email", newEmail)
+    formData.append("newEmail", newEmail)
     if (file) {
-      formData.append("avatar", file)
+      formData.append("newAvatar", file)
     }
 
     try {
@@ -63,10 +63,15 @@ const UserBoard = () => {
             )}
             {file && (
               <div className="previewAvatar">
-                <img src={URL.createObjectURL(file)} alt="Nouvel avatar" />
+                <img src={URL.createObjectURL(file)} alt="New avatar" />
               </div>
             )}
-            <input type="file" onChange={e => setFile(e.target.files[0])} />
+            <input
+              type="file"
+              onChange={e => {
+                setFile(e.target.files[0])
+              }}
+            />
           </label>
         </div>
         <button type="submit">Enregistrer</button>
