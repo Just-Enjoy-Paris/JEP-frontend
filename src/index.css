@@ -38,7 +38,6 @@
   }
 }
 
-
 /* --- RESETS --- */
 * {
   box-sizing: border-box;
@@ -147,8 +146,6 @@ section {
 }
 body {
   line-height: 1;
-  display: flex;
-  flex-direction: column;
 }
 ol,
 ul {
