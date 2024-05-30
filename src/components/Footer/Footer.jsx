@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom"
-import "./Footer.css"
+import "./footer.css"
 
 import logo from "../../img/logo.svg"
 
