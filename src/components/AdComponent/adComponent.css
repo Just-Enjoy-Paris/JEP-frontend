@@ -7,5 +7,5 @@
 .ad-container img{
     width: 100%;
     height: auto;
-    /* object-fit: cover; */
+    /* object-fit: cover; */ /* enlever les commentaire pour mettre l'image en taille réelle et centrée */
 }
