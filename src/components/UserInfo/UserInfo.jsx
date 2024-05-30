@@ -1,7 +1,9 @@
 /* eslint-disable no-console */
 import React, { useContext, useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { FaUserAlt } from "react-icons/fa";
+import { NavLink, useNavigate } from "react-router-dom";
+import { CiUser } from "react-icons/ci";
+import { CiHeart } from "react-icons/ci";
+import { CiLogout } from "react-icons/ci";
 import { AuthContext } from "../../../context/user.context";
 
 import "./userInfo.css";
@@ -9,7 +11,7 @@ import "./userInfo.css";
 const UserInfo = () => {
   const navigate = useNavigate();
   const [selectedAvatar, setSelectedAvatar] = useState(null);
-  const { user, isAuthenticated } = useContext(AuthContext);
+  const { user, isAuthenticated, handleLogout } = useContext(AuthContext);
 
   if (!user) {
     return <div>Loading...</div>;
@@ -17,19 +19,21 @@ const UserInfo = () => {
 
   return !isAuthenticated ? ( navigate("/log") ) : (
     <div className="user-info-page">
-      <h1 className="title">Bienvenue,</h1>
+      <h1 className="infoTitle">Bienvenue,</h1>
       <h3 className="user-name">{user.name}</h3>
       <div className="user-avatar">{user.avatar}</div>
       <div className="user-fav">
-        <FaUserAlt className="favIcon" size={24} />
-        <p>Favoris</p>
+        <CiHeart className="favIcon" size={30} />
+        <p>Mes Favoris</p>
       </div>
-      <div className="user-info">
-        <FaUserAlt className="infoIcon" size={24} />
+      <NavLink to="/client-area" className="user-info">
+        <CiUser className="infoIcon" size={30} />
         <p>Mes informations</p>
+      </NavLink>
+      <div className="client-logout">
+      <CiLogout size={30} />
+      <button onClick={handleLogout}>Déconnexion</button>
       </div>
-
-      <button onClick={handleLogout}>Log out</button>
     </div>
   );
 }

@@ -20,7 +20,7 @@ export default function Header() {
       </NavLink>
       {/* Log button */}
       {isAuthenticated ? (
-        <NavLink className="logButton" to="/client-area">
+        <NavLink className="logButton" to="/client-info">
           <FaUserAlt className="logIcon" size={24} />
         </NavLink>
       ) : (

@@ -9,7 +9,7 @@ export default function Log() {
 
   useEffect(() => {
     if (isAuthenticated) {
-      navigate("/client-area")
+      navigate("/client-info")
     }
   }, [isAuthenticated])
 

@@ -10,7 +10,7 @@ import "./userBoard.css"
 
 const UserBoard = () => {
   const navigate = useNavigate()
-  const { isAuthenticated, update, setUpdate, handleLogout } =
+  const { isAuthenticated, update, setUpdate } =
     useContext(AuthContext)
   const [newPassword, setNewPassword] = useState("")
   const [newAvatar, setNewAvatar] = useState("")
@@ -38,7 +38,7 @@ const UserBoard = () => {
 
   return (
     <div className="espace-client">
-      <h1 className="title">Mes informations</h1>
+      <h1 className="boardTitle">Mes informations</h1>
       <form onSubmit={updateUser}>
         <label>
           Mettre à jour l'email:
@@ -64,7 +64,7 @@ const UserBoard = () => {
       </form>
 
       <div>
-        <h2>Mettre à jour l'avatar</h2>
+        <h2 className="avatarTitle">Mettre à jour l'avatar</h2>
         <div className="avatarArea">
           {avatars.map(avatar => (
             <img
@@ -80,8 +80,6 @@ const UserBoard = () => {
         </div>
         <button onClick={updateUser}>Enregistrer</button>
       </div>
-
-      <button onClick={handleLogout}>Log out</button>
     </div>
   )
 }
