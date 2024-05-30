@@ -1,28 +1,10 @@
-import { useState, useEffect } from "react";
+import "./adComponent.css"
 
-const AdComponent = ({ ads }) => {
-  const [advertisements, setAdvertisements] = useState([]);
-
-  useEffect(() => {
-    if (ads) {
-      setAdvertisements(ads);
-    }
-  }, [ads]);
-
+const AdComponent = () => {
+  
   return (
     <div className="ad-container">
-      {advertisements.map((ad, index) => (
-        <div key={index} className="ad">
-          <h3>{ad.title}</h3>
-          <p>{ad.description}</p>
-          {ad.image && <img src={ad.image} alt={ad.title} />}
-          {ad.link && (
-            <a href={ad.link} target="_blank" rel="noopener noreferrer">
-              Learn More
-            </a>
-          )}
-        </div>
-      ))}
+      <img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExajN4MmZ2M255OXJlaG1mNHp6dWhzdnZ0MDNlZWdhNmdxNHhwbWhiayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/d2YZzTQvyoNYf9YI/giphy.gif" alt="" />
     </div>
   );
 };

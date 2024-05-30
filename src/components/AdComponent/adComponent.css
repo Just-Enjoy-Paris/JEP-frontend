@@ -1,0 +1,7 @@
+.ad-container {
+    /* border: 2px solid white; */
+    margin-top: 0.5vh;
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+}

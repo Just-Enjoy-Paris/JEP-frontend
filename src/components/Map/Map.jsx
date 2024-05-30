@@ -1,6 +1,7 @@
 import { useContext, useEffect } from "react"
 import "./map.css"
 import { DataContext } from "../../../context/data.context"
+import AdComponent from "../AdComponent/AdComponent"
 
 export default function Map() {
   const { places } = useContext(DataContext)
@@ -66,6 +67,7 @@ export default function Map() {
   return (
     <section>
       <div id="map" className="mapContainer"></div>
+      <AdComponent/>
     </section>
   )
 }
