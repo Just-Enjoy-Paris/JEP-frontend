@@ -7,9 +7,6 @@
 
 .btn-search {
   color: var(--txt-color);
-  font-family: "Raleway", sans-serif;
-  font-weight: 700;
-  font-size: 16px;
   background-color: var(--secondary-color);
   border-radius: 0px 5px 5px 0px;
   border: none;
@@ -20,8 +17,8 @@
 .input-search {
   color: black;
   font-family: "Raleway", sans-serif;
-  font-weight: 700;
-  font-size: 16px;
+  font-weight: 600;
+  font-size: 15px;
   background-color: var(--txt-color);
   border-top: 1px solid var(--secondary-color);
   border-bottom: 1px solid var(--secondary-color);
@@ -29,8 +26,10 @@
   border-right: none;
   padding: 15px;
   width: 50%;
-  z-index: 999;
+  z-index: 0;
+  outline: none;
 }
+
 .filter-dropdown {
   width: 15%;
 }
@@ -43,11 +42,9 @@
   background-color: var(--secondary-color);
   border-top: none;
   list-style: none;
-  padding: 0;
   width: 50%;
-  z-index: 999;
+  z-index: 1;
   max-height: 200px;
-  overflow: hidden;
   overflow-y: auto;
   scrollbar-width: none;
 }
