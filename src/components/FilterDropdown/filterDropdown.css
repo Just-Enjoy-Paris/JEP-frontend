@@ -18,14 +18,9 @@
   top: auto;
   width: 100%;
   z-index: 999;
-  font-family: "Raleway", sans-serif;
 }
 
 .filterLinks.open {
   display: block;
   animation: slideDown 0.5s ease-in-out forwards;
-}
-
-.filter div {
-  color: var(--txt-color);
 }

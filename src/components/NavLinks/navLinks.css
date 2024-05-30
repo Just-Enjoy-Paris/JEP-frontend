@@ -38,6 +38,7 @@
   animation: slideDown 0.5s ease-in-out forwards;
   background-color: var(--secondary-color);
   box-shadow: 2px 4px 18px 0px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
 }
 
 .dropdown-toggle {
@@ -78,4 +79,3 @@
   scale: 2;
   cursor: pointer;
 }
-

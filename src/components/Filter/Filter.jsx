@@ -45,14 +45,18 @@ export default function Filter() {
 
   return (
     <div className="filter">
-      {categories.map(category => (
-        <div key={category}>
+      {categories.map((category, index) => (
+        <div className="checkbox-wrapper" key={category}>
           <input
+            className="toggle"
+            id={`cbx-${index}`}
             type="checkbox"
             checked={selectedCategories.includes(category)}
             onChange={() => handleCategoryChange(category)}
           />
-          <label>{category}</label>
+          <label htmlFor={`cbx-${index}`} className="cb">
+            {category}
+          </label>
         </div>
       ))}
     </div>
