@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom"
 import { MdKeyboardArrowLeft } from "react-icons/md";
-import "./customerArea.css"
+import "./customerUpdate.css"
 
 import UserBoard from "../../components/UserBoard/UserBoard"
 

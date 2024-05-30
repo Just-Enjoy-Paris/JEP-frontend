@@ -1,5 +1,5 @@
 /* eslint-disable no-console */
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import { CiUser } from "react-icons/ci";
 import { CiHeart } from "react-icons/ci";
@@ -10,7 +10,6 @@ import "./userInfo.css";
 
 const UserInfo = () => {
   const navigate = useNavigate();
-  const [selectedAvatar, setSelectedAvatar] = useState(null);
   const { user, isAuthenticated, handleLogout } = useContext(AuthContext);
 
   if (!user) {
