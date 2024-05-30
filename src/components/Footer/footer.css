@@ -1,9 +1,11 @@
 .footer {
+  position: absolute;
+  bottom: 0;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   background-color: var(--main-color);
   align-items: center;
-  width: 100%; /* Pour s'étendre sur toute la largeur de la fenêtre */
+  width: 100%;
 }
 
 .footer a {
