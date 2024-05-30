@@ -20,7 +20,7 @@ export const AuthProvider = ({ children }) => {
           }
         )
         setIsAuthenticated(true)
-        setUser(res.data)
+        setUser(res.data.userData)
         setUpdate(true)
         // eslint-disable-next-line no-console
         console.log(res.data)

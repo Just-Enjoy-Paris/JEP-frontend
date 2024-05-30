@@ -1,37 +1,10 @@
+import { useContext } from "react"
 import "./filter.css"
-import React, { useContext } from "react"
 import { DataContext } from "../../../context/data.context"
 
 export default function Filter() {
-  const { selectedCategories, setSelectedCategories } = useContext(DataContext)
-  const categories = [
-    "Pâtisserie",
-    "Restaurant",
-    "Bijouterie",
-    "Bar",
-    "Pub",
-    "Eglise",
-    "Cimetière",
-    "Galerie d'art",
-    "Hotel",
-    "Service d'impression 3D",
-    "Parfumerie",
-    "Librairie",
-    "Boulangerie",
-    "Café",
-    "Boutique de Porcelaine",
-    "Primeur",
-    "Boutique de vêtements",
-    "Boutique d'objets religieux",
-    "Salon de the",
-    "Fast food",
-    "Bubble tea",
-    "Salon de coiffure",
-    "Marchand de glaces",
-    "Vente et réparation de cycles",
-    "Boutique de CBD",
-    "Association"
-  ]
+  const { categories, selectedCategories, setSelectedCategories } =
+    useContext(DataContext)
 
   const handleCategoryChange = category => {
     setSelectedCategories(prevCategories => {

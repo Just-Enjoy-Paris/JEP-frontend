@@ -1,9 +1,16 @@
-import { useContext } from "react"
+import { useContext, useEffect } from "react"
 import PlaceCard from "../PlaceCard/PlaceCard"
 import { DataContext } from "../../../context/data.context"
 
-export default function PlaceList() {
-  const { searchResult, places, selectedCategories } = useContext(DataContext)
+export default function PlaceList({ searchResult }) {
+  const { places, selectedCategories, setSelectedCategories } =
+    useContext(DataContext)
+
+  useEffect(() => {
+    return () => {
+      setSelectedCategories([])
+    }
+  }, [])
 
   const filteredPlaces =
     searchResult === null

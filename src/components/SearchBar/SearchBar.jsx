@@ -5,56 +5,72 @@ import { DataContext } from "../../../context/data.context"
 import { FaSearch } from "react-icons/fa"
 import FilterDropdown from "../FilterDropdown/FilterDropdown"
 
-export default function SearchBar() {
-  const { places, search, setSearch, setSearchResult } = useContext(DataContext)
+export default function SearchBar({
+  setSearchResult,
+  setSelectedCategories,
+  selectedCategories
+}) {
+  const { places } = useContext(DataContext)
   const [suggestions, setSuggestions] = useState([])
+  const [search, setSearch] = useState("")
   const inputRef = useRef(null)
 
-  const findPlaces = ({ type }) => {
-    const deburredSearch = deburr(search).toLowerCase()
+  const findPlaces = () => {
+    const deburredSearch = deburr(search).toLowerCase() // Normalise la chaîne de recherche
     const regex = new RegExp(deburredSearch, "i")
+
     const filteredPlaces = places.filter(place => {
-      const deburredPlaceName = deburr(place.properties.name).toLowerCase()
-      console.log(deburredPlaceName)
+      const deburredPlaceName = deburr(place.properties.name).toLowerCase() // Normalise les noms des lieux
       return regex.test(deburredPlaceName)
     })
-
-    if (type === "search") {
-      setSearchResult(filteredPlaces)
-      setSuggestions([])
-    } else if (type === "suggestion") {
-      setSuggestions(filteredPlaces)
-    }
+    setSearchResult(filteredPlaces)
+    setSuggestions([])
   }
 
   const handleSearchChange = event => {
-    const newSearchValue = event.target.value
-    setSearch(newSearchValue)
-    if (newSearchValue === "") {
-      setSearchResult(null)
-      setSuggestions([])
+    const inputValue = event.target.value
+    setSearch(inputValue)
+    if (inputValue) {
+      const deburredInput = deburr(inputValue).toLowerCase() // Normalise l'entrée utilisateur
+      const regex = new RegExp(deburredInput, "i") // Utilise l'entrée normalisée pour la regex
+      const filteredSuggestions = places
+        .filter(place => {
+          const deburredPlaceName = deburr(place.properties.name).toLowerCase() // Normalise également les noms des lieux
+          return regex.test(deburredPlaceName)
+        })
+        .slice(0, 10) // Limite les suggestions à 10
+      setSuggestions(filteredSuggestions)
     } else {
-      findPlaces({ type: "suggestion" })
+      setSuggestions([])
+      setSearchResult(places) // Remet tous les lieux si la recherche est vide (facultatif)
     }
   }
 
   const handleSearchClick = event => {
     event.preventDefault()
-    findPlaces({ type: "search" })
+    findPlaces()
     setSuggestions([])
   }
 
   const handleKeyDown = event => {
     if (event.key === "Enter") {
-      findPlaces({ type: "search" })
+      findPlaces()
       setSuggestions([])
       inputRef.current.blur()
     }
   }
 
+  const handleSuggestionClick = suggestion => {
+    setSearch(suggestion.properties.name)
+    setSuggestions([])
+  }
+
   return (
     <div className="searchBar">
-      <FilterDropdown />
+      <FilterDropdown
+        selectedCategories={selectedCategories}
+        setSelectedCategories={setSelectedCategories}
+      />
       <input
         ref={inputRef}
         className="input-search"
@@ -73,8 +89,7 @@ export default function SearchBar() {
             <li
               key={suggestion._id}
               onClick={() => {
-                setSearch(suggestion.properties.name)
-                findPlaces({ type: "search" })
+                handleSuggestionClick(suggestion)
               }}
             >
               {suggestion.properties.name}

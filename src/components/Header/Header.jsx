@@ -1,3 +1,4 @@
+import "./header.css"
 import { useContext } from "react"
 import { NavLink } from "react-router-dom"
 import { FaUserAlt } from "react-icons/fa"
@@ -18,10 +19,11 @@ export default function Header() {
       </NavLink>
       {/* Log button */}
       {isAuthenticated ? (
-        <NavLink className="logButton" to="/client-info">
+        // <NavLink className="logButton-avatar" to="/client-info">
+        <NavLink className="logButton-avatar" to="/">
           {user.account.avatar ? (
             <img
-              className="avatar-icon"
+              className="log-icon"
               src={user.account.avatar}
               alt="user avatar"
             />

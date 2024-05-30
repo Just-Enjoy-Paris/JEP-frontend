@@ -9,7 +9,7 @@ export const DataProvider = ({ children }) => {
   const [gardenPlaces, setGardenPlaces] = useState([])
   const [touristPlaces, setTouristPlaces] = useState([])
   const [search, setSearch] = useState("")
-  const [searchResult, setSearchResult] = useState(null)
+  const [categories, setCategories] = useState([])
   const [selectedCategories, setSelectedCategories] = useState([])
 
   useEffect(() => {
@@ -23,12 +23,19 @@ export const DataProvider = ({ children }) => {
         setGardenPlaces(resPlaces.data.gardenPlaces)
         setTouristPlaces(resPlaces.data.touristPlaces)
       } catch (error) {
-        // eslint-disable-next-line no-console
         console.log("Error loading ,no places found")
       }
     }
     fetchPlaces()
   }, [])
+
+  useEffect(() => {
+    const uniqueCategories = Array.from(
+      new Set(places.map(place => place.properties.category[0]))
+    )
+    setCategories(uniqueCategories)
+  }, [places])
+
   // à retirer
   useEffect(() => {
     if (places) {
@@ -39,6 +46,9 @@ export const DataProvider = ({ children }) => {
     }
     if (touristPlaces) {
       console.log("Tourist updated:", touristPlaces)
+    }
+    if (categories) {
+      console.log(categories)
     }
   }, [places, gardenPlaces, touristPlaces])
 
@@ -51,8 +61,8 @@ export const DataProvider = ({ children }) => {
         touristPlaces,
         search,
         setSearch,
-        searchResult,
-        setSearchResult,
+        categories,
+        setCategories,
         selectedCategories,
         setSelectedCategories
       }}

@@ -1,7 +1,7 @@
 import "./App.css"
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import Header from "./components/Header/Header.jsx"
-//import Footer from "./components/Footer/Footer.jsx"
+// import Footer from "./components/Footer/Footer.jsx"
 import Landing from "./pages/landing/Landing.jsx"
 import Log from "./pages/log/Log.jsx"
 import About from "./pages/about/About.jsx"
@@ -16,18 +16,18 @@ function App() {
   return (
     <Router>
       <Header />
-        <Routes>
-          <Route path="/" element={<Landing />} />
-          <Route path="/log" element={<Log />} />
-          <Route path="/signup" element={<Signup />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/places" element={<Places />} />
-          <Route path="/place/:id" element={<Place />} />
-          <Route path="/events" element={<Events />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/*" element={<Error />} />
-        </Routes>
-      {/*<Footer />*/}
+      <Routes>
+        <Route path="/" element={<Landing />} />
+        <Route path="/log" element={<Log />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/places" element={<Places />} />
+        <Route path="/place/:id" element={<Place />} />
+        <Route path="/events" element={<Events />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/*" element={<Error />} />
+      </Routes>
+      {/* <Footer /> */}
     </Router>
   )
 }
