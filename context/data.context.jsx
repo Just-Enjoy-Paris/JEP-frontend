@@ -22,7 +22,6 @@ export const DataProvider = ({ children }) => {
         setGardenPlaces(resPlaces.data.gardenPlaces)
         setTouristPlaces(resPlaces.data.touristPlaces)
       } catch (error) {
-        // eslint-disable-next-line no-console
         console.log("Error loading ,no places found")
       }
     }
@@ -42,7 +41,18 @@ export const DataProvider = ({ children }) => {
   }, [places, gardenPlaces, touristPlaces])
 
   return (
-    <DataContext.Provider value={{setPlaces, places, gardenPlaces, touristPlaces, search, setSearch, searchResult, setSearchResult}}>
+    <DataContext.Provider
+      value={{
+        setPlaces,
+        places,
+        gardenPlaces,
+        touristPlaces,
+        search,
+        setSearch,
+        searchResult,
+        setSearchResult
+      }}
+    >
       {children}
     </DataContext.Provider>
   )
