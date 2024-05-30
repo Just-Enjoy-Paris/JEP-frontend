@@ -8,21 +8,18 @@ import "./userBoard.css"
 
 const UserBoard = () => {
   const navigate = useNavigate()
-  const { isAuthenticated, update, setUpdate, user, setUser } =
-    useContext(AuthContext)
-  const [newPassword, setNewPassword] = useState("")
-  const [newAvatar, setNewAvatar] = useState(user?.avatar || "")
-  const [newEmail, setNewEmail] = useState(user?.email || "")
+  const { isAuthenticated, update, setUpdate, user } = useContext(AuthContext)
+  const [newAvatar, setNewAvatar] = useState(null)
+  const [newEmail, setNewEmail] = useState(null)
 
   const updateUser = async e => {
     e.preventDefault()
     try {
-      const response = await axios.put(
+      await axios.put(
         `${import.meta.env.VITE_API_URL}/updateprofile`,
-        { email: newEmail, avatar: newAvatar, password: newPassword },
+        { email: newEmail, avatar: newAvatar },
         { withCredentials: true }
       )
-      setUser(response.data)
       setUpdate(!update)
     } catch (err) {
       console.log("Error updating user:", err)
@@ -35,44 +32,30 @@ const UserBoard = () => {
     }
   }, [isAuthenticated, navigate])
 
-    return (
-      <div className="espace-client">
-        <h1 className="title">Mes informations</h1>
-        <form onSubmit={updateUser}>
-          <label>
-            Mettre à jour email:
-            <input
-              type="email"
-              value={newEmail}
-              onChange={e => setNewEmail(e.target.value)}
-            />
-          </label>
-          <button type="submit">Enregistrer</button>
-        </form>
-  
-        <form onSubmit={updateUser}>
-          <label>
-            Mettre à jour le mot de passe:
-            <input
-              type="password"
-              value={newPassword}
-              onChange={e => setNewPassword(e.target.value)}
-            />
-          </label>
-          <button type="submit">Enregistrer</button>
-        </form>
-  
-        <form onSubmit={updateUser}>
-          <label htmlFor="newAvatar" className="avatarArea">
-            Mettre à jour avatar
-            <input
-              type="file"
-              value={newAvatar}
-              onChange={e => setNewAvatar(e.target.value)}
-            />
-          </label>
-          <button onClick={updateUser}>Enregistrer</button>
-        </form>
+  return (
+    <div className="espace-client">
+      <h1 className="title">Mes informations</h1>
+      <form onSubmit={updateUser}>
+        <label>
+          Email
+          <input
+            type="email"
+            placeholder={user.email}
+            value={newEmail}
+            onChange={e => setNewEmail(e.target.value)}
+          />
+        </label>
+
+        <label htmlFor="newAvatar" className="avatarArea">
+          Avatar
+          <input
+            type="file"
+            value={newAvatar}
+            onChange={e => setNewAvatar(e.target.value)}
+          />
+        </label>
+        <button onClick={updateUser}>Enregistrer</button>
+      </form>
     </div>
   )
 }
