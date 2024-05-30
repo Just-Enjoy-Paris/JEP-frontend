@@ -1,7 +1,11 @@
 .ad-container {
-    /* border: 2px solid white; */
-    margin-top: 0.5vh;
-    height: 15vh;
+    height: 10vh;
     display: flex;
     justify-content: center;
+}
+
+.ad-container img{
+    width: 100%;
+    height: auto;
+    /* object-fit: cover; */
 }
