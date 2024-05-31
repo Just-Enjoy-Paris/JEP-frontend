@@ -1,6 +1,7 @@
 import { useContext, useEffect } from "react"
 import "./map.css"
 import { DataContext } from "../../../context/data.context"
+import SearchBanner from "../SearchBanner/SearchBanner"
 
 export default function Map() {
   const { places } = useContext(DataContext)
@@ -65,7 +66,8 @@ export default function Map() {
   }, [places])
 
   return (
-    <section>
+    <section className="map-page">
+      <SearchBanner/>
       <div id="map" className="mapContainer"></div>
     </section>
   )

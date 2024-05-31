@@ -1,0 +1,14 @@
+.search-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-banner{
+    display: flex;
+    justify-content: center;
+    flex-direction: row-reverse;
+    flex-wrap: nowrap;
+    width: 75%;
+}
