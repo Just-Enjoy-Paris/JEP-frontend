@@ -5,24 +5,34 @@
   justify-content: space-between;
   align-items: center;
   background-color: var(--main-color);
-  max-height: 100px;
+}
+
+.active {
+  display: flex;
+  align-items: center;
+}
+
+.active {
+  display: flex;
+  align-items: center;
 }
 
 .logo {
   width: 55px;
 }
 
+.logo-container {
+  display: flex;
+}
+
 .logButton {
-  border: none;
-  border-radius: 10px;
-  padding: 15px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
   text-decoration: none;
   color: var(--txt-color);
 }
-/* à verif */
-.logButton-avatar img {
-  border-radius: 40%;
-  padding: 10px;
-  height: 63px;
-  object-fit: scale-down;
+
+.avatar-icon {
+  width: 10vw;
 }

@@ -18,12 +18,11 @@ export default function Header() {
         <img className="logo" src={logo} alt="logo" />
       </NavLink>
       {/* Log button */}
-      {isAuthenticated ? (
-        // <NavLink className="logButton-avatar" to="/client-info">
-        <NavLink className="logButton-avatar" to="/">
+      {isAuthenticated && user ? (
+        <NavLink className="logButton" to="/client-info">
           {user.account.avatar ? (
             <img
-              className="log-icon"
+              className="avatar-icon"
               src={user.account.avatar}
               alt="user avatar"
             />

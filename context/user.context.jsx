@@ -1,13 +1,11 @@
 import axios from "axios"
-import { useEffect } from "react"
-import { createContext } from "react"
-import { useState } from "react"
+import { useEffect, createContext, useState } from "react"
 
 export const AuthContext = createContext()
 
 export const AuthProvider = ({ children }) => {
   const [isAuthenticated, setIsAuthenticated] = useState(false)
-  const [user, setUser] = useState()
+  const [user, setUser] = useState(null)
   const [update, setUpdate] = useState(false)
 
   useEffect(() => {
@@ -23,14 +21,22 @@ export const AuthProvider = ({ children }) => {
         setUser(res.data.userData)
         setUpdate(true)
         // eslint-disable-next-line no-console
-        console.log(res.data)
+        console.log(res.data.userData)
       } catch (err) {
         // eslint-disable-next-line no-console
-        console.log("Error loading ,no User found")
+        console.log("Error loading, no User found")
       }
     }
     fetchuser()
   }, [update, isAuthenticated])
+
+  const handleLogout = async () => {
+    await axios.delete(`${import.meta.env.VITE_API_URL}/logout`, {
+      withCredentials: true
+    })
+    setIsAuthenticated(false)
+    setUser(null)
+  }
 
   return (
     <AuthContext.Provider
@@ -40,7 +46,8 @@ export const AuthProvider = ({ children }) => {
         user,
         setUser,
         update,
-        setUpdate
+        setUpdate,
+        handleLogout
       }}
     >
       {children}
