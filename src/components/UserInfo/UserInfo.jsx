@@ -37,7 +37,14 @@ const UserInfo = () => {
       </NavLink>
       <div className="client-logout">
         <CiLogout size={30} />
-        <button onClick={handleLogout}>Déconnexion</button>
+        <button
+          onClick={() => {
+            handleLogout()
+            navigate("/")
+          }}
+        >
+          Déconnexion
+        </button>
       </div>
     </section>
   )

@@ -8,8 +8,9 @@ export const DataProvider = ({ children }) => {
   const [places, setPlaces] = useState([])
   const [gardenPlaces, setGardenPlaces] = useState([])
   const [touristPlaces, setTouristPlaces] = useState([])
-  const [search, setSearch] = useState(null)
-  const [searchResult, setSearchResult] = useState(null)
+  const [search, setSearch] = useState("")
+  const [categories, setCategories] = useState([])
+  const [selectedCategories, setSelectedCategories] = useState([])
 
   useEffect(() => {
     const fetchPlaces = async () => {
@@ -28,6 +29,29 @@ export const DataProvider = ({ children }) => {
     fetchPlaces()
   }, [])
 
+  useEffect(() => {
+    const uniqueCategories = Array.from(
+      new Set(places.map(place => place.properties.category[0]))
+    )
+    setCategories(uniqueCategories)
+  }, [places])
+
+  // à retirer
+  useEffect(() => {
+    if (places) {
+      console.log("Places updated:", places)
+    }
+    if (gardenPlaces) {
+      console.log("Garden updated:", gardenPlaces)
+    }
+    if (touristPlaces) {
+      console.log("Tourist updated:", touristPlaces)
+    }
+    if (categories) {
+      console.log(categories)
+    }
+  }, [places, gardenPlaces, touristPlaces])
+
   return (
     <DataContext.Provider
       value={{
@@ -37,8 +61,10 @@ export const DataProvider = ({ children }) => {
         touristPlaces,
         search,
         setSearch,
-        searchResult,
-        setSearchResult
+        categories,
+        setCategories,
+        selectedCategories,
+        setSelectedCategories
       }}
     >
       {children}

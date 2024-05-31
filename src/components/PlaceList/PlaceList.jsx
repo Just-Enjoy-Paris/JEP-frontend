@@ -1,57 +1,35 @@
-import { useContext, useState } from "react"
-import "./placeList.css"
+import { useContext, useEffect } from "react"
 import PlaceCard from "../PlaceCard/PlaceCard"
-import FilterDropdown from "../FilterDropdown/FilterDropdown"
-import SearchBar from "../SearchBar/SearchBar"
 import { DataContext } from "../../../context/data.context"
 
-export default function PlaceList() {
-  const [selectedCategories, setSelectedCategories] = useState([])
-  const { searchResult, places } = useContext(DataContext)
+export default function PlaceList({ searchResult }) {
+  const { places, selectedCategories, setSelectedCategories } =
+    useContext(DataContext)
 
-  const handleCategoryChange = category => {
-    setSelectedCategories(prevCategories => {
-      if (prevCategories.includes(category)) {
-        return prevCategories.filter(cat => cat !== category)
-      } else {
-        return [...prevCategories, category]
-      }
-    })
-  }
+  useEffect(() => {
+    return () => {
+      setSelectedCategories([])
+    }
+  }, [])
 
-  // Filtrer les lieux en fonction des catégories sélectionnées et du terme de recherche
   const filteredPlaces =
-    places &&
-    (searchResult !== null
-      ? searchResult.filter(
+    searchResult === null
+      ? places.filter(
           place =>
             selectedCategories.length === 0 ||
             selectedCategories.includes(place.properties.category[0])
         )
-      : places.filter(
+      : searchResult.filter(
           place =>
             selectedCategories.length === 0 ||
             selectedCategories.includes(place.properties.category[0])
-        ))
+        )
 
-  return (
-    <section className="placeList">
-      <h1 className="placeListTitle">Lieux</h1>
-      <div className="filterBar">
-      <SearchBar />
-      {/* Inclure le composant Filter et passer les catégories sélectionnées et la fonction de mise à jour */}
-      <FilterDropdown
-        selectedCategories={selectedCategories}
-        onCategoryChange={handleCategoryChange}
-      />
-      </div>
-      {filteredPlaces.map((place, index) => (
-        <PlaceCard
-          key={place._id}
-          place={place}
-          isLast={index === filteredPlaces.length - 1}
-        />
-      ))}
-    </section>
-  )
+  return filteredPlaces.map((place, index) => (
+    <PlaceCard
+      key={place._id}
+      place={place}
+      isLast={index === filteredPlaces.length - 1}
+    />
+  ))
 }
