@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import { NavLink, useNavigate } from "react-router-dom"
 import { useContext, useState } from "react"
 
@@ -25,10 +26,9 @@ const LoginForm = () => {
       if (response.status === 200) {
         navigate("/client-info")
       }
-      // eslint-disable-next-line no-console
+
       console.log(response.data)
     } catch (error) {
-      // eslint-disable-next-line no-console, no-undef
       console.log(error.response.data)
     }
   }

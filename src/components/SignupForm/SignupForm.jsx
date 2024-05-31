@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import { useState } from "react"
 import axios from "axios"
 import { useNavigate } from "react-router-dom"
@@ -13,7 +14,6 @@ const SignUpForm = ({ onSwitchToLogin }) => {
   const handleSubmit = async e => {
     e.preventDefault()
     if (password !== confirmPassword) {
-      // eslint-disable-next-line no-console
       console.log("Les mots de passe ne correspondent pas")
       return
     }
@@ -24,13 +24,12 @@ const SignUpForm = ({ onSwitchToLogin }) => {
         { email, password, username },
         { withCredentials: true }
       )
-      // eslint-disable-next-line no-console
+
       console.log(response)
       if (response.status === 201) {
         navigate("/log")
       }
     } catch (error) {
-      // eslint-disable-next-line no-console
       console.log(error)
     }
   }

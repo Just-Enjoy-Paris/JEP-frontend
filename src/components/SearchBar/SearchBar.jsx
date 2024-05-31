@@ -16,11 +16,11 @@ export default function SearchBar({
   const inputRef = useRef(null)
 
   const findPlaces = () => {
-    const deburredSearch = deburr(search).toLowerCase() // Normalise la chaîne de recherche
+    const deburredSearch = deburr(search).toLowerCase()
     const regex = new RegExp(deburredSearch, "i")
 
     const filteredPlaces = places.filter(place => {
-      const deburredPlaceName = deburr(place.properties.name).toLowerCase() // Normalise les noms des lieux
+      const deburredPlaceName = deburr(place.properties.name).toLowerCase()
       return regex.test(deburredPlaceName)
     })
     setSearchResult(filteredPlaces)
@@ -31,18 +31,18 @@ export default function SearchBar({
     const inputValue = event.target.value
     setSearch(inputValue)
     if (inputValue) {
-      const deburredInput = deburr(inputValue).toLowerCase() // Normalise l'entrée utilisateur
-      const regex = new RegExp(deburredInput, "i") // Utilise l'entrée normalisée pour la regex
+      const deburredInput = deburr(inputValue).toLowerCase()
+      const regex = new RegExp(deburredInput, "i")
       const filteredSuggestions = places
         .filter(place => {
-          const deburredPlaceName = deburr(place.properties.name).toLowerCase() // Normalise également les noms des lieux
+          const deburredPlaceName = deburr(place.properties.name).toLowerCase()
           return regex.test(deburredPlaceName)
         })
-        .slice(0, 10) // Limite les suggestions à 10
+        .slice(0, 10)
       setSuggestions(filteredSuggestions)
     } else {
       setSuggestions([])
-      setSearchResult(places) // Remet tous les lieux si la recherche est vide (facultatif)
+      setSearchResult(places)
     }
   }
 
