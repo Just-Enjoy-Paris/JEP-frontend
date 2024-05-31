@@ -10,6 +10,7 @@ export const DataProvider = ({ children }) => {
   const [touristPlaces, setTouristPlaces] = useState([])
   const [search, setSearch] = useState(null)
   const [searchResult, setSearchResult] = useState(null)
+  const [showLoader, setShowLoader] = useState(true);
 
   useEffect(() => {
     const fetchPlaces = async () => {
@@ -39,7 +40,9 @@ export const DataProvider = ({ children }) => {
         search,
         setSearch,
         searchResult,
-        setSearchResult
+        setSearchResult,
+        showLoader,
+        setShowLoader
       }}
     >
       {children}

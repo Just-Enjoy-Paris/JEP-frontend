@@ -1,5 +1,7 @@
 import "./App.css"
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
+import { useContext } from "react"
+
 import Header from "./components/Header/Header.jsx"
 //import Footer from "./components/Footer/Footer.jsx"
 import Landing from "./pages/landing/Landing.jsx"
@@ -13,27 +15,47 @@ import Signup from "./pages/signup/Signup.jsx"
 import Place from "./pages/places/Place.jsx"
 import CustomerUpdate from "./pages/customerUpdate/CustomerUpdate.jsx"
 import CustomerInfo from "./pages/customerInfo/CustomerInfo.jsx"
+import Loader from "./pages/loader/Loader.jsx"
+import { DataContext } from "../context/data.context.jsx"
 
 function App() {
-  return (
-    <Router>
-      <Header />
-      <Routes>
-        <Route path="/" element={<Landing />} />
-        <Route path="/log" element={<Log />} />
-        <Route path="/client-area" element={<CustomerUpdate />}/>
-        <Route path="/client-info" element={<CustomerInfo />}/>
-        <Route path="/signup" element={<Signup />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/places" element={<Places />} />
-        <Route path="/place/:id" element={<Place />} />
-        <Route path="/events" element={<Events />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/*" element={<Error />} />
-      </Routes>
-      {/*<Footer />*/}
-    </Router>
-  )
+  const {showLoader} = useContext(DataContext)
+
+ {/* useEffect(() => {
+    // Hide loader when initial route is loaded
+    if (location.pathname !== "/") {
+      setShowLoader(false);
 }
 
+})*/}
+  return (
+    <>
+      {showLoader ? (
+        // Show loader until initial route is loaded
+        <Loader />
+      ) : (
+        <>
+        <Router>
+          <Header />
+          <Routes>
+            <Route path="/" element={<Landing />} />
+            <Route path="/log" element={<Log />} />
+            <Route path="/client-area" element={<CustomerUpdate />}/>
+            <Route path="/client-info" element={<CustomerInfo />}/>
+            <Route path="/signup" element={<Signup />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/places" element={<Places />} />
+            <Route path="/place/:id" element={<Place />} />
+            <Route path="/events" element={<Events />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/*" element={<Error />} />
+            <Route path="/loader" element={<Loader/>} />
+          </Routes>
+          {/*<Footer />*/}
+        </Router>
+      </>
+    )}
+  </>
+  );
+}
 export default App
