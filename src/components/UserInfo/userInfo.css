@@ -12,15 +12,30 @@
 .infoTitle{
     color: var(--txt-color);
     font-size: 34px;
-    margin-bottom: 3vh;
+    margin-bottom: 10px;
     font-weight: 700;
+    display: flex;
+    justify-content: center;
+}
+
+.user-name {
+    color: var(--txt-color);
+    display: flex;
+    justify-content: center;
 }
 
 .user-avatar {
     width: auto;
     height: 150px;
-    background-color: var(--txt-color);
+    background-color: transparent;
     margin: 10px 0px;
+}
+
+.user-avatar img {
+    width: auto;
+    height: 150px;
+    margin: 0 auto;
+    display: flex;
 }
 
 .user-fav{

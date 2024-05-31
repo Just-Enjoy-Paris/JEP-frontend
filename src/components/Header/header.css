@@ -3,21 +3,31 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   background-color: var(--main-color);
 }
 
-.active{
+.active {
   display: flex;
+  align-items: center;
+}
+
+.active {
+  display: flex;
+  align-items: center;
 }
 
 .logo {
   width: 55px;
-  margin-top: 5px;
+}
+
+.logo-container {
+  display: flex;
 }
 
 .logButton {
-  border: none;
-  border-radius: 10px;
+  display: flex;
+  align-items: center;
   padding: 10px;
   text-decoration: none;
   color: var(--txt-color);

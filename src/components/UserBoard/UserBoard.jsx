@@ -3,26 +3,28 @@ import axios from "axios"
 import React, { useContext, useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
 import { AuthContext } from "../../../context/user.context"
-
 import "./userBoard.css"
 
 const UserBoard = () => {
   const navigate = useNavigate()
-  const { isAuthenticated, update, setUpdate, user, setUser } =
-    useContext(AuthContext)
-  const [newPassword, setNewPassword] = useState("")
-  const [newAvatar, setNewAvatar] = useState(user?.avatar || "")
-  const [newEmail, setNewEmail] = useState(user?.email || "")
+  const { isAuthenticated, update, setUpdate, user } = useContext(AuthContext)
+  const [newEmail, setNewEmail] = useState("")
+  const [file, setFile] = useState(null)
 
   const updateUser = async e => {
     e.preventDefault()
+    const formData = new FormData()
+    formData.append("newEmail", newEmail)
+    if (file) {
+      formData.append("newAvatar", file)
+    }
+
     try {
-      const response = await axios.put(
+      await axios.put(
         `${import.meta.env.VITE_API_URL}/updateprofile`,
-        { email: newEmail, avatar: newAvatar, password: newPassword },
+        formData,
         { withCredentials: true }
       )
-      setUser(response.data)
       setUpdate(!update)
     } catch (err) {
       console.log("Error updating user:", err)
@@ -35,45 +37,46 @@ const UserBoard = () => {
     }
   }, [isAuthenticated, navigate])
 
-    return (
-      <div className="espace-client">
-        <h1 className="title">Mes informations</h1>
-        <form onSubmit={updateUser}>
+  return (
+    <section className="userBoard">
+      <h1 className="title">Mes informations</h1>
+      <form onSubmit={updateUser}>
+        <div>
           <label>
-            Mettre à jour email:
+            Email
             <input
               type="email"
+              placeholder={user ? user.email : "email"}
               value={newEmail}
               onChange={e => setNewEmail(e.target.value)}
             />
           </label>
-          <button type="submit">Enregistrer</button>
-        </form>
-  
-        <form onSubmit={updateUser}>
-          <label>
-            Mettre à jour le mot de passe:
-            <input
-              type="password"
-              value={newPassword}
-              onChange={e => setNewPassword(e.target.value)}
-            />
-          </label>
-          <button type="submit">Enregistrer</button>
-        </form>
-  
-        <form onSubmit={updateUser}>
+        </div>
+        <div>
           <label htmlFor="newAvatar" className="avatarArea">
-            Mettre à jour avatar
+            Avatar
+            {/* à retirer aprés ajout du loader */}
+            {user && (
+              <div className="userBoardAvatar">
+                <img src={user.account.avatar} alt="user avatar" />
+              </div>
+            )}
+            {file && (
+              <div className="previewAvatar">
+                <img src={URL.createObjectURL(file)} alt="New avatar" />
+              </div>
+            )}
             <input
               type="file"
-              value={newAvatar}
-              onChange={e => setNewAvatar(e.target.value)}
+              onChange={e => {
+                setFile(e.target.files[0])
+              }}
             />
           </label>
-          <button onClick={updateUser}>Enregistrer</button>
-        </form>
-    </div>
+        </div>
+        <button type="submit">Enregistrer</button>
+      </form>
+    </section>
   )
 }
 

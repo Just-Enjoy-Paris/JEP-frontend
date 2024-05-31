@@ -1,18 +1,14 @@
 .return {
-    display: flex;
-    align-items: center;
-    color: var(--txt-color);
-    font-family: "Raleway", sans-serif;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 20px;
-    margin: 15px 0px 0px 10px;
+  display: flex;
+  align-items: center;
+  color: var(--txt-color);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 20px;
+  margin: 15px 0px 0px 10px;
 }
 
-body{
-    font-family: "Raleway", sans-serif;
-}
-
-html {    
-    background-color: var(--main-color);
+body {
+  font-family: "Raleway", sans-serif;
+  background-color: var(--main-color);
 }
