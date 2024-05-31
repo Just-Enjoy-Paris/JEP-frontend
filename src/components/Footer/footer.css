@@ -1,6 +1,5 @@
 .footer {
-  position: absolute;
-  bottom: 0;
+  position: sticky;
   display: flex;
   justify-content: space-evenly;
   background-color: var(--main-color);
@@ -9,10 +8,9 @@
 }
 
 .footer a {
+  display: flex;
   text-decoration: none;
   padding: 10px;
-  color: black;
-  font-family: "Raleway", sans-serif;
   color: var(--txt-color);
   font-size: 12px;
 }
