@@ -1,60 +1,82 @@
+import "./searchBar.css"
 import { useContext, useRef, useState } from "react"
 import deburr from "lodash.deburr"
-import "./searchBar.css"
 import { DataContext } from "../../../context/data.context"
-import { FaSearch } from "react-icons/fa";
+import { FaSearch } from "react-icons/fa"
+import FilterDropdown from "../FilterDropdown/FilterDropdown"
 
-export default function SearchBar() {
-  const { places, search, setSearch, setSearchResult } = useContext(DataContext)
+export default function SearchBar({
+  setSearchResult,
+  setSelectedCategories,
+  selectedCategories
+}) {
+  const { places } = useContext(DataContext)
   const [suggestions, setSuggestions] = useState([])
-
+  const [search, setSearch] = useState("")
   const inputRef = useRef(null)
 
-  const findPlaces = ({ type }) => {
+  const findPlaces = () => {
     const deburredSearch = deburr(search).toLowerCase()
     const regex = new RegExp(deburredSearch, "i")
+
     const filteredPlaces = places.filter(place => {
       const deburredPlaceName = deburr(place.properties.name).toLowerCase()
       return regex.test(deburredPlaceName)
     })
-    if (type === "search") {
-      setSearchResult(filteredPlaces)
-    } else if (type === "suggestion") {
-      setSuggestions(filteredPlaces)
-    }
+    setSearchResult(filteredPlaces)
+    setSuggestions([])
   }
 
   const handleSearchChange = event => {
-    setSearch(event.target.value)
-    findPlaces({ type: "suggestion" })
-    if (event.target.value === "") {
-      setSearchResult(null)
+    const inputValue = event.target.value
+    setSearch(inputValue)
+    if (inputValue) {
+      const deburredInput = deburr(inputValue).toLowerCase()
+      const regex = new RegExp(deburredInput, "i")
+      const filteredSuggestions = places
+        .filter(place => {
+          const deburredPlaceName = deburr(place.properties.name).toLowerCase()
+          return regex.test(deburredPlaceName)
+        })
+        .slice(0, 10)
+      setSuggestions(filteredSuggestions)
+    } else {
       setSuggestions([])
-      inputRef.current.blur()
+      setSearchResult(places)
     }
   }
 
   const handleSearchClick = event => {
     event.preventDefault()
+    findPlaces()
     setSuggestions([])
-    findPlaces({ type: "search" })
   }
+
   const handleKeyDown = event => {
     if (event.key === "Enter") {
-      findPlaces({ type: "search" })
+      findPlaces()
       setSuggestions([])
       inputRef.current.blur()
     }
   }
 
+  const handleSuggestionClick = suggestion => {
+    setSearch(suggestion.properties.name)
+    setSuggestions([])
+  }
+
   return (
     <div className="searchBar">
+      <FilterDropdown
+        selectedCategories={selectedCategories}
+        setSelectedCategories={setSelectedCategories}
+      />
       <input
         ref={inputRef}
         className="input-search"
         type="search"
         placeholder="Rechercher un lieu"
-        value={search === null ? "" : search}
+        value={search}
         onChange={handleSearchChange}
         onKeyDown={handleKeyDown}
       />
@@ -63,16 +85,14 @@ export default function SearchBar() {
       </button>
       {suggestions.length > 0 && (
         <ul className="autocomplete-results">
-          {suggestions.map(place => (
+          {suggestions.map(suggestion => (
             <li
-              key={place._id}
+              key={suggestion._id}
               onClick={() => {
-                setSearch(place.properties.name)
-                findPlaces({ type: "suggestion" })
-                setSuggestions([])
+                handleSuggestionClick(suggestion)
               }}
             >
-              {place.properties.name}
+              {suggestion.properties.name}
             </li>
           ))}
         </ul>

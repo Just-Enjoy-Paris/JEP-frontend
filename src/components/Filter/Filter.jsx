@@ -1,48 +1,37 @@
-import React from "react";
+import { useContext } from "react"
+import "./filter.css"
+import { DataContext } from "../../../context/data.context"
 
-export default function Filter({ selectedCategories, onCategoryChange }) {
-  const categories = 
-  [
-    "Pâtisserie",
-    "Restaurant",
-    "Bijouterie",
-    "Bar",
-    "Pub",
-    "Eglise",
-    "Cimetière",
-    "Galerie d'art",
-    "Hotel",
-    "Service d'impression 3D",
-    "Parfumerie",
-    "Librairie",
-    "Boulangerie",
-    "Café",
-    "Boutique de Porcelaine",
-    "Primeur",
-    "Boutique de vêtements",
-    "Boutique d'objets religieux", 
-    "Salon de the",
-    "Fast food",
-    "Bubble tea",
-    "Salon de coiffure",
-    "Marchand de glaces",
-    "Vente et réparation de cycles",
-    "Boutique de CBD",
-    "Association"
-   ];
+export default function Filter() {
+  const { categories, selectedCategories, setSelectedCategories } =
+    useContext(DataContext)
+
+  const handleCategoryChange = category => {
+    setSelectedCategories(prevCategories => {
+      if (prevCategories.includes(category)) {
+        return prevCategories.filter(cat => cat !== category)
+      } else {
+        return [...prevCategories, category]
+      }
+    })
+  }
 
   return (
     <div className="filter">
-      {categories.map((category) => (
-        <div key={category}>
+      {categories.map((category, index) => (
+        <div className="checkbox-wrapper" key={category}>
           <input
+            className="toggle"
+            id={`cbx-${index}`}
             type="checkbox"
             checked={selectedCategories.includes(category)}
-            onChange={() => onCategoryChange(category)}
+            onChange={() => handleCategoryChange(category)}
           />
-          <label>{category}</label>
+          <label htmlFor={`cbx-${index}`} className="cb">
+            {category}
+          </label>
         </div>
       ))}
     </div>
-  );
+  )
 }

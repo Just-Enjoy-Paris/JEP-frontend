@@ -2,10 +2,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
 
 /* --- VARIABLES --- */
-:root{
+:root {
   --main-color: #213251;
   --secondary-color: #365286;
-  --txt-color: #FFFFFF;
+  --txt-color: #ffffff;
 }
 
 /* --- ANIMATIONS --- */
@@ -166,12 +166,4 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-html {
-  height: 100%;
-}
-
-h1 h2 h3 h4 h5 h6 p a {
-  font-family: "Raleway", sans-serif;
-}
-
 /* --- GLOBAL STYLES --- */

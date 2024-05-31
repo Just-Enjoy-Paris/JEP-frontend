@@ -1,0 +1,78 @@
+.userBord {
+  display: flex;
+  flex-direction: column;
+  padding: 5%;
+  font-family: "Raleway", sans-serif;
+}
+
+.boardTitle {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 3vh;
+}
+
+.userBord label {
+  color: var(--txt-color);
+}
+
+.userBord input {
+  color: var(--txt-color);
+  padding: 5px;
+}
+
+.userBord button {
+  color: var(--txt-color);
+  background-color: var(--main-color);
+  padding: 5px;
+  border: 1px solid var(--main-color);
+}
+
+.logoutBtn {
+  display: block;
+  width: 50%;
+  padding: 19px;
+  font-size: 16px;
+  background-color: var(--main-color);
+  color: var(--txt-color);
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  margin: 0 auto;
+}
+
+.avatarTitle {
+  color: var(--txt-color);
+}
+
+.avatarArea {
+  display: flex;
+  gap: 10px;
+  color: var(--txt-color);
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  border: none;
+  transition: border 0.3s ease;
+}
+
+.avatar.selected {
+  border: 2px solid blue;
+}
+
+.logoutBtn {
+  display: block;
+  width: 50%;
+  padding: 19px;
+  font-size: 16px;
+  background-color: var(--main-color);
+  color: var(--txt-color);
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  margin: 0 auto;
+}
