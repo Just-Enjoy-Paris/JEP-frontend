@@ -1,0 +1,11 @@
+.ad-container {
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+}
+
+.ad-container img{
+    width: 100%;
+    height: auto;
+    /* object-fit: cover; */ /* enlever les commentaire pour mettre l'image en taille réelle et centrée */
+}
