@@ -27,18 +27,6 @@ export const DataProvider = ({ children }) => {
     }
     fetchPlaces()
   }, [])
-  // à retirer
-  useEffect(() => {
-    if (places) {
-      console.log("Places updated:", places)
-    }
-    if (gardenPlaces) {
-      console.log("Garden updated:", gardenPlaces)
-    }
-    if (touristPlaces) {
-      console.log("Tourist updated:", touristPlaces)
-    }
-  }, [places, gardenPlaces, touristPlaces])
 
   return (
     <DataContext.Provider

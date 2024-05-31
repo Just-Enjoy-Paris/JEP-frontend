@@ -11,6 +11,8 @@ import Contact from "./pages/contact/Contact.jsx"
 import Error from "./pages/error/Error.jsx"
 import Signup from "./pages/signup/Signup.jsx"
 import Place from "./pages/places/Place.jsx"
+import CustomerUpdate from "./pages/customerUpdate/CustomerUpdate.jsx"
+import CustomerInfo from "./pages/customerInfo/CustomerInfo.jsx"
 
 function App() {
   return (
@@ -19,6 +21,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Landing />} />
         <Route path="/log" element={<Log />} />
+        <Route path="/client-area" element={<CustomerUpdate />}/>
+        <Route path="/client-info" element={<CustomerInfo />}/>
         <Route path="/signup" element={<Signup />} />
         <Route path="/about" element={<About />} />
         <Route path="/places" element={<Places />} />
@@ -27,7 +31,8 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/*" element={<Error />} />
       </Routes>
-      {/* <Footer /> */}
+
+      {/*<Footer />*/}
     </Router>
   )
 }
