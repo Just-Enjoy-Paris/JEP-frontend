@@ -1,5 +1,5 @@
 /* eslint-disable no-console */
-import React, { useContext } from "react"
+import React, { useContext, useEffect } from "react"
 import { NavLink, useNavigate } from "react-router-dom"
 import { CiUser } from "react-icons/ci"
 import { CiHeart } from "react-icons/ci"
@@ -12,16 +12,18 @@ const UserInfo = () => {
   const navigate = useNavigate()
   const { user, isAuthenticated, handleLogout } = useContext(AuthContext)
 
-  if (!user) {
-    return <div>Loading...</div>
-  }
+  useEffect(() => {
+    if (!isAuthenticated) {
+      navigate("/log")
+    }
+  }, [isAuthenticated, navigate])
 
-  return !isAuthenticated ? (
-    navigate("/log")
+  return !user ? (
+    <div>Loading</div>
   ) : (
     <section className="user-info-page">
       <h1 className="infoTitle">Bienvenue,</h1>
-      <h3 className="user-name">{user.name}</h3>
+      <h3 className="user-name">{user.account.username}</h3>
       <div className="user-avatar">
         <img src={user.account.avatar} alt="user avatar" />
       </div>

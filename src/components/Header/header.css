@@ -8,16 +8,20 @@
 
 .active{
   display: flex;
+  align-items: center;
 }
 
 .logo {
   width: 55px;
-  margin-top: 5px;
+}
+
+.logo-container{
+  display: flex;
 }
 
 .logButton {
-  border: none;
-  border-radius: 10px;
+  display: flex;
+  align-items: center;
   padding: 10px;
   text-decoration: none;
   color: var(--txt-color);
