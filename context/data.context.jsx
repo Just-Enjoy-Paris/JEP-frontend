@@ -8,6 +8,8 @@ export const DataProvider = ({ children }) => {
   const [places, setPlaces] = useState([])
   const [gardenPlaces, setGardenPlaces] = useState([])
   const [touristPlaces, setTouristPlaces] = useState([])
+  const [searchResult, setSearchResult] = useState(null)
+  const [showLoader, setShowLoader] = useState(true);
   const [search, setSearch] = useState("")
   const [categories, setCategories] = useState([])
   const [selectedCategories, setSelectedCategories] = useState([])
@@ -61,6 +63,10 @@ export const DataProvider = ({ children }) => {
         touristPlaces,
         search,
         setSearch,
+        searchResult,
+        setSearchResult,
+        showLoader,
+        setShowLoader,
         categories,
         setCategories,
         selectedCategories,
