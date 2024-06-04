@@ -39,11 +39,32 @@ const UserBoard = () => {
 
   return (
     <section className="userBoard">
-      <h1 className="title">Mes informations</h1>
+      <h1 className="userBoardTitle">Mes informations</h1>
       <form onSubmit={updateUser}>
-        <div>
+      <div>
+          <label htmlFor="newAvatar" className="avatarArea">
+            {/* à retirer aprés ajout du loader */}
+            {user && (
+              <div className="userBoardAvatar">
+                <img className="avatar" src={user.account.avatar} alt="user avatar" />
+              </div>
+            )}
+            {file && (
+              <div className="previewAvatar">
+                <img className="avatar" src={URL.createObjectURL(file)} alt="New avatar" />
+              </div>
+            )}
+            <input
+              type="file"
+              className="avatarChoice"
+              onChange={e => {
+                setFile(e.target.files[0])
+              }}
+            />
+          </label>
+        </div>
+        <div className="userInfo">
           <label>
-            Email
             <input
               type="email"
               placeholder={user ? user.email : "email"}
@@ -51,30 +72,10 @@ const UserBoard = () => {
               onChange={e => setNewEmail(e.target.value)}
             />
           </label>
+            <p>{user.account.username}</p>
         </div>
-        <div>
-          <label htmlFor="newAvatar" className="avatarArea">
-            Avatar
-            {/* à retirer aprés ajout du loader */}
-            {user && (
-              <div className="userBoardAvatar">
-                <img src={user.account.avatar} alt="user avatar" />
-              </div>
-            )}
-            {file && (
-              <div className="previewAvatar">
-                <img src={URL.createObjectURL(file)} alt="New avatar" />
-              </div>
-            )}
-            <input
-              type="file"
-              onChange={e => {
-                setFile(e.target.files[0])
-              }}
-            />
-          </label>
-        </div>
-        <button type="submit">Enregistrer</button>
+       
+        <button className="saveBtn" type="submit">Enregistrer</button>
       </form>
     </section>
   )
