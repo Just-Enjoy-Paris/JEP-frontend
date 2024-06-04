@@ -1,42 +1,69 @@
-import "./placeCard.css";
-import { Link } from "react-router-dom";
-import { useInView } from "react-intersection-observer";
-import { motion } from "framer-motion";
-import CategoryIcon from "../IconCategory/IconCategory";
+import "./placeCard.css"
+import { useState } from "react"
+import { Link } from "react-router-dom"
+import { useInView } from "react-intersection-observer"
+import { motion } from "framer-motion"
+import CategoryIcon from "../IconCategory/IconCategory"
+import { CiHeart } from "react-icons/ci"
 
 const PlaceCard = ({ place, isLast }) => {
   const [ref, inView] = useInView({
     threshold: 0.5,
-    triggerOnce: true,
-  });
+    triggerOnce: true
+  })
+  const [isActive, setIsActive] = useState(false);
 
   const variants = {
     hidden: { y: "15vw", opacity: 0 },
-    visible: { y: 0, opacity: 1 },
+    visible: { y: 0, opacity: 1 }
+  }
+
+  const handleClick = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setIsActive(!isActive);
   };
 
   return (
-    <Link to={`/place/${place._id}`} className={`placesCard ${isLast ? "lastCard" : ""}`}>
-      <motion.div className="cardFlex"
-        ref={ref}
-        variants={variants}
-        initial="hidden"
-        animate={inView ? "visible" : "hidden"}
-        transition={{ duration: 0.4, ease: "easeInOut" }}
-      >
-        <div className="card">
-          <CategoryIcon category={place.properties.category} className="cardIcon" />
-          <div>
-            <h1>{place.properties.name}</h1>
-            <p>
-              {place.properties.address.split(",")[0]} <br />
-              {place.properties.address.split(",")[1]}
-            </p>
-          </div>
-        </div>
-      </motion.div>
-    </Link>
-  );
-};
+    <Link
+    to={`/place/${place._id}`}
+    className={`placesCard ${isLast ? "lastCard" : ""}`}
+  >
+    <motion.div
+      className="cardFlex"
+      ref={ref}
+      variants={variants}
+      initial="hidden"
+      animate={inView ? "visible" : "hidden"}
+      transition={{ duration: 0.4, ease: "easeInOut" }}
+    >
+      <div className="card">
 
-export default PlaceCard;
+            <div className="card-content">
+              <CategoryIcon
+                category={place.properties.category}
+                className="cardIcon"
+              />
+              <div>
+                <h1>{place.properties.name}</h1>
+                <p>
+                  {place.properties.address.split(",")[0]} <br />
+                  {place.properties.address.split(",")[1]}
+                </p>
+              </div>
+            </div>
+            <div className="favorite">
+              <button className="favoriteButton" onClick={handleClick}>
+              <div className="favoriteIcon">
+            <CiHeart className={`favoriteIcon ${isActive ? "active" : ""}`} size={30} />
+          </div>
+              </button>
+            </div>
+
+      </div>
+      </motion.div>
+        </Link>
+  )
+}
+
+export default PlaceCard

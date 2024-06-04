@@ -2,12 +2,12 @@
 
 .placesCard {
   width: 85%;
+  text-decoration: none;
 }
 
 .card {
-  text-decoration: none;
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
   padding: 10px;
   color: var(--txt-color);
@@ -17,6 +17,11 @@
   border-radius: 10px;
   text-overflow: ellipsis;
   box-shadow: 5px 7px 9px -6px rgba(0, 0, 0, 0.75);
+}
+
+.card-content {
+  display: flex;
+  align-items: center;
 }
 
 .card h1 {
@@ -44,4 +49,27 @@
 
 .lastCard {
   margin-bottom: 75px;
+}
+
+.favorite {
+  display: flex;
+  align-items: center;
+}
+
+.favoriteButton {
+  color: var(--txt-color);
+  background-color: var(--secondary-color);
+  border: none;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.favoriteIcon {
+  transition: fill 0.5s ease-in-out;
+  /* fill: none; */
+}
+
+.favoriteIcon.active {
+  fill: red;
 }
