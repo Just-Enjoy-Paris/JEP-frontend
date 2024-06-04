@@ -1,5 +1,6 @@
 import "./placeDetails.css";
 import { CiHeart } from "react-icons/ci";
+import Rating from "../Rating/Rating";
 
 export default function PlacesDetails({ place }) {
     return (
@@ -9,17 +10,20 @@ export default function PlacesDetails({ place }) {
                 <div className="favorite">
                     <h1>{place.name}</h1>
                     <button className="favoriteButton">
-                    <div className="favoriteFlex">
-                    <CiHeart size={30} />
-                    </div>
+                        <div className="favoriteFlex">
+                            <CiHeart size={30} />
+                        </div>
                     </button>
                 </div>
                 <p className="placeAddress">{place.address}</p>
+                <div className="ratingFlex">
+                    <Rating/>                
                 <div className="placeCategories">
                     {place.category.map((category, index) => (
                         <div className="category" key={index}>{category}</div>
                     ))}
-                </div>
+                </div>  
+                </div>              
                 <p className="placeDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Pellentesque non nibh dignissim, fermentum nibh id, finibus magna.
                     Duis id ipsum ac augue vestibulum faucibus. Cras nec euismod odio.
