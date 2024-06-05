@@ -15,7 +15,6 @@ const UserBoard = () => {
     e.preventDefault()
     const formData = new FormData()
     formData.append("newEmail", newEmail)
-
     if (file) {
       formData.append("newAvatar", file)
     }
