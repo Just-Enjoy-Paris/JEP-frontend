@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import "./favoriteComponent.css"; // Assurez-vous de créer un fichier CSS pour styliser votre composant
+import "./favoriteComponent.css";
 
 const FavoriteComponent = () => {
   const [favoritePlaces, setFavoritePlaces] = useState([]);
