@@ -16,7 +16,6 @@ const PlaceCard = ({ place, isLast }) => {
     triggerOnce: true
   })
   const [isActive, setIsActive] = useState(false)
-  const [id, setId] = useState("")
 
   const variants = {
     hidden: { y: "15vw", opacity: 0 },
@@ -24,21 +23,20 @@ const PlaceCard = ({ place, isLast }) => {
   }
 
   useEffect(() => {
-    if (id && isActive) {
-      const alreadyFavorited = user.account.favPlaces.includes(id)
-      if (alreadyFavorited) {
-        rmFavorites(id)
-      } else {
-        addFavorites(id)
-      }
+    if (user && user.account.favPlaces.includes(place._id)) {
+      setIsActive(true)
     }
-  }, [id, isActive, user.account.favPlaces])
+  }, [user, place._id])
 
-  const handleClick = e => {
+  const handleClick = async e => {
     e.preventDefault()
     e.stopPropagation()
-    setIsActive(!isActive)
-    setId(place._id)
+    if (isActive) {
+      await rmFavorites(place._id)
+    } else {
+      await addFavorites(place._id)
+    }
+    setIsActive(!isActive);
   }
 
   const addFavorites = async id => {
