@@ -28,7 +28,7 @@ export default function Places() {
       </NavLink>
 
       <div className="placesWidth" key={place._id}>
-        <PlacesDetails place={place.properties} />
+        <PlacesDetails place={place.properties} placeId={place._id} />
       </div>
     </div>
   )

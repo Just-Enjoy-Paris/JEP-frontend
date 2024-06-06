@@ -1,18 +1,45 @@
+import axios from "axios"
 import "./rating.css"
+import React, { useContext, useState } from "react"
+import { DataContext } from "../../../context/data.context"
 
-export default function Rating() {
-    return (
-        <div className="rating">
-            <input value="5" name="rate" id="star5" type="radio"/>
-            <label title="text" htmlFor="star5"></label>
-            <input value="4" name="rate" id="star4" type="radio"/>
-            <label title="text" htmlFor="star4"></label>
-            <input value="3" name="rate" id="star3" type="radio" checked=""/>
-            <label title="text" htmlFor="star3"></label>
-            <input value="2" name="rate" id="star2" type="radio"/>
-            <label title="text" htmlFor="star2"></label>
-            <input value="1" name="rate" id="star1" type="radio"/>
-            <label title="text" htmlFor="star1"></label>
-        </div>      
-    )
+export default function Rating({ placeId }) {
+  const [newRate, setNewRate] = useState("")
+  const { setPlaces } = useContext(DataContext)
+
+  const placeRating = async e => {
+    e.preventDefault()
+    try {
+      const response = await axios.put(
+        `${import.meta.env.VITE_API_URL}/rating-place`,
+        { placeId, newRate },
+        { withCredentials: true }
+      )
+      setPlaces(response.data.places)
+    } catch (error) {
+      console.log("Error updating rating:", error)
+    }
+  }
+
+  return (
+    <form className="rating" onSubmit={placeRating}>
+      <button type="submit">Valider la note</button>
+      {[5, 4, 3, 2, 1].map(number => (
+        <React.Fragment key={number}>
+          <input
+            value={number}
+            onChange={e => setNewRate(e.target.value)}
+            checked={newRate === number.toString()}
+            name="rate"
+            id={`star${number}`}
+            type="radio"
+          />
+          <label
+            title={`Rate as ${number} stars`}
+            htmlFor={`star${number}`}
+          ></label>
+        </React.Fragment>
+      ))}
+    </form>
+  )
 }
