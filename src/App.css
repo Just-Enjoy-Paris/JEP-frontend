@@ -12,3 +12,7 @@ body {
   font-family: "Raleway", sans-serif;
   background-color: var(--main-color);
 }
+
+.placeList {
+  scroll-behavior: auto;
+}

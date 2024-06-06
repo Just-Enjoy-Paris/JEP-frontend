@@ -1,6 +1,7 @@
 import "./placeDetails.css";
 import { CiHeart } from "react-icons/ci";
 import Rating from "../Rating/Rating";
+import Opinion from "../Opinion/Opinion";
 
 export default function PlacesDetails({ place }) {
     return (
@@ -29,6 +30,7 @@ export default function PlacesDetails({ place }) {
                     Duis id ipsum ac augue vestibulum faucibus. Cras nec euismod odio.
                     Cras fermentum felis a magna venenatis, eget suscipit orci maximus.
                 </p>
+                <Opinion />
             </div>
         </div>
     );
