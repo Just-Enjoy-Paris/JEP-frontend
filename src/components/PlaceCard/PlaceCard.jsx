@@ -1,5 +1,6 @@
+/* eslint-disable no-console */
 import "./placeCard.css"
-import { useState, useEffect } from "react"
+import { useState } from "react"
 import { Link } from "react-router-dom"
 import { useInView } from "react-intersection-observer"
 import { motion } from "framer-motion"
@@ -13,7 +14,7 @@ const PlaceCard = ({ place, isLast }) => {
     triggerOnce: true
   })
   const [isActive, setIsActive] = useState(false)
-  const [favoriteIds, setFavoriteIds] = useState([])
+  const [favoriteIds, setFavoriteIds] = useState("")
 
   const variants = {
     hidden: { y: "15vw", opacity: 0 },
@@ -27,26 +28,23 @@ const PlaceCard = ({ place, isLast }) => {
     setIsActive(!isActive)
     if (newIsActive) {
       // Add the place ID to favorites
-      setFavoriteIds([...favoriteIds, place._id])
+      setFavoriteIds(place._id)
+      saveFavorites(favoriteIds)
     } else {
       // Remove the place ID from favorites
       setFavoriteIds(favoriteIds.filter(id => id !== place._id))
+      saveFavorites(favoriteIds)
     }
   }
 
   const saveFavorites = async favorites => {
     try {
-      await axios.post(`${import.meta.env.VITE_API_URL}/addFav`, { favoriteIds: favorites })
+      await axios.put(`${import.meta.env.VITE_API_URL}/addFav`, { favoriteIds: favorites })
       console.log("Favorites saved successfully")
     } catch (error) {
       console.error("Error saving favorites:", error)
     }
   }
-
-  // Save favorites each time the favoriteIds state changes
-  useEffect(() => {
-    saveFavorites(favoriteIds)
-  }, [favoriteIds])
 
   return (
     <Link
