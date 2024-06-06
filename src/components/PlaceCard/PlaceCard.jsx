@@ -1,6 +1,7 @@
 /* eslint-disable no-console */
 import "./placeCard.css"
-import { useState } from "react"
+import { useContext, useState, useEffect } from "react"
+import { AuthContext } from "../../../context/user.context"
 import { Link } from "react-router-dom"
 import { useInView } from "react-intersection-observer"
 import { motion } from "framer-motion"
@@ -9,40 +10,60 @@ import { CiHeart } from "react-icons/ci"
 import axios from "axios"
 
 const PlaceCard = ({ place, isLast }) => {
+  const { user } = useContext(AuthContext)
   const [ref, inView] = useInView({
     threshold: 0.5,
     triggerOnce: true
   })
   const [isActive, setIsActive] = useState(false)
-  const [favoriteIds, setFavoriteIds] = useState("")
+  const [id, setId] = useState("")
 
   const variants = {
     hidden: { y: "15vw", opacity: 0 },
     visible: { y: 0, opacity: 1 }
   }
 
+  useEffect(() => {
+    if (id && isActive) {
+      const alreadyFavorited = user.account.favPlaces.includes(id)
+      if (alreadyFavorited) {
+        rmFavorites(id)
+      } else {
+        addFavorites(id)
+      }
+    }
+  }, [id, isActive, user.account.favPlaces])
+
   const handleClick = e => {
     e.preventDefault()
     e.stopPropagation()
-    const newIsActive = !isActive
     setIsActive(!isActive)
-    if (newIsActive) {
-      // Add the place ID to favorites
-      setFavoriteIds(place._id)
-      saveFavorites(favoriteIds)
-    } else {
-      // Remove the place ID from favorites
-      setFavoriteIds(favoriteIds.filter(id => id !== place._id))
-      saveFavorites(favoriteIds)
+    setId(place._id)
+  }
+
+  const addFavorites = async id => {
+    try {
+      await axios.put(
+        `${import.meta.env.VITE_API_URL}/addFav`,
+        { id },
+        { withCredentials: true }
+      )
+      console.log("Favorite added successfully")
+    } catch (error) {
+      console.error("Error adding to favorites:", error)
     }
   }
 
-  const saveFavorites = async favorites => {
+  const rmFavorites = async id => {
     try {
-      await axios.put(`${import.meta.env.VITE_API_URL}/addFav`, { favoriteIds: favorites })
-      console.log("Favorites saved successfully")
+      await axios.put(
+        `${import.meta.env.VITE_API_URL}/rmFav`,
+        { id },
+        { withCredentials: true }
+      )
+      console.log("Favorite removed successfully")
     } catch (error) {
-      console.error("Error saving favorites:", error)
+      console.error("Error removing from favorites:", error)
     }
   }
 
@@ -74,14 +95,15 @@ const PlaceCard = ({ place, isLast }) => {
             </div>
           </div>
           <div className="favorite">
-            <button className="favoriteButton" onClick={handleClick}>
+            <div className="favoriteButton">
               <div className="favoriteIcon">
                 <CiHeart
+                  onClick={handleClick}
                   className={`favoriteIcon ${isActive ? "active" : ""}`}
                   size={30}
                 />
               </div>
-            </button>
+            </div>
           </div>
         </div>
       </motion.div>
