@@ -2,13 +2,21 @@ import axios from "axios"
 import "./rating.css"
 import React, { useContext, useState } from "react"
 import { DataContext } from "../../../context/data.context"
+import toast from "react-hot-toast"
+import { AuthContext } from "../../../context/user.context"
 
-export default function Rating({ placeId }) {
-  const [newRate, setNewRate] = useState("")
+export default function Rating({ placeId, rate }) {
+  const [newRate, setNewRate] = useState(rate)
   const { setPlaces } = useContext(DataContext)
+  const { isAuthenticated } = useContext(AuthContext)
 
   const placeRating = async e => {
     e.preventDefault()
+    if (!isAuthenticated) {
+      return toast(
+        <p className="p-toast">Connectez vous pour évaluer un lieu</p>
+      )
+    }
     try {
       const response = await axios.put(
         `${import.meta.env.VITE_API_URL}/rating-place`,
@@ -17,7 +25,7 @@ export default function Rating({ placeId }) {
       )
       setPlaces(response.data.places)
     } catch (error) {
-      console.log("Error updating rating:", error)
+      toast.error("Error updating rating")
     }
   }
 
@@ -35,8 +43,11 @@ export default function Rating({ placeId }) {
             type="radio"
           />
           <label
-            title={`Rate as ${number} stars`}
             htmlFor={`star${number}`}
+            className={
+              newRate >= number ? "full" : newRate >= number - 0.5 ? "half" : ""
+            }
+            title={`Rate as ${number} stars`}
           ></label>
         </React.Fragment>
       ))}

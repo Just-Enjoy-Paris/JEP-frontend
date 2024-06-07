@@ -1,29 +1,27 @@
 import "./placeDetails.css"
-import { CiHeart } from "react-icons/ci"
+import AddFav from "../AddFav/AddFav"
 import Rating from "../Rating/Rating"
 
-export default function PlacesDetails({ place, placeId }) {
+export default function PlacesDetails({ place }) {
   return (
-    <div className="placeContent">
+    <section className="placeContent">
       <img
         className="placePicture"
-        src={place.picture}
-        alt={`Photo de ${place.name}`}
+        src={place.properties.picture}
+        alt={`Photo de ${place.properties.name}`}
       />
       <div className="placeLocation">
         <div className="favorite">
-          <h1>{place.name}</h1>
-          <button className="favoriteButton">
-            <div className="favoriteFlex">
-              <CiHeart size={30} />
-            </div>
-          </button>
+          <h1>{place.properties.name}</h1>
+          <div className="favoriteFlex">
+            <AddFav place={place} />
+          </div>
         </div>
-        <p className="placeAddress">{place.address}</p>
+        <p className="placeAddress">{place.properties.address}</p>
         <div className="ratingFlex">
-          <Rating placeId={placeId} />
+          <Rating placeId={place._id} rate={place.properties.rate} />
           <div className="placeCategories">
-            {place.category.map((category, index) => (
+            {place.properties.category.map((category, index) => (
               <div className="category" key={index}>
                 {category}
               </div>
@@ -37,6 +35,6 @@ export default function PlacesDetails({ place, placeId }) {
           a magna venenatis, eget suscipit orci maximus.
         </p>
       </div>
-    </div>
+    </section>
   )
 }

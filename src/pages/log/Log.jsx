@@ -14,8 +14,8 @@ export default function Log() {
   }, [isAuthenticated])
 
   return (
-    <>
+    <main>
       <LoginForm />
-    </>
+    </main>
   )
 }

@@ -1,21 +1,21 @@
-import { useContext, useEffect } from "react";
-import { motion } from "framer-motion";
-import "./loader.css";
-import { DataContext } from "../../../context/data.context";
+import { useContext, useEffect } from "react"
+import { motion } from "framer-motion"
+import "./loader.css"
+import { DataContext } from "../../../context/data.context"
 
 const Loader = () => {
-  const {setShowLoader} = useContext(DataContext)
+  const { setShowLoader } = useContext(DataContext)
   useEffect(() => {
     // Automatically hide the loader after a delay
     setTimeout(() => {
-      setShowLoader(false);
-    }, 3200);
-  }, [setShowLoader]);
+      setShowLoader(false)
+    }, 3200)
+  }, [setShowLoader])
 
-  const createLogoAnimation = (delay) => ({
+  const createLogoAnimation = delay => ({
     hidden: {
       opacity: 0,
-      fill: "rgb(255, 255, 255)",
+      fill: "rgb(255, 255, 255)"
     },
     visible: {
       opacity: 1,
@@ -23,20 +23,27 @@ const Loader = () => {
       fill: "rgb(255, 255, 255)",
       transition: {
         default: { duration: 1, ease: "easeIn", delay: delay },
-        fill: { duration: 1, color: "rgb(19, 26, 34)", ease: "easeIn", delay: delay },
+        fill: {
+          duration: 1,
+          color: "rgb(19, 26, 34)",
+          ease: "easeIn",
+          delay: delay
+        }
       }
     }
-  });
+  })
 
   return (
-    <div>
+    <main>
       <motion.svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 841.89 754.4">
         <motion.circle
-         className="cls-18" 
-         cx="338.58" cy="256.95" r="18.68"
-         initial="hidden"
-         animate="visible"
-         variants={createLogoAnimation(0.6)}         
+          className="cls-18"
+          cx="338.58"
+          cy="256.95"
+          r="18.68"
+          initial="hidden"
+          animate="visible"
+          variants={createLogoAnimation(0.6)}
         />
         <g id="_Répétition_radiale_">
           <motion.circle
@@ -148,8 +155,8 @@ const Loader = () => {
           </g>
         </g>
       </motion.svg>
-    </div>
-  );
-};
+    </main>
+  )
+}
 
-export default Loader;
+export default Loader

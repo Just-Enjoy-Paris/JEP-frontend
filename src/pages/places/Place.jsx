@@ -16,20 +16,15 @@ export default function Places() {
     }
   }, [place, navigate])
 
-  if (!place) {
-    return null
-  }
-
   return (
-    <div className="places">
+    <main>
       <NavLink to="/places" className="return">
         <MdKeyboardArrowLeft size={35} />
         <h1>Lieux</h1>
       </NavLink>
-
-      <div className="placesWidth" key={place._id}>
-        <PlacesDetails place={place.properties} placeId={place._id} />
-      </div>
-    </div>
+      <section>
+        <PlacesDetails place={place} />
+      </section>
+    </main>
   )
 }

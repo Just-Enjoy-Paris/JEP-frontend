@@ -1,5 +1,4 @@
-.footer {
-  position: sticky;
+footer {
   display: flex;
   justify-content: space-evenly;
   background-color: var(--main-color);
@@ -8,7 +7,7 @@
   height: fit-content;
 }
 
-.footer a {
+footer a {
   display: flex;
   text-decoration: none;
   padding: 10px;

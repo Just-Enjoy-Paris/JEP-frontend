@@ -1,12 +1,11 @@
-/* eslint-disable no-console */
-import "./placeCard.css"
+import "./favPlaceCard.css"
 import { Link } from "react-router-dom"
 import { useInView } from "react-intersection-observer"
 import { motion } from "framer-motion"
 import CategoryIcon from "../IconCategory/IconCategory"
 import AddFav from "../AddFav/AddFav"
 
-const PlaceCard = ({ place, isLast }) => {
+const FavPlaceCard = ({ place, isLast }) => {
   const [ref, inView] = useInView({
     threshold: 0.5,
     triggerOnce: true
@@ -20,18 +19,18 @@ const PlaceCard = ({ place, isLast }) => {
   return (
     <Link
       to={`/place/${place._id}`}
-      className={`placesCard ${isLast ? "lastCard" : ""}`}
+      className={`favPlacesCard ${isLast ? "lastCard" : ""}`}
     >
       <motion.div
-        className="cardFlex"
+        className="favCardFlex"
         ref={ref}
         variants={variants}
         initial="hidden"
         animate={inView ? "visible" : "hidden"}
         transition={{ duration: 0.4, ease: "easeInOut" }}
       >
-        <div className="card">
-          <div className="card-content">
+        <div className="favCard">
+          <div className="favCard-content">
             <CategoryIcon
               category={place.properties.category}
               className="cardIcon"
@@ -51,4 +50,4 @@ const PlaceCard = ({ place, isLast }) => {
   )
 }
 
-export default PlaceCard
+export default FavPlaceCard
