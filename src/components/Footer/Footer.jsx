@@ -5,7 +5,7 @@ import logo from "../../img/logo.svg"
 
 export default function Footer() {
   return (
-    <footer className="footer">
+    <footer>
       <NavLink to="/">
         <img className="logoFooter" src={logo} alt="logo" />
       </NavLink>
