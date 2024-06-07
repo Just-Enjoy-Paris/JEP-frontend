@@ -21,3 +21,7 @@ main {
   font-size: 20px;
   margin: 15px 0px 0px 10px;
 }
+.p-toast {
+  font-size: 15px;
+  font-weight: bold;
+}

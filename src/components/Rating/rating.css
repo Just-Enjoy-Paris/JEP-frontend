@@ -1,0 +1,79 @@
+.rating {
+  display: flex;
+  margin: 5px 0;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+}
+
+.rating:not(:checked) > input {
+  position: absolute;
+  appearance: none;
+}
+
+.rating:not(:checked) > label {
+  float: right;
+  cursor: pointer;
+  font-size: 30px;
+}
+
+.rating:not(:checked) > label:before {
+  content: "★";
+}
+
+.rating > input:checked + label:hover,
+.rating > input:checked + label:hover ~ label,
+.rating > input:checked ~ label:hover,
+.rating > input:checked ~ label:hover ~ label,
+.rating > label:hover ~ input:checked ~ label {
+  color: #e58e09;
+}
+
+.rating:not(:checked) > label:hover,
+.rating:not(:checked) > label:hover ~ label {
+  color: #ff9e0b;
+}
+
+.rating > input:checked ~ label {
+  color: #ffa723;
+}
+
+.rating input[type="radio"] {
+  display: none;
+}
+
+.rating label {
+  cursor: pointer;
+  font-size: 30px;
+  color: #ccc;
+}
+
+.rating label.full:before {
+  content: "★";
+  color: #ffa723;
+}
+
+.rating label.half:before {
+  content: "★";
+  background: linear-gradient(90deg, #ffa723 50%, #ccc 50%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.rating label:hover,
+.rating label:hover ~ label,
+.rating label:focus,
+.rating label:focus ~ label {
+  background: #ffa723;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+.rating label.half:hover:before,
+.rating label.half:hover ~ label:before,
+.rating label.half:focus:before,
+.rating label.half:focus ~ label:before {
+  background: #ffa723;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}

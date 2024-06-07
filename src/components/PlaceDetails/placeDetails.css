@@ -42,8 +42,13 @@
 }
 
 .placeAddress {
-  margin: 0 0 15px;
+  margin: 0 0 5px;
   font-style: italic;
+}
+
+.ratingFlex {
+  display: flex;
+  flex-direction: column;
 }
 
 .placeCategories {

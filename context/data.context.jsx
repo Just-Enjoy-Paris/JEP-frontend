@@ -9,7 +9,7 @@ export const DataProvider = ({ children }) => {
   const [gardenPlaces, setGardenPlaces] = useState([])
   const [touristPlaces, setTouristPlaces] = useState([])
   const [searchResult, setSearchResult] = useState(null)
-  const [showLoader, setShowLoader] = useState(true);
+  const [showLoader, setShowLoader] = useState(true)
   const [search, setSearch] = useState("")
   const [categories, setCategories] = useState([])
   const [selectedCategories, setSelectedCategories] = useState([])
@@ -39,20 +39,20 @@ export const DataProvider = ({ children }) => {
   }, [places])
 
   // à retirer
-  useEffect(() => {
-    if (places) {
-      console.log("Places updated:", places)
-    }
-    if (gardenPlaces) {
-      console.log("Garden updated:", gardenPlaces)
-    }
-    if (touristPlaces) {
-      console.log("Tourist updated:", touristPlaces)
-    }
-    if (categories) {
-      console.log(categories)
-    }
-  }, [places, gardenPlaces, touristPlaces])
+  // useEffect(() => {
+  //   if (places) {
+  //     console.log("Places updated:", places)
+  //   }
+  //   if (gardenPlaces) {
+  //     console.log("Garden updated:", gardenPlaces)
+  //   }
+  //   if (touristPlaces) {
+  //     console.log("Tourist updated:", touristPlaces)
+  //   }
+  //   if (categories) {
+  //     console.log(categories)
+  //   }
+  // }, [places, gardenPlaces, touristPlaces])
 
   return (
     <DataContext.Provider

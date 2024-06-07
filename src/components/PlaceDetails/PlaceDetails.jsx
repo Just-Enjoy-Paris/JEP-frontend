@@ -1,5 +1,6 @@
-import AddFav from "../AddFav/AddFav"
 import "./placeDetails.css"
+import AddFav from "../AddFav/AddFav"
+import Rating from "../Rating/Rating"
 
 export default function PlacesDetails({ place }) {
   return (
@@ -17,12 +18,15 @@ export default function PlacesDetails({ place }) {
           </div>
         </div>
         <p className="placeAddress">{place.properties.address}</p>
-        <div className="placeCategories">
-          {place.properties.category.map((category, index) => (
-            <div className="category" key={index}>
-              {category}
-            </div>
-          ))}
+        <div className="ratingFlex">
+          <Rating placeId={place._id} rate={place.properties.rate} />
+          <div className="placeCategories">
+            {place.properties.category.map((category, index) => (
+              <div className="category" key={index}>
+                {category}
+              </div>
+            ))}
+          </div>
         </div>
         <p className="placeDescription">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque

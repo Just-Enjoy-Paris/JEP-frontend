@@ -51,6 +51,9 @@
   gap: 10px;
   color: var(--txt-color);
 }
+.avatarArea img {
+  width: 80px;
+}
 
 .avatar {
   width: 50px;
