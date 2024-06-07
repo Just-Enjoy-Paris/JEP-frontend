@@ -21,15 +21,14 @@ export default function Places() {
   }
 
   return (
-    <div className="places">
+    <main>
       <NavLink to="/places" className="return">
         <MdKeyboardArrowLeft size={35} />
         <h1>Lieux</h1>
       </NavLink>
-
-      <div className="placesWidth" key={place._id}>
-        <PlacesDetails place={place.properties} />
+      <div key={place._id}>
+        <PlacesDetails place={place} />
       </div>
-    </div>
+    </main>
   )
 }

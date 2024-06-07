@@ -1,5 +1,4 @@
-.footer {
-  position: sticky;
+footer {
   display: flex;
   justify-content: space-evenly;
   background-color: var(--main-color);
@@ -7,7 +6,7 @@
   width: 100%;
 }
 
-.footer a {
+footer a {
   display: flex;
   text-decoration: none;
   padding: 10px;

@@ -4,10 +4,10 @@ import Map from "../../components/Map/Map"
 
 export default function Landing() {
   return (
-    <>
+    <main>
       <Map />
       {/*<EventPreview />*/}
       {/*<PlaceList />*/}
-    </>
+    </main>
   )
 }

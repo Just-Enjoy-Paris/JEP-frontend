@@ -18,6 +18,7 @@ import CustomerInfo from "./pages/customerInfo/CustomerInfo.jsx"
 import UserFavs from "./pages/userFavs/UserFavs.jsx"
 import Loader from "./pages/loader/Loader.jsx"
 import { DataContext } from "../context/data.context.jsx"
+import { Toaster } from "react-hot-toast"
 
 function App() {
   const { showLoader } = useContext(DataContext)
@@ -30,6 +31,7 @@ function App() {
       ) : (
         <>
           <Router>
+            <Toaster />
             <Header />
             <Routes>
               <Route path="/" element={<Landing />} />
