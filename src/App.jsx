@@ -5,6 +5,7 @@ import { useContext } from "react"
 import Header from "./components/Header/Header.jsx"
 import Footer from "./components/Footer/Footer.jsx"
 import Landing from "./pages/landing/Landing.jsx"
+import Landing2 from "./pages/landing2/Landing2.jsx"
 import Log from "./pages/log/Log.jsx"
 import About from "./pages/about/About.jsx"
 import Places from "./pages/places/Places.jsx"
@@ -35,6 +36,7 @@ function App() {
             <Header />
             <Routes>
               <Route path="/" element={<Landing />} />
+              <Route path="/2" element={<Landing2 />} />
               <Route path="/log" element={<Log />} />
               <Route path="/client-area" element={<CustomerUpdate />} />
               <Route path="/client-info" element={<CustomerInfo />} />

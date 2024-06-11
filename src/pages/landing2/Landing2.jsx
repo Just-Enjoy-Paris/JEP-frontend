@@ -1,9 +1,9 @@
-import Map from "../../components/Map/Map"
+import MapRoute from "../../components/MapRoute/MapRoute"
 
 export default function Landing() {
   return (
     <main>
-      <Map />
+      <MapRoute/>
     </main>
   )
 }

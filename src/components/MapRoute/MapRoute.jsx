@@ -1,57 +1,50 @@
 import { useEffect, useRef, useContext } from "react"
 import { DataContext } from "../../../context/data.context"
+import AdComponent from "../AdComponent/AdComponent"
 
-export default function Directions({ map, showItinerary }) {
+export default function MapRoute({ map }) {
+  const mapRef = useRef(null)
   const directionsRendererRef = useRef(null)
   const { places } = useContext(DataContext)
 
   useEffect(() => {
-    // Vérifier que l'objet Map a été initialisé
-    if (!map) return
+    if (!map || !window.google) return
 
-    // objet DirectionsRenderer pour afficher l'itinéraire
+    mapRef.current = new window.google.maps.Map(document.getElementById("map"), {
+      center: { lat: 48.8566, lng: 2.3522 },
+      zoom: 12,
+      mapId: "fe2668b01b9cb7be"
+    })
+
+    // DirectionsRenderer pour afficher l'itinéraire sur la carte
     directionsRendererRef.current = new window.google.maps.DirectionsRenderer({
-      map: null
+      map: mapRef.current,
     })
 
-    // Écouter l'événement idle de l'objet Map pour associer l'objet DirectionsRenderer à l'objet Map
-    const idleListener = map.addListener("load", () => {
-      // Associer l'objet DirectionsRenderer à l'objet Map
-      directionsRendererRef.current.setMap(map)
-      if (showItinerary) {
-        calculateItinerary()
-      } else {
-        // Masquer l'itinéraire
-        directionsRendererRef.current.setDirections({ routes: [] })
-      }
-      // Supprimer l'écouteur d'événement idle
-      idleListener.remove()
-    })
-  }, [map, showItinerary])
+    const limitedPlaces = places.slice(0, 25)
 
-  const calculateItinerary = () => {
-    // objet DirectionsService pour envoyer la requête de calcul d'itinéraire
-    const directionsService = new window.google.maps.DirectionsService()
+    const directionsService = new window.google.maps.DirectionsService();
 
-    // tableau de waypoints pour les étapes intermédiaires de l'itinéraire
-    const waypoints = []
-    for (let i = 0; i < 25; i++) {
-      waypoints.push({
-        location: {
-          lat: places[i].geometry.coordinates[1],
-          lng: places[i].geometry.coordinates[0]
-        },
-        stopover: true
-      })
-    }
+    const waypoints = limitedPlaces.slice(1, -1).map((place) => ({
+      location: {
+        lat: place.geometry.coordinates[1],
+        lng: place.geometry.coordinates[0],
+      },
+      stopover: true,
+    }))
 
-    // requête de calcul d'itinéraire
     directionsService.route(
       {
-        origin: { lat: waypoints[0].location.lat, lng: waypoints[0].location.lng },
-        destination: { lat: waypoints[waypoints.length - 1].location.lat, lng: waypoints[waypoints.length - 1].location.lng },
+        origin: {
+          lat: limitedPlaces[0].geometry.coordinates[1],
+          lng: limitedPlaces[0].geometry.coordinates[0],
+        },
+        destination: {
+          lat: limitedPlaces[limitedPlaces.length - 1].geometry.coordinates[1],
+          lng: limitedPlaces[limitedPlaces.length - 1].geometry.coordinates[0],
+        },
         waypoints: waypoints,
-        travelMode: "WALKING"
+        travelMode: "WALKING",
       },
       (result, status) => {
         if (status === "OK") {
@@ -61,7 +54,12 @@ export default function Directions({ map, showItinerary }) {
         }
       }
     )
-  }
 
-  return null
+  }, [map, places])
+
+  return (
+    <section>
+      <div id="map" className="mapContainer"></div>
+      <AdComponent/>
+    </section>  )
 }
