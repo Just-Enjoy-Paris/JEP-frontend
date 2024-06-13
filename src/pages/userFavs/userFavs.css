@@ -1,0 +1,33 @@
+.userfav-title {
+  text-align: center;
+  padding: 15px 45px;
+  color: var(--txt-color);
+  font-size: 24px;
+}
+
+.favplaces-section {
+  min-height: 80px;
+  border: solid 1px red;
+}
+
+.favtourist-section {
+  min-height: 80px;
+  border: solid 1px red;
+}
+
+.favgardens-section {
+  min-height: 80px;
+  border: solid 1px red;
+}
+.sectionFav-title {
+  font-size: 18px;
+  color: var(--txt-color);
+  padding: 8px 25px;
+  margin-left: 10px;
+}
+.emptyFav {
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

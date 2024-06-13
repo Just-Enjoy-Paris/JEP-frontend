@@ -43,6 +43,7 @@
     color: var(--txt-color);
     font-size: 26px;
     margin: 10px;
+    text-decoration: none;
 }
 
 .user-fav p{

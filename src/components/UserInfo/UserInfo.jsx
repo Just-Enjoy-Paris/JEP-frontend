@@ -27,10 +27,10 @@ const UserInfo = () => {
       <div className="user-avatar">
         <img src={user.account.avatar} alt="user avatar" />
       </div>
-      <div className="user-fav">
+      <NavLink to="/user-favorites" className="user-fav">
         <CiHeart className="favIcon" size={30} />
         <p>Mes Favoris</p>
-      </div>
+      </NavLink>
       <NavLink to="/client-area" className="user-info">
         <CiUser className="infoIcon" size={30} />
         <p>Mes informations</p>
