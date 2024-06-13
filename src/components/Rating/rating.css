@@ -1,3 +1,9 @@
+.total-stars{
+  display: flex;
+  align-items: center;
+  margin: 0px 5px 0px 5px;
+}
+
 .rating {
   display: flex;
   margin: 5px 0;

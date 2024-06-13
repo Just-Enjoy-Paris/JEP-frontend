@@ -32,6 +32,7 @@ export default function Rating({ placeId, rate }) {
   return (
     <form className="rating" onSubmit={placeRating}>
       <button type="submit">Valider la note</button>
+      <div className="total-stars">({rate})</div>
       {[5, 4, 3, 2, 1].map(number => (
         <React.Fragment key={number}>
           <input
