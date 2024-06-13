@@ -46,22 +46,20 @@ export default function PlaceList({ searchResult, categoryMap }) {
   return (
     <>
       {Object.keys(categoryMap).map((mainCategory) => (
-        <section className="category-section" key={mainCategory}>
-          <h2>{mainCategory}</h2>
-          <div className="main-category-section">
-            {groupedPlaces[mainCategory] ? (
-              groupedPlaces[mainCategory].map((place, index) => (
+        groupedPlaces[mainCategory]?.length > 0 && (
+          <section className="category-section" key={mainCategory}>
+            <h2>{mainCategory}</h2>
+            <div className="main-category-section">
+              {groupedPlaces[mainCategory].map((place, index) => (
                 <PlaceCard
                   key={place._id}
                   place={place}
                   isLast={index === groupedPlaces[mainCategory].length - 1}
                 />
-              ))
-            ) : (
-              <p>Aucun {mainCategory.toLowerCase()} trouvé.</p>
-            )}
-          </div>
-        </section>
+              ))}
+            </div>
+          </section>
+        )
       ))}
     </>
   );

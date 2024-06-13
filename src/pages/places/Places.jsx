@@ -12,30 +12,39 @@ export default function Places() {
       "Fast food",
       "Streetfood Chinoise",
       "Restaurant Algerien",
-      "Restaurant Italien"
+      "Restaurant Italien",
+      "Brasserie"
     ],
+    Soif: ["Bar", "Pub", "Café"],
     Shopping: [
       "Boutique",
       "Bijouterie",
       "Association",
-      "Boutique de vêtements", 
-      "Boutique de porcelaine"
+      "Boutique de vêtements",
+      "Boutique de porcelaine",
+      "Parfumerie"
     ],
     Gourmandise: [
       "Pâtisserie",
       "Bubble tea",
-      "Salon de thé",
-      "Marchand de glaces"
+      "Salon de the",
+      "Marchand de glaces",
     ],
     Courses: ["Boulangerie", "Primeur", "Marché"],
     Hôtel: ["Hotel"],
-    Culture: ["Boutique d'objets religieux", "Librairie"],
-    Pratique: ["Coiffeur", "Boutique de CBD", "Vente et réparation de cycles"]
+    Culture: ["Boutique d'objets religieux", "Librairie", "Galerie d'art"],
+    Pratique: [
+      "Coiffeur",
+      "Boutique de CBD",
+      "Vente et réparation de cycles",
+      "Service d'impression 3D"
+    ]
   }
 
   const categorySections = [
     { categories: ["Restaurant"] },
     { categories: ["Gourmandise"] },
+    { categories: ["Soif"] },
     { categories: ["Shopping"] },
     { categories: ["Pratique"] },
     { categories: ["Courses"] },
