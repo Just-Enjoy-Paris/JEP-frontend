@@ -1,46 +1,52 @@
-.placesCard {
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+.favPlacesCard {
   width: 85%;
   text-decoration: none;
 }
 
-.card {
+.favCard {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px;
   color: var(--txt-color);
   font-size: 20px;
+  font-family: "Raleway", sans-serif;
   background-color: var(--secondary-color);
   border-radius: 10px;
   text-overflow: ellipsis;
   box-shadow: 5px 7px 9px -6px rgba(0, 0, 0, 0.75);
 }
 
-.card-content {
+.favCard-content {
   display: flex;
   align-items: center;
 }
 
-.card h1 {
+.favCard h1 {
   font-size: 13px;
   font-weight: bold;
   overflow: hidden;
 }
 
-.card p {
+.favCard p {
   font-size: 11px;
   margin-top: 5px;
   font-style: italic;
 }
 
-.card svg {
+.favCard svg {
   margin: 10px 35px 10px 20px;
   display: flex;
 }
 
-.cardFlex {
+.favCardFlex {
   padding: 10px;
   display: flex;
   flex-direction: column;
 }
 
+.lastCard {
+  margin-bottom: 75px;
+}

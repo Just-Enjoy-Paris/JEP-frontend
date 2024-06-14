@@ -1,80 +1,73 @@
 .placeContent {
-    width: 85%;
-    margin: 10px auto;    
+  width: 85%;
+  margin: 10px auto;
 }
 
 .placePicture {
-    box-sizing: border-box;
-    width: 100%;
-    height: 290px;
-    object-fit: fill;
+  box-sizing: border-box;
+  width: 100%;
+  height: 290px;
+  object-fit: fill;
 }
 
 .placeLocation {
-    font-family: "Raleway", sans-serif;
-    margin: 10px 0;
-    color: var(--txt-color);
+  font-family: "Raleway", sans-serif;
+  margin: 10px 0;
+  color: var(--txt-color);
 }
 
 .favorite {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
 .favoriteFlex {
-    margin: 0 0 10px 0;
-    padding: 0;
-    position: absolute;
-    top: 75px;
-    right: 35px;
+  margin: 0 0 10px 0;
+  padding: 0;
+  position: absolute;
+  top: 75px;
+  right: 35px;
 }
 
-.favoriteButton {
-    color: var(--txt-color);
-    background-color: var(--secondary-color);
-    border: none;
-    padding: 0;
+.placeLocation h1 {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 5px 0 5px;
+  text-overflow: ellipsis;
+  text-wrap: nowrap;
+  overflow: hidden;
 }
 
-.placeLocation h1{
-    font-size: 24px;
-    font-weight: 600;
-    margin: 5px 0 5px;
-    text-overflow: ellipsis;
-    text-wrap: nowrap;
-    overflow: hidden;
-}
-
-.placeAddress{
-    margin: 0 0 5px;
-    font-style: italic;
+.placeAddress {
+  margin: 0 0 5px;
+  font-style: italic;
 }
 
 .ratingFlex {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .placeCategories {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .category {
-    padding: 10px;
-    margin: 5px 5px 5px 0px;
-    background-color: var(--main-color);
-    border-radius: 5px;
+  padding: 10px;
+  margin: 5px 5px 5px 0px;
+  background-color: var(--main-color);
+  border-radius: 5px;
 }
 
 .placeDescription {
-    margin: 10px 0px 0px 0px;
+  margin: 10px 0px 0px 0px;
 }
 
 .placeDescription {
-    margin: 10px 0px 0px 0px;
-    line-height: 23px;    
+  margin: 10px 0px 0px 0px;
+  line-height: 23px;
 }

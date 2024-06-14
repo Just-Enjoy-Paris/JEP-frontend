@@ -1,47 +1,48 @@
 .opinion {
-    display: flex;
-    flex-direction: row;
-    margin-top: 5px;
-    justify-content: flex-end;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  margin-top: 5px;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 .opinion p {
-    font-size: 12px;
+  font-size: 12px;
 }
 
 .icon1 {
-    margin-left: 10px;
+  margin-left: 10px;
 }
 
 .icon2 {
-    margin-left: 8px;
+  margin-left: 8px;
 }
 
-.icon1, .icon2 {
-    /* Styles par défaut pour les icônes */
-    color: var(--txt-color);
-    transition: color 0.3s ease-in;
-  }
-  
-  .up {
-    /* Styles pour le pouce levé cliqué */
-    color: var(--main-color);
-    background-color: var(--txt-color);
-    border-radius: 50%; /* Ajoute un arrondi à l'arrière-plan */
-    padding: 5px; /* Ajoute un espace autour de l'icône */
-    height: auto;
-    width: 35px;
-    margin-left: 10px;
-  }
-  
-  .down {
-    /* Styles pour le pouce baissé cliqué */
-    color: red;
-    background-color: var(--txt-color);
-    border-radius: 50%; /* Ajoute un arrondi à l'arrière-plan */
-    padding: 5px; /* Ajoute un espace autour de l'icône */    
-    height: auto;
-    width: 35px;
-    margin-left: 8px;
-  }
+.icon1,
+.icon2 {
+  /* Styles par défaut pour les icônes */
+  color: var(--txt-color);
+  transition: color 0.3s ease-in;
+}
+
+.up {
+  /* Styles pour le pouce levé cliqué */
+  color: var(--main-color);
+  background-color: var(--txt-color);
+  border-radius: 50%; /* Ajoute un arrondi à l'arrière-plan */
+  padding: 5px; /* Ajoute un espace autour de l'icône */
+  height: auto;
+  width: 35px;
+  margin-left: 10px;
+}
+
+.down {
+  /* Styles pour le pouce baissé cliqué */
+  color: red;
+  background-color: var(--txt-color);
+  border-radius: 50%; /* Ajoute un arrondi à l'arrière-plan */
+  padding: 5px; /* Ajoute un espace autour de l'icône */
+  height: auto;
+  width: 35px;
+  margin-left: 8px;
+}

@@ -1,7 +1,6 @@
 .contactTitle {
   text-align: center;
   font-size: 26px;
-  font-family: "Raleway", sans-serif;
   font-weight: bold;
   color: var(--txt-color);
 }
@@ -10,7 +9,6 @@
   margin: 0 auto;
   padding: 20px;
   align-items: center;
-  font-family: "Raleway", sans-serif;
   color: white;
 }
 

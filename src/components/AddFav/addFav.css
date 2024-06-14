@@ -1,0 +1,7 @@
+.favoriteIcon {
+  transition: fill 0.5s ease-in-out;
+}
+
+.favoriteIcon.active {
+  fill: red;
+}
