@@ -3,7 +3,6 @@ import "./placeCard.css"
 import { Link } from "react-router-dom"
 import { useInView } from "react-intersection-observer"
 import { motion } from "framer-motion"
-import CategoryIcon from "../IconCategory/IconCategory"
 import AddFav from "../AddFav/AddFav"
 
 const PlaceCard = ({ place, isLast }) => {
@@ -13,8 +12,8 @@ const PlaceCard = ({ place, isLast }) => {
   })
 
   const variants = {
-    hidden: { y: "15vw", opacity: 0 },
-    visible: { y: 0, opacity: 1 }
+    hidden: { x: "15vw", opacity: 0 },
+    visible: { x: 0, opacity: 1 }
   }
 
   return (
@@ -32,19 +31,15 @@ const PlaceCard = ({ place, isLast }) => {
       >
         <div className="card">
           <div className="card-content">
-            <CategoryIcon
-              category={place.properties.category}
-              className="cardIcon"
-            />
+            <img src={place.properties.picture} />
             <div>
               <h1>{place.properties.name}</h1>
-              <p>
-                {place.properties.address.split(",")[0]} <br />
-                {place.properties.address.split(",")[1]}
-              </p>
+              <p>{place.properties.address}</p>
             </div>
           </div>
+          <div className="favIcon">
           <AddFav place={place} />
+          </div>
         </div>
       </motion.div>
     </Link>
