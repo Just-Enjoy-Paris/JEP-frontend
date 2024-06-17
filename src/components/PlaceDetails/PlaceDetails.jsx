@@ -1,6 +1,7 @@
 import "./placeDetails.css"
 import AddFav from "../AddFav/AddFav"
 import Rating from "../Rating/Rating"
+import Opinion from "../Opinion/Opinion"
 
 export default function PlacesDetails({ place }) {
   return (
@@ -34,6 +35,7 @@ export default function PlacesDetails({ place }) {
           augue vestibulum faucibus. Cras nec euismod odio. Cras fermentum felis
           a magna venenatis, eget suscipit orci maximus.
         </p>
+        <Opinion place={place} />
       </div>
     </section>
   )
