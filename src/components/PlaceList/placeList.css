@@ -1,0 +1,15 @@
+.category-section h2{
+  color: var(--txt-color);
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+  margin: 15px 0;
+}
+
+.main-category-section {
+  display: flex;
+  overflow-x: scroll;
+  scrollbar-width: none;
+  height: 270px;
+}
+
