@@ -1,0 +1,21 @@
+.ad-card-flex {
+    display: flex;
+    align-items: center;
+}
+
+.ad-card {
+  display: flex;
+  padding: 10px;
+  border-radius: 15px;
+  box-shadow: 5px 7px 9px -6px rgba(0, 0, 0, 0.75);
+  background-color: var(--secondary-color);
+  position: relative;
+  width: 300px;
+  height: 250px;
+}
+
+.ad-card img{
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}

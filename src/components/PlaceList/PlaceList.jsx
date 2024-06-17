@@ -2,6 +2,7 @@ import React, { useContext, useEffect } from "react"
 import PlaceCard from "../PlaceCard/PlaceCard"
 import { DataContext } from "../../../context/data.context"
 import AdCategories from "../AdCategories/AdCategories"
+import AdCard from "../AdCard/AdCard"
 import "./placeList.css"
 
 export default function PlaceList({ searchResult, categoryMap }) {
@@ -51,17 +52,20 @@ export default function PlaceList({ searchResult, categoryMap }) {
 
   return (
     <>
-      {mainCategoriesWithPlaces.map((mainCategory, index) => (
+      {mainCategoriesWithPlaces.map((mainCategory) => (
         <React.Fragment key={mainCategory}>
           <section className="category-section">
             <h2>{mainCategory}</h2>
             <div className="main-category-section">
-              {groupedPlaces[mainCategory].map(place => (
-                <PlaceCard key={place._id} place={place} />
+              {groupedPlaces[mainCategory].map((place, index) => (
+                <React.Fragment key={place._id}>
+                  <PlaceCard place={place} />
+                  {(index + 1) % 3 === 0 && <AdCard />}
+                </React.Fragment>
               ))}
             </div>
           </section>
-          {index % 2 === 0 && <AdCategories />}
+          <AdCategories />
         </React.Fragment>
       ))}
     </>
