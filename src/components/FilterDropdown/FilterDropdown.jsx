@@ -2,29 +2,45 @@ import "./filterDropdown.css"
 import { VscSettings } from "react-icons/vsc"
 import Filter from "../Filter/Filter"
 import { useState } from "react"
+import Modal from "react-modal"
+import CloseModal from "../../img/close.svg"
 
 const FilterDropdown = () => {
-  // État pour suivre si le menu est ouvert ou fermé
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isClosing, setIsClosing] = useState(false)
+
+  const openModal = () => {
+    setIsMenuOpen(true)
+    setIsClosing(false)
+  }
+
+  const closeModal = () => {
+    setIsClosing(true)
+    setTimeout(() => {
+      setIsMenuOpen(false)
+    }, 300) 
+  }
 
   return (
     <div className="filter-dropdown">
-      {/* Bouton de bascule du menu */}
-      <button
-        className="filter-dropdown-toggle"
-        onClick={() => setIsMenuOpen(!isMenuOpen)}
-      >
+      <button className="filter-dropdown-toggle" onClick={openModal}>
         <div className="filterMenu">
           <VscSettings className="openFilter" size={30} />
         </div>
       </button>
 
-      {/* Affichage conditionnel des filtres */}
-      {isMenuOpen && (
-        <div className={`filterLinks ${isMenuOpen ? "open" : "closed"}`}>
-          <Filter />
-        </div>
-      )}
+      <Modal
+        isOpen={isMenuOpen}
+        onRequestClose={closeModal}
+        contentLabel="Filter Modal"
+        className={`modal ${isClosing ? "slide-out" : "slide-in"}`}
+        overlayClassName="overlay"
+      >
+        <button className="closeModal" onClick={closeModal}>
+          <img src={CloseModal}/>
+        </button>
+        <Filter />
+      </Modal>
     </div>
   )
 }

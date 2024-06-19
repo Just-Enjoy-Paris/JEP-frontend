@@ -1,20 +1,57 @@
 import { NavLink } from "react-router-dom"
-import { useState } from "react"
-
+import { useState, useEffect } from "react"
+import Modal from "react-modal"
 import "./navLinks.css"
 import openMenu from "../../img/open.svg"
 import closeMenu from "../../img/close.svg"
 
+// Set the app element for accessibility purposes
+Modal.setAppElement("#root")
+
 const NavLinks = () => {
   // State to track whether the menu is open or closed
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isClosing, setIsClosing] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (isMenuOpen) {
+        setIsClosing(true)
+        setTimeout(() => {
+          setIsMenuOpen(false)
+          setIsClosing(false) // Reset isClosing after closing
+        }, 300) // Match this duration with the CSS animation duration
+      }
+    }
+
+    // Add scroll event listener
+    window.addEventListener("scroll", handleScroll)
+
+    // Clean up
+    return () => {
+      window.removeEventListener("scroll", handleScroll)
+    }
+  }, [isMenuOpen])
+
+  const openModal = () => {
+    setIsMenuOpen(true)
+    setIsClosing(false)
+  }
+
+  const closeModal = () => {
+    setIsClosing(true)
+    setTimeout(() => {
+      setIsMenuOpen(false)
+      setIsClosing(false) // Reset isClosing after closing
+    }, 300) // Match this duration with the CSS animation duration
+  }
 
   return (
     <>
       {/* Menu toggle button */}
       <button
         className="dropdown-toggle"
-        onClick={() => setIsMenuOpen(!isMenuOpen)}
+        onClick={isMenuOpen ? closeModal : openModal}
       >
         {isMenuOpen ? (
           <img className="closeMenu" src={closeMenu} alt="Close" />
@@ -22,33 +59,30 @@ const NavLinks = () => {
           <img className="openMenu" src={openMenu} alt="Open" />
         )}
       </button>
-      {/* Navigation links */}
-      <nav className={`links ${isMenuOpen ? "open" : "closed"}`}>
-        {/* Home link */}
-        <NavLink to="/" onClick={() => setIsMenuOpen(false)}>
-          Acceuil
-        </NavLink>
 
-        {/* Places link */}
-        <NavLink to="/places" onClick={() => setIsMenuOpen(false)}>
-          Lieux
-        </NavLink>
-
-        {/* About link */}
-        <NavLink to="/about" onClick={() => setIsMenuOpen(false)}>
-          À propos
-        </NavLink>      
-                  
-            {/* 
-            <NavLink to="/events" onClick={() => setIsMenuOpen(false)}>
-              Evenements
-            </NavLink>*/}
-
-        {/* Contact link */}
-        <NavLink to="/contact" onClick={() => setIsMenuOpen(false)}>
-          Contact
-        </NavLink>
-      </nav>
+      {/* Modal for navigation links */}
+      <Modal
+        isOpen={isMenuOpen}
+        onRequestClose={closeModal}
+        contentLabel="Navigation Modal"
+        className={`nav-modal ${isClosing ? "slide-out" : "slide-in"}`}
+        overlayClassName="nav-overlay"
+      >
+        <nav className="nav-links">
+          <NavLink to="/" onClick={closeModal}>
+            Acceuil
+          </NavLink>
+          <NavLink to="/places" onClick={closeModal}>
+            Lieux
+          </NavLink>
+          <NavLink to="/about" onClick={closeModal}>
+            À propos
+          </NavLink>
+          <NavLink to="/contact" onClick={closeModal}>
+            Contact
+          </NavLink>
+        </nav>
+      </Modal>
     </>
   )
 }
