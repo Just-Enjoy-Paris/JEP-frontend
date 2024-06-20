@@ -9,12 +9,14 @@ export default function PlaceList({ searchResult, categoryMap }) {
   const { places, selectedCategories, setSelectedCategories } =
     useContext(DataContext)
 
+  // Reset selected categories when the component is unmounted
   useEffect(() => {
     return () => {
       setSelectedCategories([])
     }
   }, [setSelectedCategories])
 
+  // Filter places based on selected categories
   const filterPlaces = places => {
     return places.filter(
       place =>
@@ -23,9 +25,11 @@ export default function PlaceList({ searchResult, categoryMap }) {
     )
   }
 
+  // Get filtered places based on search results or all places
   const filteredPlaces =
     searchResult === null ? filterPlaces(places) : filterPlaces(searchResult)
 
+  // Map subcategories to main categories
   const mapToMainCategory = subCategory => {
     for (const [mainCategory, subCategories] of Object.entries(categoryMap)) {
       if (subCategories.includes(subCategory)) {
@@ -35,6 +39,7 @@ export default function PlaceList({ searchResult, categoryMap }) {
     return null
   }
 
+  // Group places by main category
   const groupedPlaces = filteredPlaces.reduce((acc, place) => {
     const mainCategory = mapToMainCategory(place.properties.category[0])
     if (mainCategory) {
@@ -46,13 +51,14 @@ export default function PlaceList({ searchResult, categoryMap }) {
     return acc
   }, {})
 
+  // Get main categories that have places
   const mainCategoriesWithPlaces = Object.keys(categoryMap).filter(
     mainCategory => groupedPlaces[mainCategory]?.length > 0
   )
 
   return (
     <>
-      {mainCategoriesWithPlaces.map((mainCategory) => (
+      {mainCategoriesWithPlaces.map(mainCategory => (
         <React.Fragment key={mainCategory}>
           <section className="category-section">
             <h2>{mainCategory}</h2>
