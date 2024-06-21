@@ -60,7 +60,7 @@ export default function PlaceList({ searchResult, categoryMap }) {
               {groupedPlaces[mainCategory].map((place, index) => (
                 <React.Fragment key={place._id}>
                   <PlaceCard place={place} />
-                  {(index + 1) % 3 === 0 && <AdCard />}
+                  {(index + 1) % 4 === 0 && <AdCard />}
                 </React.Fragment>
               ))}
             </div>
