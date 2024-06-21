@@ -7,15 +7,18 @@ export default function Map() {
   const { places } = useContext(DataContext)
 
   useEffect(() => {
+    // Initialize the Google Map
     const initMap = () => {
       const googleMaps = window.google.maps
 
+      // Create a new map centered on Paris
       const map = new googleMaps.Map(document.getElementById("map"), {
         center: { lat: 48.8566, lng: 2.3522 },
         zoom: 12,
         mapId: "fe2668b01b9cb7be"
       })
 
+      // Add markers for each place
       places.forEach(point => {
         const marker = new googleMaps.Marker({
           position: {
@@ -26,6 +29,7 @@ export default function Map() {
           title: point.properties.name
         })
 
+        // Create an info window for each marker
         const infoWindow = new googleMaps.InfoWindow({
           content: `
             <div>
@@ -39,14 +43,17 @@ export default function Map() {
             </div>
           `
         })
+
+        // Add a click listener to open the info window when the marker is clicked
         marker.addListener("click", () => {
           infoWindow.open(map, marker)
         })
       })
     }
 
+    // Load the Google Maps script
     const loadGoogleMaps = async () => {
-      // Vérifier si le script a déjà été chargé
+      // Check if the script is already loaded
       if (!document.getElementById("google-maps-script")) {
         const script = document.createElement("script")
         script.id = "google-maps-script"
@@ -56,7 +63,7 @@ export default function Map() {
         document.body.appendChild(script)
         script.onload = initMap
       } else {
-        // Si le script est déjà chargé, initialiser la carte directement
+        // If the script is already loaded, initialize the map directly
         if (window.google && window.google.maps) {
           initMap()
         }
@@ -67,8 +74,10 @@ export default function Map() {
 
   return (
     <section>
+      {/* Map container */}
       <div id="map" className="mapContainer"></div>
-      <AdComponent/>
+      {/* Ad component */}
+      <AdComponent />
     </section>
   )
 }

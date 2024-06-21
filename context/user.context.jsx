@@ -30,6 +30,7 @@ export const AuthProvider = ({ children }) => {
     fetchuser()
   }, [update, isAuthenticated])
 
+  // Function to handle user logout
   const handleLogout = async () => {
     await axios.delete(`${import.meta.env.VITE_API_URL}/logout`, {
       withCredentials: true
