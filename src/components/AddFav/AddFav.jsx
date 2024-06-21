@@ -13,6 +13,7 @@ const AddFav = ({ place }) => {
   const [isActive, setIsActive] = useState(false)
 
   useEffect(() => {
+    // Check if the place is already in the user's favorites
     if (user && user.account.favPlaces.includes(place._id)) {
       setIsActive(true)
     }
@@ -21,11 +22,13 @@ const AddFav = ({ place }) => {
   const handleClick = async e => {
     e.preventDefault()
     e.stopPropagation()
+    // If the user is not authenticated, show a toast notification
     if (!isAuthenticated) {
       return toast(
         <p className="p-toast">Connectez vous pour ajouter un favori</p>
       )
     }
+    // Toggle the favorite status
     if (isActive) {
       await rmFavorites(place._id)
     } else {
@@ -34,6 +37,7 @@ const AddFav = ({ place }) => {
     setIsActive(!isActive)
   }
 
+  // Function to add a place to the user's favorites
   const addFavorites = async id => {
     try {
       await axios.put(
@@ -54,6 +58,7 @@ const AddFav = ({ place }) => {
     }
   }
 
+  // Function to remove a place from the user's favorites
   const rmFavorites = async id => {
     try {
       await axios.put(
