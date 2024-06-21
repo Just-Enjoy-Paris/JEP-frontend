@@ -1,8 +1,16 @@
 .ad-categories {
-  height: 10vh;
+  width: 100%;
+  max-width: 728px;
+  height: 90px;
+  
+  margin: 0 auto;
   display: flex;
   justify-content: center;
-  margin: 10px;
+  /* align-items: center; */
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  overflow: hidden;
 }
 
 .ad-categories img {
