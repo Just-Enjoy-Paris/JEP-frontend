@@ -2,19 +2,23 @@ import "./contactForm.css"
 import { useState } from "react"
 
 const ContactForm = () => {
+  // Declare state variables for pseudo, email, and message
   const [pseudo, setPseudo] = useState("")
   const [email, setEmail] = useState("")
   const [message, setMessage] = useState("")
 
+  // Handle form submission
   const handleSubmit = e => {
     e.preventDefault()
-    // Traitement du formulaire (envoi des données au serveur, etc.)
+    // Form processing (sending data to server, etc.)
   }
 
   return (
+    // Create a form with class "contactForm" and handle form submission
     <form className="contactForm" onSubmit={handleSubmit}>
       <h1 className="contactTitle">Contactez-nous !</h1>
 
+      {/* Label and input for pseudo */}
       <label className="contactLabel" htmlFor="pseudo">
         Pseudo
       </label>
@@ -26,6 +30,7 @@ const ContactForm = () => {
         onChange={e => setPseudo(e.target.value)}
       />
 
+      {/* Label and input for email */}
       <label className="contactLabel" htmlFor="email">
         Email
       </label>
@@ -37,6 +42,7 @@ const ContactForm = () => {
         onChange={e => setEmail(e.target.value)}
       />
 
+      {/* Label and textarea for message */}
       <label className="contactLabel" htmlFor="message">
         Message
       </label>
@@ -47,6 +53,7 @@ const ContactForm = () => {
         placeholder="Votre message ici..."
       ></textarea>
 
+      {/* Submit button */}
       <button className="contactButton" type="submit">
         Envoyer
       </button>

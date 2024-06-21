@@ -1,17 +1,16 @@
-import { motion } from "framer-motion";
+import { motion } from "framer-motion"
 
 const PageHeader = ({ title, description }) => (
   <>
-    {/* Page description */}
     <motion.p
       className="pageDescription"
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
-      transition={{ delay:0.5, duration: 0.5, ease: "easeInOut" }}
+      transition={{ delay: 0.5, duration: 0.5, ease: "easeInOut" }}
     >
       {description}
     </motion.p>
-    {/* Page title */}
+
     <motion.h3
       className="pageTitle"
       initial={{ y: -100, opacity: 0 }}
@@ -21,6 +20,6 @@ const PageHeader = ({ title, description }) => (
       {title}
     </motion.h3>
   </>
-);
+)
 
-export default PageHeader;
+export default PageHeader
