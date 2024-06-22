@@ -1,0 +1,38 @@
+.ad-popup {
+  position: fixed;
+  top: -100%; /* Déplacez le pop-up hors de l'écran */
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Alignez le contenu en haut */
+  z-index: 999;
+  transition: top 1s ease;
+}
+
+.ad-popup.slide-in {
+  top: 0;
+}
+
+.ad-popup.slide-out {
+  top: -100%;
+}
+
+.ad-content {
+  background-color: white;
+  padding: 5px;
+  border-radius: 8px;
+  width: 80%;
+}
+
+.ad-content img {
+    width: 100%;
+    height: auto;
+}
+
+.close-button {
+  border: none;
+  cursor: pointer;
+}

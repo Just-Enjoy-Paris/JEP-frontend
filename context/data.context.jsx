@@ -25,12 +25,13 @@ export const DataProvider = ({ children }) => {
         setGardenPlaces(resPlaces.data.gardenPlaces)
         setTouristPlaces(resPlaces.data.touristPlaces)
       } catch (error) {
-        console.log("Error loading ,no places found")
+        console.log("Error loading, no places found")
       }
     }
     fetchPlaces()
   }, [])
 
+  // Extract unique categories from places and set them in state
   useEffect(() => {
     const uniqueCategories = Array.from(
       new Set(places.map(place => place.properties.category[0]))
@@ -38,7 +39,7 @@ export const DataProvider = ({ children }) => {
     setCategories(uniqueCategories)
   }, [places])
 
-  // à retirer
+  // Uncomment the below effect for debugging purposes
   // useEffect(() => {
   //   if (places) {
   //     console.log("Places updated:", places)
