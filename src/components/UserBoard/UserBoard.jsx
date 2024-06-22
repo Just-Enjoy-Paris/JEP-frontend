@@ -11,6 +11,7 @@ const UserBoard = () => {
   const [newEmail, setNewEmail] = useState("")
   const [file, setFile] = useState(null)
 
+  // Function to handle user profile update
   const updateUser = async e => {
     e.preventDefault()
     const formData = new FormData()
@@ -18,17 +19,20 @@ const UserBoard = () => {
     formData.append("newAvatar", file)
 
     try {
+      // Send update request to server
       await axios.put(
         `${import.meta.env.VITE_API_URL}/updateprofile`,
         formData,
         { withCredentials: true }
       )
+      // Update the state to trigger re-render
       setUpdate(!update)
     } catch (err) {
       console.log("Error updating user:", err)
     }
   }
 
+  // Redirect to login page if user is not authenticated
   useEffect(() => {
     if (!isAuthenticated) {
       navigate("/log")
@@ -39,19 +43,28 @@ const UserBoard = () => {
     <section className="userBoard">
       <h1 className="userBoardTitle">Mes informations</h1>
       <form onSubmit={updateUser}>
-      <div>
+        <div>
           <label htmlFor="newAvatar" className="avatarArea">
-            {/* à retirer aprés ajout du loader */}
+            {/* Display user's current avatar or preview new avatar */}
             {user && (
               <div className="userBoardAvatar">
-                <img className="avatar" src={user.account.avatar} alt="user avatar" />
+                <img
+                  className="avatar"
+                  src={user.account.avatar}
+                  alt="user avatar"
+                />
               </div>
             )}
             {file && (
               <div className="previewAvatar">
-                <img className="avatar" src={URL.createObjectURL(file)} alt="New avatar" />
+                <img
+                  className="avatar"
+                  src={URL.createObjectURL(file)}
+                  alt="New avatar"
+                />
               </div>
             )}
+            {/* File input for avatar upload */}
             <input
               type="file"
               className="avatarChoice"
@@ -63,6 +76,7 @@ const UserBoard = () => {
         </div>
         <div className="userInfo">
           <label>
+            {/* Input field for updating email */}
             <input
               type="email"
               placeholder={user ? user.email : "email"}
@@ -70,10 +84,13 @@ const UserBoard = () => {
               onChange={e => setNewEmail(e.target.value)}
             />
           </label>
-            <p>{user.account.username}</p>
+          {/* Display username */}
+          <p>{user.account.username}</p>
         </div>
-       
-        <button className="saveBtn" type="submit">Enregistrer</button>
+        {/* Submit button */}
+        <button className="saveBtn" type="submit">
+          Enregistrer
+        </button>
       </form>
     </section>
   )

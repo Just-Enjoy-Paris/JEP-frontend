@@ -3,11 +3,13 @@ import { useInView } from "react-intersection-observer"
 import { motion } from "framer-motion"
 
 const AdCard = () => {
+  // Use useInView to detect when the component is in view
   const [ref, inView] = useInView({
     threshold: 0.5,
     triggerOnce: true
   })
 
+  // Define animation variants for the motion.div component
   const variants = {
     hidden: { x: "15vw", opacity: 0 },
     visible: { x: 0, opacity: 1 }

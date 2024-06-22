@@ -15,6 +15,7 @@ export default function SearchBar({
   const [search, setSearch] = useState("")
   const inputRef = useRef(null)
 
+  // Function to find places based on the search input
   const findPlaces = () => {
     const deburredSearch = deburr(search).toLowerCase()
     const regex = new RegExp(deburredSearch, "i")
@@ -27,6 +28,7 @@ export default function SearchBar({
     setSuggestions([])
   }
 
+  // Handle changes in the search input
   const handleSearchChange = event => {
     const inputValue = event.target.value
     setSearch(inputValue)
@@ -46,12 +48,14 @@ export default function SearchBar({
     }
   }
 
+  // Handle the search button click
   const handleSearchClick = event => {
     event.preventDefault()
     findPlaces()
     setSuggestions([])
   }
 
+  // Handle the Enter key press
   const handleKeyDown = event => {
     if (event.key === "Enter") {
       findPlaces()
@@ -60,6 +64,7 @@ export default function SearchBar({
     }
   }
 
+  // Handle clicking on a suggestion
   const handleSuggestionClick = suggestion => {
     setSearch(suggestion.properties.name)
     setSuggestions([])
@@ -67,10 +72,12 @@ export default function SearchBar({
 
   return (
     <div className="searchBar">
+      {/* Filter dropdown component */}
       <FilterDropdown
         selectedCategories={selectedCategories}
         setSelectedCategories={setSelectedCategories}
       />
+      {/* Search input */}
       <input
         ref={inputRef}
         className="input-search"
@@ -80,9 +87,11 @@ export default function SearchBar({
         onChange={handleSearchChange}
         onKeyDown={handleKeyDown}
       />
+      {/* Search button */}
       <button className="btn-search" onClick={handleSearchClick}>
         <FaSearch size={24} />
       </button>
+      {/* Display autocomplete suggestions */}
       {suggestions.length > 0 && (
         <ul className="autocomplete-results">
           {suggestions.map(suggestion => (

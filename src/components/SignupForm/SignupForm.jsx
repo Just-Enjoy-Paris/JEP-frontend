@@ -4,6 +4,7 @@ import axios from "axios"
 import { useNavigate } from "react-router-dom"
 
 const SignUpForm = ({ onSwitchToLogin }) => {
+  // State variables for form inputs
   const [username, setUsername] = useState("")
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
@@ -11,14 +12,17 @@ const SignUpForm = ({ onSwitchToLogin }) => {
 
   const navigate = useNavigate()
 
+  // Handle form submission
   const handleSubmit = async e => {
     e.preventDefault()
+    // Check if passwords match
     if (password !== confirmPassword) {
       console.log("Les mots de passe ne correspondent pas")
       return
     }
 
     try {
+      // Send signup request to server
       const response = await axios.post(
         `${import.meta.env.VITE_API_URL}/signup`,
         { email, password, username },
@@ -26,6 +30,7 @@ const SignUpForm = ({ onSwitchToLogin }) => {
       )
 
       console.log(response)
+      // Navigate to login page on successful signup
       if (response.status === 201) {
         navigate("/log")
       }
@@ -44,6 +49,7 @@ const SignUpForm = ({ onSwitchToLogin }) => {
         </a>
       </p>
       <div className="login-field">
+        {/* Username input field */}
         <label htmlFor="pseudo" className="login-label">
           Pseudo
         </label>
@@ -57,6 +63,7 @@ const SignUpForm = ({ onSwitchToLogin }) => {
         />
       </div>
       <div className="login-field">
+        {/* Email input field */}
         <label htmlFor="email" className="login-label">
           Adresse e-mail
         </label>
@@ -70,6 +77,7 @@ const SignUpForm = ({ onSwitchToLogin }) => {
         />
       </div>
       <div className="login-field">
+        {/* Password input field */}
         <label htmlFor="password" className="login-label">
           Mot de passe
         </label>
@@ -83,6 +91,7 @@ const SignUpForm = ({ onSwitchToLogin }) => {
         />
       </div>
       <div className="login-field">
+        {/* Confirm password input field */}
         <label htmlFor="confirmPassword" className="login-label">
           Confirmez le mot de passe
         </label>
@@ -95,6 +104,7 @@ const SignUpForm = ({ onSwitchToLogin }) => {
           required
         />
       </div>
+      {/* Submit button */}
       <button className="login-button" type="submit">
         S&apos;inscrire
       </button>
