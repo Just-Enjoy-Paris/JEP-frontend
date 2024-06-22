@@ -2,14 +2,13 @@
   width: 100%;
   max-width: 728px;
   height: 90px;
-  
   margin: 0 auto;
   display: flex;
   justify-content: center;
   /* align-items: center; */
   background-color: #fff;
   border: 1px solid #ddd;
-  border-radius: 5px;
+  border-radius: 4px;
   overflow: hidden;
 }
 
