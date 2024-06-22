@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from "react"
 import PlaceCard from "../PlaceCard/PlaceCard"
 import { DataContext } from "../../../context/data.context"
-import AdCategories from "../AdCategories/AdCategories"
+// import AdCategories from "../AdCategories/AdCategories"
 import AdCard from "../AdCard/AdCard"
 import "./placeList.css"
 
@@ -71,7 +71,7 @@ export default function PlaceList({ searchResult, categoryMap }) {
               ))}
             </div>
           </section>
-          <AdCategories />
+          {/* <AdCategories /> */}
         </React.Fragment>
       ))}
     </>
