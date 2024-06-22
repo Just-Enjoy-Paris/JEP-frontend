@@ -26,7 +26,7 @@ const NavLinks = () => {
       <nav className={`links ${isMenuOpen ? "open" : "closed"}`}>
         {/* Home link */}
         <NavLink to="/" onClick={() => setIsMenuOpen(false)}>
-          Acceuil
+          Accueil
         </NavLink>
 
         {/* Places link */}
