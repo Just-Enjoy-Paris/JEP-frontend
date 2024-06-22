@@ -53,22 +53,23 @@ export default function Places() {
   ]
 
   return (
-    <main className="placesPage">
-      <h1 className="placeListTitle">Lieux</h1>
-      <SearchBar setSearchResult={setSearchResult} />
-      <section className="placeListContainer">
-        {categorySections.map(({ title, categories }) => (
-          <div className="category-section" key={title}>
-            {categories.map(category => (
-              <PlaceList
-                key={category}
-                searchResult={searchResult}
-                categoryMap={{ [category]: categoryMap[category] }}
-              />
-            ))}
-          </div>
-        ))}
-      </section>
-    </main>
-  )
+  <main className="placesPage">
+    <h1 className="placeListTitle">Lieux</h1>
+    <SearchBar setSearchResult={setSearchResult} />
+    <section className="placeListContainer">
+      {categorySections.map(({ categories }, index) => (
+        <div className="category-section" key={index}>
+          {categories.map((category, index2) => (
+            <PlaceList
+              key={index2}
+              searchResult={searchResult}
+              categoryMap={{ [category]: categoryMap[category] }}
+            />
+          ))}
+        </div>
+      ))}
+    </section>
+  </main>
+)
+
 }
