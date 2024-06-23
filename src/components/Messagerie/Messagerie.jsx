@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import axios from "axios"
+import "./messagerie.css"
 
 const Messagerie = () => {
   const [messages, setMessages] = useState([])
@@ -14,16 +15,18 @@ const Messagerie = () => {
   }, [])
 
   return (
-    <div>
-      <h1>Messagerie</h1>
-      <ul>
-        {messages.map(message => (
-          <li key={message._id}>
-            <strong>{message.pseudo}:</strong> {message.message}
-          </li>
-        ))}
-      </ul>
-    </div>
+    <main>
+      <div className="messagerie">
+        <h1>Messagerie</h1>
+        <ul>
+          {Array.isArray(messages) && messages.map(message => (
+            <li key={message._id}>
+              <strong>{message.pseudo}:</strong> {message.message}
+            </li>
+          ))}
+        </ul>
+      </div>
+    </main>
   )
 }
 
