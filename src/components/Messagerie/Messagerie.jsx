@@ -7,9 +7,15 @@ const Messagerie = () => {
 
   useEffect(() => {
     const fetchMessages = async () => {
-      const response = await axios.get("/messages")
-      setMessages(response.data)
-    }
+      try {
+        const res = await axios.get("/messages")
+        // const data = await res.json()
+        setMessages(res.data)
+        // console.log("mes messages sont: " + res.data)
+      } catch (error) {
+        console.error(error)
+      }
+    };
 
     fetchMessages()
   }, [])
@@ -19,11 +25,12 @@ const Messagerie = () => {
       <div className="messagerie">
         <h1>Messagerie</h1>
         <ul>
-          {Array.isArray(messages) && messages.map(message => (
-            <li key={message._id}>
-              <strong>{message.pseudo}:</strong> {message.message}
-            </li>
-          ))}
+          {Array.isArray(messages) &&
+            messages.map(message => (
+              <li key={message._id}>
+                <strong>{message.username}:</strong> {message.message}
+              </li>
+            ))}
         </ul>
       </div>
     </main>

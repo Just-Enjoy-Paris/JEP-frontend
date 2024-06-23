@@ -12,31 +12,26 @@ const ContactForm = () => {
   const { user } = useContext(AuthContext)
   const pseudo = user ? user.account.username : ""
 
-  // Handle form submission
   const handleSubmit = async e => {
     e.preventDefault()
     try {
-      // Send request to server to submit contact form
-      const response = await axios.post("/contact", {
+      const res = await axios.post("/addMessage", {
         pseudo,
         email,
-        message,
+        message
       })
-      // Display success message to user based on server response
-      alert(response.data.message)
-      // Clear form fields
+        // eslint-disable-next-line no-console
+        alert(res.data.message)
       setEmail("")
       setMessage("")
     } catch (error) {
+      // eslint-disable-next-line no-console
       console.error(error)
-      // Display error message to user
       alert("Une erreur s'est produite lors de l'envoi du message.")
     }
   }
-  
 
   return (
-    // Create a form with class "contactForm" and handle form submission
     <form className="contactForm" onSubmit={handleSubmit}>
       <h1 className="contactTitle">Contactez-nous !</h1>
 
