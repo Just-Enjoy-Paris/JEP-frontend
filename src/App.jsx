@@ -10,6 +10,7 @@ import About from "./pages/about/About.jsx"
 import Places from "./pages/places/Places.jsx"
 import Events from "./pages/events/Events.jsx"
 import Contact from "./pages/contact/Contact.jsx"
+import Messaging from "./pages/messaging/Messaging.jsx"
 import Error from "./pages/error/Error.jsx"
 import Signup from "./pages/signup/Signup.jsx"
 import Place from "./pages/places/Place.jsx"
@@ -45,6 +46,7 @@ function App() {
               <Route path="/place/:id" element={<Place />} />
               <Route path="/events" element={<Events />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/messagerie" element={<Messaging />} />
               <Route path="/*" element={<Error />} />
               <Route path="/loader" element={<Loader />} />
             </Routes>

@@ -48,6 +48,9 @@ const NavLinks = () => {
         <NavLink to="/contact" onClick={() => setIsMenuOpen(false)}>
           Contact
         </NavLink>
+        <NavLink to="/messagerie" onClick={() => setIsMenuOpen(false)}>
+          Messagerie
+        </NavLink>
       </nav>
     </>
   )

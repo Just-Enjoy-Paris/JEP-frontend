@@ -1,6 +1,7 @@
 import "./contactForm.css"
 import { useState, useContext } from "react"
 import { AuthContext } from "../../../context/user.context"
+import axios from "axios"
 
 const ContactForm = () => {
   // Declare state variables for pseudo, email, and message
@@ -12,10 +13,27 @@ const ContactForm = () => {
   const pseudo = user ? user.account.username : ""
 
   // Handle form submission
-  const handleSubmit = e => {
+  const handleSubmit = async e => {
     e.preventDefault()
-    // Form processing (sending data to server, etc.)
+    try {
+      // Send request to server to submit contact form
+      const response = await axios.post("/contact", {
+        pseudo,
+        email,
+        message,
+      })
+      // Display success message to user based on server response
+      alert(response.data.message)
+      // Clear form fields
+      setEmail("")
+      setMessage("")
+    } catch (error) {
+      console.error(error)
+      // Display error message to user
+      alert("Une erreur s'est produite lors de l'envoi du message.")
+    }
   }
+  
 
   return (
     // Create a form with class "contactForm" and handle form submission
