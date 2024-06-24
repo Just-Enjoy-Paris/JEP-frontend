@@ -1,23 +1,28 @@
 .messagerie {
-    max-width: 800px;
-    margin: 0 auto;
     padding: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .messagerie button {
+    background-color: var(--main-color);
+    color: var(--txt-color);
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
   }
   
   .messagerie h1 {
-    color: white;
-    margin-top: 0;
+    display: flex;
+    justify-content: center;
+    color: var(--txt-color);
   }
   
   .messagerie ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+    color: var(--txt-color);
+    margin-bottom: 10px;
   }
   
   .messagerie li {
-    border-bottom: 1px solid #eee;
+    border-bottom: 2px solid var(--main-color);
     padding: 10px 0;
   }
   
