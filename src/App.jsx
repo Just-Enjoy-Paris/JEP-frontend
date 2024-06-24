@@ -2,6 +2,7 @@ import "./App.css"
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import { useContext } from "react"
 
+import CookieConsent from "./components/CookieConsent/CookieConsent.jsx"
 import Header from "./components/Header/Header.jsx"
 import Footer from "./components/Footer/Footer.jsx"
 import Landing from "./pages/landing/Landing.jsx"
@@ -33,6 +34,7 @@ function App() {
           <Router>
             <Toaster />
             <Header />
+            <CookieConsent />
             <Routes>
               <Route path="/" element={<Landing />} />
               <Route path="/log" element={<Log />} />

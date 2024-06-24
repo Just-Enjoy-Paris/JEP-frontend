@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react"
 import Cookies from "js-cookie"
 
+import "./cookieConsent.css"
+
 const CookieConsent = () => {
   const [hasConsented, setHasConsented] = useState(false)
 
@@ -24,8 +26,7 @@ const CookieConsent = () => {
     <div className="cookie-consent">
       <p>
         Ce site utilise des cookies pour améliorer votre expérience. En
-        continuant à naviguer sur ce site, vous acceptez notre utilisation des
-        cookies.
+        continuant à naviguer sur ce site, vous acceptez notre <a href="/">Politique d utilisation des cookies</a>.
       </p>
       <button onClick={handleAccept}>Accepter</button>
     </div>

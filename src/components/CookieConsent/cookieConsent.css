@@ -1,7 +1,28 @@
 .cookie-consent {
     position: absolute;
-    top: 0;
-    background-color: var(--txt-color);
-    height: 100px;
-    width: 90%;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-color);
+    color: var(--txt-color);
+    height: 120px;
+    padding: 10px;
+}
+
+p a {
+    color: var(--txt-color);
+}
+
+.cookie-consent button {
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 15px;
+    background-color: var(--secondary-color);
+    color: var(--txt-color);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    width: 50%;
 }
