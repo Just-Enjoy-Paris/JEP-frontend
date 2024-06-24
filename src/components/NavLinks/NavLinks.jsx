@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom"
+import { NavLink, useLocation } from "react-router-dom"
 import { useState } from "react"
 
 import "./navLinks.css"
@@ -8,6 +8,8 @@ import closeMenu from "../../img/close.svg"
 const NavLinks = () => {
   // State to track whether the menu is open or closed
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const location = useLocation()
+  const isAuthenticated = location.state && location.state.isAuthenticated
 
   return (
     <>
@@ -48,9 +50,11 @@ const NavLinks = () => {
         <NavLink to="/contact" onClick={() => setIsMenuOpen(false)}>
           Contact
         </NavLink>
-        <NavLink to="/messagerie" onClick={() => setIsMenuOpen(false)}>
-          Messagerie
-        </NavLink>
+        {isAuthenticated && (
+          <NavLink to="/messagerie" onClick={() => setIsMenuOpen(false)}>
+            Messagerie
+          </NavLink>
+        )}
       </nav>
     </>
   )
