@@ -1,12 +1,14 @@
-import { useEffect, useState } from "react"
+import { useContext, useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
 import axios from "axios"
 import "./messagerie.css"
+import { AuthContext } from "../../../context/user.context"
 
 const Messagerie = () => {
   const [messages, setMessages] = useState([])
   const [sortOrder, setSortOrder] = useState("asc")
   const navigate = useNavigate()
+  const {isAuthenticated} = useContext(AuthContext)
 
   useEffect(() => {
     const fetchMessages = async () => {
@@ -22,15 +24,14 @@ const Messagerie = () => {
     }
 
     const checkAuth = () => {
-      const token = localStorage.getItem("token")
-      if (!token) {
-        navigate("/login")
+      if (!isAuthenticated) {
+        navigate("/log")
       }
     }
 
     checkAuth()
     fetchMessages()
-  }, [])
+  }, [isAuthenticated, navigate])
 
   const handleSort = () => {
     if (sortOrder === "asc") {
