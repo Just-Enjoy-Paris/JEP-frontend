@@ -1,0 +1,7 @@
+.cookie-consent {
+    position: absolute;
+    top: 0;
+    background-color: var(--txt-color);
+    height: 100px;
+    width: 90%;
+}
