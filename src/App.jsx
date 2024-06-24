@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import { useContext } from "react"
 
 import CookieConsent from "./components/CookieConsent/CookieConsent.jsx"
+import CookiePolicyPage from "./pages/cookiePolicy/CookiePolicyPage.jsx"
 import Header from "./components/Header/Header.jsx"
 import Footer from "./components/Footer/Footer.jsx"
 import Landing from "./pages/landing/Landing.jsx"
@@ -43,6 +44,7 @@ function App() {
               <Route path="/user-favorites" element={<UserFavs />} />
               <Route path="/signup" element={<Signup />} />
               <Route path="/about" element={<About />} />
+              <Route path="/cookie-policy" element={<CookiePolicyPage/>} />
               <Route path="/places" element={<Places />} />
               <Route path="/place/:id" element={<Place />} />
               <Route path="/events" element={<Events />} />

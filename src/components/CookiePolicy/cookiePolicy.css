@@ -1,0 +1,10 @@
+.cookie-policy{
+    color: var(--txt-color);
+    margin: 20px 15px;
+}
+
+.cookie-policy h2 {
+    font-size: 1.2rem;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
