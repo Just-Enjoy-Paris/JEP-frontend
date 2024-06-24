@@ -10,18 +10,18 @@ const ContactForm = () => {
 
   // Get user pseudo from AuthContext
   const { user } = useContext(AuthContext)
-  const pseudo = user ? user.account.username : ""
+  const username = user ? user.account.username : ""
 
   const handleSubmit = async e => {
     e.preventDefault()
     try {
       const res = await axios.post("/addMessage", {
-        pseudo,
+        username,
         email,
         message
       })
-        // eslint-disable-next-line no-console
-        alert(res.data.message)
+      // eslint-disable-next-line no-console
+      alert(res.data.message)
       setEmail("")
       setMessage("")
     } catch (error) {
@@ -42,7 +42,7 @@ const ContactForm = () => {
         className="contactInput"
         type="text"
         id="pseudo"
-        value={pseudo}
+        value={username}
         readOnly
       />
 

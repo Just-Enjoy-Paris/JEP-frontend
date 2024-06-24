@@ -9,13 +9,11 @@ const Messagerie = () => {
     const fetchMessages = async () => {
       try {
         const res = await axios.get("/messages")
-        // const data = await res.json()
         setMessages(res.data)
-        // console.log("mes messages sont: " + res.data)
       } catch (error) {
         console.error(error)
       }
-    };
+    }
 
     fetchMessages()
   }, [])
