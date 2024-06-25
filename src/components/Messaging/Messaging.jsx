@@ -55,6 +55,9 @@ messaging"
         Trier par date {sortOrder === "desc" ? "▼" : "▲"}
       </button>
       {/* ul initialise une liste et il sont les elements dans la liste */}
+      {/* fait plutôt des Div au lieu d'une liste , (une div par message avec le mail et 
+      le message et si c'est user avec compte son username) */}
+
       <ul>
         {Array.isArray(messages) &&
           messages.map(message => (
