@@ -1,8 +1,8 @@
-.messagerie {
+.messaging {
   padding: 20px;
 }
 
-.messagerie button {
+.messaging button {
   background-color: var(--main-color);
   color: var(--txt-color);
   border: none;
@@ -10,18 +10,18 @@
   padding: 10px;
 }
 
-.messagerie h1 {
+.messaging h1 {
   display: flex;
   justify-content: center;
   color: var(--txt-color);
 }
 
-.messagerie ul {
+.messaging ul {
   color: var(--txt-color);
   margin-bottom: 10px;
 }
 
-.messagerie ul:last-child {
+.messaging ul:last-child {
   margin-bottom: 5px;
 }
 
@@ -33,16 +33,16 @@
   font-size: 12px;
 }
 
-.messagerie li {
+.messaging li {
   border-bottom: 2px solid var(--main-color);
   padding: 10px 0;
   font-size: 15px;
 }
 
-.messagerie li:last-child {
+.messaging li:last-child {
   border-bottom: none;
 }
 
-.messagerie strong {
+.messaging strong {
   font-weight: bold;
 }

@@ -3,6 +3,11 @@ import { useState, useContext } from "react"
 import { AuthContext } from "../../../context/user.context"
 import axios from "axios"
 
+// faire en sorte que si le user est connecté il au son username affiché ou son email et qu'il ne puisse pas le modifier
+// faire en sorte que si c'est un user non connecté il donne un mail valide pour povoir envoyer son message
+// virer username puisque si t'as pas de compte t'as pas de username
+// remplasse addMessage pas sendMessage (back et front)
+
 const ContactForm = () => {
   // Declare state variables for pseudo, email, and message
   const [email, setEmail] = useState("")
@@ -15,11 +20,14 @@ const ContactForm = () => {
   const handleSubmit = async e => {
     e.preventDefault()
     try {
-      const res = await axios.post(`${import.meta.env.VITE_API_URL}/addMessage`, {
-        username,
-        email,
-        message
-      })
+      const res = await axios.post(
+        `${import.meta.env.VITE_API_URL}/addMessage`,
+        {
+          username,
+          email,
+          message
+        }
+      )
       // eslint-disable-next-line no-console
       alert(res.data.message)
       setEmail("")

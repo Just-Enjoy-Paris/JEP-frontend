@@ -49,7 +49,7 @@ const NavLinks = () => {
           Contact
         </NavLink>
         <NavLink to="/messagerie" onClick={() => setIsMenuOpen(false)}>
-          Messagerie
+          Messaging
         </NavLink>
       </nav>
     </>

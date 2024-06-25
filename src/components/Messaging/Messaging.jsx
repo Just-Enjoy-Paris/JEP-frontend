@@ -1,14 +1,15 @@
+/* eslint-disable no-console */
 import { useContext, useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
 import axios from "axios"
-import "./messagerie.css"
+import "./messaging.css"
 import { AuthContext } from "../../../context/user.context"
 
-const Messagerie = () => {
+const Messaging = () => {
   const [messages, setMessages] = useState([])
   const [sortOrder, setSortOrder] = useState("asc")
   const navigate = useNavigate()
-  const {isAuthenticated} = useContext(AuthContext)
+  const { isAuthenticated } = useContext(AuthContext)
 
   useEffect(() => {
     const fetchMessages = async () => {
@@ -49,8 +50,11 @@ const Messagerie = () => {
 
   return (
     <main>
-      <div className="messagerie">
-        <h1>Messagerie</h1>
+      <div
+        className="
+messaging"
+      >
+        <h1>Messaging</h1>
         <button onClick={handleSort}>
           Trier par date {sortOrder === "desc" ? "▼" : "▲"}
         </button>
@@ -71,4 +75,4 @@ const Messagerie = () => {
   )
 }
 
-export default Messagerie
+export default Messaging
