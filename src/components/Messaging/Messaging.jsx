@@ -9,23 +9,23 @@ const Messaging = () => {
   const [messages, setMessages] = useState(null)
   const [sortOrder, setSortOrder] = useState("asc")
   const navigate = useNavigate()
-  const { isAuthenticated } = useContext(AuthContext)
+  const { user, isAuthenticated } = useContext(AuthContext)
 
   useEffect(() => {
     const fetchMessages = async () => {
       try {
-        const res = await axios.get(`${import.meta.env.VITE_API_URL}/messages`)
-        const sortedMessages = res.data.sort(
+        const res = await axios.get(`${import.meta.env.VITE_API_URL}/messages`);
+        const allMessages = res.data.sort(
           (a, b) => new Date(b.date) - new Date(a.date)
-        )
-        setMessages(sortedMessages)
+        );
+        setMessages(allMessages);
       } catch (error) {
-        console.error(error)
+        console.error(error);
       }
     }
 
     fetchMessages()
-  }, [navigate])
+  }, [navigate, user?.email])
 
   if (!isAuthenticated) {
     navigate("/log")
@@ -46,30 +46,24 @@ const Messaging = () => {
   }
 
   return (
-    <div
-      className="
-messaging"
-    >
-      <h1>Messaging</h1>
+    <div className="messaging">
+      <h1>Messagerie</h1>
       <button onClick={handleSort}>
         Trier par date {sortOrder === "desc" ? "▼" : "▲"}
       </button>
-      {/* ul initialise une liste et il sont les elements dans la liste */}
-      {/* fait plutôt des Div au lieu d'une liste , (une div par message avec le mail et 
-      le message et si c'est user avec compte son username) */}
-
-      <ul>
+      <div className="messages-list">
         {Array.isArray(messages) &&
           messages.map(message => (
-            <li key={message._id}>
-              <ul className="date-message">{message.date}</ul>
-              <ul className="email-message">{message.email}</ul>
-              <ul>
-                <strong>{message.username}:</strong> {message.message}
-              </ul>
-            </li>
+            <div key={message._id} className="message-content">
+              <div className="date-message">{message.date}</div>
+              <div className="email-message"><strong>De la part de: </strong>{message.email}</div>
+              <div className="subject-message"><strong>Sujet: </strong>{message.subject}</div>
+              <div className="txt-message">
+                {message.message}
+              </div>
+            </div>
           ))}
-      </ul>
+      </div>
     </div>
   )
 }

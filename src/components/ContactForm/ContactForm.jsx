@@ -2,58 +2,42 @@ import "./contactForm.css"
 import { useState, useContext } from "react"
 import { AuthContext } from "../../../context/user.context"
 import axios from "axios"
-
-// faire en sorte que si le user est connecté il au son username affiché ou son email et qu'il ne puisse pas le modifier
-// faire en sorte que si c'est un user non connecté il donne un mail valide pour povoir envoyer son message
-// virer username puisque si t'as pas de compte t'as pas de username
-// remplasse addMessage pas sendMessage (back et front)
-// remplacer alert par toast
+import toast from "react-hot-toast"
 
 const ContactForm = () => {
   // Declare state variables for pseudo, email, and message
-  const [email, setEmail] = useState("")
-  const [message, setMessage] = useState("")
-
-  // Get user pseudo from AuthContext
   const { user } = useContext(AuthContext)
-  const username = user ? user.account.username : ""
+  const [subject, setSubject] = useState("")
+  const [email, setEmail] = useState(user ? user.email : "")
+  const [message, setMessage] = useState("")
 
   const handleSubmit = async e => {
     e.preventDefault()
     try {
+      const url = user ? `${import.meta.env.VITE_API_URL}/user/sendMessage` : `${import.meta.env.VITE_API_URL}/sendMessage`
       const res = await axios.post(
-        `${import.meta.env.VITE_API_URL}/addMessage`,
+        url,
         {
-          username,
           email,
+          subject,
           message
         }
       )
       // eslint-disable-next-line no-console
-      alert(res.data.message)
+      toast(res.data.message)
       setEmail("")
+      setSubject("")
       setMessage("")
     } catch (error) {
       // eslint-disable-next-line no-console
       console.error(error)
-      alert("Une erreur s'est produite lors de l'envoi du message.")
+      toast("Une erreur s'est produite lors de l'envoi du message.")
     }
   }
 
   return (
     <form className="contactForm" onSubmit={handleSubmit}>
       <h1 className="contactTitle">Contactez-nous !</h1>
-
-      <label className="contactLabel" htmlFor="pseudo">
-        Pseudo
-      </label>
-      <input
-        className="contactInput"
-        type="text"
-        id="pseudo"
-        value={username}
-        readOnly
-      />
 
       <label className="contactLabel" htmlFor="email">
         Email
@@ -64,6 +48,17 @@ const ContactForm = () => {
         id="email"
         value={email}
         onChange={e => setEmail(e.target.value)}
+      />
+
+      <label className="contactLabel" htmlFor="subject">
+        Sujet
+      </label>
+      <input
+        className="contactInput"
+        type="text"
+        id="subject"
+        value={subject}
+        onChange={e => setSubject(e.target.value)}
       />
 
       <label className="contactLabel" htmlFor="message">

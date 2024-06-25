@@ -1,10 +1,14 @@
 .messaging {
   padding: 20px;
+  color: var(--txt-color);
+}
+
+.messages-list{
+  padding-top: 20px;
 }
 
 .messaging button {
   background-color: var(--main-color);
-  color: var(--txt-color);
   border: none;
   border-radius: 5px;
   padding: 10px;
@@ -13,16 +17,10 @@
 .messaging h1 {
   display: flex;
   justify-content: center;
-  color: var(--txt-color);
 }
 
-.messaging ul {
-  color: var(--txt-color);
+.messaging div {
   margin-bottom: 10px;
-}
-
-.messaging ul:last-child {
-  margin-bottom: 5px;
 }
 
 .date-message {
@@ -30,17 +28,17 @@
 }
 
 .email-message {
-  font-size: 12px;
-}
-
-.messaging li {
-  border-bottom: 2px solid var(--main-color);
-  padding: 10px 0;
   font-size: 15px;
 }
 
-.messaging li:last-child {
-  border-bottom: none;
+.subject-message {
+  font-size: 15px;
+}
+
+.txt-message {
+  border-bottom: 2px solid var(--main-color);
+  padding-bottom: 10px;
+  font-size: 15px;
 }
 
 .messaging strong {
