@@ -5,6 +5,7 @@
 }
 
 .filter-dropdown-toggle {
+  position: relative;
   background-color: var(--secondary-color);
   border: none;
   border-radius: 5px 0 0 5px;
@@ -20,7 +21,76 @@
   z-index: 1;
 }
 
-.filterLinks.open {
-  display: block;
-  animation: slideDown 0.5s ease-in-out forwards;
+@keyframes slideInModal {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
 }
+
+@keyframes slideOutModal {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%)
+  }
+}
+
+.modal.slide-in {
+  animation: slideInModal 0.3s forwards;
+}
+
+.modal.slide-out {
+  animation: slideOutModal 0.3s forwards;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 300px; /* Adjust the width as needed */
+  background: var(--secondary-color);
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  outline: none;
+  z-index: 1000; /* Ensures it appears above other elements */
+  overflow-y: auto; /* Allows scrolling if content is too long */
+}
+
+.modal::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for WebKit-based browsers */
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  z-index: 999; /* Ensures it appears just below the modal */
+}
+
+.closeModal {
+  width: 30px;
+  background: none;
+  border: none;  
+}
+
+@media (max-width: 768px) {
+  .modal {
+    width: 80%; /* Adjust the width for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .modal {
+    width: 80%; /* Adjust the width for very small screens */
+  }
+}
+
+
