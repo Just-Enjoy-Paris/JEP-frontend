@@ -6,7 +6,7 @@ import "./messaging.css"
 import { AuthContext } from "../../../context/user.context"
 
 const Messaging = () => {
-  const [messages, setMessages] = useState([])
+  const [messages, setMessages] = useState(null)
   const [sortOrder, setSortOrder] = useState("asc")
   const navigate = useNavigate()
   const { isAuthenticated } = useContext(AuthContext)
@@ -24,15 +24,12 @@ const Messaging = () => {
       }
     }
 
-    const checkAuth = () => {
-      if (!isAuthenticated) {
-        navigate("/log")
-      }
-    }
-
-    checkAuth()
     fetchMessages()
-  }, [isAuthenticated, navigate])
+  }, [navigate])
+
+  if (!isAuthenticated) {
+    navigate("/log")
+  }
 
   const handleSort = () => {
     if (sortOrder === "asc") {
@@ -49,29 +46,28 @@ const Messaging = () => {
   }
 
   return (
-    <main>
-      <div
-        className="
+    <div
+      className="
 messaging"
-      >
-        <h1>Messaging</h1>
-        <button onClick={handleSort}>
-          Trier par date {sortOrder === "desc" ? "▼" : "▲"}
-        </button>
-        <ul>
-          {Array.isArray(messages) &&
-            messages.map(message => (
-              <li key={message._id}>
-                <ul className="date-message">{message.date}</ul>
-                <ul className="email-message">{message.email}</ul>
-                <ul>
-                  <strong>{message.username}:</strong> {message.message}
-                </ul>
-              </li>
-            ))}
-        </ul>
-      </div>
-    </main>
+    >
+      <h1>Messaging</h1>
+      <button onClick={handleSort}>
+        Trier par date {sortOrder === "desc" ? "▼" : "▲"}
+      </button>
+      {/* ul initialise une liste et il sont les elements dans la liste */}
+      <ul>
+        {Array.isArray(messages) &&
+          messages.map(message => (
+            <li key={message._id}>
+              <ul className="date-message">{message.date}</ul>
+              <ul className="email-message">{message.email}</ul>
+              <ul>
+                <strong>{message.username}:</strong> {message.message}
+              </ul>
+            </li>
+          ))}
+      </ul>
+    </div>
   )
 }
 

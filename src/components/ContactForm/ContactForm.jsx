@@ -7,6 +7,7 @@ import axios from "axios"
 // faire en sorte que si c'est un user non connecté il donne un mail valide pour povoir envoyer son message
 // virer username puisque si t'as pas de compte t'as pas de username
 // remplasse addMessage pas sendMessage (back et front)
+// remplacer alert par toast
 
 const ContactForm = () => {
   // Declare state variables for pseudo, email, and message
