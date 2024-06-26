@@ -81,7 +81,7 @@ const NavLinks = () => {
           <NavLink to="/contact" onClick={closeModal}>
             Contact
           </NavLink>
-          <NavLink to="/messagerie" onClick={closeModal}>
+          <NavLink to="/messaging" onClick={closeModal}>
             Messagerie
           </NavLink>
         </nav>

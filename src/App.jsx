@@ -46,7 +46,7 @@ function App() {
               <Route path="/place/:id" element={<Place />} />
               <Route path="/events" element={<Events />} />
               <Route path="/contact" element={<Contact />} />
-              <Route path="/messagerie" element={<MessagingPage />} />
+              <Route path="/messaging" element={<MessagingPage />} />
               <Route path="/*" element={<Error />} />
               <Route path="/loader" element={<Loader />} />
             </Routes>
