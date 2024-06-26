@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import "./contactForm.css"
 import { useState, useContext } from "react"
 import { AuthContext } from "../../../context/user.context"
@@ -5,7 +6,6 @@ import axios from "axios"
 import toast from "react-hot-toast"
 
 const ContactForm = () => {
-  // Declare state variables for pseudo, email, and message
   const { user } = useContext(AuthContext)
   const [subject, setSubject] = useState("")
   const [email, setEmail] = useState(user ? user.email : "")
@@ -18,7 +18,7 @@ const ContactForm = () => {
         ? `${import.meta.env.VITE_API_URL}/user/sendMessage`
         : `${import.meta.env.VITE_API_URL}/sendMessage`
       const res = await axios.post(
-        url,
+        url, // Correction ici, `url` n'a pas besoin d'être un objet.
         {
           email,
           subject,
@@ -26,13 +26,11 @@ const ContactForm = () => {
         },
         { withCredentials: true }
       )
-      // eslint-disable-next-line no-console
       toast(res.data.message)
       setEmail("")
       setSubject("")
       setMessage("")
     } catch (error) {
-      // eslint-disable-next-line no-console
       console.error(error)
       toast("Une erreur s'est produite lors de l'envoi du message.")
     }
@@ -68,6 +66,7 @@ const ContactForm = () => {
         Message
       </label>
       <textarea
+        className="contactInput" // Ajout de la classe `contactInput` pour garder la cohérence
         id="message"
         value={message}
         onChange={e => setMessage(e.target.value)}
