@@ -1,11 +1,18 @@
 .ad-container {
-  height: 10vh;
+  width: 100%;
+  max-width: 728px;
+  height: 90px;
+  margin: 0 auto;
   display: flex;
   justify-content: center;
+  /* align-items: center; */
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  overflow: hidden;
 }
 
 .ad-container img {
   width: 100%;
   height: auto;
-  /* object-fit: cover; */ /* enlever les commentaire pour mettre l'image en taille réelle et centrée */
 }
