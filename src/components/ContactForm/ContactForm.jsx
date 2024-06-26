@@ -14,14 +14,17 @@ const ContactForm = () => {
   const handleSubmit = async e => {
     e.preventDefault()
     try {
-      const url = user ? `${import.meta.env.VITE_API_URL}/user/sendMessage` : `${import.meta.env.VITE_API_URL}/sendMessage`
+      const url = user
+        ? `${import.meta.env.VITE_API_URL}/user/sendMessage`
+        : `${import.meta.env.VITE_API_URL}/sendMessage`
       const res = await axios.post(
         url,
         {
           email,
           subject,
           message
-        }
+        },
+        { withCredentials: true }
       )
       // eslint-disable-next-line no-console
       toast(res.data.message)
