@@ -9,6 +9,7 @@
 
 .messaging button {
   background-color: var(--main-color);
+  color: var(--txt-color);
   border: none;
   border-radius: 5px;
   padding: 10px;

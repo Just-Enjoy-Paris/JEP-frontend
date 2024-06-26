@@ -9,7 +9,7 @@ const Messaging = () => {
   const [messages, setMessages] = useState(null)
   const [sortOrder, setSortOrder] = useState("asc")
   const navigate = useNavigate()
-  const { user, isAuthenticated } = useContext(AuthContext)
+  const { isAuthenticated } = useContext(AuthContext)
 
   useEffect(() => {
     const fetchMessages = async () => {
@@ -25,7 +25,7 @@ const Messaging = () => {
     }
 
     fetchMessages()
-  }, [navigate, user?.email])
+  }, [navigate])
 
   if (!isAuthenticated) {
     navigate("/log")
@@ -45,6 +45,19 @@ const Messaging = () => {
     }
   }
 
+  const formatDate = (dateString) => {
+    const date = new Date(dateString);
+    const options = {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+      hour: "numeric",
+      minute: "numeric",
+      second: "numeric",
+    }
+    return date.toLocaleString("fr-FR", options);
+  }
+
   return (
     <div className="messaging">
       <h1>Messagerie</h1>
@@ -55,7 +68,7 @@ const Messaging = () => {
         {Array.isArray(messages) &&
           messages.map(message => (
             <div key={message._id} className="message-content">
-              <div className="date-message">{message.date}</div>
+              <div className="date-message">{formatDate(message.date)}</div>
               <div className="email-message"><strong>De la part de: </strong>{message.email}</div>
               <div className="subject-message"><strong>Sujet: </strong>{message.subject}</div>
               <div className="txt-message">

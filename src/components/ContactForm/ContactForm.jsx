@@ -18,7 +18,7 @@ const ContactForm = () => {
         ? `${import.meta.env.VITE_API_URL}/user/sendMessage`
         : `${import.meta.env.VITE_API_URL}/sendMessage`
       const res = await axios.post(
-        url, // Correction ici, `url` n'a pas besoin d'être un objet.
+        url,
         {
           email,
           subject,
@@ -66,7 +66,7 @@ const ContactForm = () => {
         Message
       </label>
       <textarea
-        className="contactInput" // Ajout de la classe `contactInput` pour garder la cohérence
+        className="contactInput"
         id="message"
         value={message}
         onChange={e => setMessage(e.target.value)}
