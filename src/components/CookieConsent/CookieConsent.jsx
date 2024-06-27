@@ -15,7 +15,7 @@ const CookieConsent = () => {
 
   const handleAccept = () => {
     setHasConsented(true)
-    Cookies.set("cookie_consent", "true", { expires: 30 })
+    Cookies.set("cookie_consent", "true", { expires: 30 }) // 30 days
   }
 
   if (hasConsented) {
@@ -26,7 +26,7 @@ const CookieConsent = () => {
     <div className="cookie-consent">
       <p>
         Ce site utilise des cookies pour améliorer votre expérience. En
-        continuant à naviguer sur ce site, vous acceptez notre <a href="/cookie-policy">Politique d utilisation des cookies</a>.
+        continuant à naviguer sur ce site, vous acceptez notre <a href="/cookie-policy">Politique d&apos;utilisation des cookies</a>.
       </p>
       <button onClick={handleAccept}>Accepter</button>
     </div>

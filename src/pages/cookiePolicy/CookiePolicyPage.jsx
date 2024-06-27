@@ -3,9 +3,9 @@ import CookiePolicy from "../../components/CookiePolicy/CookiePolicy"
 
 const CookiePolicyPage = () => {
   return (
-    <div>
+    <main>
       <CookiePolicy />
-    </div>
+    </main>
   )
 }
 
