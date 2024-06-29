@@ -1,22 +1,22 @@
-import { useContext, useEffect } from "react";
-import "./map.css";
-import { DataContext } from "../../../context/data.context";
-import AdComponent from "../AdComponent/AdComponent";
-import MarkerSoif from "../../img/PINS/Pin_BIERE.png";
-import MarkerRestaurant from "../../img/PINS/Pin_RESTO.png";
-import MarkerCulture from "../../img/PINS/Pin_CULTURE_3.png";
-import MarkerHotel from "../../img/PINS/Pin_HOTEL.png";
-import MarkerGourmandise from "../../img/PINS/Pin_COOKIE.png";
-import MarkerPratique from "../../img/PINS/Pin_PRATIQUE_2.png";
-import MarkerShopping from "../../img/PINS/Pin_SHOPPING.png";
-import MarkerCourses from "../../img/PINS/Pin_COURSES_2.png";
-import MarkerCluster from "../../img/PINS/Pin_CLUSTER.svg";
+import { useContext, useEffect } from "react"
+import "./map.css"
+import { DataContext } from "../../../context/data.context"
+import AdComponent from "../AdComponent/AdComponent"
+import { MarkerClusterer } from "@googlemaps/markerclusterer"
+import MarkerSoif from "../../img/PINS/Pin_BIERE.png"
+import MarkerRestaurant from "../../img/PINS/Pin_RESTO.png"
+import MarkerCulture from "../../img/PINS/Pin_CULTURE_3.png"
+import MarkerHotel from "../../img/PINS/Pin_HOTEL.png"
+import MarkerGourmandise from "../../img/PINS/Pin_COOKIE.png"
+import MarkerPratique from "../../img/PINS/Pin_PRATIQUE_2.png"
+import MarkerShopping from "../../img/PINS/Pin_SHOPPING.png"
+import MarkerCourses from "../../img/PINS/Pin_COURSES_2.png"
+import MarkerCluster from "../../img/PINS/Pin_CLUSTER.svg"
 
 // Importez la bibliothèque MarkerClusterer
-import { MarkerClusterer } from "@googlemaps/markerclusterer";
 
 export default function Map() {
-  const { places } = useContext(DataContext);
+  const { places } = useContext(DataContext)
 
   const categoryMap = {
     Restaurant: [
@@ -40,7 +40,7 @@ export default function Map() {
       "Pâtisserie",
       "Bubble tea",
       "Salon de the",
-      "Marchand de glaces",
+      "Marchand de glaces"
     ],
     Courses: ["Boulangerie", "Primeur", "Marché"],
     Hôtel: ["Hotel"],
@@ -51,45 +51,47 @@ export default function Map() {
       "Vente et réparation de cycles",
       "Service d'impression 3D"
     ]
-  };
+  }
 
-  const getMarkerIcon = (category) => {
+  const getMarkerIcon = category => {
     if (categoryMap.Restaurant.includes(category)) {
-      return MarkerRestaurant;
+      return MarkerRestaurant
     } else if (categoryMap.Soif.includes(category)) {
-      return MarkerSoif;
+      return MarkerSoif
     } else if (categoryMap.Shopping.includes(category)) {
-      return MarkerShopping;
+      return MarkerShopping
     } else if (categoryMap.Gourmandise.includes(category)) {
-      return MarkerGourmandise;
+      return MarkerGourmandise
     } else if (categoryMap.Hôtel.includes(category)) {
-      return MarkerHotel;
+      return MarkerHotel
     } else if (categoryMap.Culture.includes(category)) {
-      return MarkerCulture;
+      return MarkerCulture
     } else if (categoryMap.Pratique.includes(category)) {
-      return MarkerPratique;
+      return MarkerPratique
     } else if (categoryMap.Courses.includes(category)) {
-      return MarkerCourses;
+      return MarkerCourses
     } else {
-      return null;
+      return null
     }
-  };
+  }
 
   useEffect(() => {
     // Initialize the Google Map
     const initMap = () => {
-      const googleMaps = window.google.maps;
+      const googleMaps = window.google.maps
 
       // Create a new map centered on Paris
       const map = new googleMaps.Map(document.getElementById("map"), {
         center: { lat: 48.8566, lng: 2.3522 },
         zoom: 12,
         mapId: "fe2668b01b9cb7be"
-      });
+      })
 
       const markers = places.map(point => {
-        const category = Array.isArray(point.properties.category) ? point.properties.category[0] : point.properties.category;
-        const icon = getMarkerIcon(category);
+        const category = Array.isArray(point.properties.category)
+          ? point.properties.category[0]
+          : point.properties.category
+        const icon = getMarkerIcon(category)
 
         const marker = new googleMaps.Marker({
           position: {
@@ -100,8 +102,8 @@ export default function Map() {
           icon: {
             url: icon,
             scaledSize: new googleMaps.Size(26, 32)
-          },
-        });
+          }
+        })
 
         // Create an info window for each marker
         const infoWindow = new googleMaps.InfoWindow({
@@ -112,14 +114,14 @@ export default function Map() {
               <p>${point.properties.category}</p>
             </div>
           `
-        });
+        })
 
         marker.addListener("click", () => {
-          infoWindow.open(map, marker);
-        });
+          infoWindow.open(map, marker)
+        })
 
-        return marker;
-      });
+        return marker
+      })
 
       const clusterStyles = [
         {
@@ -140,7 +142,7 @@ export default function Map() {
           height: 50,
           width: 50
         }
-      ];
+      ]
 
       // Utilisez MarkerClusterer pour regrouper les marqueurs avec des styles personnalisés
       new MarkerClusterer({
@@ -148,15 +150,21 @@ export default function Map() {
         map,
         renderer: {
           render({ count, position }) {
-            const index = Math.min(count.toString().length - 1, clusterStyles.length - 1);
-            const style = clusterStyles[index];
+            const index = Math.min(
+              count.toString().length - 1,
+              clusterStyles.length - 1
+            )
+            const style = clusterStyles[index]
 
             return new googleMaps.Marker({
               position,
               icon: {
                 url: style.url,
                 scaledSize: new googleMaps.Size(style.width, style.height),
-                labelOrigin: new googleMaps.Point(style.width / 2, style.height / 2)
+                labelOrigin: new googleMaps.Point(
+                  style.width / 2,
+                  style.height / 2
+                )
               },
               label: {
                 text: String(count),
@@ -164,32 +172,32 @@ export default function Map() {
                 fontSize: "16px",
                 fontWeight: "bold"
               }
-            });
+            })
           }
         }
-      });
-    };
+      })
+    }
 
     // Load the Google Maps script
     const loadGoogleMaps = async () => {
       // Check if the script is already loaded
       if (!document.getElementById("google-maps-script")) {
-        const script = document.createElement("script");
-        script.id = "google-maps-script";
-        script.src = `${import.meta.env.VITE_API_URL_AND_KEYMAP}`;
-        script.async = true;
-        script.defer = true;
-        document.body.appendChild(script);
-        script.onload = initMap;
+        const script = document.createElement("script")
+        script.id = "google-maps-script"
+        script.src = `${import.meta.env.VITE_API_URL_AND_KEYMAP}`
+        script.async = true
+        script.defer = true
+        document.body.appendChild(script)
+        script.onload = initMap
       } else {
         // If the script is already loaded, initialize the map directly
         if (window.google && window.google.maps) {
-          initMap();
+          initMap()
         }
       }
-    };
-    loadGoogleMaps();
-  }, [places]);
+    }
+    loadGoogleMaps()
+  }, [places])
 
   return (
     <section>
@@ -197,5 +205,5 @@ export default function Map() {
       <div id="map" className="mapContainer"></div>
       <AdComponent />
     </section>
-  );
+  )
 }
