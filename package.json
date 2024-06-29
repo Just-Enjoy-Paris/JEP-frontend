@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@googlemaps/markerclusterer": "^2.5.3",
     "@react-three/fiber": "^8.16.8",
     "axios": "^1.6.8",
     "csstype": "^3.1.3",
