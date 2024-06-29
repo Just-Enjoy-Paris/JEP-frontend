@@ -1,0 +1,47 @@
+.messaging {
+  padding: 20px;
+  color: var(--txt-color);
+}
+
+.messages-list{
+  padding-top: 20px;
+}
+
+.messaging button {
+  background-color: var(--main-color);
+  color: var(--txt-color);
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.messaging h1 {
+  display: flex;
+  justify-content: center;
+}
+
+.messaging div {
+  margin-bottom: 10px;
+}
+
+.date-message {
+  font-size: 12px;
+}
+
+.email-message {
+  font-size: 15px;
+}
+
+.subject-message {
+  font-size: 15px;
+}
+
+.txt-message {
+  border-bottom: 2px solid var(--main-color);
+  padding-bottom: 10px;
+  font-size: 15px;
+}
+
+.messaging strong {
+  font-weight: bold;
+}
