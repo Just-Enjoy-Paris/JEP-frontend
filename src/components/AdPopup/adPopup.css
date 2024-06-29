@@ -7,7 +7,7 @@
   background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;
-  align-items: flex-start; /* Alignez le contenu en haut */
+  align-items: flex-start;
   z-index: 999;
   transition: top 1s ease;
 }
@@ -21,10 +21,12 @@
 }
 
 .ad-content {
+  position: inherit;
   background-color: white;
   padding: 5px;
   border-radius: 8px;
   width: 80%;
+  top: 30vh;
 }
 
 .ad-content img {

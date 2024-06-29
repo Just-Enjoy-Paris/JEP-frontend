@@ -3,7 +3,8 @@
 import Map from "../../components/Map/Map"
 
 export default function Landing() {
-{/* const [showPopup, setShowPopup] = useState(false)
+  {
+    /*const [showPopup, setShowPopup] = useState(false)
 
   useEffect(() => {
     const lastPopupTime = localStorage.getItem("lastPopupTime");
@@ -22,8 +23,9 @@ export default function Landing() {
   const handleClose = () => {
     setShowPopup(false);
     localStorage.setItem("lastPopupTime", new Date().getTime().toString());
-  };
-*/}
+  };*/
+  }
+
   return (
     <main>
       {/*{showPopup && <AdPopup onClose={handleClose} />}*/}

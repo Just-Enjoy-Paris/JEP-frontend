@@ -36,12 +36,7 @@ export default function PlacesDetails({ place }) {
           </div>
         </div>
         {/* Display the place description */}
-        <p className="placeDescription">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
-          non nibh dignissim, fermentum nibh id, finibus magna. Duis id ipsum ac
-          augue vestibulum faucibus. Cras nec euismod odio. Cras fermentum felis
-          a magna venenatis, eget suscipit orci maximus.
-        </p>
+        <p className="placeDescription">{place.properties.description}</p>
         {/* Opinion component */}
         <Opinion place={place} />
       </div>

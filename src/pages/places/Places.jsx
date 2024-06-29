@@ -1,6 +1,7 @@
 import "./places.css"
 import PlaceList from "../../components/PlaceList/PlaceList"
 import SearchBar from "../../components/SearchBar/SearchBar"
+import AdCategories from "../../components/AdCategories/AdCategories"
 import { useState } from "react"
 
 export default function Places() {
@@ -57,15 +58,16 @@ export default function Places() {
       <h1 className="placeListTitle">Lieux</h1>
       <SearchBar setSearchResult={setSearchResult} />
       <section className="placeListContainer">
-        {categorySections.map(({ title, categories }) => (
-          <div className="category-section" key={title}>
-            {categories.map(category => (
+        {categorySections.map(({ categories }, index) => (
+          <div className="category-section" key={index}>
+            {categories.map((category, index2) => (
               <PlaceList
-                key={category}
+                key={index2}
                 searchResult={searchResult}
                 categoryMap={{ [category]: categoryMap[category] }}
               />
             ))}
+            {index % 2 === 0 && <AdCategories />}
           </div>
         ))}
       </section>

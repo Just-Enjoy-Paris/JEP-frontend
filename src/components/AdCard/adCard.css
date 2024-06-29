@@ -1,20 +1,20 @@
 .ad-card-flex {
-    display: flex;
+  display: flex;
+  align-items: center;
 }
 
 .ad-card {
   display: flex;
-  padding: 10px;
-  border-radius: 15px;
-  box-shadow: 5px 7px 9px -6px rgba(0, 0, 0, 0.75);
-  background-color: var(--secondary-color);
-  position: relative;
+  margin: 0 auto;
+  border-radius: 4px;
+  background-color: #fff;
+  border: 1px solid #ddd;
   width: 300px;
   height: 250px;
 }
 
-.ad-card img{
-    width: 100%;
-    height: auto;
-    object-fit: contain;
+.ad-card img {
+  width: 100%;
+  height: auto;
+  /* object-fit: contain; */
 }
