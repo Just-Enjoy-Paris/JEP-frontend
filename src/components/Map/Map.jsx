@@ -2,7 +2,6 @@ import { useContext, useEffect } from "react"
 import "./map.css"
 import { DataContext } from "../../../context/data.context"
 import AdComponent from "../AdComponent/AdComponent"
-import { MarkerClusterer } from "@googlemaps/markerclusterer"
 import MarkerSoif from "../../img/PINS/Pin_BIERE.png"
 import MarkerRestaurant from "../../img/PINS/Pin_RESTO.png"
 import MarkerCulture from "../../img/PINS/Pin_CULTURE_3.png"
@@ -14,6 +13,7 @@ import MarkerCourses from "../../img/PINS/Pin_COURSES_2.png"
 import MarkerCluster from "../../img/PINS/Pin_CLUSTER.svg"
 
 // Importez la bibliothèque MarkerClusterer
+import { MarkerClusterer } from "@googlemaps/markerclusterer"
 
 export default function Map() {
   const { places } = useContext(DataContext)
