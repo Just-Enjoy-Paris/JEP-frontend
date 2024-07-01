@@ -22,35 +22,62 @@ const CookiePolicy = () => {
         chaque fois que vous revenez sur le site ou que vous naviguez d&apos;une
         page à l&apos;autre.
       </p>
-      <h2>Comment utilisons-nous les cookies ?</h2>
-      <p>Nous utilisons des cookies pour :</p>
+      <h2>Quels types de cookies utilisons-nous ?</h2>
+      <p>Nous utilisons deux types de cookies:</p>
       <ul>
-        <li>
-          Gérer votre session utilisateur et vous permettre de rester connecté
-          lorsque vous naviguez sur notre site.
+        <li className="bullet-point">
+          <strong>Les cookies essentiels:</strong> ils sont nécessaires au
+          fonctionnement du site et ne peuvent pas être désactivés. Ils ne
+          collectent aucune donnée personnelle.
         </li>
-        <li>
-          Mémoriser vos préférences d&apos;affichage et vos paramètres
-          utilisateur.
+        <li className="bullet-point">
+          <strong>Les cookies non essentiels:</strong> ils sont utilisés pour
+          améliorer votre expérience de navigation en vous proposant des
+          contenus personnalisés et en mesurant l&apos;audience du site. Ils
+          nécessitent votre consentement préalable.
         </li>
-        <li>
-          Analyser l&apos;utilisation de notre site web afin d&apos;améliorer
-          ses fonctionnalités et ses performances.
+      </ul>
+      <h2>Comment gérer les cookies ?</h2>
+      <p>
+        Vous pouvez gérer vos préférences en matière de cookies en cliquant sur
+        le bouton &quot;Gérer les cookies&quot; dans les paramètres de votre
+        compte. Vous pouvez également configurer votre navigateur pour refuser
+        les cookies non essentiels.
+      </p>
+      <h2>Quels sont les cookies utilisés sur notre site ?</h2>
+      <p>Voici la liste des cookies utilisés sur notre site:</p>
+      <ul>
+        <li className="bullet-point">
+          <strong>Cookies essentiels:</strong>
+          <ul>
+            <li className="square-point">
+              cookie_consent: ce cookie permet de mémoriser votre choix en
+              matière de consentement des cookies.
+            </li>
+          </ul>
         </li>
-        <li>
-          Suivre l&apos;efficacité de nos campagnes publicitaires et de nos
-          réseaux sociaux.
-        </li>
-        <li>
-          Personnaliser le contenu et les publicités en fonction de vos centres
-          d&apos;intérêt.
+        <li className="bullet-point">
+          <strong>Cookies non essentiels:</strong>
+          <ul>
+            <li className="square-point">
+              geo_location: ce cookie permet de mémoriser votre position
+              géographique pour vous proposer des itinéraires personnalisés sur
+              notre carte Google Maps.
+            </li>
+            <li className="square-point">
+              ads_clicks: ce cookie permet de mémoriser vos clics sur nos
+              publicités Google AdSense pour mesurer l&apos;efficacité de nos
+              campagnes publicitaires.
+            </li>
+          </ul>
         </li>
       </ul>
       <h2>Comment contrôler les cookies ?</h2>
       <p>
         Vous pouvez contrôler et/ou supprimer des cookies comme vous le
         souhaitez. Pour en savoir plus, consultez la page&nbsp;
-        <a className="aboutCookies"
+        <a
+          className="aboutCookies"
           href="https://www.aboutcookies.org/"
           target="_blank"
           rel="noopener noreferrer"

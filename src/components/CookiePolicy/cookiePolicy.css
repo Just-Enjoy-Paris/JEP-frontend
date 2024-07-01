@@ -1,6 +1,6 @@
 .cookie-policy {
   color: var(--txt-color);
-  margin: 25px;
+  margin: 20px;
   line-height: 1.5;
 }
 
@@ -10,8 +10,17 @@
   margin-bottom: 10px;
 }
 
-li {
+.bullet-point {
   list-style-type: disc;
+}
+
+.square-point {
+  list-style-type: square;
+  margin-left: 15px;
+}
+
+li strong {
+  font-weight: bold;
 }
 
 .aboutCookies {
