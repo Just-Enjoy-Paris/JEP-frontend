@@ -32,7 +32,7 @@ const UserInfo = () => {
       </div>
       {/* Link to user favorites */}
       <NavLink to="/user-favorites" className="user-fav">
-        <CiHeart className="favIcon" size={30} />
+        <CiHeart size={30} />
         <p>Mes Favoris</p>
       </NavLink>
       {/* Link to user information */}
