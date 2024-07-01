@@ -1,10 +1,20 @@
-.cookie-policy{
-    color: var(--txt-color);
-    margin: 20px 15px;
+.cookie-policy {
+  color: var(--txt-color);
+  margin: 25px;
+  line-height: 1.5;
 }
 
 .cookie-policy h2 {
-    font-size: 1.2rem;
-    margin-top: 15px;
-    margin-bottom: 10px;
+  font-size: 1.2rem;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+li {
+  list-style-type: disc;
+}
+
+.aboutCookies {
+    text-decoration: none;
+    color: orange;
 }
