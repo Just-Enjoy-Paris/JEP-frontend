@@ -28,7 +28,7 @@ const UserFavs = () => {
             ))
           ) : (
             <div className="emptyFav">
-              <p>Vous n&apos;avez pas encor de favoris</p>
+              <p>Vous n&apos;avez pas encore de favoris</p>
             </div>
           )}
         </div>
@@ -37,7 +37,7 @@ const UserFavs = () => {
         <div className="sectionFav-title">
           <h2>Favorite Tourist Spots</h2>
           <div className="emptyFav">
-            <p>Vous n&apos;avez pas encor de favoris</p>
+            <p>Vous n&apos;avez pas encore de favoris</p>
           </div>
         </div>
       </section>
@@ -45,7 +45,7 @@ const UserFavs = () => {
         <div className="sectionFav-title">
           <h2>Favorite Gardens</h2>
           <div className="emptyFav">
-            <p>Vous n&apos;avez pas encor de favoris</p>
+            <p>Vous n&apos;avez pas encore de favoris</p>
           </div>
         </div>
       </section>
