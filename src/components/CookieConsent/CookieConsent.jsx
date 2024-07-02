@@ -30,6 +30,22 @@ const CookieConsent = () => {
     return null
   }
 
+  // Function to store user geolocation in a cookie
+  const setGeolocationCookie = (latitude, longitude) => {
+    Cookies.set("geolocation", JSON.stringify({ latitude, longitude }), {
+      expires: 30 // 30 jours
+    })
+  }
+
+  // Function to store the user's advertising clicks in a cookie
+  const setAdClickCookie = adId => {
+    const adClicks = Cookies.getJSON("ad_clicks") || []
+    adClicks.push(adId)
+    Cookies.set("ad_clicks", adClicks, {
+      expires: 30 // 30 jours
+    })
+  }
+
   return (
     <div className="cookie-consent">
       <p>
