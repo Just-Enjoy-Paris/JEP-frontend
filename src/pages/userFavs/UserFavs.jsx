@@ -13,7 +13,7 @@ const UserFavs = () => {
   return (
     <main>
       <section className="userfav-title">
-        <h1>Mes Lieux favoris</h1>
+        <h1>Mes lieux favoris</h1>
       </section>
       <section className="favplaces-section">
         <div className="sectionFav-title">
