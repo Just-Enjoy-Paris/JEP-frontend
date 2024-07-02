@@ -6,7 +6,7 @@
   color: var(--txt-color);
 }
 
-h1 {
+.aboutTitle {
   font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 3vh;
