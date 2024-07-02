@@ -3,14 +3,17 @@ import Cookies from "js-cookie"
 
 import "./cookieConsent.css"
 
+// Fonction personnalisée pour vérifier le consentement aux cookies
+const getCookieConsent = () => {
+  const cookieConsent = Cookies.get("cookie_consent")
+  return cookieConsent === "true"
+}
+
 const CookieConsent = () => {
   const [hasConsented, setHasConsented] = useState(false)
 
   useEffect(() => {
-    const cookieConsent = Cookies.get("cookie_consent")
-    if (cookieConsent === "true") {
-      setHasConsented(true)
-    }
+    setHasConsented(getCookieConsent())
   }, [])
 
   const handleAccept = () => {
@@ -31,7 +34,8 @@ const CookieConsent = () => {
     <div className="cookie-consent">
       <p>
         Ce site utilise des cookies pour améliorer votre expérience. En
-        continuant à naviguer sur ce site, vous acceptez notre <a href="/cookie-policy">Politique d&apos;utilisation des cookies</a>.
+        continuant à naviguer sur ce site, vous acceptez notre{" "}
+        <a href="/cookie-policy">Politique d&apos;utilisation des cookies</a>.
       </p>
       <button onClick={handleAccept}>Accepter</button>
       <button onClick={handleRefuse}>Refuser</button>
@@ -40,3 +44,4 @@ const CookieConsent = () => {
 }
 
 export default CookieConsent
+export { getCookieConsent }
