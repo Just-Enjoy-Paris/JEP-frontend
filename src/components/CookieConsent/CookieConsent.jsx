@@ -18,6 +18,11 @@ const CookieConsent = () => {
     Cookies.set("cookie_consent", "true", { expires: 30 }) // 30 days
   }
 
+  const handleRefuse = () => {
+    setHasConsented(false)
+    Cookies.set("cookie_consent", "false", { expires: 1 }) // 1 day
+  }
+
   if (hasConsented) {
     return null
   }
@@ -29,6 +34,7 @@ const CookieConsent = () => {
         continuant à naviguer sur ce site, vous acceptez notre <a href="/cookie-policy">Politique d&apos;utilisation des cookies</a>.
       </p>
       <button onClick={handleAccept}>Accepter</button>
+      <button onClick={handleRefuse}>Refuser</button>
     </div>
   )
 }

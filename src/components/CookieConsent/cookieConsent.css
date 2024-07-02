@@ -2,13 +2,15 @@
     position: absolute;
     bottom: 0;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
     align-items: center;
     background-color: var(--main-color);
     color: var(--txt-color);
     height: 120px;
-    padding: 10px;
+    margin: 10px 0px;
+    padding: 5px;
 }
 
 p a {
@@ -24,5 +26,5 @@ p a {
     border: none;
     border-radius: 30px;
     cursor: pointer;
-    width: 50%;
+    width: 45%;
 }
