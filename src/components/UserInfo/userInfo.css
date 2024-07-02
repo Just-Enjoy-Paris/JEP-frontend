@@ -49,6 +49,7 @@
 
 .user-fav p{
     padding: 0px 5px;
+    align-content: center;
 }
 
 .user-info{
@@ -61,6 +62,7 @@
 
 .user-info p{
     padding: 0px 5px;
+    align-content: center;
 }
 
 .client-logout{

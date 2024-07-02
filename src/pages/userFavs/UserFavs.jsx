@@ -13,11 +13,11 @@ const UserFavs = () => {
   return (
     <main>
       <section className="userfav-title">
-        <h1>Mes Lieux Favoris</h1>
+        <h1>Mes lieux favoris</h1>
       </section>
       <section className="favplaces-section">
         <div className="sectionFav-title">
-          <h2>Favorite Places</h2>
+          <h2>Mes lieux</h2>
           {favPlaces.length > 0 ? (
             favPlaces.map((place, index) => (
               <FavPlaceCard
@@ -28,24 +28,24 @@ const UserFavs = () => {
             ))
           ) : (
             <div className="emptyFav">
-              <p>Vous n&apos;avez pas encor de favoris</p>
+              <p>Vous n&apos;avez pas encore de favoris</p>
             </div>
           )}
         </div>
       </section>
       <section className="favtourist-section">
         <div className="sectionFav-title">
-          <h2>Favorite Tourist Spots</h2>
+          <h2>Mes lieux touristiques</h2>
           <div className="emptyFav">
-            <p>Vous n&apos;avez pas encor de favoris</p>
+            <p>Vous n&apos;avez pas encore de favoris</p>
           </div>
         </div>
       </section>
       <section className="favgardens-section">
         <div className="sectionFav-title">
-          <h2>Favorite Gardens</h2>
+          <h2>Mes parcs</h2>
           <div className="emptyFav">
-            <p>Vous n&apos;avez pas encor de favoris</p>
+            <p>Vous n&apos;avez pas encore de favoris</p>
           </div>
         </div>
       </section>

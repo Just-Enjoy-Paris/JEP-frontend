@@ -1,7 +1,25 @@
 .favoriteIcon {
-  transition: fill 0.5s ease-in-out;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
 }
 
 .favoriteIcon.active {
-  fill: red;
+  color: #ED5C58; 
+  transition: transform 0.3s ease-in-out;
+}
+
+.iconAnim {
+  animation: fillHeart 0.3s forwards;
+}
+
+@keyframes fillHeart {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
