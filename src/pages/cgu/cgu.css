@@ -1,0 +1,16 @@
+.use-conditions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 10px;
+  color: var(--txt-color);
+}
+
+.cguTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 3vh;
+}
+span {
+  font-weight: bold;
+}

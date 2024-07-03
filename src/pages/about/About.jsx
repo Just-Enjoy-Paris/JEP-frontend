@@ -4,7 +4,7 @@ export default function About() {
   return (
     <main>
       <div className="about-us">
-        <h1 className="abouTitlie">À propos</h1>
+        <h1 className="aboutTitle">À propos</h1>
         <p>
           <span>Découvrez Paris autrement avec Chemin 75</span>
           <br />

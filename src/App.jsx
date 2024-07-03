@@ -7,6 +7,8 @@ import Footer from "./components/Footer/Footer.jsx"
 import Landing from "./pages/landing/Landing.jsx"
 import Log from "./pages/log/Log.jsx"
 import About from "./pages/about/About.jsx"
+import Cgu from "./pages/cgu/Cgu.jsx"
+import Cgv from "./pages/cgv/Cgv.jsx"
 import Places from "./pages/places/Places.jsx"
 import Events from "./pages/events/Events.jsx"
 import Contact from "./pages/contact/Contact.jsx"
@@ -42,6 +44,8 @@ function App() {
               <Route path="/user-favorites" element={<UserFavs />} />
               <Route path="/signup" element={<Signup />} />
               <Route path="/about" element={<About />} />
+              <Route path="/cgu" element={<Cgu />} />
+              <Route path="/cgv" element={<Cgv />} />
               <Route path="/places" element={<Places />} />
               <Route path="/place/:id" element={<Place />} />
               <Route path="/events" element={<Events />} />

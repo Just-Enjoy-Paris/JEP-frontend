@@ -18,3 +18,14 @@ footer a {
 .logoFooter {
   width: 55px;
 }
+
+.conditions {
+  display: flex;
+  flex-direction: row;
+  color: var(--txt-color);
+  align-items: center;
+}
+
+.conditions a {
+  padding: 0;
+}
