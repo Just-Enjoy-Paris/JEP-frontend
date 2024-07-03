@@ -1,5 +1,6 @@
 import "./contactForm.css"
 import { useState } from "react"
+import Button from "../Button/Button"
 
 const ContactForm = () => {
   // Declare state variables for pseudo, email, and message
@@ -54,9 +55,7 @@ const ContactForm = () => {
       ></textarea>
 
       {/* Submit button */}
-      <button className="contactButton" type="submit">
-        Envoyer
-      </button>
+      <Button name="Envoyer" className="contactButton" type="submit" />
     </form>
   )
 }
