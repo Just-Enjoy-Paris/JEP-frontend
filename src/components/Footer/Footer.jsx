@@ -11,6 +11,7 @@ export default function Footer() {
       </NavLink>
       <NavLink>Mentions Légales</NavLink>
       <NavLink to="/contact">Contact</NavLink>
+      <NavLink to="/cookie-policy">Cookies</NavLink>
     </footer>
   )
 }

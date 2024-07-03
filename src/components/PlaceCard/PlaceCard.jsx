@@ -26,7 +26,7 @@ const PlaceCard = ({ place, isLast }) => {
               <p>{place.properties.address}</p>
             </div>
           </div>
-          <div className="favIcon">
+          <div className="fav">
             {/* Add to favorites component */}
             <AddFav place={place} />
           </div>
