@@ -1,50 +1,89 @@
 import "./cgu.css"
 
 export default function Cgu() {
-    return (
-      <main>
-        <div className="use-conditions">
-          <h1 className="cguTitle">Conditions générales d&apos;utilisation</h1>
-          <p>
-            <span>Découvrez Paris autrement avec Chemin 75</span>
-            <br />
-            un site
-            Internet innovant destiné aux visiteurs de Paris, proposant une
-            expérience interactive et écologique unique pour explorer la ville.
-            Que vous soyez un nouveau visiteur ou un amateur de découvertes
-            inédites, Chemin 75 vous offre la possibilité de personnaliser votre
-            randonnée urbaine en choisissant des lieux d intérêt et en suivant des
-            itinéraires optimisés à pied ou à vélo.
-          </p>
-          <br />
-          <p>
-            <span>Une expérience sur mesure</span>
-            <br />
-            Chemin 75 répond à la
-            demande croissante de voyages personnalisés en simplifiant la
-            planification et en facilitant la découverte des attractions
-            culturelles, historiques et touristiques de Paris. Avec une interface
-            intuitive et conviviale, ce projet se distingue par son engagement
-            écologique et sa capacité à offrir des expériences uniques grâce à des
-            partenariats locaux.
-          </p>
-          <br />
-          <p>
-            <span>Un projet en phase avec les enjeux actuels</span>
-            <br />
-            En période des JO Paris 2024, où le coût des transports en commun sera en
-            forte hausse, Chemin 75 se positionne comme une alternative idéale en
-            mettant l accent sur des déplacements écologiques. Explorez Paris de
-            manière responsable tout en bénéficiant d offres exclusives et d une
-            immersion complète dans l authenticité de la ville.
-          </p>
-          <br />
-          <p>
-            Rejoignez-nous pour une aventure urbaine enrichissante et respectueuse
-            de l environnement. Découvrez Paris comme jamais auparavant avec
-            Chemin 75 !
-          </p>
-        </div>
-      </main>
-    )
-  }
+  return (
+    <main>
+      <div className="use-conditions">
+        <h1 className="cguTitle">Conditions générales d&apos;utilisation</h1>
+        <h2>1. Informations Légales</h2>
+        <p>
+          Le site <strong>[Nom du Site]</strong> est édité par{" "}
+          <strong>[Nom de l&apos;Entreprise]</strong>, situé au{" "}
+          <strong>[Adresse]</strong>. Numéro SIRET :{" "}
+          <strong>[Numéro SIRET]</strong>. Email de contact :{" "}
+          <strong>[Email de Contact]</strong>.
+        </p>
+
+        <h2>2. Description des Services</h2>
+        <p>
+          <strong>[Nom du Site]</strong> offre les services suivants :
+          [Description des Services]. Ces services sont accessibles à toute
+          personne disposant d&apos;une connexion internet. Certains services peuvent
+          nécessiter une inscription.
+        </p>
+
+        <h2>3. Accès au Site</h2>
+        <p>
+          L&apos;accès au site est gratuit pour les utilisateurs disposant d&apos;un accès
+          internet. Les frais d&apos;accès et d&apos;utilisation du réseau de
+          télécommunication sont à la charge de l&apos;utilisateur. L&apos;accès à
+          certaines parties du site peut nécessiter la création d&apos;un compte.
+        </p>
+
+        <h2>4. Inscription</h2>
+        <p>
+          L&apos;inscription au site est gratuite et ouverte à toute personne. Lors
+          de l&apos;inscription, l&apos;utilisateur s&apos;engage à fournir des informations
+          exactes et à jour. La création de comptes multiples pour une même
+          personne est interdite.
+        </p>
+
+        <h2>5. Règles de Conduite</h2>
+        <p>
+          Les utilisateurs s&apos;engagent à ne pas utiliser le site pour des
+          activités illégales, de harcèlement, de spam ou toute autre activité
+          nuisible. Tout comportement contraire aux règles peut entraîner la
+          suspension ou la suppression du compte de l&apos;utilisateur.
+        </p>
+
+        <h2>6. Propriété Intellectuelle</h2>
+        <p>
+          Le contenu du site, incluant mais non limité aux textes, images,
+          vidéos et graphiques, est la propriété de{" "}
+          <strong>[Nom de l&apos;Entreprise]</strong>. Toute reproduction,
+          distribution ou utilisation non autorisée est interdite.
+        </p>
+
+        <h2>7. Limitation de Responsabilité</h2>
+        <p>
+          <strong>[Nom de l&apos;Entreprise]</strong> décline toute responsabilité
+          pour les dommages directs ou indirects découlant de l&apos;utilisation du
+          site. Les services sont fournis en l&apos;état, sans garantie de
+          performance.
+        </p>
+
+        <h2>8. Protection des Données Personnelles</h2>
+        <p>
+          Les données personnelles collectées sur le site sont utilisées
+          conformément à notre politique de confidentialité. Les utilisateurs
+          disposent de droits d&apos;accès, de rectification et de suppression de
+          leurs données personnelles.
+        </p>
+
+        <h2>9. Modification des CGU</h2>
+        <p>
+          Les présentes CGU peuvent être modifiées à tout moment. Les
+          utilisateurs seront informés des modifications par une notification
+          sur le site ou par email.
+        </p>
+
+        <h2>10. Droit Applicable et Juridiction</h2>
+        <p>
+          Les présentes CGU sont régies par le droit français. En cas de litige,
+          les parties s&apos;engagent à rechercher une solution amiable avant
+          d&apos;engager une action judiciaire.
+        </p>
+      </div>
+    </main>
+  )
+}
