@@ -18,16 +18,18 @@ const setGeolocationCookie = (latitude, longitude) => {
 
 // Function to store the user's advertising clicks in a cookie
 const setAdClickCookie = adId => {
-  const adClicks = Cookies.getJSON("ad_clicks") || []
+  const adClicks = Cookies.get("ad_clicks")
+    ? JSON.parse(Cookies.get("ad_clicks"))
+    : []
   adClicks.push(adId)
-  Cookies.set("ad_clicks", adClicks, {
-    expires: 30
-  })
+  Cookies.set("ad_clicks", JSON.stringify(adClicks), { expires: 30 })
 }
 
 // Function to retrieve the user's advertising clicks from a cookie
 const getAdClickCookie = () => {
-  const adClicks = Cookies.getJSON("ad_clicks") || []
+  const adClicks = Cookies.get("ad_clicks")
+    ? JSON.parse(Cookies.get("ad_clicks"))
+    : []
   return adClicks
 }
 
