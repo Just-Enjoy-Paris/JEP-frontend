@@ -4,6 +4,7 @@ import React, { useContext, useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
 import { AuthContext } from "../../../context/user.context"
 import "./userBoard.css"
+import Button from "../Button/Button"
 
 const UserBoard = () => {
   const navigate = useNavigate()
@@ -88,9 +89,7 @@ const UserBoard = () => {
           <p>{user.account.username}</p>
         </div>
         {/* Submit button */}
-        <button className="saveBtn" type="submit">
-          Enregistrer
-        </button>
+        <Button name="Enregistrer" className="saveBtn" type="submit" />
       </form>
     </section>
   )

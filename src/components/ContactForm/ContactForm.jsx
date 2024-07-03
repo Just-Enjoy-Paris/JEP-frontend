@@ -4,6 +4,7 @@ import { useState, useContext } from "react"
 import { AuthContext } from "../../../context/user.context"
 import axios from "axios"
 import toast from "react-hot-toast"
+import Button from "../Button/Button"
 
 const ContactForm = () => {
   const { user } = useContext(AuthContext)
@@ -73,9 +74,8 @@ const ContactForm = () => {
         placeholder="Votre message ici..."
       ></textarea>
 
-      <button className="contactButton" type="submit">
-        Envoyer
-      </button>
+      {/* Submit button */}
+      <Button name="Envoyer" className="contactButton" type="submit" />
     </form>
   )
 }

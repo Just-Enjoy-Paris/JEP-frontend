@@ -1,7 +1,8 @@
 /* eslint-disable no-console */
 import { useState } from "react"
 import axios from "axios"
-import { useNavigate } from "react-router-dom"
+import { NavLink, useNavigate } from "react-router-dom"
+import Button from "../Button/Button"
 
 const SignUpForm = ({ onSwitchToLogin }) => {
   // State variables for form inputs
@@ -42,12 +43,7 @@ const SignUpForm = ({ onSwitchToLogin }) => {
   return (
     <form className="login-form" onSubmit={handleSubmit}>
       <h1 className="login-title">Créer un compte</h1>
-      <p>
-        déjà inscrit?
-        <a href="/log" onClick={onSwitchToLogin}>
-          se connecter
-        </a>
-      </p>
+      <p className="createAccount">Déjà inscrit? <NavLink to="/log" onClick={onSwitchToLogin}>Se connecter</NavLink></p>
       <div className="login-field">
         {/* Username input field */}
         <label htmlFor="pseudo" className="login-label">
@@ -105,9 +101,7 @@ const SignUpForm = ({ onSwitchToLogin }) => {
         />
       </div>
       {/* Submit button */}
-      <button className="login-button" type="submit">
-        S&apos;inscrire
-      </button>
+      <Button name="S&apos;inscrire" className="login-button" type="submit" />
     </form>
   )
 }

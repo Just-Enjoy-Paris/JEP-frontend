@@ -9,6 +9,13 @@
   margin: 5px 0;
   flex-direction: row-reverse;
   justify-content: flex-end;
+  align-items: center;
+}
+
+.rating .btn {
+  padding: 8px;
+  font-size: 12px;
+  margin: 5px;
 }
 
 .rating:not(:checked) > input {
