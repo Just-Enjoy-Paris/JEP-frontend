@@ -25,6 +25,12 @@
   position: relative;
 }
 
+.card .favoriteIconWrapper {
+  position: absolute;
+  bottom: 170px;
+  right: 0px;
+}
+
 .card img {
   width: 100%;
   height: 160px;
@@ -53,7 +59,7 @@
 }
 
 .card svg {
-  margin: 10px 35px 10px 20px;
+  margin: 7px;
   display: flex;
 }
 
