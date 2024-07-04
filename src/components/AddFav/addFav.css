@@ -1,25 +1,38 @@
-.favoriteIcon {
+.favoriteIconWrapper {
+  display: flex;
+  justify-content: flex-end;
   cursor: pointer;
-  transition: color 0.3s ease-in-out;
+  display: inline-block;
 }
 
-.favoriteIcon.active {
-  color: #ED5C58; 
+.favoriteIconWrapper img{
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.favoriteIcon {
   transition: transform 0.3s ease-in-out;
 }
 
-.iconAnim {
-  animation: fillHeart 0.3s forwards;
+.favoriteIcon.active {
+  animation: scaleHeart 0.3s ease-in-out;
 }
 
-@keyframes fillHeart {
-  0% {
+.favoriteIcon .iconAnim {
+  animation: scaleHeart 0.3s ease-in-out;
+}
+
+@keyframes scaleHeart {
+  0%, 100% {
     transform: scale(1);
   }
   50% {
     transform: scale(1.2);
   }
+
   100% {
-    transform: scale(1);
+    transform: scale(1)
   }
 }
