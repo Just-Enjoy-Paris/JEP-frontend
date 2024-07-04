@@ -40,7 +40,6 @@
 
 .user-fav{
     display: flex;
-    flex-direction: column;
     color: var(--txt-color);
     font-size: 26px;
     margin: 10px;

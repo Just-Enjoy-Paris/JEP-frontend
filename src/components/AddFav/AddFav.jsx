@@ -2,11 +2,10 @@
 import "./addFav.css"
 import { useContext, useState, useEffect } from "react"
 import { AuthContext } from "../../../context/user.context"
-
-import { CiHeart } from "react-icons/ci"
-import { FaHeart } from "react-icons/fa"
 import axios from "axios"
 import toast from "react-hot-toast"
+import favheartr from "../../img/FAV/favRed.svg"
+import favheartw from "../../img/FAV/favWhite.svg"
 
 const AddFav = ({ place }) => {
   const { user, setUser, isAuthenticated } = useContext(AuthContext)
@@ -88,9 +87,17 @@ const AddFav = ({ place }) => {
   return (
     <div onClick={handleClick} className="favoriteIconWrapper">
       {isActive ? (
-        <FaHeart className="favoriteIcon active iconAnim" size={30} />
+        <img
+          src={favheartr}
+          alt="Active Favorite Icon"
+          className="favoriteIcon active iconAnim"
+        />
       ) : (
-        <CiHeart className="favoriteIcon iconAnim" size={30} />
+        <img
+          src={favheartw}
+          alt="Inactive Favorite Icon"
+          className="favoriteIcon iconAnim"
+        />
       )}
     </div>
   )

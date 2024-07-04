@@ -4,6 +4,7 @@ import { useContext, useState } from "react"
 
 import "./logForm.css"
 import axios from "axios"
+import Button from "../Button/Button"
 import { AuthContext } from "../../../context/user.context"
 
 const LoginForm = () => {
@@ -42,8 +43,8 @@ const LoginForm = () => {
     // Create login form
     <form className="login-form" onSubmit={handleSubmit}>
       <h1 className="login-title">Connexion</h1>
-      <p>
-        pas encore inscrit? <NavLink to="/signup">créer un compte</NavLink>
+      <p className="createAccount">
+        pas encore inscrit? <NavLink to="/signup">Créer un compte</NavLink>
       </p>
       <div className="login-field">
         {/* Email input field */}
@@ -82,9 +83,7 @@ const LoginForm = () => {
         <a href="#">mot de passe oublié?</a>
       </div>
       {/* Submit button */}
-      <button className="login-button" type="submit">
-        Se connecter
-      </button>
+      <Button name="Se connecter" className="login-button" type="submit" />
     </form>
   )
 }

@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import PageHeader from "../../components/PageHeader";
 import "./error.css"
+import Button from "../../components/Button/Button";
 
 /**
  * Represents the 404 Page Not Found component.
@@ -24,7 +25,7 @@ const PageNotFound = () => {
             <p> ou naviguer vers une autre section du site.</p>
             {/* Provide a link back to the home page */}
             <Link to="/" className="home">
-              <button className="errorBtn">Acceuil</button>
+              <Button name="Acceuil" className="errorBtn" />
             </Link>
           </div>
         </div>

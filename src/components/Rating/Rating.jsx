@@ -4,6 +4,7 @@ import React, { useContext, useState } from "react"
 import { DataContext } from "../../../context/data.context"
 import toast from "react-hot-toast"
 import { AuthContext } from "../../../context/user.context"
+import Button from "../Button/Button"
 
 export default function Rating({ placeId, rate }) {
   const [newRate, setNewRate] = useState(rate)
@@ -36,7 +37,7 @@ export default function Rating({ placeId, rate }) {
     // Rating form
     <form className="rating" onSubmit={placeRating}>
       {/* Submit button */}
-      <button type="submit">Valider la note</button>
+      <Button className="rating-btn" name="Noter" type="submit" />
       {/* Display total stars */}
       <div className="total-stars">({rate})</div>
       {/* Star rating inputs */}
