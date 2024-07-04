@@ -4,7 +4,7 @@ import { useContext, useState, useEffect } from "react"
 import { AuthContext } from "../../../context/user.context"
 
 import { CiHeart } from "react-icons/ci"
-import { FaHeart } from "react-icons/fa";
+import { FaHeart } from "react-icons/fa"
 import axios from "axios"
 import toast from "react-hot-toast"
 
@@ -15,10 +15,10 @@ const AddFav = ({ place }) => {
 
   useEffect(() => {
     // Check if the place is already in the user's favorites
-    if (user && user.account.favPlaces.includes(place._id)) {
+    if (user && user.account.favPlaces.includes(place.id_JEP)) {
       setIsActive(true)
     }
-  }, [user, place._id])
+  }, [user, place])
 
   const handleClick = async e => {
     e.preventDefault()
@@ -31,15 +31,18 @@ const AddFav = ({ place }) => {
     }
     // Toggle the favorite status
     if (isActive) {
-      await rmFavorites(place._id)
+      await rmFavorites(place)
     } else {
-      await addFavorites(place._id)
+      await addFavorites(place)
     }
     setIsActive(!isActive)
   }
 
   // Function to add a place to the user's favorites
-  const addFavorites = async id => {
+  const addFavorites = async place => {
+    const id = place._id
+    const favId = place.id_JEP
+
     try {
       await axios.put(
         `${import.meta.env.VITE_API_URL}/addFav`,
@@ -51,7 +54,7 @@ const AddFav = ({ place }) => {
         ...prevUser,
         account: {
           ...prevUser.account,
-          favPlaces: [...prevUser.account.favPlaces, id]
+          favPlaces: [...prevUser.account.favPlaces, favId]
         }
       }))
     } catch (error) {
@@ -60,7 +63,9 @@ const AddFav = ({ place }) => {
   }
 
   // Function to remove a place from the user's favorites
-  const rmFavorites = async id => {
+  const rmFavorites = async place => {
+    const id = place._id
+    const favId = place.id_JEP
     try {
       await axios.put(
         `${import.meta.env.VITE_API_URL}/rmFav`,
@@ -72,7 +77,7 @@ const AddFav = ({ place }) => {
         ...prevUser,
         account: {
           ...prevUser.account,
-          favPlaces: prevUser.account.favPlaces.filter(favId => favId !== id)
+          favPlaces: prevUser.account.favPlaces.filter(fav => fav !== favId)
         }
       }))
     } catch (error) {
