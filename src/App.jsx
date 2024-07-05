@@ -20,6 +20,7 @@ import UserFavs from "./pages/userFavs/UserFavs.jsx"
 import Loader from "./pages/loader/Loader.jsx"
 import { DataContext } from "../context/data.context.jsx"
 import { Toaster } from "react-hot-toast"
+import AddPlacesPage from "./pages/AddPlacesPage/AddPlacesPage.jsx"
 
 function App() {
   const { showLoader } = useContext(DataContext)
@@ -49,6 +50,7 @@ function App() {
               <Route path="/messaging" element={<MessagingPage />} />
               <Route path="/*" element={<Error />} />
               <Route path="/loader" element={<Loader />} />
+              <Route path="/add-place" element={<AddPlacesPage />} />
             </Routes>
             <Footer />
           </Router>
