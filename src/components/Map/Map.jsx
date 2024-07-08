@@ -201,9 +201,8 @@ export default function Map() {
 
   return (
     <section>
-      {/* Map container */}
-      <div id="map" className="mapContainer"></div>
       <AdComponent />
+      <div id="map" className="mapContainer"></div>
     </section>
   )
 }

@@ -30,7 +30,7 @@ export default function Places() {
       "Pâtisserie",
       "Bubble tea",
       "Salon de the",
-      "Marchand de glaces",
+      "Marchand de glaces"
     ],
     Courses: ["Boulangerie", "Primeur", "Marché"],
     Hôtel: ["Hotel"],
@@ -57,22 +57,22 @@ export default function Places() {
   const [showPopup, setShowPopup] = useState(false)
 
   useEffect(() => {
-    const lastPopupTime = localStorage.getItem("lastPopupTime");
+    const lastPopupTime = localStorage.getItem("lastPopupTime")
     if (!lastPopupTime) {
       // If no timestamp is recorded, display the pop-up
-      setShowPopup(true);
+      setShowPopup(true)
     } else {
-      const beforeNextPopup = 30 * 60 * 1000; // 30 minutes
-      const currentTime = new Date().getTime();
+      const beforeNextPopup = 30 * 60 * 1000 // 30 minutes
+      const currentTime = new Date().getTime()
       if (currentTime - parseInt(lastPopupTime) >= beforeNextPopup) {
-        setShowPopup(true);
+        setShowPopup(true)
       }
     }
-  }, []);
+  }, [])
 
   const handleClose = () => {
-    setShowPopup(false);
-    localStorage.setItem("lastPopupTime", new Date().getTime().toString());
+    setShowPopup(false)
+    localStorage.setItem("lastPopupTime", new Date().getTime().toString())
   }
 
   return (
