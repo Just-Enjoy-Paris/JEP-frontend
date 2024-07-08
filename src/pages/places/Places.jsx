@@ -1,7 +1,7 @@
 import "./places.css"
 import PlaceList from "../../components/PlaceList/PlaceList"
 import SearchBar from "../../components/SearchBar/SearchBar"
-import AdCategories from "../../components/AdCategories/AdCategories"
+// import AdCategories from "../../components/AdCategories/AdCategories"
 import AdPopup from "../../components/AdPopup/AdPopup"
 import { useState, useEffect } from "react"
 
@@ -90,7 +90,7 @@ export default function Places() {
                 categoryMap={{ [category]: categoryMap[category] }}
               />
             ))}
-            {index % 2 === 0 && <AdCategories />}
+            {/* {index % 2 === 0 && <AdCategories />} */}
           </div>
         ))}
       </section>
