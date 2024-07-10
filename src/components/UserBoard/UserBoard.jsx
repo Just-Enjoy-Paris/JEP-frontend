@@ -8,7 +8,7 @@ import Button from "../Button/Button"
 
 const UserBoard = () => {
   const navigate = useNavigate()
-  const { isAuthenticated, update, setUpdate, user } = useContext(AuthContext)
+  const { isAuthenticated, setUser, user } = useContext(AuthContext)
   const [newEmail, setNewEmail] = useState("")
   const [file, setFile] = useState(null)
 
@@ -21,13 +21,13 @@ const UserBoard = () => {
 
     try {
       // Send update request to server
-      await axios.put(
+      const res = await axios.put(
         `${import.meta.env.VITE_API_URL}/updateprofile`,
         formData,
         { withCredentials: true }
       )
-      // Update the state to trigger re-render
-      setUpdate(!update)
+      console.log(res.data.user)
+      setUser(res.data.user)
     } catch (err) {
       console.log("Error updating user:", err)
     }

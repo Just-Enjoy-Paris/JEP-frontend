@@ -8,7 +8,7 @@ const UserFavs = () => {
   const { user } = useContext(AuthContext)
   const { places } = useContext(DataContext)
   const favPlaces = places.filter(place =>
-    user.account.favPlaces.includes(place._id)
+    user.account.favPlaces.includes(place.id_JEP)
   )
   return (
     <main>
